@@ -1,0 +1,26 @@
+.name "vsp2"
+.type LPN
+
+.places
+env[env="true"]
+env1[env="true"]
+p[token=1]
+r[token=2]
+q[token=1]
+sys[token=2]
+
+.transitions
+te1
+te2
+te3
+t1
+t2
+
+.flows
+te1: {env} -> {p,env1}
+te2: {env} -> {q,env1}
+te2: {env} -> {p,q,env1}
+t1: {p,r} -> {sys}
+t2: {q,r} -> {sys}
+
+.initial_marking {env,r}
