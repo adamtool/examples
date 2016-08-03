@@ -1,4 +1,4 @@
-.name "vsp2"
+.name "journalReview2"
 .type LPN
 
 .places
@@ -19,7 +19,7 @@ t2
 .flows
 te1: {env} -> {p,env1}
 te2: {env} -> {q,env1}
-te2: {env} -> {p,q,env1}
+te3: {env} -> {p,q,env1}
 t1: {p,r} -> {sys}
 t2: {q,r} -> {sys}
 
