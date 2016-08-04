@@ -32,7 +32,7 @@ test1: {p1, sys} -> {sys}
 test2: {p2, sys} -> {sys}
 test3: {p3, sys} -> {sys}
 tbad1: {p1} -> {bad1}
-tbad1: {p2} -> {bad2}
-tbad1: {p3} -> {bad3}
+tbad2: {p2} -> {bad2}
+tbad3: {p3} -> {bad3}
 
 .initial_marking {env, sys}
