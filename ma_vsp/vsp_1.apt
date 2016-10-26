@@ -1,5 +1,6 @@
 .name "vsp_1"
 .type LPN
+.description "like first example + reversible"
 
 .places
 env[env="true"]
