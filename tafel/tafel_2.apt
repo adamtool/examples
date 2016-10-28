@@ -1,4 +1,6 @@
-// Net burglar example
+// Can be won by the system because they let the enviroment play infinitly often t8
+// and thus they didn't created a deadlock by blocking their move t3
+// would be lost if their is no loop at env1
 .name "exampleTafel"
 .type LPN
 .description "Example tafel 28.09.2014"
