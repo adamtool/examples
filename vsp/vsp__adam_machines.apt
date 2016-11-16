@@ -1,6 +1,8 @@
 .name "vsp2"
 .type LPN
-.description "entweder deadlock oder nondeterminisms. Also keine Strategy"
+.description "
+#WIN:SAFETY#
+entweder deadlock oder nondeterminisms. Also keine Strategy"
 
 .places
 env[env="true"]
