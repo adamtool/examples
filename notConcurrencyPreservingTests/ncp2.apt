@@ -1,7 +1,9 @@
 // Net consuming
 .name "ncp2"
 .type LPN
-.description "Testing not concurrency preserving net 2"
+.description "
+#WIN:SAFETY#
+Testing not concurrency preserving net 2"
 
 .places
 env1[env] 

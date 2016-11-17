@@ -1,7 +1,9 @@
 // asdf
 .name "mutex"
 .type LPN
-.description "mutex"
+.description "
+#WIN:SAFETY#
+mutex"
 
 .places
 Env[env="true"]

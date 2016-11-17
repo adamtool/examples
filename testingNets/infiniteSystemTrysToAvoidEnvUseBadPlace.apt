@@ -2,7 +2,9 @@
 // there should be no strategy
 .name "infinitesystem.net"
 .type LPN
-.description "infinite system cannot prevent the enviroment to visit a bad place"
+.description "
+#WIN:SAFETY#
+infinite system cannot prevent the enviroment to visit a bad place"
 
 .places
 env1[env="true"]

@@ -1,7 +1,9 @@
 // Net burglar example
 .name "ncp0"
 .type LPN
-.description "Testing not concurrency preserving net 0"
+.description "
+#WIN:SAFETY#
+Testing not concurrency preserving net 0"
 
 .places
 env1[env="true"] 

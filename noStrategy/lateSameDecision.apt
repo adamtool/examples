@@ -1,7 +1,9 @@
 // late same decision example
 .name "lateSameDecision.net"
 .type LPN
-.description "wait for it ..."
+.description "
+#WIN:SAFETY#
+wait for it ..."
 
 .places
 env1[env="true"]

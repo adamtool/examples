@@ -1,5 +1,8 @@
 .name "Container"
 .type LPN
+.description "
+#WIN:SAFETY#
+"
 
 .places
 env0[env="true"]

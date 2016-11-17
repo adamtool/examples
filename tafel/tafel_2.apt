@@ -3,7 +3,9 @@
 // would be lost if their is no loop at env1
 .name "exampleTafel"
 .type LPN
-.description "Example tafel 28.09.2014"
+.description "
+#WIN:SAFETY#
+Example tafel 28.09.2014"
 
 .places
 Env[env="true"]

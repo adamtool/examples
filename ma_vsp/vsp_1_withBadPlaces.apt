@@ -1,5 +1,8 @@
 .name "vsp_1"
 .type LPN
+.description "
+#WIN:SAFETY#
+"
 
 .places
 env[env="true"]

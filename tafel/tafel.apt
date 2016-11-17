@@ -1,7 +1,9 @@
 // Net burglar example
 .name "exampleTafel"
 .type LPN
-.description "Example tafel 28.09.2014. Should not have a strategy"
+.description "
+#WIN:SAFETY#
+Example tafel 28.09.2014. Should not have a strategy"
 
 .places
 Env[env="true"]
