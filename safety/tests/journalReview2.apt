@@ -1,8 +1,7 @@
 .name "journalReview2"
 .type LPN
-.description "
-#WIN:SAFETY#
-"
+.options
+winningCondition="SAFETY"
 
 .places
 env[env="true"]

@@ -2,9 +2,9 @@
 // problem with splitting in invariants since sys2 isn't really used
 .name "ncp1"
 .type LPN
-.description "
-#WIN:SAFETY#
-Testing not concurrency preserving net 1"
+.description "Testing not concurrency preserving net 1"
+.options
+winningCondition="SAFETY"
 
 .places
 env1[env="true"] 

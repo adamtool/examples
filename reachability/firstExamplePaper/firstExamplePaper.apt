@@ -1,9 +1,9 @@
 // Net burglar example
 .name "firstExamplePaper"
 .type LPN
-.description "
-#WIN:REACHABILITY#
-The testing example of the paper adapted to reachability"
+.description "The testing example of the paper adapted to reachability"
+.options
+winningCondition="REACHABILITY"
 
 .places
 Env[env="true"]

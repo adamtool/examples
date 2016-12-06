@@ -3,9 +3,9 @@
 // @author Paul Goelz
 .name "nondet strategy"
 .type LPN
-.description "
-#WIN:SAFETY#
-Alarm system. "
+.description "Alarm system."
+.options
+winningCondition="SAFETY"
 
 .places
 A

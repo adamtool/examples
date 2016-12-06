@@ -1,9 +1,8 @@
 // Testing the bad decision by not starting with an mcut
 .name "noInitialMcut"
 .type LPN
-.description "
-#WIN:SAFETY#
-"
+.options
+winningCondition="SAFETY"
 
 .places
 env[env="true"]

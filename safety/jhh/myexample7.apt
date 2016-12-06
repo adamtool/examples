@@ -1,8 +1,8 @@
 .name "TwoEnv"
 .type LPN
-.description "
-#WIN:SAFETY#
-Reacting to the decision of two environment players."
+.description "Reacting to the decision of two environment players."
+.options
+winningCondition="SAFETY"
 
 .places
 A[token=1]

@@ -1,9 +1,8 @@
 // currently doesn't work since not bounded? Didn't I fixed it sometime?
 .name "Workflow_M3WP2"
 .type LPN
-.description "
-#WIN:SAFETY#
-"
+.options
+winningCondition="SAFETY"
 
 .places
 A0[token=3]

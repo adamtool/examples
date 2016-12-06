@@ -1,9 +1,9 @@
 // Net burglar example
 .name "firstExamplePaper"
 .type LPN
-.description "
-#WIN:SAFETY#
-The testing example of the paper"
+.description "The testing example of the paper"
+.options
+winningCondition="SAFETY"
 
 .places
 Env[env="true"]

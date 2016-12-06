@@ -5,9 +5,9 @@
 // Deleting t4 or the env2 in the preset of t5 would fix the problem.
 .name "exampleTafel"
 .type LPN
-.description "
-#WIN:SAFETY#
-Example tafel 28.09.2014"
+.description "Example tafel 28.09.2014"
+.options
+winningCondition="SAFETY"
 
 .places
 Env[env="true"]

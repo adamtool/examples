@@ -1,8 +1,8 @@
 .name "vsp_1"
 .type LPN
-.description "
-#WIN:SAFETY#
-like first example + reversible"
+.description "like first example + reversible"
+.options
+winningCondition="SAFETY"
 
 .places
 env[env="true"]

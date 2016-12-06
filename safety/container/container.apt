@@ -1,8 +1,7 @@
 .name "Container"
 .type LPN
-.description "
-#WIN:SAFETY#
-"
+.options
+winningCondition="SAFETY"
 
 .places
 env0[env="true"]

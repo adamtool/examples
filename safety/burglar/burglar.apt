@@ -1,9 +1,9 @@
 // Net burglar example
 .name "burglar.net"
 .type LPN
-.description "
-#WIN:SAFETY#
-alarm system"
+.description "alarm system"
+.options
+winningCondition="SAFETY"
 
 .places
 env[env="true"]

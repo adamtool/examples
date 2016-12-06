@@ -1,8 +1,8 @@
 // Net constructed example
 .name "constructed example with loop"
 .type LPN
-.description "
-#WIN:SAFETY#"
+.options
+winningCondition="SAFETY"
 
 .places
 s1[env="true"]
