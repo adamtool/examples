@@ -1,3 +1,5 @@
+// do not miss the deadlock. Should have a strategy. All problems concerning
+// missing a deadlock would encounter ndet?!
 .name "deadlocked strategy"
 .type LPN
 .description "dead."
