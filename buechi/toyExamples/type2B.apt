@@ -1,5 +1,5 @@
 // has a type2 area but should not produce any problem
-.name "type2-A"
+.name "type2-B"
 .type LPN
 .description "A testing example for checking a type2 area."
 .options
