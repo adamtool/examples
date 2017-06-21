@@ -4,10 +4,10 @@
 .type LPN
 .description "Alarm system."
 .options
-winningCondition="REACHABILITY"
+winningCondition="BUECHI"
 
 .places
-A[reach="true"]
+A
 B[env="true"]
 C				// despite reach correct
 D[env="true"]			// despite reach correct
