@@ -1,3 +1,4 @@
+// has strategy?
 .name "unfoldingAdditionalSystem"
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
