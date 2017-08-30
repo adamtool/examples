@@ -1,7 +1,7 @@
-// buchi in env part should also lead in this case to a winning strategy
-.name "infiniteA"
+// buchi in env part should lead to no winning strategy, since it only once.
+.name "finiteA"
 .type LPN
-.description "Is there a problem for infinite env runs?"
+.description "Is there a problem for finite runs?"
 .options
 winningCondition="BUCHI"
 

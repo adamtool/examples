@@ -1,4 +1,4 @@
-// infinite runs of env should lead to no strategy
+// infinite run only for one part of the env successor. Thus, no strategy.
 .name "infiniteB"
 .type LPN
 .description "Is there a problem for infinite env runs?"
