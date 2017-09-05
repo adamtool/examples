@@ -1,3 +1,4 @@
+// System and environment start in opposite corners of 2x2 plan. System has to move and environment then can move to the same position.
 .name "unfoldingAdditionalSystem"
 .type LPN
 .description "Robots moving on a 2x2 plane"

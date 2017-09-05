@@ -1,3 +1,4 @@
+// System and environment start next to each other. System can always move away from environment before transition to bad place is enabled.
 .name "unfoldingAdditionalSystem"
 .type LPN
 .description "Robots moving on a 2x2 plane"
