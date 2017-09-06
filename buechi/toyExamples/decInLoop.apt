@@ -1,4 +1,5 @@
-// has a type2 area but should not produce any problem
+// is the firstExamplePaper version adapted to a buchi condition, such that
+// everytime a good decision has to be dropped.
 .name "decInLoop"
 .type LPN
 .description "A test requiring unfolding."
@@ -46,6 +47,6 @@ g2: {envRR,sysR} -> {envG,sys3}
 b1: {envLL,sysR} -> {envB,sys3}
 b2: {envRR,sysL} -> {envB,sys3}
 rg: {envG,sys3} -> {env1,sys1}
-rb: {envL,sys3} -> {env1,sys1}
+rb: {envB,sys3} -> {env1,sys1}
 
 .initial_marking {env1,sys1}
