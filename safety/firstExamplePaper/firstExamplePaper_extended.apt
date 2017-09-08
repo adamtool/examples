@@ -1,4 +1,4 @@
-// should have no strategy
+// should have no strategy because the environment can skip the test-transitions
 .name "firstExamplePaper"
 .type LPN
 .description "The testing example of the paper"
