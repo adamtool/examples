@@ -1,4 +1,5 @@
 // should have a strategy by the system not blocking the transition
+// The same as infiniteA.apt ??
 .name "unfoldingAdditionalSystem"
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
