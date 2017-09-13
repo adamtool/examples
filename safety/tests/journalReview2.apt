@@ -8,8 +8,8 @@ env[env="true"]
 env1[env="true"]
 p[token=1]
 r[token=2]
-q[token=1]
-sys[token=2]
+q[token=3]
+sys[token=1]
 
 .transitions
 te1
