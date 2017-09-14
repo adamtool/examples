@@ -1,5 +1,5 @@
 // There are two loops, one by the environment which cannot be blocked and one by the system to reach the Büchi place
-// Bounded synthesis should not be able to find the winning strategy.
+// should have strategy
 .name "decInLoop"
 .type LPN
 .description "A test requiring unfolding."
