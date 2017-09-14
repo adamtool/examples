@@ -7,12 +7,12 @@ winningCondition="SAFETY"
 .places
 E1[env="true"]
 E2[env="true"]
-EL
-ER
-S
-SL
-SR
-bad[bad="true"]
+EL[token=2]
+ER[token=2]
+S[token=1]
+SL[token=1]
+SR[token=1]
+bad[bad="true",token=2]
 
 .transitions
 l
