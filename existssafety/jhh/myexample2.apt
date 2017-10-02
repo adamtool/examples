@@ -1,0 +1,22 @@
+// with fl(t1) = {(E1,E2)}; fl(t2) = {(E1,E3)} -> ENV wins
+// with fl(t1) = {} and fl(t2) = {(E1,E3)} -> SYS wins
+.name "unfoldingAdditionalSystem"
+.type LPN
+.description "Testing the correctness of additional system places in the unfolding"
+.options
+winningCondition="SAFETY"
+
+.places
+E1
+E2[bad="true"]
+E3[bad="true"]
+
+.transitions
+t1
+t2
+
+.flows
+t1: {E1} -> {E2}
+t2: {E1} -> {E3}
+
+.initial_marking {E1}
