@@ -1,0 +1,27 @@
+// with fl(t1) = fl(t3) = {}, fl(t2) = {(E1,E3)}, fl(t3) = {(E3,E3)} -> SYS wins
+// with fl(t1) = fl(t2) = {}, rest egal -> ENV wins
+// with fl(t1) = fl(t4) = {}, rest egal -> ENV wins
+.name "unfoldingAdditionalSystem"
+.type LPN
+.description "Testing the correctness of additional system places in the unfolding"
+.options
+winningCondition="BUCHI"
+
+.places
+E1
+E2[buchi="true"]
+E3[buchi="true"]
+
+.transitions
+t1
+t2
+t3
+t4
+
+.flows
+t1: {E1} -> {E2}
+t2: {E1} -> {E3}
+t3: {E2} -> {E2}
+t4: {E3} -> {E3}
+
+.initial_marking {E1}
