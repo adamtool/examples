@@ -1,6 +1,6 @@
 // there should be no strategy since the only possibly strategy should invoke 
 // nodetermism, this end up in the problem that S3 is violated without
-// realizing  (adapted version of idea of Paul Goelz)
+// realizing (extended version of idea of Paul Goelz to reachability)
 .name "nondet strategy"
 .type LPN
 .description "Alarm system."
@@ -15,7 +15,10 @@ D[env="true"]
 E[env="true"]
 F
 G[env="true"]
-H[reach="true"]
+H
+add0
+add1[reach="true"]
+add2[reach="true"]
 K[env="true"]
 
 .transitions
@@ -26,6 +29,7 @@ d
 e
 f
 i
+t
 
 
 .flows
@@ -33,8 +37,9 @@ a: {A,K} -> {C,D}
 b: {B} -> {E}
 c: {D} -> {G}
 d: {D} -> {E}
-e: {C,F} -> {C,H}
-f: {E,F} -> {E,H}
+e: {C,F} -> {C,H,add0}
+t: {C,add0} -> {add1}
+f: {E,F} -> {E,H,add2}
 i: {B} -> {K}
 
 .initial_marking {A,B,F}

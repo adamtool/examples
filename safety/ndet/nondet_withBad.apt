@@ -1,21 +1,20 @@
-// there should be no strategy since the only possibly strategy should invoke 
-// nodetermism, this end up in the problem that S3 is violated without
-// realizing  (adapted version of idea of Paul Goelz)
+// there should be no strategy since only exhausting nondeterminism should
+// help to avoid the bad place (or deadlock?) (Adaption of Paul Goelz example)
 .name "nondet strategy"
 .type LPN
 .description "Alarm system."
 .options
-winningCondition="REACHABILITY"
+winningCondition="SAFETY"
 
 .places
-A
+A[token=1]
 B[env="true"]
-C
+C[token=1]
 D[env="true"]
 E[env="true"]
-F
+F[token=2]
 G[env="true"]
-H[reach="true"]
+H[token=2]
 K[env="true"]
 
 .transitions
@@ -25,6 +24,7 @@ c
 d
 e
 f
+//g
 i
 
 
@@ -35,6 +35,7 @@ c: {D} -> {G}
 d: {D} -> {E}
 e: {C,F} -> {C,H}
 f: {E,F} -> {E,H}
+//g: {H} -> {H}
 i: {B} -> {K}
 
 .initial_marking {A,B,F}
