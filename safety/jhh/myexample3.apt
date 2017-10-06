@@ -3,17 +3,19 @@
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
 .options
-winningCondition="SAFETY"
+winningCondition="SAFETY",
+n=10,
+b=3
 
 .places
 E1[env="true"]
 E2[env="true"]
 E3[env="true"]
-S1
-S2
-S3
-S4
-bad[bad="true"]
+S1[token=1]
+S2[token=1]
+S3[token=1]
+S4[token=1]
+bad[token=1,bad="true"]
 
 .transitions
 l
