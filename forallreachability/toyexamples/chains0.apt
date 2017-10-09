@@ -1,5 +1,5 @@
 // should have NO strategy (left to right and right to left in the  middle)
-.name "chains.net"
+.name "chains0.net"
 .type LPN
 .options
 winningCondition="A_REACHABILITY"

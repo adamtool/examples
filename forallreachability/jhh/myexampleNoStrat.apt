@@ -1,7 +1,7 @@
 // with fl(t) = {(E1,E2)} -> SYS wins
 // with fl(t) = {} -> ENV wins
-// without annotation the first case is used automatically
-.name "unfoldingAdditionalSystem1"
+// annotated it to achieve last case
+.name "unfoldingAdditionalSystem3"
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
 .options
@@ -12,7 +12,7 @@ E1[env="true"]
 E2[reach="true",env="true"]
 
 .transitions
-t
+t[tfl="{E1}->{}"]
 
 .flows
 t: {E1} -> {E2}
