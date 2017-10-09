@@ -1,4 +1,4 @@
-// should have strategy (left left and right)
+// should have strategy (flow left and right)
 .name "chains.net"
 .type LPN
 .options
