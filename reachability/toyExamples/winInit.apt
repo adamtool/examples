@@ -1,0 +1,16 @@
+// should have strategy
+.name "winInit.net"
+.type LPN
+.options
+winningCondition="E_REACHABILITY"
+
+.places
+env[env="true",reach="true"]
+s1[token=1, reach="true"]
+s2[token=2, reach="true"]
+
+.transitions
+
+.flows
+
+.initial_marking {s1,s2,env}
