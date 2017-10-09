@@ -1,6 +1,6 @@
 // Net burglar example
-// should have strategy (standard flow)
-.name "burglar.net"
+// should have strategy (mixed flow of a and b location)
+.name "burglar1.net"
 .type LPN
 .description "security system"
 .options
@@ -39,8 +39,8 @@ tx
 ta
 ty
 tb
-tbb[tfl="{a}->{pa},{s4}->{pb}"]
-taa[tfl="{s3}->{pa},{b}->{pb}"]
+tbb[tfl="{a}->{pb},{s4}->{pa}"]
+taa[tfl="{s3}->{pb},{b}->{pa}"]
 
 .flows
 // left arm
