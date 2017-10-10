@@ -1,6 +1,6 @@
 // Net burglar example
-// should have strategy (mixed flow of a and b location, at the both to alarm)
-.name "burglar1.net"
+// should have NO strategy (mixed flow of a and b location, but at the end only one flow to alarm)
+.name "burglar2.net"
 .type LPN
 .description "security system"
 .options
@@ -33,8 +33,8 @@ t5
 t6
 t7
 t8
-t9[tfl="{bb}->{alarm},{ab}->{alarm},{eb}->{eb}"]
-t10[tfl="{aa}->{alarm},{ba}->{alarm},{ea}->{ea}"]
+t9[tfl="{bb}->{alarm},{ab}->{},{eb}->{eb}"]
+t10[tfl="{aa}->{},{ba}->{alarm},{ea}->{ea}"]
 tx
 ta
 ty

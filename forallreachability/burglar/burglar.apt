@@ -1,5 +1,5 @@
 // Net burglar example
-// should have strategy (standard flow)
+// should have strategy (standard flow, both going to alarm)
 .name "burglar.net"
 .type LPN
 .description "security system"
@@ -7,7 +7,7 @@
 winningCondition="A_REACHABILITY"
 
 .places
-env[env="true"]
+env[env="true", reach="true"]
 s1[env="true"]
 s2[env="true"]
 s3
@@ -33,8 +33,8 @@ t5
 t6
 t7
 t8
-t9[tfl="{bb}->{alarm},{ab}->{},{eb}->{eb}"]
-t10[tfl="{aa}->{},{ba}->{alarm},{ea}->{ea}"]
+t9[tfl="{bb}->{alarm},{ab}->{alarm},{eb}->{eb}"]
+t10[tfl="{aa}->{alarm},{ba}->{alarm},{ea}->{ea}"]
 tx
 ta
 ty
