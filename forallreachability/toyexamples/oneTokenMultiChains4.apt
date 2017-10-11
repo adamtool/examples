@@ -7,12 +7,12 @@ winningCondition="A_REACHABILITY"
 .places
 env[env="true"]
 env1[env="true",reach="true"]
-sa1
-sa2
-sa3[reach="true"]
-sa4
-sb1
-sb2
+sa1[token=1]
+sa2[token=1]
+sa3[token=1,reach="true"]
+sa4[token=3]
+sb1[token=2]
+sb2[token=2]
 
 .transitions
 t1
