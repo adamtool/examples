@@ -5,7 +5,7 @@
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
 .options
-winningCondition="BUCHI"
+winningCondition="A_BUCHI"
 
 .places
 E1
