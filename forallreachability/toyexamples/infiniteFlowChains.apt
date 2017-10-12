@@ -6,9 +6,9 @@ winningCondition="A_REACHABILITY"
 
 .places
 env[env="true"]
-env1[env="true",buchi="true"]
+env1[env="true",reach="true"]
 sa1
-sa2[buchi="true"]
+sa2[reach="true"]
 sb1
 sb2
 
