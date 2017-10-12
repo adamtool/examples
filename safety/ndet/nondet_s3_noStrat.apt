@@ -13,7 +13,7 @@ p[token=1]
 r[token=2]
 q[token=3]
 s1[token=1]
-s2[token=2]
+s2[token=3]
 
 .transitions
 t1
