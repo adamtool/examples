@@ -1,7 +1,7 @@
 // Problem with S3. Here there should be no deterministic strategy.
 // (S3 - problem see mail ERO 2017/03/07 here adapted (would be the same problem
 // if the places p and q would be enviroment places.)
-.name "nondet strategy"
+.name "nondet_s3_noStrat.apt"
 .type LPN
 .description "Alarm system."
 .options
