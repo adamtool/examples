@@ -17,9 +17,11 @@ t1[tfl="{sa1}->{sa2},{sb1}->{sb2}"]
 t2
 t3
 tenv
+tenv1
 
 .flows
 tenv: {env} -> {env1}
+tenv1: {env1} -> {env}
 t1: {sa1,sb1} -> {sa2,sb2}
 t2: {sa2} -> {sa2}
 t3: {sb2} -> {sb2}

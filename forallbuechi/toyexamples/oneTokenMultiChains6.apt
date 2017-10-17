@@ -1,5 +1,5 @@
 // should have no strategy (sys token)
-.name "oneTokenMultiChains2.net"
+.name "oneTokenMultiChains6.net"
 .type LPN
 .options
 winningCondition="A_BUCHI"
