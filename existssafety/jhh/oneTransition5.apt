@@ -1,5 +1,4 @@
-// with fl(t) = {(E1,E2)} -> ENV wins
-// with fl(t) = {} -> SYS wins
+// forced empty fl(t) -> SYS wins because initial token is consumed without ever visiting bad place
 .name "unfoldingAdditionalSystem"
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
@@ -11,7 +10,7 @@ E1[env="true"]
 E2[bad="true",env="true"]
 
 .transitions
-t
+t[tfl="{}"]
 
 .flows
 t: {E1} -> {E2}
