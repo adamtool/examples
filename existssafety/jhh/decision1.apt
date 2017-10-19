@@ -1,10 +1,9 @@
-// with fl(t1) = {(E1,E2)}; fl(t2) = {(E1,E3)} -> ENV wins
-// with fl(t1) = {} and fl(t2) = {(E1,E3)} -> SYS wins
+// with fl(t1) = {(E1,E2)}; fl(t2) = {(E1,E3)} automatically added -> ENV wins
 .name "unfoldingAdditionalSystem"
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
 .options
-winningCondition="SAFETY"
+winningCondition="E_SAFETY"
 
 .places
 E1

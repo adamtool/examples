@@ -1,16 +1,16 @@
-// forced empty fl(t) -> SYS wins because initial token is consumed without ever visiting bad place
+// forced empty fl(t) -> ENV wins because BOTH flow chains reach bad place
 .name "unfoldingAdditionalSystem"
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
 .options
-winningCondition="SAFETY"
+winningCondition="E_SAFETY"
 
 .places
-E1[env="true"]
+E1[bad="true",env="true"]
 E2[bad="true",env="true"]
 
 .transitions
-t[tfl="{}"]
+t[tfl=""]
 
 .flows
 t: {E1} -> {E2}
