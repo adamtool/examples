@@ -6,8 +6,8 @@
 winningCondition="E_SAFETY"
 
 .places
-S1
-S2[bad="true"]
+S1[token=1]
+S2[token=1,bad="true"]
 
 
 .transitions

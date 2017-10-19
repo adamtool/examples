@@ -1,4 +1,5 @@
 // all 4 flow chains have to reach one of the two bad places
+// ergo ENV wins
 .name "unfoldingAdditionalSystem"
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
@@ -6,10 +7,10 @@
 winningCondition="E_SAFETY"
 
 .places
-E1
-S1
-E2[bad="true"]
-S2[bad="true"]
+E1[token=1]
+S1[token=2]
+E2[token=1,bad="true"]
+S2[token=2,bad="true"]
 
 .transitions
 t[tfl="{S1,E1}->{S2,E2}"]
