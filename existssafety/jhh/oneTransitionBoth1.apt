@@ -6,10 +6,10 @@
 winningCondition="E_SAFETY"
 
 .places
-E1
-S1
-E2
-S2[bad="true"]
+E1[token=1]
+S1[token=2]
+E2[token=1]
+S2[token=2, bad="true"]
 
 .transitions
 t[tfl="{E1,S1}->{E2,S2}"]

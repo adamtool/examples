@@ -1,4 +1,4 @@
-// 
+// should have strategy
 .name "sendingProtocol"
 .type LPN
 .options
@@ -8,16 +8,16 @@ winningCondition="SAFETY"
 Env[env="true"]
 LA[env="true"]
 EA[env="true"]
-SA
-SAA
+SA[token=1]
+SAA[token=1]
 LB[env="true"]
 EB[env="true"]
-SB
-SBB
-GO[env="true"]
-TRAP
-decision
-bad[bad="true"]
+SB[token=2]
+SBB[token=2]
+GO[token=1]
+TRAP[token=1]
+decision[token=1]
+bad[token=1,bad="true"]
 
 
 
