@@ -10,13 +10,13 @@ E1[env="true",bad="true"]
 E2[env="true"]
 E3[env="true"]
 E4[env="true"]
-S1
-S2
-S3
-S4
-S5
-S6
-bad1[bad="true"]
+S1[token=1]
+S2[token=1]
+S3[token=1]
+S4[token=2]
+S5[token=2]
+S6[token=2]
+bad1[token=1,bad="true"]
 
 .transitions
 t1

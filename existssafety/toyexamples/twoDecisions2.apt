@@ -6,14 +6,14 @@
 winningCondition="E_SAFETY"
 
 .places
-E1[token=1,env="true"]
-E2[token=1,env="true"]
-E3[token=1,env="true"]
-S1[token=2]
-S2[token=2]
-S3[token=2]
-bad1[token=1,bad="true",env="true"]
-bad2[token=2]
+E1[env="true"]
+E2[env="true"]
+E3[env="true"]
+S1[token=1]
+S2[token=1]
+S3[token=1]
+bad1[bad="true",env="true"]
+bad2[token=1]
 
 .transitions
 t1
