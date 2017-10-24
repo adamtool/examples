@@ -1,5 +1,4 @@
-// with fl(t1) = {} = fl(t2) -> ENV wins
-// with fl(t1) = {} and fl(t2) = {(E1,E3)} -> SYS wins
+// one good option for the system -> SYS wins
 .name "unfoldingAdditionalSystem2"
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
@@ -13,7 +12,7 @@ E3[token=1,reach="true"]
 
 .transitions
 t1
-t2
+t2[tfl=""]
 
 .flows
 t1: {E1} -> {E2}

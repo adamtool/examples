@@ -1,6 +1,4 @@
-// with fl(t) = {(E1,E2)} -> SYS wins
-// with fl(t) = {} -> ENV wins
-// without annotation the first case is used automatically
+// 2 flow chains, only one reaches good place -> ENV wins
 .name "unfoldingAdditionalSystem1"
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
@@ -9,10 +7,10 @@ winningCondition="A_REACHABILITY"
 
 .places
 E1[env="true"]
-E2[reach="true",env="true"]
+E2[env="true",reach="true"]
 
 .transitions
-t
+t[tfl=""]
 
 .flows
 t: {E1} -> {E2}

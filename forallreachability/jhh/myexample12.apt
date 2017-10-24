@@ -1,0 +1,18 @@
+// one flow chain reaches good place -> SYS wins
+.name "unfoldingAdditionalSystem1"
+.type LPN
+.description "Testing the correctness of additional system places in the unfolding"
+.options
+winningCondition="A_REACHABILITY"
+
+.places
+E1[env="true"]
+E2[env="true",reach="true"]
+
+.transitions
+t
+
+.flows
+t: {E1} -> {E2}
+
+.initial_marking {E1}
