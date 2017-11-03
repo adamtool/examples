@@ -1,5 +1,5 @@
 // should have no strategy, the token dies.
-.name "oneTokenMultiChains5.net"
+.name "infiniteFlowChains.net"
 .type LPN
 .options
 winningCondition="A_REACHABILITY"
