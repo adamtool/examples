@@ -1,5 +1,5 @@
 // env should win as it can catch every system player
-.name "unfoldingAdditionalSystem"
+.name "infflowchains"
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
 .options

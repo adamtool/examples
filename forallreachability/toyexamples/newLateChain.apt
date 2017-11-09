@@ -1,4 +1,4 @@
-// should have NO strategy (since t2 creates a new chain)
+// should have strategy (or NO if it has to be played till the end - t2 creates a new chain) 
 .name "newLateChain.net"
 .type LPN
 .options

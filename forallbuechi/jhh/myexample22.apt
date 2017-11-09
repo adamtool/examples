@@ -1,4 +1,4 @@
-// SYS wins because only one choice does not work
+// SYS wins because only one choice does not work (infinitely many tokenchains)
 .name "unfoldingAdditionalSystem"
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
