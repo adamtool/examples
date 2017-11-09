@@ -1,4 +1,4 @@
-// ENV wins because both choices lead to a finite flow chain
+// SYS wins because only one choice does not work
 .name "unfoldingAdditionalSystem"
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
@@ -12,8 +12,8 @@ E3[buchi="true"]
 
 .transitions
 t1[tfl=""]
-t2[tfl=""]
-t3
+t2
+t3[tfl=""]
 t4
 
 .flows

@@ -1,5 +1,4 @@
-// system wins because every flow chain reaches a good place at the same time a new one is spawned
-// should have no strategy, the token dies. ???
+// env wins because infinitely many flow chains never reach a good place
 .name "infiniteFlowChains.net"
 .type LPN
 .options
@@ -9,7 +8,7 @@ winningCondition="A_REACHABILITY"
 env[env="true"]
 env1[env="true",reach="true"]
 sa1
-sa2[reach="true"]
+sa2
 sb1
 sb2
 
