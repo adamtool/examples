@@ -1,4 +1,5 @@
-// should have no strategy, the token dies.
+// should have strategy, since each of the infinitely many tokenchains will
+// eventually reach the buchi place infinitely often
 .name "oneTokenMultiChains5.net"
 .type LPN
 .options
