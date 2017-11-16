@@ -1,4 +1,4 @@
-// TODO unsure
+// SYS wins because safe flow chain of E2 is continued
 .name "multipleFlowChains"
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"

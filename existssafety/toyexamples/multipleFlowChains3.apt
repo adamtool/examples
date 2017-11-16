@@ -1,4 +1,4 @@
-// TODO can argue for both as winner 
+// SYS wins because transition creates a new safe flow chain
 .name "multipleFlowChains"
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
