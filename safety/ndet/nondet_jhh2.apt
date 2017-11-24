@@ -1,5 +1,5 @@
-// there should be no strategy since only exhausting nondeterminism should
-// help to avoid the bad place (or deadlock?) (Adaption of Paul Goelz example)
+// system wins. It just can not allow f and never has a problem
+// (it has the pattern "potential nondet")
 .name "nondet strategy"
 .type LPN
 .description "Alarm system."

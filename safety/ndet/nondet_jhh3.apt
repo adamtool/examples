@@ -1,3 +1,5 @@
+// there should be no strategy, since every strategy should encounter
+// ndet (between f2 and e)
 .name "nondet strategy"
 .type LPN
 .description "Alarm system."
