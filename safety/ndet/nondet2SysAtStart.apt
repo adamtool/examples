@@ -1,6 +1,8 @@
 // Adaption of Paul Gölz's example
 // added place S
-// should have strategy
+// should have strategy for old definition checking the ndet within the strategy
+// should have NO strategy for the new definition where we check the ndet in the
+// original game.
 .name "nondet"
 .description "Alarm system."
 .type LPN
