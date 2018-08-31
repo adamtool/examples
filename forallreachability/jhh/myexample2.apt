@@ -11,7 +11,7 @@ E2[token=1,reach="true"]
 E3[token=1,reach="true"]
 
 .transitions
-t1[tfl="E1->{}"]
+t1[tfl=""]
 t2[tfl="E1->{E3}"]
 
 .flows
