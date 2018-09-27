@@ -5,19 +5,21 @@
 winningCondition="SAFETY"
 
 .places
-
 A[env="true"]
 B
 C
-D[bad="true"]
-
+E[bad="true"]
 
 .transitions
 tA
 tB
+tC
+tD
 
 .flows
-tA:{A,B}->{C}
-tB:{A}->{D}
+tA: {A} ->{B}
+tB: {A}->{B}
+tD: {B}->{C}
+tC: {C}->{E}
 
-.initial_marking {A,B}
+.initial_marking {A}
