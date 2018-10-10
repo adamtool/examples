@@ -6,12 +6,12 @@ winningCondition="SAFETY"
 
 .places
 
-A
-B
-C
-D
-E
-F
+A[env="true"]
+B[env="true"]
+C[env="true"]
+D[env="true"]
+E[env="true"]
+F[env="true"]
 
 
 .transitions
