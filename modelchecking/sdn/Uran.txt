@@ -1,0 +1,125 @@
+.name "Uran"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+sw012
+sw013
+sw014
+sw015
+sw016
+sw017
+sw018
+sw019
+sw020
+sw021
+sw022
+sw023
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+fwd032
+fwd033
+fwd034
+fwd035
+fwd036
+fwd037
+fwd038
+fwd039
+fwd040
+fwd041
+fwd042
+fwd043
+fwd044
+fwd045
+fwd046
+fwd047
+.arcs
+sw000 fwd000 sw001
+sw001 fwd024 sw000
+sw000 fwd001 sw003
+sw003 fwd025 sw000
+sw001 fwd002 sw010
+sw010 fwd026 sw001
+sw001 fwd003 sw006
+sw006 fwd027 sw001
+sw002 fwd004 sw003
+sw003 fwd028 sw002
+sw004 fwd005 sw019
+sw019 fwd029 sw004
+sw004 fwd006 sw005
+sw005 fwd030 sw004
+sw005 fwd007 sw016
+sw016 fwd031 sw005
+sw006 fwd008 sw011
+sw011 fwd032 sw006
+sw007 fwd009 sw019
+sw019 fwd033 sw007
+sw008 fwd010 sw019
+sw019 fwd034 sw008
+sw009 fwd011 sw016
+sw016 fwd035 sw009
+sw010 fwd012 sw019
+sw019 fwd036 sw010
+sw012 fwd013 sw022
+sw022 fwd037 sw012
+sw013 fwd014 sw019
+sw019 fwd038 sw013
+sw014 fwd015 sw015
+sw015 fwd039 sw014
+sw015 fwd016 sw021
+sw021 fwd040 sw015
+sw015 fwd017 sw023
+sw023 fwd041 sw015
+sw016 fwd018 sw019
+sw019 fwd042 sw016
+sw017 fwd019 sw018
+sw018 fwd043 sw017
+sw018 fwd020 sw019
+sw019 fwd044 sw018
+sw019 fwd021 sw020
+sw020 fwd045 sw019
+sw019 fwd022 sw021
+sw021 fwd046 sw019
+sw021 fwd023 sw022
+sw022 fwd047 sw021

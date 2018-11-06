@@ -1,0 +1,81 @@
+.name "TLex"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+.arcs
+sw000 fwd000 sw003
+sw003 fwd016 sw000
+sw000 fwd001 sw003
+sw003 fwd017 sw000
+sw001 fwd002 sw003
+sw003 fwd018 sw001
+sw002 fwd003 sw011
+sw011 fwd019 sw002
+sw002 fwd004 sw003
+sw003 fwd020 sw002
+sw002 fwd005 sw003
+sw003 fwd021 sw002
+sw003 fwd006 sw011
+sw011 fwd022 sw003
+sw003 fwd007 sw010
+sw010 fwd023 sw003
+sw003 fwd008 sw010
+sw010 fwd024 sw003
+sw004 fwd009 sw011
+sw011 fwd025 sw004
+sw005 fwd010 sw011
+sw011 fwd026 sw005
+sw006 fwd011 sw011
+sw011 fwd027 sw006
+sw007 fwd012 sw011
+sw011 fwd028 sw007
+sw008 fwd013 sw011
+sw011 fwd029 sw008
+sw009 fwd014 sw010
+sw010 fwd030 sw009
+sw010 fwd015 sw011
+sw011 fwd031 sw010

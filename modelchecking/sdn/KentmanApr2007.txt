@@ -1,0 +1,124 @@
+.name "KentmanApr2007"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+sw012
+sw013
+sw014
+sw015
+sw016
+sw017
+sw018
+sw019
+sw020
+sw021
+sw022
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+fwd032
+fwd033
+fwd034
+fwd035
+fwd036
+fwd037
+fwd038
+fwd039
+fwd040
+fwd041
+fwd042
+fwd043
+fwd044
+fwd045
+fwd046
+fwd047
+.arcs
+sw000 fwd000 sw011
+sw011 fwd024 sw000
+sw001 fwd001 sw011
+sw011 fwd025 sw001
+sw002 fwd002 sw016
+sw016 fwd026 sw002
+sw003 fwd003 sw016
+sw016 fwd027 sw003
+sw004 fwd004 sw018
+sw018 fwd028 sw004
+sw005 fwd005 sw019
+sw019 fwd029 sw005
+sw006 fwd006 sw021
+sw021 fwd030 sw006
+sw007 fwd007 sw021
+sw021 fwd031 sw007
+sw008 fwd008 sw016
+sw016 fwd032 sw008
+sw009 fwd009 sw020
+sw020 fwd033 sw009
+sw010 fwd010 sw019
+sw019 fwd034 sw010
+sw010 fwd011 sw011
+sw011 fwd035 sw010
+sw011 fwd012 sw016
+sw016 fwd036 sw011
+sw011 fwd013 sw018
+sw018 fwd037 sw011
+sw011 fwd014 sw021
+sw021 fwd038 sw011
+sw011 fwd015 sw021
+sw021 fwd039 sw011
+sw012 fwd016 sw020
+sw020 fwd040 sw012
+sw013 fwd017 sw015
+sw015 fwd041 sw013
+sw014 fwd018 sw016
+sw016 fwd042 sw014
+sw015 fwd019 sw016
+sw016 fwd043 sw015
+sw016 fwd020 sw019
+sw019 fwd044 sw016
+sw016 fwd021 sw022
+sw022 fwd045 sw016
+sw018 fwd022 sw019
+sw019 fwd046 sw018
+sw019 fwd023 sw020
+sw020 fwd047 sw019

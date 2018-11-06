@@ -1,0 +1,150 @@
+.name "Karen"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+sw012
+sw013
+sw014
+sw015
+sw016
+sw017
+sw018
+sw019
+sw020
+sw021
+sw022
+sw023
+sw024
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+fwd032
+fwd033
+fwd034
+fwd035
+fwd036
+fwd037
+fwd038
+fwd039
+fwd040
+fwd041
+fwd042
+fwd043
+fwd044
+fwd045
+fwd046
+fwd047
+fwd048
+fwd049
+fwd050
+fwd051
+fwd052
+fwd053
+fwd054
+fwd055
+fwd056
+fwd057
+fwd058
+fwd059
+.arcs
+sw000 fwd000 sw001
+sw001 fwd030 sw000
+sw000 fwd001 sw002
+sw002 fwd031 sw000
+sw000 fwd002 sw003
+sw003 fwd032 sw000
+sw000 fwd003 sw005
+sw005 fwd033 sw000
+sw000 fwd004 sw009
+sw009 fwd034 sw000
+sw001 fwd005 sw004
+sw004 fwd035 sw001
+sw001 fwd006 sw006
+sw006 fwd036 sw001
+sw001 fwd007 sw006
+sw006 fwd037 sw001
+sw001 fwd008 sw007
+sw007 fwd038 sw001
+sw002 fwd009 sw020
+sw020 fwd039 sw002
+sw002 fwd010 sw014
+sw014 fwd040 sw002
+sw003 fwd011 sw024
+sw024 fwd041 sw003
+sw003 fwd012 sw012
+sw012 fwd042 sw003
+sw003 fwd013 sw013
+sw013 fwd043 sw003
+sw003 fwd014 sw014
+sw014 fwd044 sw003
+sw004 fwd015 sw005
+sw005 fwd045 sw004
+sw005 fwd016 sw008
+sw008 fwd046 sw005
+sw005 fwd017 sw009
+sw009 fwd047 sw005
+sw010 fwd018 sw024
+sw024 fwd048 sw010
+sw011 fwd019 sw024
+sw024 fwd049 sw011
+sw014 fwd020 sw021
+sw021 fwd050 sw014
+sw015 fwd021 sw016
+sw016 fwd051 sw015
+sw015 fwd022 sw024
+sw024 fwd052 sw015
+sw015 fwd023 sw024
+sw024 fwd053 sw015
+sw017 fwd024 sw024
+sw024 fwd054 sw017
+sw018 fwd025 sw022
+sw022 fwd055 sw018
+sw019 fwd026 sw021
+sw021 fwd056 sw019
+sw021 fwd027 sw022
+sw022 fwd057 sw021
+sw022 fwd028 sw023
+sw023 fwd058 sw022
+sw023 fwd029 sw024
+sw024 fwd059 sw023

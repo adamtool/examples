@@ -1,0 +1,179 @@
+.name "Renater2004"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+sw012
+sw013
+sw014
+sw015
+sw016
+sw017
+sw018
+sw019
+sw020
+sw021
+sw022
+sw023
+sw024
+sw025
+sw026
+sw027
+sw028
+sw029
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+fwd032
+fwd033
+fwd034
+fwd035
+fwd036
+fwd037
+fwd038
+fwd039
+fwd040
+fwd041
+fwd042
+fwd043
+fwd044
+fwd045
+fwd046
+fwd047
+fwd048
+fwd049
+fwd050
+fwd051
+fwd052
+fwd053
+fwd054
+fwd055
+fwd056
+fwd057
+fwd058
+fwd059
+fwd060
+fwd061
+fwd062
+fwd063
+fwd064
+fwd065
+fwd066
+fwd067
+fwd068
+fwd069
+fwd070
+fwd071
+.arcs
+sw000 fwd000 sw001
+sw001 fwd036 sw000
+sw000 fwd001 sw021
+sw021 fwd037 sw000
+sw001 fwd002 sw006
+sw006 fwd038 sw001
+sw002 fwd003 sw013
+sw013 fwd039 sw002
+sw003 fwd004 sw021
+sw021 fwd040 sw003
+sw003 fwd005 sw007
+sw007 fwd041 sw003
+sw004 fwd006 sw013
+sw013 fwd042 sw004
+sw005 fwd007 sw012
+sw012 fwd043 sw005
+sw005 fwd008 sw022
+sw022 fwd044 sw005
+sw006 fwd009 sw012
+sw012 fwd045 sw006
+sw006 fwd010 sw015
+sw015 fwd046 sw006
+sw007 fwd011 sw012
+sw012 fwd047 sw007
+sw008 fwd012 sw009
+sw009 fwd048 sw008
+sw008 fwd013 sw012
+sw012 fwd049 sw008
+sw009 fwd014 sw014
+sw014 fwd050 sw009
+sw009 fwd015 sw015
+sw015 fwd051 sw009
+sw010 fwd016 sw013
+sw013 fwd052 sw010
+sw011 fwd017 sw013
+sw013 fwd053 sw011
+sw012 fwd018 sw013
+sw013 fwd054 sw012
+sw012 fwd019 sw015
+sw015 fwd055 sw012
+sw012 fwd020 sw019
+sw019 fwd056 sw012
+sw013 fwd021 sw016
+sw016 fwd057 sw013
+sw013 fwd022 sw017
+sw017 fwd058 sw013
+sw013 fwd023 sw018
+sw018 fwd059 sw013
+sw013 fwd024 sw019
+sw019 fwd060 sw013
+sw013 fwd025 sw021
+sw021 fwd061 sw013
+sw013 fwd026 sw023
+sw023 fwd062 sw013
+sw013 fwd027 sw024
+sw024 fwd063 sw013
+sw013 fwd028 sw025
+sw025 fwd064 sw013
+sw013 fwd029 sw026
+sw026 fwd065 sw013
+sw013 fwd030 sw027
+sw027 fwd066 sw013
+sw020 fwd031 sw021
+sw021 fwd067 sw020
+sw020 fwd032 sw029
+sw029 fwd068 sw020
+sw022 fwd033 sw023
+sw023 fwd069 sw022
+sw027 fwd034 sw028
+sw028 fwd070 sw027
+sw028 fwd035 sw029
+sw029 fwd071 sw028

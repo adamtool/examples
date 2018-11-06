@@ -1,0 +1,157 @@
+.name "Darkstrand"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+sw012
+sw013
+sw014
+sw015
+sw016
+sw017
+sw018
+sw019
+sw020
+sw021
+sw022
+sw023
+sw024
+sw025
+sw026
+sw027
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+fwd032
+fwd033
+fwd034
+fwd035
+fwd036
+fwd037
+fwd038
+fwd039
+fwd040
+fwd041
+fwd042
+fwd043
+fwd044
+fwd045
+fwd046
+fwd047
+fwd048
+fwd049
+fwd050
+fwd051
+fwd052
+fwd053
+fwd054
+fwd055
+fwd056
+fwd057
+fwd058
+fwd059
+fwd060
+fwd061
+.arcs
+sw000 fwd000 sw001
+sw001 fwd031 sw000
+sw000 fwd001 sw003
+sw003 fwd032 sw000
+sw001 fwd002 sw025
+sw025 fwd033 sw001
+sw001 fwd003 sw013
+sw013 fwd034 sw001
+sw002 fwd004 sw019
+sw019 fwd035 sw002
+sw002 fwd005 sw006
+sw006 fwd036 sw002
+sw003 fwd006 sw006
+sw006 fwd037 sw003
+sw004 fwd007 sw005
+sw005 fwd038 sw004
+sw004 fwd008 sw007
+sw007 fwd039 sw004
+sw005 fwd009 sw008
+sw008 fwd040 sw005
+sw006 fwd010 sw007
+sw007 fwd041 sw006
+sw008 fwd011 sw009
+sw009 fwd042 sw008
+sw009 fwd012 sw016
+sw016 fwd043 sw009
+sw010 fwd013 sw017
+sw017 fwd044 sw010
+sw010 fwd014 sw011
+sw011 fwd045 sw010
+sw011 fwd015 sw012
+sw012 fwd046 sw011
+sw012 fwd016 sw013
+sw013 fwd047 sw012
+sw012 fwd017 sw015
+sw015 fwd048 sw012
+sw014 fwd018 sw025
+sw025 fwd049 sw014
+sw014 fwd019 sw026
+sw026 fwd050 sw014
+sw015 fwd020 sw016
+sw016 fwd051 sw015
+sw016 fwd021 sw017
+sw017 fwd052 sw016
+sw018 fwd022 sw027
+sw027 fwd053 sw018
+sw018 fwd023 sw022
+sw022 fwd054 sw018
+sw019 fwd024 sw027
+sw027 fwd055 sw019
+sw019 fwd025 sw026
+sw026 fwd056 sw019
+sw020 fwd026 sw021
+sw021 fwd057 sw020
+sw020 fwd027 sw023
+sw023 fwd058 sw020
+sw021 fwd028 sw022
+sw022 fwd059 sw021
+sw023 fwd029 sw024
+sw024 fwd060 sw023
+sw024 fwd030 sw025
+sw025 fwd061 sw024

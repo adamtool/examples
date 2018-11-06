@@ -1,0 +1,36 @@
+.name "Nordu1989"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+.arcs
+sw000 fwd000 sw001
+sw001 fwd006 sw000
+sw001 fwd001 sw002
+sw002 fwd007 sw001
+sw001 fwd002 sw003
+sw003 fwd008 sw001
+sw001 fwd003 sw005
+sw005 fwd009 sw001
+sw001 fwd004 sw006
+sw006 fwd010 sw001
+sw003 fwd005 sw004
+sw004 fwd011 sw003

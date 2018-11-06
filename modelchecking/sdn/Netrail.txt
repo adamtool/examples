@@ -1,0 +1,52 @@
+.name "Netrail"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+.arcs
+sw000 fwd000 sw004
+sw004 fwd010 sw000
+sw000 fwd001 sw006
+sw006 fwd011 sw000
+sw001 fwd002 sw002
+sw002 fwd012 sw001
+sw001 fwd003 sw006
+sw006 fwd013 sw001
+sw002 fwd004 sw003
+sw003 fwd014 sw002
+sw002 fwd005 sw004
+sw004 fwd015 sw002
+sw003 fwd006 sw004
+sw004 fwd016 sw003
+sw004 fwd007 sw005
+sw005 fwd017 sw004
+sw004 fwd008 sw006
+sw006 fwd018 sw004
+sw005 fwd009 sw006
+sw006 fwd019 sw005

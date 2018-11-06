@@ -1,0 +1,108 @@
+.name "Restena"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+sw012
+sw013
+sw014
+sw015
+sw016
+sw017
+sw018
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+fwd032
+fwd033
+fwd034
+fwd035
+fwd036
+fwd037
+fwd038
+fwd039
+fwd040
+fwd041
+.arcs
+sw000 fwd000 sw009
+sw009 fwd021 sw000
+sw001 fwd001 sw009
+sw009 fwd022 sw001
+sw002 fwd002 sw010
+sw010 fwd023 sw002
+sw002 fwd003 sw003
+sw003 fwd024 sw002
+sw003 fwd004 sw009
+sw009 fwd025 sw003
+sw004 fwd005 sw010
+sw010 fwd026 sw004
+sw005 fwd006 sw010
+sw010 fwd027 sw005
+sw006 fwd007 sw009
+sw009 fwd028 sw006
+sw007 fwd008 sw015
+sw015 fwd029 sw007
+sw008 fwd009 sw010
+sw010 fwd030 sw008
+sw009 fwd010 sw010
+sw010 fwd031 sw009
+sw009 fwd011 sw016
+sw016 fwd032 sw009
+sw009 fwd012 sw017
+sw017 fwd033 sw009
+sw010 fwd013 sw011
+sw011 fwd034 sw010
+sw010 fwd014 sw018
+sw018 fwd035 sw010
+sw012 fwd015 sw018
+sw018 fwd036 sw012
+sw012 fwd016 sw014
+sw014 fwd037 sw012
+sw013 fwd017 sw014
+sw014 fwd038 sw013
+sw014 fwd018 sw017
+sw017 fwd039 sw014
+sw014 fwd019 sw015
+sw015 fwd040 sw014
+sw015 fwd020 sw016
+sw016 fwd041 sw015

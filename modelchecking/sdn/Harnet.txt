@@ -1,0 +1,126 @@
+.name "Harnet"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+sw012
+sw013
+sw014
+sw015
+sw016
+sw017
+sw018
+sw019
+sw020
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+fwd032
+fwd033
+fwd034
+fwd035
+fwd036
+fwd037
+fwd038
+fwd039
+fwd040
+fwd041
+fwd042
+fwd043
+fwd044
+fwd045
+fwd046
+fwd047
+fwd048
+fwd049
+.arcs
+sw000 fwd000 sw002
+sw002 fwd025 sw000
+sw001 fwd001 sw002
+sw002 fwd026 sw001
+sw002 fwd002 sw003
+sw003 fwd027 sw002
+sw002 fwd003 sw006
+sw006 fwd028 sw002
+sw002 fwd004 sw007
+sw007 fwd029 sw002
+sw002 fwd005 sw015
+sw015 fwd030 sw002
+sw004 fwd006 sw014
+sw014 fwd031 sw004
+sw005 fwd007 sw016
+sw016 fwd032 sw005
+sw008 fwd008 sw018
+sw018 fwd033 sw008
+sw009 fwd009 sw018
+sw018 fwd034 sw009
+sw010 fwd010 sw013
+sw013 fwd035 sw010
+sw011 fwd011 sw015
+sw015 fwd036 sw011
+sw012 fwd012 sw018
+sw018 fwd037 sw012
+sw013 fwd013 sw014
+sw014 fwd038 sw013
+sw013 fwd014 sw015
+sw015 fwd039 sw013
+sw014 fwd015 sw016
+sw016 fwd040 sw014
+sw015 fwd016 sw016
+sw016 fwd041 sw015
+sw015 fwd017 sw017
+sw017 fwd042 sw015
+sw015 fwd018 sw017
+sw017 fwd043 sw015
+sw016 fwd019 sw018
+sw018 fwd044 sw016
+sw016 fwd020 sw018
+sw018 fwd045 sw016
+sw017 fwd021 sw018
+sw018 fwd046 sw017
+sw017 fwd022 sw019
+sw019 fwd047 sw017
+sw018 fwd023 sw020
+sw020 fwd048 sw018
+sw019 fwd024 sw020
+sw020 fwd049 sw019

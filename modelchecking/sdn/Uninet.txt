@@ -1,0 +1,118 @@
+.name "Uninet"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+sw012
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+fwd032
+fwd033
+fwd034
+fwd035
+fwd036
+fwd037
+fwd038
+fwd039
+fwd040
+fwd041
+fwd042
+fwd043
+fwd044
+fwd045
+fwd046
+fwd047
+fwd048
+fwd049
+.arcs
+sw000 fwd000 sw010
+sw010 fwd025 sw000
+sw001 fwd001 sw012
+sw012 fwd026 sw001
+sw001 fwd002 sw002
+sw002 fwd027 sw001
+sw001 fwd003 sw002
+sw002 fwd028 sw001
+sw001 fwd004 sw004
+sw004 fwd029 sw001
+sw002 fwd005 sw003
+sw003 fwd030 sw002
+sw003 fwd006 sw004
+sw004 fwd031 sw003
+sw003 fwd007 sw004
+sw004 fwd032 sw003
+sw004 fwd008 sw006
+sw006 fwd033 sw004
+sw004 fwd009 sw007
+sw007 fwd034 sw004
+sw004 fwd010 sw011
+sw011 fwd035 sw004
+sw004 fwd011 sw011
+sw011 fwd036 sw004
+sw004 fwd012 sw012
+sw012 fwd037 sw004
+sw005 fwd013 sw006
+sw006 fwd038 sw005
+sw005 fwd014 sw006
+sw006 fwd039 sw005
+sw005 fwd015 sw007
+sw007 fwd040 sw005
+sw006 fwd016 sw007
+sw007 fwd041 sw006
+sw007 fwd017 sw010
+sw010 fwd042 sw007
+sw008 fwd018 sw009
+sw009 fwd043 sw008
+sw008 fwd019 sw010
+sw010 fwd044 sw008
+sw008 fwd020 sw010
+sw010 fwd045 sw008
+sw009 fwd021 sw011
+sw011 fwd046 sw009
+sw009 fwd022 sw011
+sw011 fwd047 sw009
+sw010 fwd023 sw011
+sw011 fwd048 sw010
+sw010 fwd024 sw011
+sw011 fwd049 sw010
