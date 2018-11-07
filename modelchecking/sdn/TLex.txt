@@ -40,42 +40,30 @@ fwd022
 fwd023
 fwd024
 fwd025
-fwd026
-fwd027
-fwd028
-fwd029
-fwd030
-fwd031
 .arcs
-sw000 fwd000 sw003
-sw003 fwd016 sw000
-sw000 fwd001 sw003
-sw003 fwd017 sw000
-sw001 fwd002 sw003
-sw003 fwd018 sw001
-sw002 fwd003 sw011
-sw011 fwd019 sw002
-sw002 fwd004 sw003
-sw003 fwd020 sw002
-sw002 fwd005 sw003
-sw003 fwd021 sw002
+sw001 fwd000 sw003
+sw003 fwd013 sw001
+sw010 fwd001 sw011
+sw011 fwd014 sw010
+sw005 fwd002 sw011
+sw011 fwd015 sw005
+sw006 fwd003 sw011
+sw011 fwd016 sw006
+sw003 fwd004 sw010
+sw010 fwd017 sw003
+sw002 fwd005 sw011
+sw011 fwd018 sw002
 sw003 fwd006 sw011
-sw011 fwd022 sw003
-sw003 fwd007 sw010
-sw010 fwd023 sw003
-sw003 fwd008 sw010
-sw010 fwd024 sw003
-sw004 fwd009 sw011
+sw011 fwd019 sw003
+sw009 fwd007 sw010
+sw010 fwd020 sw009
+sw002 fwd008 sw003
+sw003 fwd021 sw002
+sw007 fwd009 sw011
+sw011 fwd022 sw007
+sw000 fwd010 sw003
+sw003 fwd023 sw000
+sw008 fwd011 sw011
+sw011 fwd024 sw008
+sw004 fwd012 sw011
 sw011 fwd025 sw004
-sw005 fwd010 sw011
-sw011 fwd026 sw005
-sw006 fwd011 sw011
-sw011 fwd027 sw006
-sw007 fwd012 sw011
-sw011 fwd028 sw007
-sw008 fwd013 sw011
-sw011 fwd029 sw008
-sw009 fwd014 sw010
-sw010 fwd030 sw009
-sw010 fwd015 sw011
-sw011 fwd031 sw010

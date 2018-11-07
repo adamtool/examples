@@ -25,17 +25,17 @@ fwd011
 fwd012
 fwd013
 .arcs
-sw000 fwd000 sw005
-sw005 fwd007 sw000
-sw001 fwd001 sw005
-sw005 fwd008 sw001
-sw002 fwd002 sw003
-sw003 fwd009 sw002
-sw002 fwd003 sw005
-sw005 fwd010 sw002
-sw003 fwd004 sw004
-sw004 fwd011 sw003
-sw005 fwd005 sw006
-sw006 fwd012 sw005
-sw005 fwd006 sw007
-sw007 fwd013 sw005
+sw005 fwd000 sw006
+sw006 fwd007 sw005
+sw005 fwd001 sw007
+sw007 fwd008 sw005
+sw001 fwd002 sw005
+sw005 fwd009 sw001
+sw002 fwd003 sw003
+sw003 fwd010 sw002
+sw000 fwd004 sw005
+sw005 fwd011 sw000
+sw002 fwd005 sw005
+sw005 fwd012 sw002
+sw003 fwd006 sw004
+sw004 fwd013 sw003
