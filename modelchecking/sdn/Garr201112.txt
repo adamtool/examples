@@ -1,0 +1,366 @@
+.name "Garr201112"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+sw012
+sw013
+sw014
+sw015
+sw016
+sw017
+sw018
+sw019
+sw020
+sw021
+sw022
+sw023
+sw024
+sw025
+sw026
+sw027
+sw028
+sw029
+sw030
+sw031
+sw032
+sw033
+sw034
+sw035
+sw036
+sw037
+sw038
+sw039
+sw040
+sw041
+sw042
+sw043
+sw044
+sw045
+sw046
+sw047
+sw048
+sw049
+sw050
+sw051
+sw052
+sw053
+sw054
+sw055
+sw056
+sw057
+sw058
+sw059
+sw060
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+fwd032
+fwd033
+fwd034
+fwd035
+fwd036
+fwd037
+fwd038
+fwd039
+fwd040
+fwd041
+fwd042
+fwd043
+fwd044
+fwd045
+fwd046
+fwd047
+fwd048
+fwd049
+fwd050
+fwd051
+fwd052
+fwd053
+fwd054
+fwd055
+fwd056
+fwd057
+fwd058
+fwd059
+fwd060
+fwd061
+fwd062
+fwd063
+fwd064
+fwd065
+fwd066
+fwd067
+fwd068
+fwd069
+fwd070
+fwd071
+fwd072
+fwd073
+fwd074
+fwd075
+fwd076
+fwd077
+fwd078
+fwd079
+fwd080
+fwd081
+fwd082
+fwd083
+fwd084
+fwd085
+fwd086
+fwd087
+fwd088
+fwd089
+fwd090
+fwd091
+fwd092
+fwd093
+fwd094
+fwd095
+fwd096
+fwd097
+fwd098
+fwd099
+fwd100
+fwd101
+fwd102
+fwd103
+fwd104
+fwd105
+fwd106
+fwd107
+fwd108
+fwd109
+fwd110
+fwd111
+fwd112
+fwd113
+fwd114
+fwd115
+fwd116
+fwd117
+fwd118
+fwd119
+fwd120
+fwd121
+fwd122
+fwd123
+fwd124
+fwd125
+fwd126
+fwd127
+fwd128
+fwd129
+fwd130
+fwd131
+fwd132
+fwd133
+fwd134
+fwd135
+fwd136
+fwd137
+fwd138
+fwd139
+fwd140
+fwd141
+fwd142
+fwd143
+fwd144
+fwd145
+fwd146
+fwd147
+fwd148
+fwd149
+.arcs
+sw018 fwd000 sw055
+sw055 fwd075 sw018
+sw046 fwd001 sw060
+sw060 fwd076 sw046
+sw004 fwd002 sw007
+sw007 fwd077 sw004
+sw031 fwd003 sw034
+sw034 fwd078 sw031
+sw042 fwd004 sw049
+sw049 fwd079 sw042
+sw036 fwd005 sw037
+sw037 fwd080 sw036
+sw039 fwd006 sw059
+sw059 fwd081 sw039
+sw028 fwd007 sw055
+sw055 fwd082 sw028
+sw024 fwd008 sw037
+sw037 fwd083 sw024
+sw037 fwd009 sw055
+sw055 fwd084 sw037
+sw016 fwd010 sw034
+sw034 fwd085 sw016
+sw017 fwd011 sw034
+sw034 fwd086 sw017
+sw004 fwd012 sw055
+sw055 fwd087 sw004
+sw014 fwd013 sw026
+sw026 fwd088 sw014
+sw034 fwd014 sw035
+sw035 fwd089 sw034
+sw044 fwd015 sw055
+sw055 fwd090 sw044
+sw018 fwd016 sw041
+sw041 fwd091 sw018
+sw014 fwd017 sw046
+sw046 fwd092 sw014
+sw014 fwd018 sw055
+sw055 fwd093 sw014
+sw035 fwd019 sw037
+sw037 fwd094 sw035
+sw009 fwd020 sw058
+sw058 fwd095 sw009
+sw027 fwd021 sw055
+sw055 fwd096 sw027
+sw038 fwd022 sw056
+sw056 fwd097 sw038
+sw012 fwd023 sw020
+sw020 fwd098 sw012
+sw049 fwd024 sw050
+sw050 fwd099 sw049
+sw020 fwd025 sw021
+sw021 fwd100 sw020
+sw015 fwd026 sw035
+sw035 fwd101 sw015
+sw037 fwd027 sw039
+sw039 fwd102 sw037
+sw047 fwd028 sw049
+sw049 fwd103 sw047
+sw018 fwd029 sw049
+sw049 fwd104 sw018
+sw011 fwd030 sw055
+sw055 fwd105 sw011
+sw002 fwd031 sw035
+sw035 fwd106 sw002
+sw013 fwd032 sw029
+sw029 fwd107 sw013
+sw037 fwd033 sw040
+sw040 fwd108 sw037
+sw040 fwd034 sw054
+sw054 fwd109 sw040
+sw006 fwd035 sw055
+sw055 fwd110 sw006
+sw014 fwd036 sw034
+sw034 fwd111 sw014
+sw034 fwd037 sw036
+sw036 fwd112 sw034
+sw003 fwd038 sw037
+sw037 fwd113 sw003
+sw004 fwd039 sw010
+sw010 fwd114 sw004
+sw021 fwd040 sw023
+sw023 fwd115 sw021
+sw029 fwd041 sw030
+sw030 fwd116 sw029
+sw014 fwd042 sw057
+sw057 fwd117 sw014
+sw015 fwd043 sw053
+sw053 fwd118 sw015
+sw010 fwd044 sw044
+sw044 fwd119 sw010
+sw001 fwd045 sw004
+sw004 fwd120 sw001
+sw037 fwd046 sw051
+sw051 fwd121 sw037
+sw019 fwd047 sw021
+sw021 fwd122 sw019
+sw017 fwd048 sw056
+sw056 fwd123 sw017
+sw037 fwd049 sw056
+sw056 fwd124 sw037
+sw006 fwd050 sw045
+sw045 fwd125 sw006
+sw055 fwd051 sw059
+sw059 fwd126 sw055
+sw014 fwd052 sw035
+sw035 fwd127 sw014
+sw018 fwd053 sw021
+sw021 fwd128 sw018
+sw037 fwd054 sw038
+sw038 fwd129 sw037
+sw018 fwd055 sw043
+sw043 fwd130 sw018
+sw040 fwd056 sw059
+sw059 fwd131 sw040
+sw014 fwd057 sw029
+sw029 fwd132 sw014
+sw035 fwd058 sw056
+sw056 fwd133 sw035
+sw014 fwd059 sw049
+sw049 fwd134 sw014
+sw015 fwd060 sw037
+sw037 fwd135 sw015
+sw048 fwd061 sw049
+sw049 fwd136 sw048
+sw021 fwd062 sw022
+sw022 fwd137 sw021
+sw008 fwd063 sw022
+sw022 fwd138 sw008
+sw010 fwd064 sw045
+sw045 fwd139 sw010
+sw035 fwd065 sw052
+sw052 fwd140 sw035
+sw010 fwd066 sw021
+sw021 fwd141 sw010
+sw031 fwd067 sw033
+sw033 fwd142 sw031
+sw032 fwd068 sw049
+sw049 fwd143 sw032
+sw025 fwd069 sw037
+sw037 fwd144 sw025
+sw010 fwd070 sw055
+sw055 fwd145 sw010
+sw037 fwd071 sw058
+sw058 fwd146 sw037
+sw000 fwd072 sw035
+sw035 fwd147 sw000
+sw005 fwd073 sw055
+sw055 fwd148 sw005
+sw029 fwd074 sw059
+sw059 fwd149 sw029

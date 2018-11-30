@@ -1,0 +1,27 @@
+// unsat
+.name "minimal"
+.type LPN
+.options
+winningCondition="SAFETY"
+
+.places
+
+A[env="true"]
+B[env="true"]
+C[env="true"]
+D[env="true"]
+E[env="true"]
+F[env="true"]
+
+
+.transitions
+tA
+tB
+tC
+
+.flows
+tA:{A}->{D}
+tB:{B}->{E}
+tC:{C}->{F}
+
+.initial_marking {A,B,C}

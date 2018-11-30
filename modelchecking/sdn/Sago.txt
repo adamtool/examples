@@ -1,0 +1,91 @@
+.name "Sago"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+sw012
+sw013
+sw014
+sw015
+sw016
+sw017
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+fwd032
+fwd033
+.arcs
+sw000 fwd000 sw001
+sw001 fwd017 sw000
+sw016 fwd001 sw017
+sw017 fwd018 sw016
+sw004 fwd002 sw007
+sw007 fwd019 sw004
+sw006 fwd003 sw007
+sw007 fwd020 sw006
+sw010 fwd004 sw013
+sw013 fwd021 sw010
+sw012 fwd005 sw013
+sw013 fwd022 sw012
+sw001 fwd006 sw016
+sw016 fwd023 sw001
+sw012 fwd007 sw015
+sw015 fwd024 sw012
+sw008 fwd008 sw009
+sw009 fwd025 sw008
+sw014 fwd009 sw017
+sw017 fwd026 sw014
+sw002 fwd010 sw003
+sw003 fwd027 sw002
+sw000 fwd011 sw004
+sw004 fwd028 sw000
+sw014 fwd012 sw015
+sw015 fwd029 sw014
+sw010 fwd013 sw011
+sw011 fwd030 sw010
+sw002 fwd014 sw005
+sw005 fwd031 sw002
+sw003 fwd015 sw017
+sw017 fwd032 sw003
+sw008 fwd016 sw011
+sw011 fwd033 sw008

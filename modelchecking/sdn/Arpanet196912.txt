@@ -1,0 +1,25 @@
+.name "Arpanet196912"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+.arcs
+sw000 fwd000 sw001
+sw001 fwd004 sw000
+sw001 fwd001 sw002
+sw002 fwd005 sw001
+sw000 fwd002 sw003
+sw003 fwd006 sw000
+sw000 fwd003 sw002
+sw002 fwd007 sw000

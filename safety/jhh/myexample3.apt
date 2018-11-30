@@ -3,9 +3,7 @@
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
 .options
-winningCondition="SAFETY",
-n=10,
-b=3
+winningCondition="SAFETY"
 
 .places
 E1[env="true"]

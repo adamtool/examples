@@ -1,0 +1,159 @@
+.name "Sunet"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+sw012
+sw013
+sw014
+sw015
+sw016
+sw017
+sw018
+sw019
+sw020
+sw021
+sw022
+sw023
+sw024
+sw025
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+fwd032
+fwd033
+fwd034
+fwd035
+fwd036
+fwd037
+fwd038
+fwd039
+fwd040
+fwd041
+fwd042
+fwd043
+fwd044
+fwd045
+fwd046
+fwd047
+fwd048
+fwd049
+fwd050
+fwd051
+fwd052
+fwd053
+fwd054
+fwd055
+fwd056
+fwd057
+fwd058
+fwd059
+fwd060
+fwd061
+fwd062
+fwd063
+.arcs
+sw022 fwd000 sw023
+sw023 fwd032 sw022
+sw023 fwd001 sw024
+sw024 fwd033 sw023
+sw000 fwd002 sw007
+sw007 fwd034 sw000
+sw008 fwd003 sw009
+sw009 fwd035 sw008
+sw018 fwd004 sw019
+sw019 fwd036 sw018
+sw001 fwd005 sw006
+sw006 fwd037 sw001
+sw003 fwd006 sw007
+sw007 fwd038 sw003
+sw005 fwd007 sw008
+sw008 fwd039 sw005
+sw001 fwd008 sw002
+sw002 fwd040 sw001
+sw012 fwd009 sw013
+sw013 fwd041 sw012
+sw019 fwd010 sw020
+sw020 fwd042 sw019
+sw000 fwd011 sw004
+sw004 fwd043 sw000
+sw016 fwd012 sw025
+sw025 fwd044 sw016
+sw020 fwd013 sw021
+sw021 fwd045 sw020
+sw019 fwd014 sw021
+sw021 fwd046 sw019
+sw004 fwd015 sw010
+sw010 fwd047 sw004
+sw020 fwd016 sw022
+sw022 fwd048 sw020
+sw010 fwd017 sw015
+sw015 fwd049 sw010
+sw009 fwd018 sw010
+sw010 fwd050 sw009
+sw002 fwd019 sw003
+sw003 fwd051 sw002
+sw002 fwd020 sw024
+sw024 fwd052 sw002
+sw011 fwd021 sw012
+sw012 fwd053 sw011
+sw002 fwd022 sw017
+sw017 fwd054 sw002
+sw016 fwd023 sw017
+sw017 fwd055 sw016
+sw009 fwd024 sw013
+sw013 fwd056 sw009
+sw014 fwd025 sw016
+sw016 fwd057 sw014
+sw005 fwd026 sw016
+sw016 fwd058 sw005
+sw021 fwd027 sw022
+sw022 fwd059 sw021
+sw000 fwd028 sw006
+sw006 fwd060 sw000
+sw001 fwd029 sw007
+sw007 fwd061 sw001
+sw011 fwd030 sw015
+sw015 fwd062 sw011
+sw023 fwd031 sw025
+sw025 fwd063 sw023

@@ -1,0 +1,31 @@
+.name "Mren"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+.arcs
+sw001 fwd000 sw002
+sw002 fwd005 sw001
+sw002 fwd001 sw005
+sw005 fwd006 sw002
+sw002 fwd002 sw003
+sw003 fwd007 sw002
+sw000 fwd003 sw002
+sw002 fwd008 sw000
+sw002 fwd004 sw004
+sw004 fwd009 sw002

@@ -1,0 +1,128 @@
+.name "Fccn"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+sw012
+sw013
+sw014
+sw015
+sw016
+sw017
+sw018
+sw019
+sw020
+sw021
+sw022
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+fwd032
+fwd033
+fwd034
+fwd035
+fwd036
+fwd037
+fwd038
+fwd039
+fwd040
+fwd041
+fwd042
+fwd043
+fwd044
+fwd045
+fwd046
+fwd047
+fwd048
+fwd049
+.arcs
+sw006 fwd000 sw009
+sw009 fwd025 sw006
+sw015 fwd001 sw020
+sw020 fwd026 sw015
+sw017 fwd002 sw020
+sw020 fwd027 sw017
+sw001 fwd003 sw006
+sw006 fwd028 sw001
+sw006 fwd004 sw012
+sw012 fwd029 sw006
+sw006 fwd005 sw007
+sw007 fwd030 sw006
+sw020 fwd006 sw021
+sw021 fwd031 sw020
+sw008 fwd007 sw010
+sw010 fwd032 sw008
+sw005 fwd008 sw006
+sw006 fwd033 sw005
+sw003 fwd009 sw006
+sw006 fwd034 sw003
+sw006 fwd010 sw022
+sw022 fwd035 sw006
+sw005 fwd011 sw022
+sw022 fwd036 sw005
+sw018 fwd012 sw020
+sw020 fwd037 sw018
+sw020 fwd013 sw022
+sw022 fwd038 sw020
+sw008 fwd014 sw011
+sw011 fwd039 sw008
+sw002 fwd015 sw020
+sw020 fwd040 sw002
+sw014 fwd016 sw020
+sw020 fwd041 sw014
+sw007 fwd017 sw022
+sw022 fwd042 sw007
+sw019 fwd018 sw020
+sw020 fwd043 sw019
+sw006 fwd019 sw008
+sw008 fwd044 sw006
+sw004 fwd020 sw006
+sw006 fwd045 sw004
+sw021 fwd021 sw022
+sw022 fwd046 sw021
+sw000 fwd022 sw006
+sw006 fwd047 sw000
+sw006 fwd023 sw013
+sw013 fwd048 sw006
+sw016 fwd024 sw020
+sw020 fwd049 sw016

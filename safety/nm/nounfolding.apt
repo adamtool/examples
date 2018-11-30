@@ -1,0 +1,29 @@
+// unsat
+.name "oneunfolding"
+.type LPN
+.options
+winningCondition="SAFETY"
+
+.places
+
+A[env="true"]
+B
+C[env="true"]
+
+D
+
+E[bad="true"]
+F
+G
+
+.transitions
+tA
+tB
+tC
+
+.flows
+tA:{A,B}->{D,E}
+tB:{B,C}->{D,F}
+tC:{F}->{G}
+
+.initial_marking {A,B,C}

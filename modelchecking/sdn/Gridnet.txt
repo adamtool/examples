@@ -1,0 +1,94 @@
+.name "Gridnet"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+fwd032
+fwd033
+fwd034
+fwd035
+fwd036
+fwd037
+fwd038
+fwd039
+.arcs
+sw001 fwd000 sw002
+sw002 fwd020 sw001
+sw004 fwd001 sw007
+sw007 fwd021 sw004
+sw006 fwd002 sw007
+sw007 fwd022 sw006
+sw004 fwd003 sw006
+sw006 fwd023 sw004
+sw004 fwd004 sw005
+sw005 fwd024 sw004
+sw002 fwd005 sw008
+sw008 fwd025 sw002
+sw005 fwd006 sw007
+sw007 fwd026 sw005
+sw001 fwd007 sw004
+sw004 fwd027 sw001
+sw003 fwd008 sw008
+sw008 fwd028 sw003
+sw001 fwd009 sw005
+sw005 fwd029 sw001
+sw001 fwd010 sw006
+sw006 fwd030 sw001
+sw000 fwd011 sw007
+sw007 fwd031 sw000
+sw001 fwd012 sw007
+sw007 fwd032 sw001
+sw005 fwd013 sw006
+sw006 fwd033 sw005
+sw002 fwd014 sw003
+sw003 fwd034 sw002
+sw000 fwd015 sw003
+sw003 fwd035 sw000
+sw000 fwd016 sw008
+sw008 fwd036 sw000
+sw003 fwd017 sw004
+sw004 fwd037 sw003
+sw000 fwd018 sw002
+sw002 fwd038 sw000
+sw006 fwd019 sw008
+sw008 fwd039 sw006

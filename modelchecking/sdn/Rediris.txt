@@ -1,0 +1,148 @@
+.name "Rediris"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+sw012
+sw013
+sw014
+sw015
+sw016
+sw017
+sw018
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+fwd030
+fwd031
+fwd032
+fwd033
+fwd034
+fwd035
+fwd036
+fwd037
+fwd038
+fwd039
+fwd040
+fwd041
+fwd042
+fwd043
+fwd044
+fwd045
+fwd046
+fwd047
+fwd048
+fwd049
+fwd050
+fwd051
+fwd052
+fwd053
+fwd054
+fwd055
+fwd056
+fwd057
+fwd058
+fwd059
+fwd060
+fwd061
+.arcs
+sw011 fwd000 sw016
+sw016 fwd031 sw011
+sw004 fwd001 sw007
+sw007 fwd032 sw004
+sw007 fwd002 sw016
+sw016 fwd033 sw007
+sw012 fwd003 sw016
+sw016 fwd034 sw012
+sw009 fwd004 sw018
+sw018 fwd035 sw009
+sw000 fwd005 sw003
+sw003 fwd036 sw000
+sw005 fwd006 sw008
+sw008 fwd037 sw005
+sw016 fwd007 sw017
+sw017 fwd038 sw016
+sw006 fwd008 sw007
+sw007 fwd039 sw006
+sw012 fwd009 sw013
+sw013 fwd040 sw012
+sw005 fwd010 sw012
+sw012 fwd041 sw005
+sw003 fwd011 sw016
+sw016 fwd042 sw003
+sw016 fwd012 sw018
+sw018 fwd043 sw016
+sw004 fwd013 sw005
+sw005 fwd044 sw004
+sw002 fwd014 sw010
+sw010 fwd045 sw002
+sw009 fwd015 sw010
+sw010 fwd046 sw009
+sw009 fwd016 sw016
+sw016 fwd047 sw009
+sw003 fwd017 sw009
+sw009 fwd048 sw003
+sw002 fwd018 sw003
+sw003 fwd049 sw002
+sw011 fwd019 sw012
+sw012 fwd050 sw011
+sw012 fwd020 sw015
+sw015 fwd051 sw012
+sw014 fwd021 sw016
+sw016 fwd052 sw014
+sw005 fwd022 sw016
+sw016 fwd053 sw005
+sw008 fwd023 sw012
+sw012 fwd054 sw008
+sw013 fwd024 sw014
+sw014 fwd055 sw013
+sw005 fwd025 sw007
+sw007 fwd056 sw005
+sw001 fwd026 sw018
+sw018 fwd057 sw001
+sw000 fwd027 sw006
+sw006 fwd058 sw000
+sw001 fwd028 sw006
+sw006 fwd059 sw001
+sw015 fwd029 sw016
+sw016 fwd060 sw015
+sw006 fwd030 sw016
+sw016 fwd061 sw006

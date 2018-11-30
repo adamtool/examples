@@ -1,0 +1,78 @@
+.name "Nsfnet"
+.type LTS
+.states
+sw000[initial]
+sw001
+sw002
+sw003
+sw004
+sw005
+sw006
+sw007
+sw008
+sw009
+sw010
+sw011
+sw012
+.labels
+fwd000
+fwd001
+fwd002
+fwd003
+fwd004
+fwd005
+fwd006
+fwd007
+fwd008
+fwd009
+fwd010
+fwd011
+fwd012
+fwd013
+fwd014
+fwd015
+fwd016
+fwd017
+fwd018
+fwd019
+fwd020
+fwd021
+fwd022
+fwd023
+fwd024
+fwd025
+fwd026
+fwd027
+fwd028
+fwd029
+.arcs
+sw001 fwd000 sw002
+sw002 fwd015 sw001
+sw005 fwd001 sw009
+sw009 fwd016 sw005
+sw009 fwd002 sw011
+sw011 fwd017 sw009
+sw003 fwd003 sw012
+sw012 fwd018 sw003
+sw005 fwd004 sw006
+sw006 fwd019 sw005
+sw001 fwd005 sw004
+sw004 fwd020 sw001
+sw006 fwd006 sw007
+sw007 fwd021 sw006
+sw008 fwd007 sw009
+sw009 fwd022 sw008
+sw000 fwd008 sw011
+sw011 fwd023 sw000
+sw004 fwd009 sw012
+sw012 fwd024 sw004
+sw000 fwd010 sw007
+sw007 fwd025 sw000
+sw006 fwd011 sw012
+sw012 fwd026 sw006
+sw010 fwd012 sw011
+sw011 fwd027 sw010
+sw011 fwd013 sw012
+sw012 fwd028 sw011
+sw000 fwd014 sw002
+sw002 fwd029 sw000
