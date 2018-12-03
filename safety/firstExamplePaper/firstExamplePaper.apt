@@ -10,8 +10,8 @@ Env[env="true"]
 A[env="true"]
 B[env="true"]
 Sys[token=1]
-A_[token=1]
-B_[token=1]
+AA[token=1]
+BB[token=1]
 EA[env="true"]
 EB[env="true"]
 qbad[token=1,bad="true"]
@@ -21,8 +21,8 @@ t1
 t2
 test1
 test2
-t1_
-t2_
+t11
+t22
 tbad1
 tbad2
 tbad3
@@ -34,12 +34,12 @@ t1: {Env} -> {A}
 t2: {Env} -> {B}
 test1: {A,Sys} -> {Sys,EA}
 test2: {B,Sys} -> {Sys,EB}
-t1_: {Sys} -> {A_}
-t2_: {Sys} -> {B_}
+t11: {Sys} -> {AA}
+t22: {Sys} -> {BB}
 // bad states
-tbad1: {A_,EB} -> {EB,qbad}
-tbad2: {B_,EA} -> {EA,qbad}
-tbad3: {A_,B} -> {B,qbad}
-tbad4: {B_,A} -> {A,qbad}
+tbad1: {AA,EB} -> {EB,qbad}
+tbad2: {BB,EA} -> {EA,qbad}
+tbad3: {AA,B} -> {B,qbad}
+tbad4: {BB,A} -> {A,qbad}
 
 .initial_marking {Env,Sys}
