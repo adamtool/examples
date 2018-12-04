@@ -1,4 +1,4 @@
-// unsat
+// three env players, unsat
 .name "minimal"
 .type LPN
 .options
