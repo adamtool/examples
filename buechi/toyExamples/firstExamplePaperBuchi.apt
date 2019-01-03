@@ -4,7 +4,7 @@
 .type LPN
 .description "the easy buchi version."
 .options
-winningCondition="BUCHI"
+condition="BUCHI"
 
 .places
 env1[env="true", buchi="true"]

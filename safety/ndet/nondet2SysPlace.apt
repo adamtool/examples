@@ -5,7 +5,7 @@
 .description "Alarm system."
 .type LPN
 .options
-winningCondition="A_SAFETY",
+condition="A_SAFETY",
 MAXTOKENCOUNT=4
 
 .places

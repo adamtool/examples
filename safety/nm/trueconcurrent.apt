@@ -2,7 +2,7 @@
 .name "minimal"
 .type LPN
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 

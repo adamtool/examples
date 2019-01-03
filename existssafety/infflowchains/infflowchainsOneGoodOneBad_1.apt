@@ -3,7 +3,7 @@
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
 .options
-winningCondition="E_SAFETY"
+condition="E_SAFETY"
 
 .places
 sa1[bad="true"]

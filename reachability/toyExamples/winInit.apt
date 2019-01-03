@@ -2,7 +2,7 @@
 .name "winInit.net"
 .type LPN
 .options
-winningCondition="E_REACHABILITY"
+condition="E_REACHABILITY"
 
 .places
 env[env="true",reach="true"]

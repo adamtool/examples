@@ -3,7 +3,7 @@
 .type LPN
 .description "testing the building strategy algorithm"
 .options
-winningCondition="REACHABILITY"
+condition="REACHABILITY"
 
 .places
 E1[env="true"]

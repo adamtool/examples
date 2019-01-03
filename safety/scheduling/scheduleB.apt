@@ -2,7 +2,7 @@
 .type LPN
 .description "the graph game is of interest"
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 S11[token=1]

@@ -2,7 +2,7 @@
 .type LPN
 .description "like first example + reversible"
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 env[env="true"]

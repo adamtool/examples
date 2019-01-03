@@ -4,7 +4,7 @@
 .type LPN
 .description "env skips the systems"
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 env1[env="true"]

@@ -4,7 +4,7 @@
 .type LPN
 .description "One inifinite env path missing the buchi state. (Should have no strategy)"
 .options
-winningCondition="BUCHI"
+condition="BUCHI"
 
 .places
 env1[env="true"]

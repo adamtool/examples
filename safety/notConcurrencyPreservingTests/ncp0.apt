@@ -3,7 +3,7 @@
 .type LPN
 .description "Testing not concurrency preserving net 0"
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 env1[env="true"] 

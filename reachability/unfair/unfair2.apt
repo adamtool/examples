@@ -4,7 +4,7 @@
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
 .options
-winningCondition="REACHABILITY"
+condition="REACHABILITY"
 
 .places
 E1[env="true"]

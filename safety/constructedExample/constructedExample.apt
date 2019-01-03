@@ -2,7 +2,7 @@
 .name "constructed example with loop"
 .type LPN
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 s1[env="true"]

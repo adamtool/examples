@@ -4,7 +4,7 @@
 .type LPN
 .description "infinite system cannot prevent the enviroment to visit a bad place"
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 env1[env="true"]

@@ -5,7 +5,7 @@
 .type LPN
 .description "Alarm system."
 .options
-winningCondition="E_REACHABILITY"
+condition="E_REACHABILITY"
 
 .places
 ENV[env="true"]

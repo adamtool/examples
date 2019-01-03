@@ -4,7 +4,7 @@
 .type LPN
 .description "dead."
 .options
-winningCondition="A_SAFETY"
+condition="A_SAFETY"
 
 .places
 E[env="true"]

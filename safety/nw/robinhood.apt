@@ -4,7 +4,7 @@
 .description "Robin Hood and Little John chase the King"
 .type LPN
 .options
-winningCondition="E_REACHABILITY"
+condition="E_REACHABILITY"
 
 .places
 Catch1[token=1,yCoord=1224.54, xCoord=476.75, reach="true"]

@@ -3,7 +3,7 @@
 .type LPN
 .description "Testing not concurrency preserving net 2"
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 S1

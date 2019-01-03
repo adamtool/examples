@@ -4,7 +4,7 @@
 .type HL-PN
 .description "alarm system"
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 env[env="true"]

@@ -2,7 +2,7 @@
 .name "oneunfolding"
 .type LPN
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 

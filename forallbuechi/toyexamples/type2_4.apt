@@ -2,7 +2,7 @@
 .name "one sys alone, one with env"
 .type LPN
 .options
-winningCondition="A_BUCHI"
+condition="A_BUCHI"
 
 .places
 env[env="true",buchi="true"]

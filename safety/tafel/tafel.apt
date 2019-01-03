@@ -3,7 +3,7 @@
 .type LPN
 .description "Example tafel 28.09.2014. Should not have a strategy"
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 Env[env="true"]

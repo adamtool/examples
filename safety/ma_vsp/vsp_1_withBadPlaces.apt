@@ -1,7 +1,7 @@
 .name "vsp_1"
 .type LPN
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 env[env="true"]

@@ -2,7 +2,7 @@
 .name "sendingProtocol"
 .type LPN
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 Env[env="true"]

@@ -1,7 +1,7 @@
 .name "The Watchdog (without partial observation) - 5"
 .type LPN
 .options
-winningCondition="SAFETY",
+condition="SAFETY",
 partialObservation="true"
 
 .places

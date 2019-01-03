@@ -2,7 +2,7 @@
 .type LPN
 .description "entweder deadlock oder nondeterminisms. Also keine Strategy"
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 env[env="true"]

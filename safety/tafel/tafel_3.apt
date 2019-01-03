@@ -7,7 +7,7 @@
 .type LPN
 .description "Example tafel 28.09.2014"
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 Env[env="true"]

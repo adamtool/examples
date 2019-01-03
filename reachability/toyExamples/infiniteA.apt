@@ -4,7 +4,7 @@
 .type LPN
 .description "Is there a problem for infinite env runs?"
 .options
-winningCondition="E_REACHABILITY"
+condition="E_REACHABILITY"
 
 .places
 env1[env="true"]

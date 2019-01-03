@@ -4,7 +4,7 @@
 .type LPN
 .description "security system"
 .options
-winningCondition="A_REACHABILITY"
+condition="A_REACHABILITY"
 
 .places
 env[env="true", reach="true"]

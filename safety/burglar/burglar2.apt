@@ -1,7 +1,7 @@
 .name "burglar2"
 .type LPN
 .options
-winningCondition="A_SAFETY"
+condition="A_SAFETY"
 
 .places
 A

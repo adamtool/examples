@@ -3,7 +3,7 @@
 .type LPN
 .description "Alarm system."
 .options
-winningCondition="REACHABILITY"
+condition="REACHABILITY"
 
 .places
 A[reach="true"]

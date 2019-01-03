@@ -2,7 +2,7 @@
 .name "infiniteChains1.net"
 .type LPN
 .options
-winningCondition="A_BUCHI"
+condition="A_BUCHI"
 
 .places
 env[env="true"]

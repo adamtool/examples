@@ -4,7 +4,7 @@
 .type LPN
 .description "Don't cut illicitly the environment!"
 .options
-winningCondition="REACHABILITY"
+condition="REACHABILITY"
 
 .places
 env1[env="true"]

@@ -2,7 +2,7 @@
 .name "Workflow_M3WP2"
 .type LPN
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 A0[token=3]

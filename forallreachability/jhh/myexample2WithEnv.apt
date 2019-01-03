@@ -5,7 +5,7 @@
 .type LPN
 .description "Testing the correctness of additional system places in the unfolding"
 .options
-winningCondition="A_REACHABILITY"
+condition="A_REACHABILITY"
 
 .places
 ENV[env="true", reach="true"] // sry, I currently still need an environment place :$

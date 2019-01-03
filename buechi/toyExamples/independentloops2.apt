@@ -4,7 +4,7 @@
 .type LPN
 .description "A test requiring unfolding."
 .options
-winningCondition="BUCHI"
+condition="BUCHI"
 
 .places
 env1[env="true"]

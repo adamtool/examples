@@ -4,7 +4,7 @@
 .description "This example should NOT have a winning strategy"
 .type LPN
 .options
-winningCondition="REACHABILITY"
+condition="REACHABILITY"
 
 .places
 E0[yCoord=200.00, xCoord=600.00, env="env"]

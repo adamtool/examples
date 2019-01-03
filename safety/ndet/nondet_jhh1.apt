@@ -5,7 +5,7 @@
 .type LPN
 .description "Alarm system."
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 A[token=1]

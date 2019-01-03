@@ -2,7 +2,7 @@
 .name "lateUnsafe"
 .type LPN
 .options
-winningCondition="A_REACHABILITY"
+condition="A_REACHABILITY"
 
 .places
 p1

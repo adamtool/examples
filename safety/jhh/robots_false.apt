@@ -3,7 +3,7 @@
 .type LPN
 .description "Robots moving on a 2x2 plane"
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 E00[env="true"]

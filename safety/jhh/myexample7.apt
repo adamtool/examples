@@ -2,7 +2,7 @@
 .type LPN
 .description "Reacting to the decision of two environment players."
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
 A[token=1]

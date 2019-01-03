@@ -3,7 +3,7 @@
 .type LPN
 .description "env unfair"
 .options
-winningCondition="E_REACHABILITY"
+condition="E_REACHABILITY"
 
 .places
 S1

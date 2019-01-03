@@ -3,7 +3,7 @@
 .type LPN
 .description "mutex"
 .options
-winningCondition="BUCHI"
+condition="BUCHI"
 
 .places
 Env[env="true"]
