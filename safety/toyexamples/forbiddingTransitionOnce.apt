@@ -6,7 +6,7 @@
 .type LPN
 .description "t is once allowed"
 .options
-condition="SAFETY"
+winningCondition="SAFETY"
 
 .places
 s1
