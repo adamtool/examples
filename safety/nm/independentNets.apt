@@ -1,0 +1,33 @@
+// unsat
+.name "testStepNet"
+.type LPN
+.options
+condition="SAFETY"
+
+.places
+start
+A[env="true"]
+B[env="true"]
+C[env="true"]
+A2[env="true"]
+B2[env="true"]
+
+
+.transitions
+tstart
+tA
+tB
+tC
+tA2
+tB2
+
+
+.flows
+tstart: {start} ->{A,A2}
+tA: {A} ->{B}
+tB: {B}->{C}
+tC: {C} ->{A}
+tA2: {A2}->{B2}
+tB2: {B2}->{A2}
+
+.initial_marking {start}
