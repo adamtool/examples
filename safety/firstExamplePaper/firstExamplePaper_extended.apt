@@ -24,10 +24,10 @@ t11
 t22
 test1
 test2
-t1_
-t2_
-t11_
-t22_
+t1A
+t2A
+t11A
+t22A
 tbad1
 tbad2
 
@@ -39,10 +39,10 @@ t11: {A} -> {EA}
 t22: {B} -> {EB}
 test1: {Sys, A} -> {Sys1,A}
 test2: {Sys, B} -> {Sys1,B}
-t1_: {Sys} -> {AA}
-t2_: {Sys} -> {BB}
-t11_: {Sys1} -> {AA}
-t22_: {Sys1} -> {BB}
+t1A: {Sys} -> {AA}
+t2A: {Sys} -> {BB}
+t11A: {Sys1} -> {AA}
+t22A: {Sys1} -> {BB}
 // bad states
 tbad1: {AA,EB} -> {EB,qbad}
 tbad2: {BB,EA} -> {EA,qbad}
