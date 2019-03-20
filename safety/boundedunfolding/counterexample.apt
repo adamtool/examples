@@ -1,0 +1,23 @@
+.name "Simple Example"
+.description "TODO"
+.type LPN
+.options
+winningCondition="A_SAFETY"
+
+.places
+p1[token=1]
+p2[token=1]
+p3[token=2]
+p4[token=2, bad="true"]
+
+.transitions
+t1
+t2
+t3
+
+.flows
+t1: {p1} -> {p2}
+t2: {p2} -> {p1}
+t3: {p3} -> {p4}
+
+.initial_marking {p1,p3}
