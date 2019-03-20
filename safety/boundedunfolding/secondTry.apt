@@ -1,0 +1,74 @@
+.name "Simple Example"
+.description "A very small APT example to reduce CPU load during development and show all the different ways that nodes in a graph can look"
+.type LPN
+.options
+winningCondition="A_SAFETY"
+
+.places
+p0[yCoord=633.73, xCoord=1391.54, env="true", bad="true"]
+p1[yCoord=921.49, xCoord=654.67, token=1]
+p10[yCoord=435.67, xCoord=1039.0, env="true"]
+p11[yCoord=443.81, xCoord=1180.16, env="true"]
+p12[yCoord=427.67, xCoord=1343.0, env="true"]
+p13[yCoord=201.16, xCoord=1624.32, env="true"]
+p14[yCoord=437.67, xCoord=1510.0, env="true"]
+p15[yCoord=484.56, xCoord=1667.27, env="true"]
+p16[yCoord=433.67, xCoord=1782.92, env="true"]
+p17[yCoord=739.67, xCoord=650.0, token=1]
+p18[yCoord=462.67, xCoord=470.0, env="true"]
+p19[yCoord=467.95, xCoord=884.05, env="true"]
+p2[yCoord=156.37, xCoord=644.78, token=1]
+p20[yCoord=765.67, xCoord=471.0, env="true"]
+p21[yCoord=746.67, xCoord=887.0, env="true"]
+p22[yCoord=734.94, xCoord=1222.69, env="true"]
+p23[yCoord=700.18, xCoord=1655.78, env="true"]
+p3[yCoord=533.2, xCoord=300.61, token=1]
+p7[yCoord=245.22, xCoord=648.76, token=1]
+p8[yCoord=463.67, xCoord=657.0, token=1]
+p9[yCoord=175.97, xCoord=1194.69, env="true"]
+
+.transitions
+t0[label="t0", yCoord=546.25, xCoord=1036.36]
+t1[label="t1", yCoord=543.15, xCoord=1345.74]
+t10[label="t10", yCoord=640.67, xCoord=746.0]
+t11[label="t11", yCoord=616.67, xCoord=980.0]
+t12[label="t12", yCoord=533.88, xCoord=1511.21]
+t13[label="t13", yCoord=529.18, xCoord=1810.7]
+t14[label="t14", yCoord=895.6, xCoord=1038.09]
+t15[label="t15", yCoord=878.34, xCoord=1358.63]
+t16[label="t16", yCoord=870.95, xCoord=1597.8]
+t17[label="t17", yCoord=874.64, xCoord=1809.85]
+t18[label="t18", yCoord=189.02, xCoord=429.84]
+t19[label="t19", yCoord=617.54, xCoord=389.03]
+t2[label="t2", yCoord=332.67, xCoord=1100.0]
+t3[label="t3", yCoord=338.67, xCoord=1248.0]
+t4[label="t4", yCoord=331.67, xCoord=1551.0]
+t5[label="t5", yCoord=338.67, xCoord=1695.0]
+t6[label="t6", yCoord=359.67, xCoord=558.18]
+t7[label="t7", yCoord=361.67, xCoord=742.0]
+t8[label="t8", yCoord=216.28, xCoord=883.92]
+t9[label="t9", yCoord=637.67, xCoord=555.0]
+
+.flows
+t0: {1*p10, 1*p18} -> {1*p0}
+t1: {1*p12, 1*p19} -> {1*p0}
+t10: {1*p8} -> {1*p17, 1*p21}
+t11: {1*p3, 1*p15} -> {1*p8, 1*p23}
+t12: {1*p14, 1*p20} -> {1*p0}
+t13: {1*p21, 1*p16} -> {1*p0}
+t14: {1*p22, 1*p17, 1*p12, 1*p18} -> {1*p9, 1*p1}
+t15: {1*p19, 1*p22, 1*p10, 1*p17} -> {1*p9, 1*p1}
+t16: {1*p1, 1*p14, 1*p23, 1*p21} -> {1*p2, 1*p13}
+t17: {1*p1, 1*p20, 1*p16, 1*p23} -> {1*p13, 1*p2}
+t18: {1*p2} -> {1*p7}
+t19: {1*p3} -> {1*p8}
+t2: {1*p9} -> {1*p11, 1*p10}
+t3: {1*p9} -> {1*p12, 1*p11}
+t4: {1*p13} -> {1*p14, 1*p15}
+t5: {1*p13} -> {1*p15, 1*p16}
+t6: {1*p7} -> {1*p3, 1*p18}
+t7: {1*p7} -> {1*p3, 1*p19}
+t8: {1*p11, 1*p2} -> {1*p22, 1*p7}
+t9: {1*p8} -> {1*p17, 1*p20}
+
+.initial_marking {p2, p9, p13}

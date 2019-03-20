@@ -1,0 +1,159 @@
+// Version of the self reconfiguring robot of the Festschrift for Bengt Jonsson
+// Should HAVE NO STRATEGY since the environment can destroy the same tool on both 
+// robots or destroy two tools on one robot
+.name "SR_r2_t2_p2"
+.type LPN
+.options
+winningCondition="A_SAFETY"
+
+.places
+C[yCoord=2316.01, xCoord=1309.52, env="true", token=0]
+Env[yCoord=81.58, xCoord=1129.34, env="true", token=0]
+P0[yCoord=-5.95, xCoord=-337.1, token=1]
+P1[yCoord=-18.66, xCoord=2952.78, token=11]
+R0P0[yCoord=1106.59, xCoord=126.34, token=2]
+R0P1[yCoord=1094.05, xCoord=2453.78, token=12]
+R0T0P0[yCoord=264.82, xCoord=34.93, token=1]
+R0T0P1[yCoord=241.13, xCoord=2481.47, token=11]
+R0T1P0[yCoord=362.84, xCoord=41.09, token=1]
+R0T1P1[yCoord=382.9, xCoord=2463.74, token=11]
+R1P0[yCoord=1386.34, xCoord=118.4, token=3]
+R1P1[yCoord=1443.82, xCoord=2492.77, token=13]
+R1T0P0[yCoord=508.42, xCoord=41.05, token=1]
+R1T0P1[yCoord=512.5, xCoord=2457.35, token=11]
+R1T1P0[yCoord=646.39, xCoord=31.03, token=1]
+R1T1P1[yCoord=645.06, xCoord=2454.59, token=11]
+R_0T_0P_0[yCoord=930.19, xCoord=802.06, token=2]
+R_0T_0P_1[yCoord=942.01, xCoord=2240.32, token=12]
+R_0T_1P_0[yCoord=903.38, xCoord=593.31, token=2]
+R_0T_1P_1[yCoord=945.78, xCoord=2365.97, token=12]
+R_1T_0P_0[yCoord=906.42, xCoord=359.66, token=3]
+R_1T_0P_1[yCoord=936.62, xCoord=1874.41, token=13]
+R_1T_1P_0[yCoord=900.84, xCoord=239.03, token=3]
+R_1T_1P_1[yCoord=947.58, xCoord=2046.06, token=13]
+S0[yCoord=240.25, xCoord=-343.1, env="true", token=0]
+S1[yCoord=220.86, xCoord=2945.36, env="true", token=0]
+T0[yCoord=1957.4, xCoord=1173.37, token=6]
+T1[yCoord=1957.65, xCoord=1451.69, token=7]
+W0[yCoord=956.98, xCoord=-100.69, env="true", token=0]
+W1[yCoord=925.78, xCoord=2652.66, env="true", token=0]
+bad0[yCoord=621.0, bad="true", xCoord=471.31, token=1]
+bad1[yCoord=311.98, bad="true", xCoord=2076.87, token=11]
+bad3[yCoord=1725.38, xCoord=933.53, bad="true", token=8]
+bad4[yCoord=1762.22, xCoord=1952.6, bad="true", token=9]
+bad5[yCoord=288.87, xCoord=1858.6, bad="true", token=1]
+check00[yCoord=1716.48, xCoord=668.75, token=8]
+check01[yCoord=1729.95, xCoord=1150.24, token=8]
+check10[yCoord=1757.36, xCoord=1683.55, token=9]
+check11[yCoord=1760.04, xCoord=2204.43, token=9]
+r0t0[yCoord=1042.24, xCoord=1032.93, token=4]
+r0t1[yCoord=1206.68, xCoord=1545.29, token=4]
+r1t0[yCoord=1354.89, xCoord=1024.3, token=5]
+r1t1[yCoord=1509.49, xCoord=1543.86, token=5]
+restart0[yCoord=2170.97, xCoord=761.63, token=8]
+restart1[yCoord=2140.7, xCoord=1944.46, token=9]
+work[yCoord=2571.78, xCoord=1257.95, token=10]
+
+.transitions
+nxt[label="nxt", yCoord=2109.03, xCoord=1316.97]
+t0[label="t0", yCoord=110.41, xCoord=-340.17]
+t1[label="t1", yCoord=251.12, xCoord=-123.52]
+t10[label="t10", yCoord=1177.76, xCoord=471.32]
+t11[label="t11", yCoord=1075.46, xCoord=359.09]
+t12[label="t12", yCoord=1089.52, xCoord=729.03]
+t13[label="t13", yCoord=1214.67, xCoord=840.25]
+t14[label="t14", yCoord=1042.71, xCoord=1681.96]
+t15[label="t15", yCoord=1104.81, xCoord=1788.06]
+t16[label="t16", yCoord=1142.44, xCoord=1969.15]
+t17[label="t17", yCoord=1234.05, xCoord=1814.34]
+t18[label="t18", yCoord=1335.06, xCoord=745.28]
+t19[label="t19", yCoord=1488.27, xCoord=629.19]
+t2[label="t2", yCoord=350.08, xCoord=-114.7]
+t20[label="t20", yCoord=1424.36, xCoord=420.84]
+t21[label="t21", yCoord=1487.15, xCoord=899.83]
+t22[label="t22", yCoord=1412.94, xCoord=1762.63]
+t23[label="t23", yCoord=1341.65, xCoord=2179.43]
+t24[label="t24", yCoord=1398.04, xCoord=1946.1]
+t25[label="t25", yCoord=1533.04, xCoord=2091.76]
+t26[label="t26", yCoord=1835.78, xCoord=957.39]
+t27[label="t27", yCoord=1834.13, xCoord=1352.72]
+t28[label="t28", yCoord=1844.01, xCoord=1759.57]
+t29[label="t29", yCoord=1852.25, xCoord=2037.95]
+t3[label="t3", yCoord=509.01, xCoord=-109.23]
+t30[label="t30", yCoord=1753.03, xCoord=1810.78]
+t31[label="t31", yCoord=1750.13, xCoord=2089.94]
+t32[label="t32", yCoord=1721.05, xCoord=827.89]
+t33[label="t33", yCoord=1719.59, xCoord=1038.72]
+t34[label="t34", yCoord=152.39, xCoord=2164.92]
+t35[label="t35", yCoord=454.16, xCoord=2291.86]
+t36[label="t36", yCoord=686.47, xCoord=2006.85]
+t37[label="t37", yCoord=561.42, xCoord=1746.92]
+t4[label="t4", yCoord=652.77, xCoord=-106.04]
+t5[label="t5", yCoord=115.84, xCoord=2952.18]
+t6[label="t6", yCoord=242.9, xCoord=2640.17]
+t7[label="t7", yCoord=377.48, xCoord=2635.13]
+t8[label="t8", yCoord=512.53, xCoord=2638.24]
+t9[label="t9", yCoord=648.85, xCoord=2639.42]
+tb0_0_0[label="tb0_0_0", yCoord=267.52, xCoord=814.83]
+tb0_0_1[label="tb0_0_1", yCoord=253.98, xCoord=2247.07]
+tb0_1_0[label="tb0_1_0", yCoord=360.93, xCoord=608.45]
+tb0_1_1[label="tb0_1_1", yCoord=381.21, xCoord=2343.94]
+tb1_0_0[label="tb1_0_0", yCoord=533.2, xCoord=329.02]
+tb1_0_1[label="tb1_0_1", yCoord=505.53, xCoord=1873.05]
+tb1_1_0[label="tb1_1_0", yCoord=646.58, xCoord=240.45]
+tb1_1_1[label="tb1_1_1", yCoord=605.82, xCoord=2079.05]
+tw0[label="tw0", yCoord=1098.45, xCoord=-98.13]
+tw1[label="tw1", yCoord=1090.15, xCoord=2657.3]
+
+.flows
+nxt: {1*C, 1*restart1, 1*restart0} -> {1*Env, 1*work, 1*T1, 1*T0}
+t0: {1*P0, 1*Env} -> {1*P1, 1*S0}
+t1: {1*S0} -> {1*W0, 1*R0T0P0}
+t10: {1*R0P0, 1*r0t0} -> {1*check00, 1*r0t0, 1*R_0T_0P_0}
+t11: {1*R0P0, 1*r0t0} -> {1*check01, 1*r0t1, 1*R_0T_1P_0}
+t12: {1*R0P0, 1*r0t1} -> {1*r0t0, 1*check00, 1*R_0T_0P_0}
+t13: {1*r0t1, 1*R0P0} -> {1*R_0T_1P_0, 1*r0t1, 1*check01}
+t14: {1*R0P1, 1*r0t0} -> {1*r0t0, 1*check00, 1*R_0T_0P_1}
+t15: {1*R0P1, 1*r0t0} -> {1*check01, 1*r0t1, 1*R_0T_1P_1}
+t16: {1*r0t1, 1*R0P1} -> {1*R_0T_0P_1, 1*check00, 1*r0t0}
+t17: {1*r0t1, 1*R0P1} -> {1*check01, 1*R_0T_1P_1, 1*r0t1}
+t18: {1*R1P0, 1*r1t0} -> {1*check10, 1*R_1T_0P_0, 1*r1t0}
+t19: {1*R1P0, 1*r1t0} -> {1*R_1T_1P_0, 1*r1t1, 1*check11}
+t2: {1*S0} -> {1*W0, 1*R0T1P0}
+t20: {1*R1P0, 1*r1t1} -> {1*check10, 1*R_1T_0P_0, 1*r1t0}
+t21: {1*R1P0, 1*r1t1} -> {1*check11, 1*R_1T_1P_0, 1*r1t1}
+t22: {1*R1P1, 1*r1t0} -> {1*R_1T_0P_1, 1*r1t0, 1*check10}
+t23: {1*R1P1, 1*r1t0} -> {1*r1t1, 1*R_1T_1P_1, 1*check11}
+t24: {1*r1t1, 1*R1P1} -> {1*check10, 1*R_1T_0P_1, 1*r1t0}
+t25: {1*r1t1, 1*R1P1} -> {1*r1t1, 1*check11, 1*R_1T_1P_1}
+t26: {1*check00, 1*T0} -> {1*restart0}
+t27: {1*T1, 1*check01} -> {1*restart0}
+t28: {1*check10, 1*T0} -> {1*restart1}
+t29: {1*T1, 1*check11} -> {1*restart1}
+t3: {1*S0} -> {1*W0, 1*R1T0P0}
+t30: {1*check10} -> {1*bad4}
+t31: {1*check11} -> {1*bad4}
+t32: {1*check00} -> {1*bad3}
+t33: {1*check01} -> {1*bad3}
+t34: {1*R_0T_0P_1, 1*R0T0P0} -> {1*bad5}
+t35: {1*R0T1P0, 1*R_0T_1P_1} -> {1*bad5}
+t36: {1*R1T1P0, 1*R_1T_1P_1} -> {1*bad5}
+t37: {1*R1T0P0, 1*R_1T_0P_1} -> {1*bad5}
+t4: {1*S0} -> {1*R1T1P0, 1*W0}
+t5: {1*Env, 1*P1} -> {1*S1}
+t6: {1*S1} -> {1*R0T0P1, 1*W1}
+t7: {1*S1} -> {1*W1, 1*R0T1P1}
+t8: {1*S1} -> {1*R1T0P1, 1*W1}
+t9: {1*S1} -> {1*W1, 1*R1T1P1}
+tb0_0_0: {1*R0T0P0, 1*R_0T_0P_0} -> {1*bad0}
+tb0_0_1: {1*R_0T_0P_1, 1*R0T0P1} -> {1*bad1}
+tb0_1_0: {1*R0T1P0, 1*R_0T_1P_0} -> {1*bad0}
+tb0_1_1: {1*R_0T_1P_1, 1*R0T1P1} -> {1*bad1}
+tb1_0_0: {1*R1T0P0, 1*R_1T_0P_0} -> {1*bad0}
+tb1_0_1: {1*R1T0P1, 1*R_1T_0P_1} -> {1*bad1}
+tb1_1_0: {1*R1T1P0, 1*R_1T_1P_0} -> {1*bad0}
+tb1_1_1: {1*R1T1P1, 1*R_1T_1P_1} -> {1*bad1}
+tw0: {1*W0, 1*work} -> {1*R0P0, 1*R1P0, 1*C}
+tw1: {1*work, 1*W1} -> {1*R1P1, 1*R0P1, 1*C}
+
+.initial_marking {1*Env, 1*P0, 1*T0, 1*T1, 1*r0t0, 1*r1t1, 1*work}
