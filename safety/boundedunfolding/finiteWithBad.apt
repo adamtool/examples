@@ -5,44 +5,45 @@
 condition="A_SAFETY"
 
 .places
-p0[yCoord=229.67, xCoord=343.0, token=1]
-p1[yCoord=390.67, xCoord=348.0, token=1]
-p10[yCoord=578.28, xCoord=526.06, env="true"]
-p11[yCoord=864.48, xCoord=165.62, env="true"]
-p12[yCoord=856.25, xCoord=558.64, env="true"]
-p13[yCoord=577.27, xCoord=818.27, env="true"]
-p14[yCoord=734.07, xCoord=621.76, env="true"]
-p15[yCoord=743.23, xCoord=837.62, env="true"]
-p16[yCoord=743.23, xCoord=1028.02, env="true"]
-p17[yCoord=865.66, xCoord=840.77, env="true"]
-p18[yCoord=463.45, xCoord=747.82, env="true"]
-p19[yCoord=1081.23, xCoord=584.98, env="true", bad="true"]
-p2[yCoord=581.67, xCoord=347.0, token=1]
-p3[yCoord=747.3, xCoord=338.71, token=1]
-p4[yCoord=859.3, xCoord=335.65, token=1]
-p5[yCoord=217.85, xCoord=749.04, env="true"]
-p6[yCoord=372.61, xCoord=752.09, env="true"]
-p7[yCoord=372.61, xCoord=602.42, env="true"]
-p8[yCoord=367.52, xCoord=945.55, env="true"]
-p9[yCoord=582.45, xCoord=172.53, env="true"]
+p0[token=1]
+p1[token=1]
+p10[env="true"]
+p11[env="true"]
+p12[env="true"]
+p13[env="true"]
+p14[env="true"]
+p15[env="true"]
+p16[env="true"]
+p17[env="true"]
+p18[env="true"]
+p19[env="true", bad="true"]
+p20[env="true", bad="true"]
+p2[token=1]
+p3[token=1]
+p4[token=1]
+p5[env="true"]
+p6[env="true"]
+p7[env="true"]
+p8[env="true"]
+p9[env="true"]
 
 .transitions
-t0[label="t0", yCoord=307.45, xCoord=239.95]
-t1[label="t1", yCoord=305.41, xCoord=476.16]
-t10[label="t10", yCoord=662.79, xCoord=717.47]
-t11[label="t11", yCoord=666.87, xCoord=913.98]
-t12[label="t12", yCoord=452.28, xCoord=-89.01]
-t13[label="t13", yCoord=485.31, xCoord=1299.49]
-t14[label="t14", yCoord=767.51, xCoord=-84.5]
-t15[label="t15", yCoord=802.03, xCoord=1325.01]
-t2[label="t2", yCoord=297.27, xCoord=671.66]
-t3[label="t3", yCoord=306.43, xCoord=831.51]
-t4[label="t4", yCoord=496.83, xCoord=267.44]
-t5[label="t5", yCoord=489.7, xCoord=441.55]
-t6[label="t6", yCoord=676.03, xCoord=252.16]
-t7[label="t7", yCoord=682.14, xCoord=454.78]
-t8[label="t8", yCoord=794.14, xCoord=243.0]
-t9[label="t9", yCoord=796.18, xCoord=454.78]
+t0[label="t0"]
+t1[label="t1"]
+t10[label="t10"]
+t11[label="t11"]
+t12[label="t12"]
+t13[label="t13"]
+t14[label="t14"]
+t15[label="t15"]
+t2[label="t2"]
+t3[label="t3"]
+t4[label="t4"]
+t5[label="t5"]
+t6[label="t6"]
+t7[label="t7"]
+t8[label="t8"]
+t9[label="t9"]
 
 .flows
 t0: {1*p0} -> {1*p1}
@@ -51,8 +52,8 @@ t10: {1*p13} -> {1*p14, 1*p15}
 t11: {1*p13} -> {1*p16, 1*p15}
 t12: {1*p7, 1*p9} -> {1*p19}
 t13: {1*p8, 1*p10} -> {1*p19}
-t14: {1*p14, 1*p11} -> {1*p19}
-t15: {1*p12, 1*p16} -> {1*p19}
+t14: {1*p14, 1*p11} -> {1*p20}
+t15: {1*p12, 1*p16} -> {1*p20}
 t2: {1*p5} -> {1*p7, 1*p6}
 t3: {1*p5} -> {1*p8, 1*p6}
 t4: {1*p1} -> {1*p9, 1*p2}
