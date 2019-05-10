@@ -1,0 +1,29 @@
+// SYSTEM should HAVE strategy
+// two env token
+// @author Manuel Gieseking
+.name "cutoff env"
+.type LPN
+.description "testing the cutoff of the environment"
+.options
+condition="SAFETY"
+
+.places
+S1
+S2
+E0[env="true"]
+E1[env="true"]
+E2[env="true"]
+E3[env="true"]
+E4[env="true", bad="true"]
+
+.transitions
+a
+b
+c
+
+.flows
+a: {S1,E0} -> {S2,E2}
+b: {E1,E2} -> {E3,E4}
+c: {S1} -> {S2}
+
+.initial_marking {S1, E0, E1}
