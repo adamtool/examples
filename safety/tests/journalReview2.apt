@@ -1,3 +1,5 @@
+// Should HAVE a strategy for the journal definition of non determinsm
+// Should NOT HAVE a strategy for the new definition
 .name "journalReview2"
 .type LPN
 .options
