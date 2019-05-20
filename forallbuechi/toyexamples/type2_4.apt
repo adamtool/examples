@@ -7,10 +7,10 @@ condition="A_BUCHI"
 .places
 env[env="true",buchi="true"]
 env1[env="true"]
-sa2[buchi="true"]
-sa22
-sb2[buchi="true"]
-sb22
+sa2[token=2,buchi="true"]
+sa22[token=2]
+sb2[token=1,buchi="true"]
+sb22[token=1]
 
 .transitions
 t2
