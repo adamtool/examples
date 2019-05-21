@@ -1,5 +1,10 @@
+// Author: Jesko Hecking-Harbusch
+// sys player has to mimic decisions of two env players one after the other, tests bounded unfolding
+// 1 sys, 2 env player
+// finite
+// should have winning strategy
 .name "Simple Example"
-.description "A very small APT example to reduce CPU load during development and show all the different ways that nodes in a graph can look"
+.description "TODO"
 .type LPN
 .options
 condition="A_SAFETY"

@@ -1,4 +1,7 @@
 // Figure 7.1a of Paul's Bachelor thesis
+// 1 sys, 2 env players
+// infinite/with loops
+// should have strategy?
 .name "burglar.net"
 .type LPN
 .description "alarm system"

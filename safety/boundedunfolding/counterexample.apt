@@ -1,3 +1,8 @@
+// Author: Jesko Hecking-Harbusch
+// one sys player has to reject transition to bad place while other sys player loops infinitely
+// 2 sys, 0 env player
+// infinite / with loops
+// should have winning strategy
 .name "Simple Example"
 .description "TODO"
 .type LPN
