@@ -1,11 +1,11 @@
 // unsat
-.name "minimal"
+.name "minimalOnlySys"
 .type LPN
 .options
 condition="SAFETY"
 
 .places
-A[env="true"]
+A
 B
 C
 E[bad="true"]
