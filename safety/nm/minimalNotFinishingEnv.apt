@@ -1,0 +1,26 @@
+// unsat
+.name "minimalNotChangingSysToEnv"
+.type LPN
+.options
+condition="SAFETY"
+
+.places
+A[env="true"]
+A1[env="true"]
+B
+C
+E[bad="true"]
+
+.transitions
+tA
+tB
+tC
+tD
+
+.flows
+tA: {A} ->{B,A1}
+tB: {A}->{B,A1}
+tD: {B}->{C}
+tC: {C}->{E}
+
+.initial_marking {A}

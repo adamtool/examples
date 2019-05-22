@@ -1,0 +1,26 @@
+// unsat
+.name "minimalNotCP"
+.type LPN
+.options
+condition="SAFETY"
+
+.places
+A[env="true"]
+B
+C
+E1
+E[bad="true"]
+
+.transitions
+tA
+tB
+tC
+tD
+
+.flows
+tA: {A} ->{B}
+tB: {A}->{B}
+tD: {B}->{C}
+tC: {C}->{E,E1}
+
+.initial_marking {A}
