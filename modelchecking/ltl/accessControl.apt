@@ -1,7 +1,8 @@
 .name "AccessControl"
 .type LPN
 .options
-condition="LTL"
+condition="LTL",
+formula="A CONTROLbureauTOcorridor"
 
 
 .places
