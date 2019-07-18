@@ -17,7 +17,7 @@ tC
 tD
 
 .flows
-tA: {A} ->{B}
+tA: {A}->{B}
 tB: {A}->{B}
 tD: {B}->{C}
 tC: {C}->{E}

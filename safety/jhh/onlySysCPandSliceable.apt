@@ -1,0 +1,37 @@
+// Won by the system; the net has only system players, is concurrency-preserving, and sliceable
+.name "unfoldingAdditionalSystem"
+.type LPN
+.description "Testing the correctness of additional system places in the unfolding"
+.options
+condition="SAFETY"
+
+.places
+S[token=1]
+SL[token=1]
+SR[token=1]
+Send[token=1]
+Estart[token=2]
+EL[token=2]
+ER[token=2]
+bad[bad="true",token=2]
+E1[env="true", token=3]
+E2[env="true", token=3]
+Eend[env="true", token=3]
+
+.transitions
+l
+r
+ll
+rr
+b1
+b2
+
+.flows
+l: {E1,Estart} -> {E2,EL}
+r: {E1,Estart} -> {E2,ER}
+ll:{E2,S} -> {Eend,SL}
+rr:{E2,S} -> {Eend,SR}
+b1:{EL,SL} -> {bad,Send}
+b2:{ER,SR} -> {bad,Send}
+
+.initial_marking {E1,Estart,S}
