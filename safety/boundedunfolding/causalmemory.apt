@@ -1,0 +1,35 @@
+// Should not have a strategy
+// Example by Niklas that shows that McMillianUnfolder is only a heuristic and needs to look in the past
+.name "Simple Example"
+.description "TODO"
+.type LPN
+.options
+condition="SAFETY"
+
+.places
+p0[token=1]
+p1[env="true"]
+p2[env="true"]
+p3[env="true"]
+p4[env="true"]
+p5[bad="true",token=1]
+
+.transitions
+t0
+t1
+t2
+t3
+t5
+t6
+t7
+
+.flows
+t0: {p0} -> {p2}
+t1: {p0} -> {p1}
+t2: {p2, p4} -> {p3, p1}
+t3: {p3} -> {p4}
+t5: {p4, p2} -> {p4, p5}
+t6: {p5} -> {p1}
+t7: {p1} -> {p2}
+
+.initial_marking {p0, p3}
