@@ -1,4 +1,5 @@
 // unsat
+// ATTENTION: changes player's membership A (env) -tA-> B (sys)
 .name "minimal"
 .type LPN
 .options
