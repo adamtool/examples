@@ -1,5 +1,7 @@
 // Should not have a strategy
 // Example by Niklas that shows that McMillianUnfolder is only a heuristic and needs to look in the past
+// can reach marking {p2,p3} either via t0 or via t1, and both "branches" need to be followed to find out
+// that no winning strategy exists
 // ATTENTION: changes player's membership p0 (sys) - t0 -> p2 (env)
 .name "Simple Example"
 .description "TODO"
