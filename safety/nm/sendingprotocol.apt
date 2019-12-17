@@ -45,4 +45,4 @@ tTRAP: {1*decision} -> {1*TRAP}
 tbad1: {1*GO, 1*EB} -> {1*bad}
 tbad2: {1*TRAP, 1*EA} -> {1*bad}
 
-.initial_marking {1*EB, 1*TRAP}
+.initial_marking {1*Env, 1*SA, 1*SB}
