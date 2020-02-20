@@ -1,4 +1,5 @@
-// Extension of Paul's example which should motivate the need to change the scheduling between mcuts when searching for nondeterminism 
+// Extension of Paul's example which should motivate the need to change the scheduling between mcuts when searching for nondeterminism
+// has no strategy
 .name "nondet strategy"
 .type LPN
 .description "Alarm system."

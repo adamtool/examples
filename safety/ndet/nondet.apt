@@ -8,16 +8,14 @@
 condition="SAFETY"
 
 .places
-A
+A[token=1]
 B[env="true"]
-C
+C[token=1]
 D[env="true"]
 E[env="true"]
-F
+F[token=2]
 G[env="true"]
-H
-I
-J[bad="true"]
+H[token=2]
 K[env="true"]
 
 .transitions
@@ -27,8 +25,7 @@ c
 d
 e
 f
-g
-h
+//g
 i
 
 
@@ -39,8 +36,7 @@ c: {D} -> {G}
 d: {D} -> {E}
 e: {C,F} -> {C,H}
 f: {E,F} -> {E,H}
-g: {H} -> {H}
-h: {I} -> {J}
+//g: {H} -> {H}
 i: {B} -> {K}
 
-.initial_marking {A,B,F,I}
+.initial_marking {A,B,F}

@@ -1,5 +1,6 @@
-// there should be no strategy since the only possibly strategy should invoke 
+// there should be no strategy since the only possibly strategy should invoke
 // nodetermism.
+// why UNNECCESSARILY in name?
 .name "nondet strategy"
 .type LPN
 .description "Alarm system."
