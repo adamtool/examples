@@ -45,8 +45,8 @@ t14[label="t14", yCoord=97.3, xCoord=171.16]
 t15[label="t15", yCoord=995.59, xCoord=138.95]
 t16[label="t16", yCoord=1050.97, xCoord=1921.58]
 t17[label="t17", yCoord=68.69, xCoord=1923.86]
-t18[label="t18", yCoord=12.51, xCoord=607.34]
-t19[label="t19", yCoord=53.2, xCoord=1419.46]
+//t18[label="t18", yCoord=12.51, xCoord=607.34]
+//t19[label="t19", yCoord=53.2, xCoord=1419.46]
 t2[label="t2", yCoord=649.57, xCoord=-118.37]
 t3[label="t3", yCoord=446.92, xCoord=-121.63]
 t4[label="t4", yCoord=709.46, xCoord=2137.38]
@@ -67,8 +67,8 @@ t14: {1*p22, 1*p17, 1*p12, 1*p18} -> {1*p9, 1*p1}
 t15: {1*p19, 1*p22, 1*p10, 1*p17} -> {1*p9, 1*p1}
 t16: {1*p1, 1*p14, 1*p23, 1*p21} -> {1*p2, 1*p13}
 t17: {1*p1, 1*p20, 1*p16, 1*p23} -> {1*p13, 1*p2}
-t18: {1*p2} -> {1*p7}
-t19: {1*p3} -> {1*p8}
+//t18: {1*p2} -> {1*p7}
+//t19: {1*p3} -> {1*p8}
 t2: {1*p9} -> {1*p11, 1*p10}
 t3: {1*p9} -> {1*p12, 1*p11}
 t4: {1*p13} -> {1*p14, 1*p15}
