@@ -9,12 +9,12 @@
 condition="SAFETY"
 
 .places
-r1[env="true"]
-r2[env="true"]
-c1[env="true"]
-c2[env="true"]
-c11[env="true"]
-c22[env="true"]
+r1[env="true", token=1]
+r2[env="true", token=1]
+c1[env="true", token=2]
+c2[env="true", token=3]
+c11[env="true",token=2]
+c22[env="true",token=3]
 sd
 s1
 s2
