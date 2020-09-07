@@ -1,4 +1,4 @@
-// unsat
+// sat
 // more than one env token
 .name "testStepNet"
 .type LPN

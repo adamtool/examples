@@ -1,4 +1,4 @@
-// two env players
+// two env players, sat
 .name "sendingProtocol2"
 .type LPN
 .options
@@ -100,7 +100,7 @@ infoB1: {SB1,SAA1} -> {decision1}
 tbad11: {EB1,GOAGAIN} -> {bad}
 tbad21: {EA1, finished} -> {bad}
 
- 
+
 t1dec1:{decision} -> {l1}
 t2dec1: {decision} -> {l2}
 t1dec2:{decision1} -> {r1}

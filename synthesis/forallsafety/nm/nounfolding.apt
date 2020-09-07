@@ -1,4 +1,4 @@
-// two env players, unsat
+// two env players, sat
 .name "oneunfolding"
 .type LPN
 .options
