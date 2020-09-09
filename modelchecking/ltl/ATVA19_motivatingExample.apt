@@ -1,5 +1,5 @@
-.name "Simple Example"
-.description "A very small APT example to reduce CPU load during development and show all the different ways that nodes in a graph can look"
+.name "MotivatingExample"
+.description "The motivating example of the ATVA19 conference."
 .type LPN
 .options
 condition="LTL"
