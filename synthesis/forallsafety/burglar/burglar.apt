@@ -1,96 +1,90 @@
-// Net burglar example
 .name "burglar.net"
-.type LPN
 .description "alarm system"
+.type LPN
 .options
 condition="SAFETY"
 
 .places
-env[env="true"]
-s1[env="true"]
-s2[env="true"]
-s3
-s4
-ea[env="true"]
-a
-b
-eb[env="true"]
-pa
-pb
-ab
-aa
-bb
-ba
-qbadA[bad="true"]
-qbadB[bad="true"]
+a[yCoord=330.0, xCoord=750.0]
+aa[yCoord=990.0, xCoord=390.0]
+ab[yCoord=990.0, xCoord=630.0]
+b[yCoord=330.0, xCoord=1230.0]
+ba[yCoord=990.0, xCoord=1350.0]
+bb[yCoord=990.0, xCoord=1590.0]
+ea[yCoord=330.0, xCoord=390.0, env="true"]
+eb[yCoord=330.0, xCoord=1590.0, env="true"]
+env[yCoord=150.0, xCoord=990.0, env="true"]
+pa[yCoord=690.0, xCoord=510.0]
+pb[yCoord=690.0, xCoord=1470.0]
+qbadA[yCoord=810.0, bad="true", xCoord=2250.0]
+qbadB[yCoord=210.0, bad="true", xCoord=2250.0]
+s1[yCoord=150.0, xCoord=510.0, env="true"]
+s2[yCoord=150.0, xCoord=1470.0, env="true"]
+s3[yCoord=450.0, xCoord=510.0]
+s4[yCoord=450.0, xCoord=1470.0]
 
 .transitions
-t1
-t2
-t3
-t4
-t5
-t6
-t7
-t8
-t9
-t10
-t11
-t12
-t13
-t14
-t15
-t16
-ta
-tb
-taa
-tbb
-tx
-ty
-tt1
-tt2
-tt3
-tt4
-tt5
-tt6
-tt7
-tt8
-
+t1[label="t1", yCoord=570.0, xCoord=510.0]
+t10[label="t10", yCoord=810.0, xCoord=1830.0]
+t11[label="t11", yCoord=690.0, xCoord=1830.0]
+t12[label="t12", yCoord=210.0, xCoord=1830.0]
+t13[label="t13", yCoord=450.0, xCoord=2010.0]
+t14[label="t14", yCoord=690.0, xCoord=2010.0]
+t15[label="t15", yCoord=330.0, xCoord=2010.0]
+t16[label="t16", yCoord=570.0, xCoord=2010.0]
+t2[label="t2", yCoord=570.0, xCoord=630.0]
+t3[label="t3", yCoord=570.0, xCoord=1350.0]
+t4[label="t4", yCoord=570.0, xCoord=1470.0]
+t5[label="t5", yCoord=810.0, xCoord=630.0]
+t6[label="t6", yCoord=810.0, xCoord=390.0]
+t7[label="t7", yCoord=810.0, xCoord=1590.0]
+t8[label="t8", yCoord=810.0, xCoord=1350.0]
+t9[label="t9", yCoord=330.0, xCoord=1830.0]
+ta[label="ta", yCoord=330.0, xCoord=510.0]
+taa[label="taa", yCoord=570.0, xCoord=930.0]
+tb[label="tb", yCoord=330.0, xCoord=1470.0]
+tbb[label="tbb", yCoord=570.0, xCoord=1050.0]
+tt1[label="tt1", yCoord=-210.0, xCoord=2010.0]
+tt2[label="tt2", yCoord=30.0, xCoord=2010.0]
+tt3[label="tt3", yCoord=-90.0, xCoord=2010.0]
+tt4[label="tt4", yCoord=150.0, xCoord=2010.0]
+tt5[label="tt5", yCoord=1110.0, xCoord=2010.0]
+tt6[label="tt6", yCoord=870.0, xCoord=2010.0]
+tt7[label="tt7", yCoord=1230.0, xCoord=2010.0]
+tt8[label="tt8", yCoord=990.0, xCoord=2010.0]
+tx[label="tx", yCoord=150.0, xCoord=750.0]
+ty[label="ty", yCoord=150.0, xCoord=1230.0]
 
 .flows
-// left arm
-tx: {env} -> {s1}
-ta: {s1,a} -> {ea,s3}
-t1: {s3} -> {pa}
-t2: {a} -> {pa}
-taa: {s3,b} -> {pa,pb}
-t5: {pa} -> {ab}
-t6: {pa} -> {aa}
-// right arm
-ty: {env} -> {s2}
-tb: {s2,b} -> {s4,eb}
-tbb: {a,s4} -> {pa,pb}
-t3: {b} -> {pb}
-t4: {s4} -> {pb}
-t7: {pb} -> {bb}
-t8: {pb} -> {ba}
-// bad states
-t9: {eb,aa} -> {eb,qbadA}
-t10: {ea,bb} -> {ea,qbadB}
-t11: {ea,ab} -> {ea,qbadA}
-t12: {eb,ba} -> {eb,qbadB}
-t13: {env,aa} -> {env,qbadA}
-t14: {env,ab} -> {env,qbadA}
-t15: {env,ba} -> {env,qbadB}
-t16: {env,bb} -> {env,qbadB}
-//  neue bad states
-tt1: {s1,aa} -> {s1,qbadA}
-tt2: {s1,ab} -> {s1,qbadA}
-tt3: {s1,ba} -> {s1,qbadB}
-tt4: {s1,bb} -> {s1,qbadB}
-tt5: {s2,aa} -> {s2,qbadA}
-tt6: {s2,ab} -> {s2,qbadA}
-tt7: {s2,ba} -> {s2,qbadB}
-tt8: {s2,bb} -> {s2,qbadB}
+t1: {1*s3} -> {1*pa}
+t10: {1*ea, 1*bb} -> {1*ea, 1*qbadB}
+t11: {1*ea, 1*ab} -> {1*qbadA, 1*ea}
+t12: {1*ba, 1*eb} -> {1*qbadB, 1*eb}
+t13: {1*env, 1*aa} -> {1*env, 1*qbadA}
+t14: {1*env, 1*ab} -> {1*qbadA, 1*env}
+t15: {1*ba, 1*env} -> {1*qbadB, 1*env}
+t16: {1*bb, 1*env} -> {1*env, 1*qbadB}
+t2: {1*a} -> {1*pa}
+t3: {1*b} -> {1*pb}
+t4: {1*s4} -> {1*pb}
+t5: {1*pa} -> {1*ab}
+t6: {1*pa} -> {1*aa}
+t7: {1*pb} -> {1*bb}
+t8: {1*pb} -> {1*ba}
+t9: {1*aa, 1*eb} -> {1*qbadA, 1*eb}
+ta: {1*a, 1*s1} -> {1*ea, 1*s3}
+taa: {1*s3, 1*b} -> {1*pb, 1*pa}
+tb: {1*b, 1*s2} -> {1*eb, 1*s4}
+tbb: {1*a, 1*s4} -> {1*pb, 1*pa}
+tt1: {1*s1, 1*aa} -> {1*qbadA, 1*s1}
+tt2: {1*s1, 1*ab} -> {1*s1, 1*qbadA}
+tt3: {1*s1, 1*ba} -> {1*qbadB, 1*s1}
+tt4: {1*s1, 1*bb} -> {1*s1, 1*qbadB}
+tt5: {1*aa, 1*s2} -> {1*qbadA, 1*s2}
+tt6: {1*s2, 1*ab} -> {1*s2, 1*qbadA}
+tt7: {1*s2, 1*ba} -> {1*s2, 1*qbadB}
+tt8: {1*s2, 1*bb} -> {1*s2, 1*qbadB}
+tx: {1*env} -> {1*s1}
+ty: {1*env} -> {1*s2}
 
-.initial_marking {a,b,env}
+.initial_marking {1*a, 1*b, 1*env}
