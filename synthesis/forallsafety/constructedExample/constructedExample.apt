@@ -1,31 +1,30 @@
-// Net constructed example
 .name "constructed example with loop"
 .type LPN
 .options
 condition="SAFETY"
 
 .places
-s1[env="true"]
-s2[env="true"]
-s3
-s4
-s5
-bad[bad="true"]
+bad[yCoord=930.0, bad="true", xCoord=1470.0, token=1]
+s1[yCoord=1170.0, xCoord=1050.0, env="true", token=0]
+s2[yCoord=1350.0, xCoord=870.0, env="true", token=0]
+s3[yCoord=1170.0, xCoord=1170.0, token=1]
+s4[yCoord=1350.0, xCoord=1290.0, token=1]
+s5[yCoord=1170.0, xCoord=1470.0, token=1]
 
 .transitions
-t1
-t2
-t3
-t4
-t5
-t6
+t1[label="t1", yCoord=1170.0, xCoord=870.0]
+t2[label="t2", yCoord=1350.0, xCoord=1050.0]
+t3[label="t3", yCoord=1170.0, xCoord=1290.0]
+t4[label="t4", yCoord=1350.0, xCoord=1470.0]
+t5[label="t5", yCoord=1050.0, xCoord=1470.0]
+t6[label="t6", yCoord=1170.0, xCoord=1650.0]
 
 .flows
-t1: {s2} -> {s1}
-t2: {s1,s3} -> {s2,s4}
-t3: {s4} -> {s3}
-t4: {s4} -> {s5}
-t5: {s5} -> {bad}
-t6: {s5} -> {s5}
+t1: {1*s2} -> {1*s1}
+t2: {1*s3, 1*s1} -> {1*s2, 1*s4}
+t3: {1*s4} -> {1*s3}
+t4: {1*s4} -> {1*s5}
+t5: {1*s5} -> {1*bad}
+t6: {1*s5} -> {1*s5}
 
-.initial_marking {s1,s3}
+.initial_marking {1*s1, 1*s3}

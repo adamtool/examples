@@ -2,45 +2,44 @@
 // and thus they didn't created a deadlock by blocking their move t3
 // would be lost if their is no loop at env1
 .name "exampleTafel"
-.type LPN
 .description "Example tafel 28.09.2014"
+.type LPN
 .options
 condition="SAFETY"
 
 .places
-Env[env="true"]
-Env1[env="tr"]
-Env2[env="tr"]
-Env3[env="tr"]
-Env4[env="tr"]
-s1
-s2
-s3
-s4
-s5
-s6
-s7[bad="asdf"]
-s8
+Env[yCoord=870.0, xCoord=570.0, env="true"]
+Env1[yCoord=870.0, xCoord=210.0, env="tr"]
+Env2[yCoord=990.0, xCoord=750.0, env="tr"]
+Env3[yCoord=1230.0, xCoord=750.0, env="tr"]
+Env4[yCoord=870.0, xCoord=930.0, env="tr"]
+s1[yCoord=750.0, xCoord=750.0]
+s2[yCoord=870.0, xCoord=1290.0]
+s3[yCoord=630.0, xCoord=1110.0]
+s4[yCoord=870.0, xCoord=1050.0]
+s5[yCoord=990.0, xCoord=1050.0]
+s6[yCoord=990.0, xCoord=1290.0]
+s7[yCoord=630.0, bad="asdf", xCoord=1350.0]
+s8[yCoord=1110.0, xCoord=930.0]
 
 .transitions
-t1
-t2
-t3
-t4
-t5
-t6
-t7
-t8
+t1[label="t1", yCoord=870.0, xCoord=390.0]
+t2[label="t2", yCoord=870.0, xCoord=750.0]
+t3[label="t3", yCoord=630.0, xCoord=1230.0]
+t4[label="t4", yCoord=1110.0, xCoord=750.0]
+t5[label="t5", yCoord=990.0, xCoord=930.0]
+t6[label="t6", yCoord=930.0, xCoord=1170.0]
+t7[label="t7", yCoord=1230.0, xCoord=930.0]
+t8[label="t8", yCoord=870.0, xCoord=30.0]
 
 .flows
-// left arm
-t1: {Env} -> {Env1}
-t2: {Env,s1} -> {Env2,s4}
-t3: {s3} -> {s7}
-t4: {Env2} -> {Env3}
-t5: {Env2,s5} -> {Env4,s8}
-t6: {s2,s4} -> {s5,s6}
-t7: {s8} -> {s8}
-t8: {Env1} -> {Env1}
+t1: {1*Env} -> {1*Env1}
+t2: {1*s1, 1*Env} -> {1*Env2, 1*s4}
+t3: {1*s3} -> {1*s7}
+t4: {1*Env2} -> {1*Env3}
+t5: {1*s5, 1*Env2} -> {1*Env4, 1*s8}
+t6: {1*s4, 1*s2} -> {1*s6, 1*s5}
+t7: {1*s8} -> {1*s8}
+t8: {1*Env1} -> {1*Env1}
 
-.initial_marking {Env,s1,s2,s3}
+.initial_marking {1*Env, 1*s1, 1*s2, 1*s3}

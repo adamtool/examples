@@ -1,63 +1,62 @@
-// asdf
 .name "mutex"
-.type LPN
 .description "mutex"
+.type LPN
 .options
 condition="SAFETY"
 
 .places
-Env[env="true"]
-mx[env="tr"]
-sf[env="tr"]
-ec[env="tr"]
-qbad[env="tr", bad="true"]
-S1
-S2
-w1
-w2
-cs1
-cs2
-f1
-f2
-r1
-r2
-s1
-s2
+Env[yCoord=504.93, xCoord=833.9, env="true"]
+S1[yCoord=810.0, xCoord=510.0]
+S2[yCoord=810.0, xCoord=810.0]
+cs1[yCoord=1470.0, xCoord=690.0]
+cs2[yCoord=1470.0, xCoord=450.0]
+ec[yCoord=570.0, xCoord=510.0, env="tr"]
+f1[yCoord=1230.0, xCoord=990.0]
+f2[yCoord=1110.0, xCoord=570.0]
+mx[yCoord=630.0, xCoord=270.0, env="tr"]
+qbad[yCoord=1770.0, bad="true", xCoord=570.0, env="tr"]
+r1[yCoord=930.0, xCoord=1410.0]
+r2[yCoord=930.0, xCoord=1770.0]
+s1[yCoord=1290.0, xCoord=1410.0]
+s2[yCoord=1290.0, xCoord=1770.0]
+sf[yCoord=630.0, xCoord=1350.0, env="tr"]
+w1[yCoord=990.0, xCoord=150.0]
+w2[yCoord=990.0, xCoord=330.0]
 
 .transitions
-tc
-ts
-ic
-is
-p1
-p2
-b1
-b2
-v1
-t1
-v2
-t2
-e1
-e2
-f
-tb
+b1[label="b1", yCoord=1110.0, xCoord=1290.0]
+b2[label="b2", yCoord=1110.0, xCoord=1890.0]
+e1[label="e1", yCoord=1110.0, xCoord=1530.0]
+e2[label="e2", yCoord=1110.0, xCoord=1650.0]
+f[label="f", yCoord=690.0, xCoord=630.0]
+ic[label="ic", yCoord=810.0, xCoord=270.0]
+is[label="is", yCoord=750.0, xCoord=1050.0]
+p1[label="p1", yCoord=1290.0, xCoord=690.0]
+p2[label="p2", yCoord=1470.0, xCoord=90.0]
+t1[label="t1", yCoord=1470.0, xCoord=990.0]
+t2[label="t2", yCoord=1290.0, xCoord=270.0]
+tb[label="tb", yCoord=1590.0, xCoord=570.0]
+tc[label="tc", yCoord=510.0, xCoord=270.0]
+ts[label="ts", yCoord=510.0, xCoord=1350.0]
+v1[label="v1", yCoord=1050.0, xCoord=990.0]
+v2[label="v2", yCoord=1290.0, xCoord=450.0]
 
 .flows
-tc: {Env} -> {mx}
-ts: {Env} -> {sf}
-ic: {S1,S2,mx} -> {w1,w2,ec}
-is: {S1,S2,sf} -> {Env,r1,r2}
-p1: {w1} -> {cs1}
-p2: {w2} -> {cs2}
-b1: {r1} -> {s1}
-b2: {r2} -> {s2}
-v1: {cs1,w2} -> {w2,f1}
-t1: {cs1,f2} -> {f1,f2}
-v2: {cs2,w1} -> {w1,f2}
-t2: {cs2,f1} -> {f1,f2}
-e1: {s1} -> {r1}
-e2: {s2} -> {r2}
-f: {ec,f1,f2} -> {S1,S2,Env}
-tb: {ec,cs1,cs2} -> {qbad,cs1,cs2}
+b1: {1*r1} -> {1*s1}
+b2: {1*r2} -> {1*s2}
+e1: {1*s1} -> {1*r1}
+e2: {1*s2} -> {1*r2}
+f: {1*ec, 1*f1, 1*f2} -> {1*S1, 1*S2, 1*Env}
+ic: {1*mx, 1*S2, 1*S1} -> {1*w2, 1*w1, 1*ec}
+is: {1*S1, 1*sf, 1*S2} -> {1*r2, 1*r1, 1*Env}
+p1: {1*w1} -> {1*cs1}
+p2: {1*w2} -> {1*cs2}
+t1: {1*cs1, 1*f2} -> {1*f2, 1*f1}
+t2: {1*cs2, 1*f1} -> {1*f1, 1*f2}
+tb: {1*ec, 1*cs2, 1*cs1} -> {1*qbad, 1*cs1, 1*cs2}
+tc: {1*Env} -> {1*mx}
+ts: {1*Env} -> {1*sf}
+v1: {1*cs1, 1*w2} -> {1*w2, 1*f1}
+v2: {1*w1, 1*cs2} -> {1*w1, 1*f2}
 
-.initial_marking {Env,S1,S2}
+.initial_marking {1*Env, 1*S1, 1*S2}

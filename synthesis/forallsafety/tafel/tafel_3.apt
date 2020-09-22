@@ -4,48 +4,47 @@
 // not be used and thus the system blocks if it don't uses t3. 
 // Deleting t4 or the env2 in the preset of t5 would fix the problem.
 .name "exampleTafel"
-.type LPN
 .description "Example tafel 28.09.2014"
+.type LPN
 .options
 condition="SAFETY"
 
 .places
-Env[env="true"]
-Env1[env="tr"]
-Env2[env="tr"]
-Env3[env="tr"]
-Env4[env="tr"]
-Env5[env="tr"]
-s1
-s2
-s3
-s4
-s5
-s6
-s7[bad="asdf"]
-s8
+Env[yCoord=870.0, xCoord=570.0, env="true", token=0]
+Env1[yCoord=870.0, xCoord=210.0, env="tr", token=0]
+Env2[yCoord=990.0, xCoord=990.0, env="tr", token=0]
+Env3[yCoord=1230.0, xCoord=990.0, env="tr", token=0]
+Env4[yCoord=870.0, xCoord=1170.0, env="tr", token=0]
+Env5[yCoord=870.0, xCoord=870.0, env="tr", token=0]
+s1[yCoord=750.0, xCoord=990.0, token=2]
+s2[yCoord=870.0, xCoord=1530.0, token=3]
+s3[yCoord=630.0, xCoord=1350.0, token=1]
+s4[yCoord=870.0, xCoord=1290.0, token=2]
+s5[yCoord=990.0, xCoord=1290.0, token=2]
+s6[yCoord=990.0, xCoord=1530.0, token=3]
+s7[yCoord=630.0, bad="asdf", xCoord=1590.0, token=1]
+s8[yCoord=1110.0, xCoord=1170.0, token=2]
 
 .transitions
-t1
-t2
-t2n
-t3
-t4
-t5
-t6
-t7
-t8
+t1[label="t1", yCoord=870.0, xCoord=390.0]
+t2[label="t2", yCoord=870.0, xCoord=990.0]
+t2n[label="t2n", yCoord=870.0, xCoord=690.0]
+t3[label="t3", yCoord=630.0, xCoord=1470.0]
+t4[label="t4", yCoord=1110.0, xCoord=990.0]
+t5[label="t5", yCoord=990.0, xCoord=1170.0]
+t6[label="t6", yCoord=930.0, xCoord=1410.0]
+t7[label="t7", yCoord=1230.0, xCoord=1170.0]
+t8[label="t8", yCoord=870.0, xCoord=30.0]
 
 .flows
-// left arm
-t1: {Env} -> {Env1}
-t2n: {Env} -> {Env5}
-t2: {Env5,s1} -> {Env2,s4}
-t3: {s3} -> {s7}
-t4: {Env2} -> {Env3}
-t5: {Env2,s5} -> {Env4,s8}
-t6: {s2,s4} -> {s5,s6}
-t7: {s8} -> {s8}
-t8: {Env1} -> {Env1}
+t1: {1*Env} -> {1*Env1}
+t2: {1*s1, 1*Env5} -> {1*Env2, 1*s4}
+t2n: {1*Env} -> {1*Env5}
+t3: {1*s3} -> {1*s7}
+t4: {1*Env2} -> {1*Env3}
+t5: {1*s5, 1*Env2} -> {1*Env4, 1*s8}
+t6: {1*s4, 1*s2} -> {1*s6, 1*s5}
+t7: {1*s8} -> {1*s8}
+t8: {1*Env1} -> {1*Env1}
 
-.initial_marking {Env,s1,s2,s3}
+.initial_marking {1*Env, 1*s1, 1*s2, 1*s3}

@@ -3,32 +3,32 @@
 // be forbidden in the whole strategy.
 // Has a strategy
 .name "forbiddingTransitionOnce.net"
-.type LPN
 .description "t is once allowed"
+.type LPN
 .options
-winningCondition="SAFETY"
+condition="SAFETY"
 
 .places
-s1
-s2
-s3
-s4
-s5
-s6[bad="true"]
-s7
+s1[yCoord=1170.0, xCoord=990.0, token=1]
+s2[yCoord=1410.0, xCoord=870.0, token=2]
+s3[yCoord=1170.0, xCoord=1170.0, token=1]
+s4[yCoord=1410.0, xCoord=1290.0, token=2]
+s5[yCoord=1050.0, xCoord=1050.0, token=3]
+s6[yCoord=1650.0, bad="true", xCoord=1290.0, token=2]
+s7[yCoord=990.0, xCoord=1290.0, token=1]
 
 .transitions
-t1
-t
-t2
-t3
-t4
+t[label="t", yCoord=1410.0, xCoord=1050.0]
+t1[label="t1", yCoord=1170.0, xCoord=870.0]
+t2[label="t2", yCoord=1530.0, xCoord=1290.0]
+t3[label="t3", yCoord=1170.0, xCoord=1290.0]
+t4[label="t4", yCoord=1290.0, xCoord=1050.0]
 
 .flows
-t1: {s1,s2} -> {s3,s5}
-t: {s2} -> {s4}
-t2: {s4} -> {s6}
-t3: {s4,s5} -> {s7}
-t4: {s3} -> {s2}
+t: {1*s2} -> {1*s4}
+t1: {1*s2, 1*s1} -> {1*s5, 1*s3}
+t2: {1*s4} -> {1*s6}
+t3: {1*s4, 1*s5} -> {1*s7}
+t4: {1*s3} -> {1*s2}
 
-.initial_marking {s1, s2}
+.initial_marking {1*s1, 1*s2}
