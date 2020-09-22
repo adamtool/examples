@@ -4,84 +4,78 @@
 condition="SAFETY"
 
 .places
-env0[env="true"]
-env1[env="true"]
-env2[env="true"]
-out[token=1]
-cont[token=1]
-testCP1[token=2]
-testCP2[token=2]
-//r1[token=3]
-//r2[token=4]
-on1[token=5]
-on2[token=6]
-off1[token=5]
-off2[token=6]
-CP1[token=1]
-CP2[token=1]
-G[token=1]
-next[token=1]
-r1cp1[token=3]
-r1cp2[token=3]
-r2cp1[token=4]
-r2cp2[token=4]
-B1[token=1, bad="true"]
-B2[token=1, bad="true"]
+B1[yCoord=810.0, bad="true", xCoord=2250.0, token=1]
+B2[yCoord=510.0, bad="true", xCoord=2250.0, token=1]
+CP1[yCoord=870.0, xCoord=2010.0, token=1]
+CP2[yCoord=510.0, xCoord=2010.0, token=1]
+G[yCoord=510.0, xCoord=750.0, token=1]
+cont[yCoord=750.0, xCoord=1290.0, token=1]
+env0[yCoord=630.0, xCoord=-30.0, env="true", token=0]
+env1[yCoord=810.0, xCoord=150.0, env="true", token=0]
+env2[yCoord=810.0, xCoord=390.0, env="true", token=0]
+next[yCoord=330.0, xCoord=1050.0, token=1]
+off1[yCoord=930.0, xCoord=510.0, token=5]
+off2[yCoord=390.0, xCoord=390.0, token=6]
+on1[yCoord=930.0, xCoord=930.0, token=5]
+on2[yCoord=150.0, xCoord=1470.0, token=6]
+out[yCoord=810.0, xCoord=630.0, token=1]
+r1cp1[yCoord=1290.0, xCoord=1170.0, token=3]
+r1cp2[yCoord=1107.43, xCoord=1662.02, token=3]
+r2cp1[yCoord=450.0, xCoord=1650.0, token=4]
+r2cp2[yCoord=330.0, xCoord=1470.0, token=4]
+testCP1[yCoord=1170.0, xCoord=-30.0, token=2]
+testCP2[yCoord=630.0, xCoord=1110.0, token=2]
 
 .transitions
-cp1b
-cp2b
-cp1g
-cp2g
-r1tocp1
-r1tocp2
-r1usecp1
-r1usecp2
-r2tocp1
-r2tocp2
-r2usecp1
-r2usecp2
-envcp1
-envcp2
-sol
-r1on
-r2on
-r1off
-r2off
-good
-reset
-tcp1
-tcp2
-contb
+contb[label="contb", yCoord=690.0, xCoord=2130.0]
+cp1b[label="cp1b", yCoord=870.0, xCoord=2130.0]
+cp1g[label="cp1g", yCoord=1170.0, xCoord=750.0]
+cp2b[label="cp2b", yCoord=510.0, xCoord=2130.0]
+cp2g[label="cp2g", yCoord=510.0, xCoord=1110.0]
+envcp1[label="envcp1", yCoord=1290.0, xCoord=630.0]
+envcp2[label="envcp2", yCoord=810.0, xCoord=1110.0]
+good[label="good", yCoord=330.0, xCoord=1350.0]
+r1off[label="r1off", yCoord=810.0, xCoord=510.0]
+r1on[label="r1on", yCoord=930.0, xCoord=750.0]
+r1tocp1[label="r1tocp1", yCoord=1290.0, xCoord=930.0]
+r1tocp2[label="r1tocp2", yCoord=930.0, xCoord=1470.0]
+r1usecp1[label="r1usecp1", yCoord=1290.0, xCoord=1470.0]
+r1usecp2[label="r1usecp2", yCoord=1050.0, xCoord=1170.0]
+r2off[label="r2off", yCoord=510.0, xCoord=390.0]
+r2on[label="r2on", yCoord=390.0, xCoord=570.0]
+r2tocp1[label="r2tocp1", yCoord=990.0, xCoord=1830.0]
+r2tocp2[label="r2tocp2", yCoord=390.0, xCoord=1830.0]
+r2usecp1[label="r2usecp1", yCoord=750.0, xCoord=1650.0]
+r2usecp2[label="r2usecp2", yCoord=510.0, xCoord=1470.0]
+reset[label="reset", yCoord=810.0, xCoord=270.0]
+sol[label="sol", yCoord=750.0, xCoord=930.0]
+tcp1[label="tcp1", yCoord=810.0, xCoord=-30.0]
+tcp2[label="tcp2", yCoord=630.0, xCoord=150.0]
 
 .flows
+contb: {1*cont} -> {1*B1}
 cp1b: {1*CP1} -> {1*B1}
+cp1g: {1*testCP1, 1*CP1} -> {1*G}
 cp2b: {1*CP2} -> {1*B2}
-cp1g: {1*CP1,1*testCP1} -> {1*G}
-cp2g: {1*CP2,1*testCP2} -> {1*G}
-//r1tocp1: {1*r1,1*on1,r1cp1,cont} -> {1*r1,1*on1,r1cp1,CP1}
-//r1tocp2: {1*r1,1*on1,r1cp2,cont} -> {1*r1,1*on1,r1cp2,CP2}
-r1tocp1: {1*on1,r1cp1,cont} -> {1*on1,r1cp1,CP1}
-r1tocp2: {1*on1,r1cp2,cont} -> {1*on1,r1cp2,CP2}
-r1usecp1: {1*r1cp2,cont} -> {cont,r1cp1}
-r1usecp2: {1*r1cp1,G} -> {r1cp2,G}
-r2tocp1: {1*on2,r2cp1,cont} -> {1*on2,r2cp1,CP1}
-r2tocp2: {1*on2,r2cp2,cont} -> {1*on2,r2cp2,CP2}
-//r2tocp1: {1*r2,1*on2,r2cp1,cont} -> {1*r2,1*on2,r2cp1,CP1}
-//r2tocp2: {1*r2,1*on2,r2cp2,cont} -> {1*r2,1*on2,r2cp2,CP2}
-r2usecp1: {1*r2cp2,cont} -> {cont,r2cp1}
-r2usecp2: {1*r2cp1,G} -> {r2cp2,G}
-tcp1: {env0} -> {env1,testCP1}
-tcp2: {env0} -> {env1,testCP2}
-envcp1: {1*out,testCP1} -> {testCP1,cont}
-envcp2: {1*out,testCP2} -> {testCP2,cont}
-sol: {1*out} -> {cont}
-r1on: {G,off1} -> {on1,next}
-r2on: {G,off2} -> {on2,next}
-r1off: {env2,on1} -> {env0,out,off1}
-r2off: {env2,on2} -> {env0,out,off2}
-good: {G} -> {next}
-reset: {next,env1} -> {env2}
-contb: {cont} -> {B1}
+cp2g: {1*CP2, 1*testCP2} -> {1*G}
+envcp1: {1*out, 1*testCP1} -> {1*testCP1, 1*cont}
+envcp2: {1*testCP2, 1*out} -> {1*testCP2, 1*cont}
+good: {1*G} -> {1*next}
+r1off: {1*env2, 1*on1} -> {1*env0, 1*off1, 1*out}
+r1on: {1*G, 1*off1} -> {1*on1, 1*next}
+r1tocp1: {1*on1, 1*r1cp1, 1*cont} -> {1*on1, 1*r1cp1, 1*CP1}
+r1tocp2: {1*on1, 1*cont, 1*r1cp2} -> {1*r1cp2, 1*CP2, 1*on1}
+r1usecp1: {1*cont, 1*r1cp2} -> {1*r1cp1, 1*cont}
+r1usecp2: {1*r1cp1, 1*G} -> {1*r1cp2, 1*G}
+r2off: {1*env2, 1*on2} -> {1*env0, 1*off2, 1*out}
+r2on: {1*G, 1*off2} -> {1*next, 1*on2}
+r2tocp1: {1*cont, 1*r2cp1, 1*on2} -> {1*on2, 1*r2cp1, 1*CP1}
+r2tocp2: {1*on2, 1*r2cp2, 1*cont} -> {1*CP2, 1*r2cp2, 1*on2}
+r2usecp1: {1*cont, 1*r2cp2} -> {1*r2cp1, 1*cont}
+r2usecp2: {1*G, 1*r2cp1} -> {1*r2cp2, 1*G}
+reset: {1*env1, 1*next} -> {1*env2}
+sol: {1*out} -> {1*cont}
+tcp1: {1*env0} -> {1*env1, 1*testCP1}
+tcp2: {1*env0} -> {1*env1, 1*testCP2}
 
-.initial_marking {env0, out,on1,on2,r1cp1,r2cp2}
+.initial_marking {1*env0, 1*on1, 1*on2, 1*out, 1*r1cp1, 1*r2cp2}
