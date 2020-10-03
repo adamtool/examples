@@ -1,3 +1,4 @@
+# Transforms the .gml files from http://www.topology-zoo.org into LTS in APT format 
 import os
 
 def transformFile(file):
@@ -21,7 +22,7 @@ def transformFile(file):
             target = int(t)
             edges.append([source,target])
 
-    newfile = open("TOPOLOGY ZOO/" + name + ".txt","w")
+    newfile = open("TOPOLOGY ZOO/" + name + ".apt","w")
     newfile.write(".name \"" + name + "\"\n")
     newfile.write(".type LTS\n")
     newfile.write(".states\n")
