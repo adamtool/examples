@@ -5,19 +5,19 @@ formula="A F pOut",
 nb_switches="5"
 
 .places
-p1
-p2
-pIn
-pOut[reach="true"]
-pup
+p1[yCoord=450.0, xCoord=690.0]
+p2[yCoord=450.0, xCoord=1170.0]
+pIn[yCoord=450.0, xCoord=330.0]
+pOut[yCoord=450.0, xCoord=1650.0, reach="true"]
+pup[yCoord=690.0, xCoord=1170.0]
 
 .transitions
-createFlows[label="createFlows", tfl="pIn -> {pIn},> -> {pIn}"]
-t0[label="t0", weakFair="true", tfl="p1 -> {p1},pIn -> {p1}"]
-t1[label="t1", weakFair="true", tfl="p1 -> {p2},p2 -> {p2}"]
-t2[label="t2", tfl="p2 -> {pup}"]
-t3[label="t3", weakFair="true", tfl="p2 -> {pOut},pOut -> {pOut}"]
-tup[label="tup", weakFair="true", tfl="p1 -> {pOut},pup -> {pOut},pOut -> {pOut}"]
+createFlows[label="createFlows", yCoord=450.0, xCoord=150.0, tfl="pIn -> {pIn},> -> {pIn}"]
+t0[label="t0", weakFair="true", yCoord=450.0, xCoord=510.0, tfl="p1 -> {p1},pIn -> {p1}"]
+t1[label="t1", weakFair="true", yCoord=450.0, xCoord=930.0, tfl="p1 -> {p2},p2 -> {p2}"]
+t2[label="t2", yCoord=570.0, xCoord=1170.0, tfl="p2 -> {pup}"]
+t3[label="t3", weakFair="true", yCoord=450.0, xCoord=1410.0, tfl="p2 -> {pOut},pOut -> {pOut}"]
+tup[label="tup", weakFair="true", yCoord=870.0, xCoord=1170.0, tfl="p1 -> {pOut},pup -> {pOut},pOut -> {pOut}"]
 
 .flows
 createFlows: {1*pIn} -> {1*pIn}
