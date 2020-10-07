@@ -1,0 +1,27 @@
+.name "initLate"
+.description "A very small APT example to reduce CPU load during development and show all the different ways that nodes in a graph can look"
+.type LPN
+.options
+condition="LTL"
+
+.places
+S[yCoord=330.0, xCoord=690.0]
+p[yCoord=570.0, xCoord=870.0]
+q1[yCoord=150.0, xCoord=690.0]
+q2[yCoord=150.0, xCoord=1050.0]
+r[yCoord=330.0, xCoord=1050.0]
+
+.transitions
+tb[label="tb", yCoord=750.0, xCoord=870.0, tfl="p -> {S}"]
+tp[label="tp", yCoord=390.0, xCoord=870.0, tfl="S -> {p}"]
+tq[label="tq", yCoord=210.0, xCoord=870.0, tfl="S -> {q1,q2}"]
+ts[label="ts", yCoord=326.0, xCoord=498.0, tfl="> -> {S}"]
+
+.flows
+tb: {1*p} -> {1*S, 1*r}
+tp: {1*S} -> {1*p}
+tp: {r} -> {}[inhibitor="true"]
+tq: {1*S} -> {1*q2, 1*q1, 1*r}
+ts: {1*S} -> {1*S}
+
+.initial_marking {1*S}
