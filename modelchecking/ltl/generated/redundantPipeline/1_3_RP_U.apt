@@ -4,32 +4,32 @@
 nb_switches="8"
 
 .places
-in
-out[reach="true"]
-p0
-p1
-p2
-p3
-pupD
-pupU
+in[yCoord=510.0, xCoord=450.0]
+out[yCoord=510.0, xCoord=1530.0, reach="true"]
+p0[yCoord=390.0, xCoord=750.0]
+p1[yCoord=630.0, xCoord=750.0]
+p2[yCoord=630.0, xCoord=990.0]
+p3[yCoord=630.0, xCoord=1230.0]
+pupD[yCoord=810.0, xCoord=570.0]
+pupU[yCoord=210.0, xCoord=570.0]
 
 .transitions
-createFlows[label="createFlows", tfl="in -> {in},> -> {in}"]
-resD[label="resD", weakFair="true", tfl="in -> {in},pupD -> {in}"]
-resU[label="resU", weakFair="true", tfl="in -> {in},pupU -> {in}"]
-tD0[label="tD0", weakFair="true", tfl="p1 -> {p1},in -> {p1}"]
-tD1[label="tD1", weakFair="true", tfl="p1 -> {p2},p2 -> {p2}"]
-tD2[label="tD2", weakFair="true", tfl="p2 -> {p3},p3 -> {p3}"]
-tDout[label="tDout", weakFair="true", tfl="p3 -> {out},out -> {out}"]
-tU0[label="tU0", weakFair="true", tfl="p0 -> {p0},in -> {p0}"]
-tUout[label="tUout", weakFair="true", tfl="p0 -> {out},out -> {out}"]
-tupD[label="tupD", tfl="p1 -> {pupD}"]
-tupU[label="tupU", tfl="p0 -> {pupU}"]
+createFlows[label="createFlows", yCoord=510.0, xCoord=270.0, tfl="in -> {in},> -> {in}"]
+resD[label="resD", weakFair="true", yCoord=810.0, xCoord=450.0, tfl="in -> {in},pupD -> {in}"]
+resU[label="resU", weakFair="true", yCoord=210.0, xCoord=450.0, tfl="in -> {in},pupU -> {in}"]
+tD0[label="tD0", weakFair="true", yCoord=630.0, xCoord=570.0, tfl="p1 -> {p1},in -> {p1}"]
+tD1[label="tD1", weakFair="true", yCoord=630.0, xCoord=870.0, tfl="p1 -> {p2},p2 -> {p2}"]
+tD2[label="tD2", weakFair="true", yCoord=630.0, xCoord=1110.0, tfl="p2 -> {p3},p3 -> {p3}"]
+tDout[label="tDout", weakFair="true", yCoord=630.0, xCoord=1350.0, tfl="p3 -> {out},out -> {out}"]
+tU0[label="tU0", weakFair="true", yCoord=390.0, xCoord=570.0, tfl="p0 -> {p0},in -> {p0}"]
+tUout[label="tUout", weakFair="true", yCoord=390.0, xCoord=1350.0, tfl="p0 -> {out},out -> {out}"]
+tupD[label="tupD", yCoord=810.0, xCoord=750.0, tfl="p1 -> {pupD}"]
+tupU[label="tupU", yCoord=210.0, xCoord=750.0, tfl="p0 -> {pupU}"]
 
 .flows
 createFlows: {1*in} -> {1*in}
-resD: {1*pupD, 1*in} -> {1*pupD, 1*in}
-resU: {1*pupU, 1*in} -> {1*pupU, 1*in}
+resD: {1*in, 1*pupD} -> {1*pupD, 1*in}
+resU: {1*in, 1*pupU} -> {1*pupU, 1*in}
 tD0: {1*p1, 1*in} -> {1*in, 1*p1}
 tD1: {1*p2, 1*p1} -> {1*p1, 1*p2}
 tD2: {1*p2, 1*p3} -> {1*p2, 1*p3}
