@@ -1,0 +1,36 @@
+.name "network_6"
+.type LPN
+.options
+formula="A F pOut",
+nb_switches="7"
+
+.places
+p1[yCoord=450.0, xCoord=690.0]
+p2[yCoord=446.11, xCoord=1026.66]
+p3[yCoord=446.11, xCoord=1386.66]
+p4[yCoord=450.0, xCoord=1710.0]
+pIn[yCoord=450.0, xCoord=330.0]
+pOut[yCoord=450.0, xCoord=2010.0, reach="true"]
+pup[yCoord=686.11, xCoord=1386.66]
+
+.transitions
+createFlows[label="createFlows", yCoord=450.0, xCoord=150.0, tfl="pIn -> {pIn},> -> {pIn}"]
+t0[label="t0", weakFair="true", yCoord=450.0, xCoord=510.0, tfl="p1 -> {p1},pIn -> {p1}"]
+t1[label="t1", weakFair="true", yCoord=450.0, xCoord=870.0, tfl="p1 -> {p2},p2 -> {p2}"]
+t2[label="t2", weakFair="true", yCoord=446.11, xCoord=1206.66, tfl="p2 -> {p3},p3 -> {p3}"]
+t3[label="t3", yCoord=566.11, xCoord=1386.66, tfl="p3 -> {pup}"]
+t4[label="t4", weakFair="true", yCoord=446.11, xCoord=1506.66, tfl="p3 -> {p4},p4 -> {p4}"]
+t5[label="t5", weakFair="true", yCoord=450.0, xCoord=1830.0, tfl="p4 -> {pOut},pOut -> {pOut}"]
+tup[label="tup", weakFair="true", yCoord=866.11, xCoord=1386.66, tfl="p2 -> {p4},p4 -> {p4},pup -> {p4}"]
+
+.flows
+createFlows: {1*pIn} -> {1*pIn}
+t0: {1*pIn, 1*p1} -> {1*p1, 1*pIn}
+t1: {1*p1, 1*p2} -> {1*p1, 1*p2}
+t2: {1*p2, 1*p3} -> {1*p3, 1*p2}
+t3: {1*p3} -> {1*pup}
+t4: {1*p4, 1*p3} -> {1*p4, 1*p3}
+t5: {1*p4, 1*pOut} -> {1*p4, 1*pOut}
+tup: {1*p2, 1*pup, 1*p4} -> {1*p4, 1*p2, 1*pup}
+
+.initial_marking {1*p1, 1*p2, 1*p3, 1*p4, 1*pIn, 1*pOut}
