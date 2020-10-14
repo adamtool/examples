@@ -1,0 +1,26 @@
+.name "redundantFlow_basis"
+.type LPN
+.options
+nb_switches="4"
+
+.places
+in[yCoord=510.0, xCoord=450.0]
+out[yCoord=510.0, xCoord=1110.0, reach="true"]
+p0[yCoord=390.0, xCoord=750.0]
+p1[yCoord=630.0, xCoord=750.0]
+
+.transitions
+createFlows[label="createFlows", yCoord=510.0, xCoord=270.0, tfl="in -> {in},> -> {in}"]
+tD0[label="tD0", weakFair="true", yCoord=630.0, xCoord=570.0, tfl="p1 -> {p1},in -> {p1}"]
+tDout[label="tDout", weakFair="true", yCoord=630.0, xCoord=930.0, tfl="p1 -> {out},out -> {out}"]
+tU0[label="tU0", weakFair="true", yCoord=390.0, xCoord=570.0, tfl="p0 -> {p0},in -> {p0}"]
+tUout[label="tUout", weakFair="true", yCoord=390.0, xCoord=930.0, tfl="p0 -> {out},out -> {out}"]
+
+.flows
+createFlows: {1*in} -> {1*in}
+tD0: {1*p1, 1*in} -> {1*in, 1*p1}
+tDout: {1*out, 1*p1} -> {1*out, 1*p1}
+tU0: {1*p0, 1*in} -> {1*in, 1*p0}
+tUout: {1*out, 1*p0} -> {1*out, 1*p0}
+
+.initial_marking {1*in, 1*out, 1*p0, 1*p1}

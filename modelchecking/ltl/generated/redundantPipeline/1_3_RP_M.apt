@@ -1,0 +1,49 @@
+.name "redundantFlow_basis_withUpdate_withMutex_not_fixed_not_fixed"
+.type LPN
+.options
+nb_switches="8"
+
+.places
+in
+mD
+mU
+mutex
+out[reach="true"]
+p0
+p1
+p2
+p3
+pupD
+pupU
+
+.transitions
+createFlows[label="createFlows", tfl="in -> {in},> -> {in}"]
+mtD[label="mtD", tfl="pupD -> {p1}"]
+mtU[label="mtU", tfl="pupU -> {p0}"]
+resD[label="resD", strongFair="true", tfl="in -> {in},pupD -> {in}"]
+resU[label="resU", strongFair="true", tfl="in -> {in},pupU -> {in}"]
+tD0[label="tD0", strongFair="true", tfl="p1 -> {p1},in -> {p1}"]
+tD1[label="tD1", strongFair="true", tfl="p1 -> {p2},p2 -> {p2}"]
+tD2[label="tD2", strongFair="true", tfl="p2 -> {p3},p3 -> {p3}"]
+tDout[label="tDout", strongFair="true", tfl="p3 -> {out},out -> {out}"]
+tU0[label="tU0", strongFair="true", tfl="p0 -> {p0},in -> {p0}"]
+tUout[label="tUout", strongFair="true", tfl="p0 -> {out},out -> {out}"]
+tupD[label="tupD", tfl="p1 -> {pupD}"]
+tupU[label="tupU", tfl="p0 -> {pupU}"]
+
+.flows
+createFlows: {1*in} -> {1*in}
+mtD: {1*pupD, 1*mD} -> {1*mutex, 1*p1}
+mtU: {1*mU, 1*pupU} -> {1*p0, 1*mutex}
+resD: {1*pupD, 1*in} -> {1*pupD, 1*in}
+resU: {1*pupU, 1*in} -> {1*pupU, 1*in}
+tD0: {1*p1, 1*in} -> {1*in, 1*p1}
+tD1: {1*p2, 1*p1} -> {1*p1, 1*p2}
+tD2: {1*p2, 1*p3} -> {1*p2, 1*p3}
+tDout: {1*out, 1*p3} -> {1*out, 1*p3}
+tU0: {1*p0, 1*in} -> {1*in, 1*p0}
+tUout: {1*out, 1*p0} -> {1*out, 1*p0}
+tupD: {1*mutex, 1*p1} -> {1*pupD, 1*mD}
+tupU: {1*p0, 1*mutex} -> {1*pupU, 1*mU}
+
+.initial_marking {1*in, 1*mutex, 1*out, 1*p0, 1*p1, 1*p2, 1*p3}

@@ -1,0 +1,42 @@
+.name "redundantFlow_basis_withUpdate"
+.type LPN
+.options
+nb_switches="8"
+
+.places
+in
+out[reach="true"]
+p0
+p1
+p2
+p3
+pupD
+pupU
+
+.transitions
+createFlows[label="createFlows", tfl="in -> {in},> -> {in}"]
+resD[label="resD", weakFair="true", tfl="in -> {in},pupD -> {in}"]
+resU[label="resU", weakFair="true", tfl="in -> {in},pupU -> {in}"]
+tD0[label="tD0", weakFair="true", tfl="p2 -> {p2},in -> {p2}"]
+tD1[label="tD1", weakFair="true", tfl="p2 -> {p3},p3 -> {p3}"]
+tDout[label="tDout", weakFair="true", tfl="p3 -> {out},out -> {out}"]
+tU0[label="tU0", weakFair="true", tfl="p0 -> {p0},in -> {p0}"]
+tU1[label="tU1", weakFair="true", tfl="p0 -> {p1},p1 -> {p1}"]
+tUout[label="tUout", weakFair="true", tfl="p1 -> {out},out -> {out}"]
+tupD[label="tupD", tfl="p2 -> {pupD}"]
+tupU[label="tupU", tfl="p0 -> {pupU}"]
+
+.flows
+createFlows: {1*in} -> {1*in}
+resD: {1*pupD, 1*in} -> {1*pupD, 1*in}
+resU: {1*pupU, 1*in} -> {1*pupU, 1*in}
+tD0: {1*p2, 1*in} -> {1*in, 1*p2}
+tD1: {1*p3, 1*p2} -> {1*p3, 1*p2}
+tDout: {1*out, 1*p3} -> {1*out, 1*p3}
+tU0: {1*p0, 1*in} -> {1*in, 1*p0}
+tU1: {1*p1, 1*p0} -> {1*p0, 1*p1}
+tUout: {1*out, 1*p1} -> {1*out, 1*p1}
+tupD: {1*p2} -> {1*pupD}
+tupU: {1*p0} -> {1*pupU}
+
+.initial_marking {1*in, 1*out, 1*p0, 1*p1, 1*p2, 1*p3}
