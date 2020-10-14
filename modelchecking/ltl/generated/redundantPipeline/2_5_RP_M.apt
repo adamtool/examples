@@ -4,44 +4,44 @@
 nb_switches="11"
 
 .places
-in
-mD
-mU
-mutex
-out[reach="true"]
-p0
-p1
-p2
-p3
-p4
-p5
-p6
-pupD
-pupU
+in[yCoord=510.0, xCoord=450.0]
+mD[yCoord=930.0, xCoord=570.0]
+mU[yCoord=90.0, xCoord=570.0]
+mutex[yCoord=510.0, xCoord=90.0]
+out[yCoord=510.0, xCoord=2130.0, reach="true"]
+p0[yCoord=390.0, xCoord=750.0]
+p1[yCoord=390.0, xCoord=1050.0]
+p2[yCoord=630.0, xCoord=750.0]
+p3[yCoord=630.0, xCoord=990.0]
+p4[yCoord=630.0, xCoord=1290.0]
+p5[yCoord=630.0, xCoord=1590.0]
+p6[yCoord=630.0, xCoord=1830.0]
+pupD[yCoord=810.0, xCoord=570.0]
+pupU[yCoord=210.0, xCoord=570.0]
 
 .transitions
-createFlows[label="createFlows", tfl="in -> {in},> -> {in}"]
-mtD[label="mtD", tfl="pupD -> {p2}"]
-mtU[label="mtU", tfl="pupU -> {p0}"]
-resD[label="resD", strongFair="true", tfl="in -> {in},pupD -> {in}"]
-resU[label="resU", strongFair="true", tfl="in -> {in},pupU -> {in}"]
-tD0[label="tD0", strongFair="true", tfl="p2 -> {p2},in -> {p2}"]
-tD1[label="tD1", strongFair="true", tfl="p2 -> {p3},p3 -> {p3}"]
-tD2[label="tD2", strongFair="true", tfl="p3 -> {p4},p4 -> {p4}"]
-tD3[label="tD3", strongFair="true", tfl="p4 -> {p5},p5 -> {p5}"]
-tD4[label="tD4", strongFair="true", tfl="p5 -> {p6},p6 -> {p6}"]
-tDout[label="tDout", strongFair="true", tfl="p6 -> {out},out -> {out}"]
-tU0[label="tU0", strongFair="true", tfl="p0 -> {p0},in -> {p0}"]
-tU1[label="tU1", strongFair="true", tfl="p0 -> {p1},p1 -> {p1}"]
-tUout[label="tUout", strongFair="true", tfl="p1 -> {out},out -> {out}"]
-tupD[label="tupD", tfl="p2 -> {pupD}"]
-tupU[label="tupU", tfl="p0 -> {pupU}"]
+createFlows[label="createFlows", yCoord=510.0, xCoord=270.0, tfl="in -> {in},> -> {in}"]
+mtD[label="mtD", yCoord=930.0, xCoord=90.0, tfl="pupD -> {p2}"]
+mtU[label="mtU", yCoord=90.0, xCoord=90.0, tfl="pupU -> {p0}"]
+resD[label="resD", strongFair="true", yCoord=810.0, xCoord=450.0, tfl="in -> {in},pupD -> {in}"]
+resU[label="resU", strongFair="true", yCoord=210.0, xCoord=450.0, tfl="in -> {in},pupU -> {in}"]
+tD0[label="tD0", strongFair="true", yCoord=630.0, xCoord=570.0, tfl="p2 -> {p2},in -> {p2}"]
+tD1[label="tD1", strongFair="true", yCoord=630.0, xCoord=870.0, tfl="p2 -> {p3},p3 -> {p3}"]
+tD2[label="tD2", strongFair="true", yCoord=630.0, xCoord=1110.0, tfl="p3 -> {p4},p4 -> {p4}"]
+tD3[label="tD3", strongFair="true", yCoord=630.0, xCoord=1410.0, tfl="p4 -> {p5},p5 -> {p5}"]
+tD4[label="tD4", strongFair="true", yCoord=630.0, xCoord=1710.0, tfl="p5 -> {p6},p6 -> {p6}"]
+tDout[label="tDout", strongFair="true", yCoord=630.0, xCoord=1950.0, tfl="p6 -> {out},out -> {out}"]
+tU0[label="tU0", strongFair="true", yCoord=390.0, xCoord=570.0, tfl="p0 -> {p0},in -> {p0}"]
+tU1[label="tU1", strongFair="true", yCoord=390.0, xCoord=870.0, tfl="p0 -> {p1},p1 -> {p1}"]
+tUout[label="tUout", strongFair="true", yCoord=390.0, xCoord=1950.0, tfl="p1 -> {out},out -> {out}"]
+tupD[label="tupD", yCoord=810.0, xCoord=750.0, tfl="p2 -> {pupD}"]
+tupU[label="tupU", yCoord=210.0, xCoord=750.0, tfl="p0 -> {pupU}"]
 
 .flows
 createFlows: {1*in} -> {1*in}
 mtD: {1*pupD, 1*mD} -> {1*mutex, 1*p2}
 mtU: {1*mU, 1*pupU} -> {1*p0, 1*mutex}
-resD: {1*pupD, 1*in} -> {1*pupD, 1*in}
+resD: {1*in, 1*pupD} -> {1*pupD, 1*in}
 resU: {1*pupU, 1*in} -> {1*pupU, 1*in}
 tD0: {1*p2, 1*in} -> {1*in, 1*p2}
 tD1: {1*p3, 1*p2} -> {1*p3, 1*p2}
