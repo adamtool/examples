@@ -1,4 +1,4 @@
-.name "sdn"
+.name "sdn-Arpanet196912"
 .type LPN
 .options
 condition="LTL"
