@@ -4,20 +4,20 @@
 condition="SAFETY"
 
 .places
-bad[yCoord=930.0, bad="true", xCoord=1470.0, token=1]
-s1[yCoord=1170.0, xCoord=1050.0, env="true", token=0]
-s2[yCoord=1350.0, xCoord=870.0, env="true", token=0]
-s3[yCoord=1170.0, xCoord=1170.0, token=1]
-s4[yCoord=1350.0, xCoord=1290.0, token=1]
-s5[yCoord=1170.0, xCoord=1470.0, token=1]
+bad[yCoord=130.0, bad="true", xCoord=770.0, token=1]
+s1[yCoord=370.0, xCoord=350.0, env="true", token=0]
+s2[yCoord=550.0, xCoord=170.0, env="true", token=0]
+s3[yCoord=370.0, xCoord=470.0, token=1]
+s4[yCoord=550.0, xCoord=590.0, token=1]
+s5[yCoord=370.0, xCoord=770.0, token=1]
 
 .transitions
-t1[label="t1", yCoord=1170.0, xCoord=870.0]
-t2[label="t2", yCoord=1350.0, xCoord=1050.0]
-t3[label="t3", yCoord=1170.0, xCoord=1290.0]
-t4[label="t4", yCoord=1350.0, xCoord=1470.0]
-t5[label="t5", yCoord=1050.0, xCoord=1470.0]
-t6[label="t6", yCoord=1170.0, xCoord=1650.0]
+t1[label="t1", yCoord=370.0, xCoord=170.0]
+t2[label="t2", yCoord=550.0, xCoord=350.0]
+t3[label="t3", yCoord=370.0, xCoord=590.0]
+t4[label="t4", yCoord=550.0, xCoord=770.0]
+t5[label="t5", yCoord=250.0, xCoord=770.0]
+t6[label="t6", yCoord=370.0, xCoord=950.0]
 
 .flows
 t1: {1*s2} -> {1*s1}
