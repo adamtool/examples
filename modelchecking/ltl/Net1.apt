@@ -1,4 +1,5 @@
 .name "sdn-Arpanet196912"
+.description "The SDN encoding of Arpanet196912 from the topology zoo and the update from [sw002fwdTosw000, sw000fwdTopOut] to [sw002fwdTopOut]."
 .type LPN
 .options
 condition="LTL"

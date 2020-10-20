@@ -1,7 +1,8 @@
 .name "sdn-Napnet"
+.description "The SDN encoding of Napnet from the topology zoo and the update from [sw003fwdTopOut] to [sw003fwdTosw004, sw004fwdTopOut]."
 .type LPN
 .options
-nb_switches="6"
+condition="LTL"
 
 .places
 p0[yCoord=30.0, xCoord=1830.0]
