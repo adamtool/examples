@@ -1,0 +1,57 @@
+.name "SDN-handbuildExample"
+.description "The motivating example from the ATVA19 paper and the update from configuration [vfwdTou, ufwdToy, yfwdTod] to configuration [vfwdToy, yfwdTol, lfwdTod].
+              Satisfiable formula:   A F d
+              Unsatisfiable formula: A F u"
+.type LPN
+.options
+condition="LTL"
+
+.places
+u[yCoord=930.0, xCoord=690.0]
+y[yCoord=750.0, xCoord=1290.0]
+l[yCoord=930.0, xCoord=1770.0]
+d[yCoord=510.0, xCoord=1770.0]
+v[yCoord=510.0, xCoord=690.0]
+p10[yCoord=990.0, xCoord=990.0]
+p11[yCoord=450.0, xCoord=990.0]
+p12[yCoord=736.84, xCoord=544.2]
+p13[yCoord=1230.0, xCoord=450.0]
+p14[yCoord=1230.0, xCoord=2070.0]
+p16[yCoord=330.0, xCoord=450.0]
+p17[yCoord=750.0, xCoord=2070.0]
+p18[yCoord=329.65, xCoord=2072.3]
+p5[yCoord=1350.0, xCoord=1290.0]
+p6[yCoord=704.92, xCoord=1590.0]
+p7[yCoord=1110.0, xCoord=1470.0]
+p8[yCoord=750.0, xCoord=1890.0]
+p9[yCoord=450.0, xCoord=1530.0]
+
+.transitions
+ingress[label="ingress", yCoord=510.0, xCoord=570.0, tfl="v -> {v},> -> {v}"]
+t0[label="t0", yCoord=630.0, xCoord=990.0, tfl="v -> {y},y -> {y}", weakFair="true"]
+t1[label="t1", yCoord=726.0, xCoord=685.0, tfl="v -> {u},u -> {u}", weakFair="true"]
+t10[label="t10", yCoord=1110.0, xCoord=2070.0, weakFair="true"]
+t11[label="t11", yCoord=450.0, xCoord=2070.0, weakFair="true"]
+t2[label="t2", yCoord=870.0, xCoord=990.0, tfl="u -> {y},y -> {y}", weakFair="true"]
+t3[label="t3", yCoord=750.0, xCoord=1769.0, tfl="d -> {d},l -> {d}", weakFair="true"]
+t4[label="t4", yCoord=630.0, xCoord=1530.0, tfl="d -> {d},y -> {d}", weakFair="true"]
+t5[label="t5", yCoord=810.0, xCoord=1590.0, tfl="y -> {y},l -> {y}", weakFair="true"]
+t6[label="t6", yCoord=990.0, xCoord=1470.0, tfl="y -> {l},l -> {l}", weakFair="true"]
+t7[label="t7", yCoord=1230.0, xCoord=1290.0]
+t9[label="t9", yCoord=450.0, xCoord=450.0, weakFair="true"]
+
+.flows
+ingress: {1*v} -> {1*v}
+t0: {1*p11, 1*v, 1*y} -> {1*p11, 1*y, 1*v}
+t1: {1*p12, 1*u, 1*v} -> {1*u, 1*v, 1*p12}
+t10: {1*p14, 1*p6} -> {1*p17, 1*p7}
+t11: {1*p9, 1*p17} -> {1*p18, 1*p8}
+t2: {1*p10, 1*u, 1*y} -> {1*y, 1*p10, 1*u}
+t3: {1*d, 1*l, 1*p8} -> {1*p8, 1*l, 1*d}
+t4: {1*p9, 1*y, 1*d} -> {1*p9, 1*d, 1*y}
+t5: {1*p6, 1*l, 1*y} -> {1*l, 1*p6, 1*y}
+t6: {1*y, 1*p7, 1*l} -> {1*y, 1*p7, 1*l}
+t7: {1*p5} -> {1*p13, 1*p14}
+t9: {1*p13, 1*p12} -> {1*p16, 1*p11}
+
+.initial_marking {1*u, 1*y, 1*l, 1*d, 1*v, 1*p10, 1*p12, 1*p5, 1*p6, 1*p9}
