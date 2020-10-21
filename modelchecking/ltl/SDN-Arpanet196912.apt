@@ -1,5 +1,7 @@
-.name "sdn-Arpanet196912"
-.description "The SDN encoding of Arpanet196912 from the topology zoo and the update from [sw002fwdTosw000, sw000fwdTopOut] to [sw002fwdTopOut]."
+.name "SDN-Arpanet196912"
+.description "The SDN encoding of Arpanet196912 from the topology zoo and the update from configuration [sw002fwdTosw000, sw000fwdTopOut] to configuration [sw002fwdTopOut].
+              Satisfiable formula:   A F pOut
+              Unsatisfiable formula: A F sw000"
 .type LPN
 .options
 condition="LTL"

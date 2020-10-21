@@ -1,5 +1,7 @@
-.name "sdn-Heanet"
-.description "The SDN encoding of Heanet from the topology zoo and the update from [sw006fwdTosw003, sw003fwdTopOut] to [sw006fwdTosw005, sw005fwdTosw003, sw003fwdTopOut]."
+.name "SDN-Heanet"
+.description "The SDN encoding of Heanet from the topology zoo and the update from configuration [sw006fwdTosw003, sw003fwdTopOut] to configuration [sw006fwdTosw005, sw005fwdTosw003, sw003fwdTopOut].
+              Satisfiable formula:   A F pOut
+              Unsatisfiable formula: A F sw005"
 .type LPN
 .options
 condition="LTL"

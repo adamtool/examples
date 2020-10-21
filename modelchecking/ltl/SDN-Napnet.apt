@@ -1,5 +1,7 @@
-.name "sdn-Napnet"
-.description "The SDN encoding of Napnet from the topology zoo and the update from [sw003fwdTopOut] to [sw003fwdTosw004, sw004fwdTopOut]."
+.name "SDN-Napnet"
+.description "The SDN encoding of Napnet from the topology zoo and the update from configuration [sw003fwdTopOut] to configuration [sw003fwdTosw004, sw004fwdTopOut].
+              Satisfiable formula:   A F pOut
+              Unsatisfiable formula: A F sw004"
 .type LPN
 .options
 condition="LTL"
