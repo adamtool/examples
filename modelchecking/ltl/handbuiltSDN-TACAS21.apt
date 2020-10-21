@@ -1,0 +1,59 @@
+.name "Simple Example"
+.description "A very small APT example to reduce CPU load during development and show all the different ways that nodes in a graph can look"
+.type LPN
+.options
+condition="LTL"
+
+.places
+a0[yCoord=390.0, xCoord=510.0]
+a1[yCoord=511.51, xCoord=529.6]
+a2[yCoord=630.0, xCoord=570.0]
+a3[yCoord=150.0, xCoord=870.0]
+a4[yCoord=238.23, xCoord=898.26]
+a5[yCoord=510.0, xCoord=930.0]
+s0[yCoord=30.0, xCoord=630.0]
+s1[yCoord=390.0, xCoord=390.0]
+s2[yCoord=750.0, xCoord=450.0]
+s3[yCoord=30.0, xCoord=990.0]
+s4[yCoord=386.98, xCoord=956.83]
+s5[yCoord=750.0, xCoord=930.0]
+u0[yCoord=630.0, xCoord=930.0]
+u1[yCoord=630.0, xCoord=690.0]
+u2[yCoord=510.0, xCoord=750.0]
+u3[yCoord=430.4, xCoord=882.06]
+u4[yCoord=390.0, xCoord=750.0]
+u5[yCoord=270.0, xCoord=750.0]
+u6[yCoord=175.31, xCoord=673.11]
+u7[yCoord=210.0, xCoord=810.0]
+
+.transitions
+ingress[label="ingress", weakFair="true", yCoord=30.0, xCoord=390.0, tfl="s0 -> {s0},> -> {s0}"]
+t0[label="t0", weakFair="true", yCoord=208.49, xCoord=473.82, tfl="s0 -> {s1},s1 -> {s1}"]
+t1[label="t1", weakFair="true", yCoord=562.46, xCoord=420.15, tfl="s1 -> {s2},s2 -> {s2}"]
+t10[label="t10", yCoord=270.0, xCoord=630.0]
+t11[label="t11", yCoord=106.28, xCoord=751.51]
+t2[label="t2", weakFair="true", yCoord=750.0, xCoord=690.0, tfl="s5 -> {s5},s2 -> {s5}"]
+t3[label="t3", weakFair="true", yCoord=30.0, xCoord=810.0, tfl="s3 -> {s3},s0 -> {s3}"]
+t4[label="t4", weakFair="true", yCoord=210.0, xCoord=1050.0, tfl="s3 -> {s4},s4 -> {s4}"]
+t5[label="t5", weakFair="true", yCoord=570.0, xCoord=1050.0, tfl="s4 -> {s5},s5 -> {s5}"]
+t6[label="t6", yCoord=630.0, xCoord=810.0]
+t7[label="t7", yCoord=510.0, xCoord=630.0]
+t8[label="t8", yCoord=428.51, xCoord=596.31]
+t9[label="t9", yCoord=333.02, xCoord=833.82]
+
+.flows
+ingress: {1*s0} -> {1*s0}
+t0: {1*s1, 1*a0, 1*s0} -> {1*s0, 1*s1, 1*a0}
+t1: {1*s2, 1*a1, 1*s1} -> {1*s2, 1*a1, 1*s1}
+t10: {1*u5} -> {1*a0, 1*u6}
+t11: {1*a3, 1*u6} -> {1*u7}
+t2: {1*s2, 1*s5, 1*a2} -> {1*s2, 1*a2, 1*s5}
+t3: {1*a3, 1*s0, 1*s3} -> {1*a3, 1*s0, 1*s3}
+t4: {1*s3, 1*s4, 1*a4} -> {1*s3, 1*s4, 1*a4}
+t5: {1*s5, 1*s4, 1*a5} -> {1*s4, 1*s5, 1*a5}
+t6: {1*u0} -> {1*u1, 1*u2}
+t7: {1*u1} -> {1*u3, 1*a2}
+t8: {1*u2} -> {1*u4, 1*a1}
+t9: {1*u3, 1*u4} -> {1*u5}
+
+.initial_marking {1*a3, 1*a4, 1*a5, 1*s0, 1*s1, 1*s2, 1*s3, 1*s4, 1*s5, 1*u0}
