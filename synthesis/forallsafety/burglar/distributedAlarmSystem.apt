@@ -1,0 +1,81 @@
+.name "Burglar"
+.description "Distributed alarm system with two locations. This example has a winning strategy."
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+bad[yCoord=1050.0, xCoord=810.0, bad="true"]
+e0[yCoord=30.0, xCoord=810.0, env="true"]
+e1[yCoord=270.0, xCoord=750.0, env="true"]
+e2[yCoord=270.0, xCoord=870.0, env="true"]
+eL[yCoord=450.0, xCoord=570.0, env="true"]
+eR[yCoord=450.0, xCoord=1050.0, env="true"]
+p0[yCoord=390.0, xCoord=750.0]
+p1[yCoord=450.0, xCoord=630.0]
+p2[yCoord=690.0, xCoord=630.0]
+pL[yCoord=870.0, xCoord=510.0]
+pR[yCoord=870.0, xCoord=750.0]
+q0[yCoord=390.0, xCoord=870.0]
+q1[yCoord=450.0, xCoord=990.0]
+q2[yCoord=690.0, xCoord=990.0]
+qL[yCoord=870.0, xCoord=870.0]
+qR[yCoord=870.0, xCoord=1110.0]
+
+.transitions
+fa0[label="fa0", yCoord=1230.0, xCoord=630.0]
+fa1[label="fa1", yCoord=1230.0, xCoord=750.0]
+fa2[label="fa2", yCoord=1230.0, xCoord=870.0]
+fa3[label="fa3", yCoord=1230.0, xCoord=990.0]
+fr0[label="fr0", yCoord=990.0, xCoord=570.0]
+fr1[label="fr1", yCoord=990.0, xCoord=690.0]
+fr2[label="fr2", yCoord=990.0, xCoord=930.0]
+fr3[label="fr3", yCoord=990.0, xCoord=1050.0]
+fr4[label="fr4", yCoord=1110.0, xCoord=570.0]
+fr5[label="fr5", yCoord=1110.0, xCoord=690.0]
+fr6[label="fr6", yCoord=1110.0, xCoord=930.0]
+fr7[label="fr7", yCoord=1110.0, xCoord=1050.0]
+t0[label="t0", yCoord=150.0, xCoord=750.0]
+t1[label="t1", yCoord=150.0, xCoord=870.0]
+t10[label="t10", yCoord=750.0, xCoord=1110.0]
+t11[label="t11", yCoord=570.0, xCoord=930.0]
+t12[label="t12", yCoord=570.0, xCoord=570.0]
+t13[label="t13", yCoord=570.0, xCoord=1050.0]
+t2[label="t2", yCoord=330.0, xCoord=630.0]
+t3[label="t3", yCoord=330.0, xCoord=990.0]
+t4[label="t4", yCoord=510.0, xCoord=750.0]
+t5[label="t5", yCoord=510.0, xCoord=870.0]
+t6[label="t6", yCoord=570.0, xCoord=690.0]
+t7[label="t7", yCoord=750.0, xCoord=510.0]
+t8[label="t8", yCoord=750.0, xCoord=750.0]
+t9[label="t9", yCoord=750.0, xCoord=870.0]
+
+.flows
+fa0: {1*e0, 1*pL} -> {1*bad}
+fa1: {1*pR, 1*e0} -> {1*bad}
+fa2: {1*qL, 1*e0} -> {1*bad}
+fa3: {1*e0, 1*qL} -> {1*bad}
+fr0: {1*pR, 1*eL} -> {1*bad}
+fr1: {1*eL, 1*qR} -> {1*bad}
+fr2: {1*eR, 1*pL} -> {1*bad}
+fr3: {1*qL, 1*eR} -> {1*bad}
+fr4: {1*pR, 1*e1} -> {1*bad}
+fr5: {1*qR, 1*e1} -> {1*bad}
+fr6: {1*pL, 1*e2} -> {1*bad}
+fr7: {1*qL, 1*e2} -> {1*bad}
+t0: {1*e0} -> {1*e1}
+t1: {1*e0} -> {1*e2}
+t10: {1*q2} -> {1*qR}
+t11: {1*q1} -> {1*q2}
+t12: {1*p0} -> {1*p2}
+t13: {1*q0} -> {1*q2}
+t2: {1*e1, 1*p0} -> {1*p1, 1*eL}
+t3: {1*q0, 1*e2} -> {1*q1, 1*eR}
+t4: {1*p1, 1*q0} -> {1*p2, 1*q2}
+t5: {1*q1, 1*p0} -> {1*q2, 1*p2}
+t6: {1*p1} -> {1*p2}
+t7: {1*p2} -> {1*pL}
+t8: {1*p2} -> {1*pR}
+t9: {1*q2} -> {1*qL}
+
+.initial_marking {1*e0, 1*p0, 1*q0}
