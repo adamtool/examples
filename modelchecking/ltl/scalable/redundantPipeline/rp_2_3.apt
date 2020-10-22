@@ -1,0 +1,53 @@
+.name "redundantFlow_basis_withUpdate_withMutex_not_fixed_not_fixed"
+.type LPN
+.options
+formula="A F out",
+nb_switches="9"
+
+.places
+in[yCoord=390.76, xCoord=-79.86]
+mD[yCoord=450.0, xCoord=1650.0]
+mU[yCoord=933.59, xCoord=591.4]
+mutex[yCoord=450.0, xCoord=1470.0]
+out[yCoord=450.0, xCoord=1350.0, reach="true"]
+p0[yCoord=270.0, xCoord=270.0]
+p1[yCoord=270.0, xCoord=630.0]
+p2[yCoord=570.0, xCoord=270.0]
+p3[yCoord=570.0, xCoord=630.0]
+p4[yCoord=570.0, xCoord=990.0]
+pupD[yCoord=-90.0, xCoord=270.0]
+pupU[yCoord=1110.0, xCoord=510.0]
+
+.transitions
+createFlows[label="createFlows", yCoord=390.0, xCoord=-210.0, tfl="in -> {in},> -> {in}"]
+mtD[label="mtD", yCoord=-90.0, xCoord=1530.0, tfl="pupD -> {p2}"]
+mtU[label="mtU", yCoord=1110.0, xCoord=810.0, tfl="pupU -> {p0}"]
+resD[label="resD", strongFair="true", yCoord=-90.0, xCoord=-30.0, tfl="in -> {in},pupD -> {in}"]
+resU[label="resU", strongFair="true", yCoord=810.0, xCoord=-90.0, tfl="in -> {in},pupU -> {in}"]
+tD0[label="tD0", strongFair="true", yCoord=570.0, xCoord=90.0, tfl="p2 -> {p2},in -> {p2}"]
+tD1[label="tD1", strongFair="true", yCoord=570.0, xCoord=450.0, tfl="p2 -> {p3},p3 -> {p3}"]
+tD2[label="tD2", strongFair="true", yCoord=570.0, xCoord=870.0, tfl="p3 -> {p4},p4 -> {p4}"]
+tDout[label="tDout", strongFair="true", yCoord=570.0, xCoord=1170.0, tfl="p4 -> {out},out -> {out}"]
+tU0[label="tU0", strongFair="true", yCoord=270.0, xCoord=90.0, tfl="p0 -> {p0},in -> {p0}"]
+tU1[label="tU1", strongFair="true", yCoord=270.0, xCoord=450.0, tfl="p0 -> {p1},p1 -> {p1}"]
+tUout[label="tUout", strongFair="true", yCoord=270.0, xCoord=870.0, tfl="p1 -> {out},out -> {out}"]
+tupD[label="tupD", yCoord=1110.0, xCoord=1530.0, tfl="p2 -> {pupD}"]
+tupU[label="tupU", yCoord=810.0, xCoord=450.0, tfl="p0 -> {pupU}"]
+
+.flows
+createFlows: {1*in} -> {1*in}
+mtD: {1*pupD, 1*mD} -> {1*mutex, 1*p2}
+mtU: {1*mU, 1*pupU} -> {1*p0, 1*mutex}
+resD: {1*in, 1*pupD} -> {1*pupD, 1*in}
+resU: {1*pupU, 1*in} -> {1*pupU, 1*in}
+tD0: {1*p2, 1*in} -> {1*in, 1*p2}
+tD1: {1*p3, 1*p2} -> {1*p3, 1*p2}
+tD2: {1*p4, 1*p3} -> {1*p4, 1*p3}
+tDout: {1*p4, 1*out} -> {1*out, 1*p4}
+tU0: {1*p0, 1*in} -> {1*in, 1*p0}
+tU1: {1*p1, 1*p0} -> {1*p0, 1*p1}
+tUout: {1*out, 1*p1} -> {1*out, 1*p1}
+tupD: {1*mutex, 1*p2} -> {1*pupD, 1*mD}
+tupU: {1*p0, 1*mutex} -> {1*pupU, 1*mU}
+
+.initial_marking {1*in, 1*mutex, 1*out, 1*p0, 1*p1, 1*p2, 1*p3, 1*p4}
