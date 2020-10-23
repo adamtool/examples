@@ -1,4 +1,5 @@
 .name "redundantFlow_basis_withUpdate_withMutex_not_fixed_not_fixed"
+.description "Unsatisfiable"
 .type LPN
 .options
 formula="A F out",
