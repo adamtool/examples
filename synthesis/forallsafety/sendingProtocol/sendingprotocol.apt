@@ -1,6 +1,5 @@
-// should have strategy
 .name "sendingProtocol"
-.description "TODO"
+.description "A simple sending protocol. This example has a winning strategy."
 .type LPN
 .options
 condition="SAFETY"

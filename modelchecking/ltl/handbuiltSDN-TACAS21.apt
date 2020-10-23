@@ -1,5 +1,7 @@
-.name "Simple Example"
-.description "A very small APT example to reduce CPU load during development and show all the different ways that nodes in a graph can look"
+.name "SDN-handbuildExample"
+.description "The motivating example from the TACAS21 paper and the update from configuration [s0fwdTos3, s3fwdTos4, s4fwdTos5] to configuration [s0fwdTos1, s1fwdTos2, s2fwdTos5].
+              Satisfiable formula:   A F s5
+              Unsatisfiable formula: (G u0 -> A F s2)"
 .type LPN
 .options
 condition="LTL"

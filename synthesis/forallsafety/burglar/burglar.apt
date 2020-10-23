@@ -1,5 +1,5 @@
-.name "burglar.net"
-.description "alarm system"
+.name "Burglar"
+.description "Distributed alarm system with two locations. This example has a winning strategy."
 .type LPN
 .options
 condition="SAFETY"

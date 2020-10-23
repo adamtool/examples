@@ -1,0 +1,31 @@
+.name "deadlock-avoidance"
+.description "The requirement of deadlock-avoidance for the system player is illustrated.
+              The system player has ONE winning strategies to avoid deadlocks.
+              Therefore, this example has a winning strategy."
+.type LPN
+.options
+condition="SAFETY"
+
+.places
+bad[yCoord=30.0, bad="true", xCoord=690.0]
+s1[yCoord=270.0, xCoord=270.0, env="true"]
+s2[yCoord=450.0, xCoord=90.0, env="true"]
+s3[yCoord=270.0, xCoord=390.0]
+s4[yCoord=450.0, xCoord=510.0]
+s5[yCoord=270.0, xCoord=690.0]
+
+.transitions
+t1[label="t1", yCoord=270.0, xCoord=90.0]
+t2[label="t2", yCoord=450.0, xCoord=270.0]
+t3[label="t3", yCoord=270.0, xCoord=510.0]
+t4[label="t4", yCoord=450.0, xCoord=690.0]
+t5[label="t5", yCoord=150.0, xCoord=690.0]
+
+.flows
+t1: {1*s2} -> {1*s1}
+t2: {1*s3, 1*s1} -> {1*s2, 1*s4}
+t3: {1*s4} -> {1*s3}
+t4: {1*s4} -> {1*s5}
+t5: {1*s5} -> {1*bad}
+
+.initial_marking {1*s1, 1*s3}
