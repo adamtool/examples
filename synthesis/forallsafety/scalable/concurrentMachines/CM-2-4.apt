@@ -1,0 +1,96 @@
+.name "Workflow_M2WP4"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+A0[yCoord=566.84, xCoord=635.07, token=5]
+A1[yCoord=406.78, xCoord=1083.0, token=7]
+B00[yCoord=774.16, bad="true", xCoord=936.12, token=1]
+B01[yCoord=571.68, bad="true", xCoord=303.8, token=2]
+B02[yCoord=773.42, bad="true", xCoord=606.18, token=3]
+B03[yCoord=405.91, bad="true", xCoord=242.4, token=4]
+B10[yCoord=445.14, bad="true", xCoord=1565.4, token=1]
+B11[yCoord=185.46, bad="true", xCoord=1078.41, token=2]
+B12[yCoord=613.41, bad="true", xCoord=1440.44, token=3]
+B13[yCoord=202.04, bad="true", xCoord=748.98, token=4]
+Env[yCoord=461.85, xCoord=780.34, env="true"]
+G0[yCoord=594.63, xCoord=584.89, token=5]
+G1[yCoord=389.13, xCoord=1154.34, token=7]
+M00[yCoord=650.17, xCoord=871.11, token=1]
+M01[yCoord=525.13, xCoord=581.19, token=2]
+M02[yCoord=663.88, xCoord=753.3, token=3]
+M03[yCoord=459.67, xCoord=498.64, token=4]
+M10[yCoord=468.75, xCoord=1301.52, token=1]
+M11[yCoord=310.32, xCoord=1018.58, token=2]
+M12[yCoord=527.82, xCoord=1235.34, token=3]
+M13[yCoord=314.47, xCoord=891.93, token=4]
+S0[yCoord=524.42, xCoord=1013.87, token=1]
+S1[yCoord=450.3, xCoord=875.52, token=2]
+S2[yCoord=546.13, xCoord=949.04, token=3]
+S3[yCoord=444.53, xCoord=813.8, token=4]
+e[yCoord=429.1, xCoord=749.66, env="true"]
+testP0[yCoord=535.37, xCoord=773.58, token=6]
+testP1[yCoord=413.07, xCoord=874.32, token=8]
+
+.transitions
+t0[label="t0", yCoord=423.35, xCoord=912.82]
+t1[label="t1", yCoord=495.87, xCoord=674.21]
+t10[label="t10", yCoord=576.9, xCoord=506.85]
+t11[label="t11", yCoord=376.94, xCoord=949.6]
+t12[label="t12", yCoord=244.35, xCoord=1054.91]
+t13[label="t13", yCoord=341.64, xCoord=1127.64]
+t14[label="t14", yCoord=605.52, xCoord=857.46]
+t15[label="t15", yCoord=721.56, xCoord=683.15]
+t16[label="t16", yCoord=636.9, xCoord=633.8]
+t17[label="t17", yCoord=555.73, xCoord=1101.49]
+t18[label="t18", yCoord=572.1, xCoord=1342.18]
+t19[label="t19", yCoord=455.41, xCoord=1180.46]
+t2[label="t2", yCoord=597.3, xCoord=973.5]
+t20[label="t20", yCoord=435.66, xCoord=645.92]
+t21[label="t21", yCoord=430.41, xCoord=368.35]
+t22[label="t22", yCoord=530.93, xCoord=519.77]
+t23[label="t23", yCoord=368.17, xCoord=808.37]
+t24[label="t24", yCoord=253.98, xCoord=817.34]
+t25[label="t25", yCoord=350.01, xCoord=1028.78]
+t3[label="t3", yCoord=715.95, xCoord=911.77]
+t4[label="t4", yCoord=618.35, xCoord=727.01]
+t5[label="t5", yCoord=501.39, xCoord=1160.76]
+t6[label="t6", yCoord=458.35, xCoord=1437.07]
+t7[label="t7", yCoord=415.54, xCoord=1230.09]
+t8[label="t8", yCoord=493.2, xCoord=736.55]
+t9[label="t9", yCoord=549.26, xCoord=431.86]
+test0[label="test0", yCoord=502.41, xCoord=884.31]
+test1[label="test1", yCoord=479.55, xCoord=929.06]
+
+.flows
+t0: {1*Env} -> {1*e, 1*testP1, 1*A1}
+t1: {1*Env} -> {1*e, 1*A0, 1*testP0}
+t10: {1*A0, 1*M01} -> {1*G0}
+t11: {1*S1} -> {1*M11}
+t12: {1*M11} -> {1*B11}
+t13: {1*A1, 1*M11} -> {1*G1}
+t14: {1*S2} -> {1*M02}
+t15: {1*M02} -> {1*B02}
+t16: {1*A0, 1*M02} -> {1*G0}
+t17: {1*S2} -> {1*M12}
+t18: {1*M12} -> {1*B12}
+t19: {1*A1, 1*M12} -> {1*G1}
+t2: {1*S0} -> {1*M00}
+t20: {1*S3} -> {1*M03}
+t21: {1*M03} -> {1*B03}
+t22: {1*M03, 1*A0} -> {1*G0}
+t23: {1*S3} -> {1*M13}
+t24: {1*M13} -> {1*B13}
+t25: {1*A1, 1*M13} -> {1*G1}
+t3: {1*M00} -> {1*B00}
+t4: {1*A0, 1*M00} -> {1*G0}
+t5: {1*S0} -> {1*M10}
+t6: {1*M10} -> {1*B10}
+t7: {1*A1, 1*M10} -> {1*G1}
+t8: {1*S1} -> {1*M01}
+t9: {1*M01} -> {1*B01}
+test0: {1*S3, 1*S1, 1*S2, 1*S0, 1*testP0} -> {1*S1, 1*S2, 1*S3, 1*S0}
+test1: {1*S0, 1*S1, 1*S2, 1*testP1, 1*S3} -> {1*S1, 1*S3, 1*S2, 1*S0}
+
+.initial_marking {1*Env, 1*S0, 1*S1, 1*S2, 1*S3}

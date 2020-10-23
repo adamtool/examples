@@ -1,0 +1,62 @@
+.name "Workflow_M2WP2"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+A0[yCoord=428.24, xCoord=1267.61, token=3]
+A1[yCoord=373.48, xCoord=574.94, token=5]
+B00[yCoord=186.59, bad="true", xCoord=1564.47, token=1]
+B01[yCoord=775.29, bad="true", xCoord=1359.05, token=2]
+B10[yCoord=679.88, bad="true", xCoord=376.08, token=1]
+B11[yCoord=287.33, bad="true", xCoord=241.47, token=2]
+Env[yCoord=327.55, xCoord=929.68, env="true"]
+G0[yCoord=491.12, xCoord=1482.58, token=3]
+G1[yCoord=472.3, xCoord=313.59, token=5]
+M00[yCoord=334.89, xCoord=1360.35, token=1]
+M01[yCoord=611.56, xCoord=1237.81, token=2]
+M10[yCoord=544.47, xCoord=613.06, token=1]
+M11[yCoord=415.78, xCoord=526.39, token=2]
+S0[yCoord=461.77, xCoord=1014.1, token=1]
+S1[yCoord=539.31, xCoord=881.67, token=2]
+e[yCoord=282.92, xCoord=947.14, env="true"]
+testP0[yCoord=413.12, xCoord=1039.93, token=4]
+testP1[yCoord=387.6, xCoord=777.5, token=6]
+
+.transitions
+t0[label="t0", yCoord=313.25, xCoord=754.8]
+t1[label="t1", yCoord=346.55, xCoord=1105.52]
+t10[label="t10", yCoord=522.07, xCoord=1319.01]
+t11[label="t11", yCoord=483.72, xCoord=689.7]
+t12[label="t12", yCoord=340.33, xCoord=389.67]
+t13[label="t13", yCoord=399.85, xCoord=390.94]
+t2[label="t2", yCoord=392.15, xCoord=1186.45]
+t3[label="t3", yCoord=258.4, xCoord=1472.74]
+t4[label="t4", yCoord=409.48, xCoord=1438.57]
+t5[label="t5", yCoord=507.14, xCoord=809.22]
+t6[label="t6", yCoord=617.31, xCoord=498.58]
+t7[label="t7", yCoord=468.03, xCoord=498.26]
+t8[label="t8", yCoord=599.69, xCoord=1044.29]
+t9[label="t9", yCoord=694.9, xCoord=1306.94]
+test0[label="test0", yCoord=502.99, xCoord=1022.61]
+test1[label="test1", yCoord=459.65, xCoord=866.38]
+
+.flows
+t0: {1*Env} -> {1*e, 1*testP1, 1*A1}
+t1: {1*Env} -> {1*e, 1*A0, 1*testP0}
+t10: {1*A0, 1*M01} -> {1*G0}
+t11: {1*S1} -> {1*M11}
+t12: {1*M11} -> {1*B11}
+t13: {1*A1, 1*M11} -> {1*G1}
+t2: {1*S0} -> {1*M00}
+t3: {1*M00} -> {1*B00}
+t4: {1*A0, 1*M00} -> {1*G0}
+t5: {1*S0} -> {1*M10}
+t6: {1*M10} -> {1*B10}
+t7: {1*A1, 1*M10} -> {1*G1}
+t8: {1*S1} -> {1*M01}
+t9: {1*M01} -> {1*B01}
+test0: {1*S1, 1*S0, 1*testP0} -> {1*S1, 1*S0}
+test1: {1*S0, 1*S1, 1*testP1} -> {1*S1, 1*S0}
+
+.initial_marking {1*Env, 1*S0, 1*S1}
