@@ -1,4 +1,5 @@
 .name "redundantFlow_basis"
+.description "Satisfiable"
 .type LPN
 .options
 formula="A F out",
