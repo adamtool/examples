@@ -1,6 +1,7 @@
 .name "redundantFlow_basis_withUpdate_withMutex_not_fixed_not_fixed"
 .type LPN
 .options
+formula="A F out",
 nb_switches="11"
 
 .places

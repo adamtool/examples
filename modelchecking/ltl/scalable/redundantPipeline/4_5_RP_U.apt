@@ -1,6 +1,7 @@
 .name "redundantFlow_basis_withUpdate"
 .type LPN
 .options
+formula="A F out",
 nb_switches="13"
 
 .places
