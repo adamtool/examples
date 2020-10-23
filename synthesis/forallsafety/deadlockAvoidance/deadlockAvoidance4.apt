@@ -17,7 +17,7 @@ s3[yCoord=630.0, xCoord=1110.0]
 s4[yCoord=870.0, xCoord=1050.0]
 s5[yCoord=990.0, xCoord=1050.0]
 s6[yCoord=990.0, xCoord=1290.0]
-s7[yCoord=630.0, bad="asdf", xCoord=1350.0]
+s7[yCoord=630.0, bad="true", xCoord=1350.0]
 s8[yCoord=1110.0, xCoord=930.0]
 
 .transitions
