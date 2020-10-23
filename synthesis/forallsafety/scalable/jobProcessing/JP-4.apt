@@ -1,0 +1,107 @@
+.name "ManufactorySystem4"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+JD_M0[yCoord=256.96, xCoord=1094.99, env="true"]
+JD_M0M1[yCoord=257.76, xCoord=1267.35, env="true"]
+JD_M0M1M2[yCoord=513.09, xCoord=1118.31, env="true"]
+JD_M0M1M2M3[yCoord=438.62, xCoord=1219.0, env="true"]
+JD_M1[yCoord=357.59, xCoord=1338.15, env="true"]
+JD_M1M2[yCoord=360.81, xCoord=1191.03, env="true"]
+JD_M1M2M3[yCoord=549.34, xCoord=1043.51, env="true"]
+JD_M2[yCoord=562.66, xCoord=1501.34, env="true"]
+JD_M2M3[yCoord=596.87, xCoord=1394.82, env="true"]
+JD_M3[yCoord=627.3, xCoord=1294.1, env="true"]
+M0[yCoord=194.02, xCoord=1021.47, token=1]
+M1[yCoord=288.6, xCoord=798.48, token=2]
+M2[yCoord=444.23, xCoord=709.73, token=3]
+M3[yCoord=541.93, xCoord=843.64, token=4]
+OUT_M0[yCoord=339.08, xCoord=805.14, token=1]
+OUT_M1[yCoord=394.53, xCoord=798.12, token=2]
+OUT_M2[yCoord=552.06, xCoord=926.72, token=3]
+OUT_M3[yCoord=592.73, xCoord=856.57, token=4]
+S[yCoord=407.74, xCoord=1427.37, env="true"]
+bad0[yCoord=186.05, bad="true", xCoord=403.6, token=1]
+bad1[yCoord=391.33, bad="true", xCoord=254.44, token=2]
+bad2[yCoord=774.75, bad="true", xCoord=863.28, token=3]
+bad3[yCoord=750.34, bad="true", xCoord=498.11, token=4]
+end[yCoord=484.4, xCoord=1026.14, env="true"]
+sw[yCoord=398.77, xCoord=1311.01, token=1]
+
+.transitions
+t0[label="t0", yCoord=296.65, xCoord=1343.74]
+t1[label="t1", yCoord=310.66, xCoord=1493.61]
+t10[label="t10", yCoord=310.54, xCoord=1078.14]
+t11[label="t11", yCoord=312.85, xCoord=603.79]
+t12[label="t12", yCoord=219.85, xCoord=777.43]
+t13[label="t13", yCoord=399.13, xCoord=497.21]
+t14[label="t14", yCoord=462.5, xCoord=1577.44]
+t15[label="t15", yCoord=495.72, xCoord=1487.26]
+t16[label="t16", yCoord=404.31, xCoord=993.0]
+t17[label="t17", yCoord=515.49, xCoord=646.36]
+t18[label="t18", yCoord=358.15, xCoord=614.31]
+t19[label="t19", yCoord=671.35, xCoord=893.56]
+t2[label="t2", yCoord=474.8, xCoord=1354.4]
+t20[label="t20", yCoord=519.08, xCoord=1383.68]
+t21[label="t21", yCoord=472.97, xCoord=1113.73]
+t22[label="t22", yCoord=614.21, xCoord=655.23]
+t23[label="t23", yCoord=551.55, xCoord=671.91]
+t24[label="t24", yCoord=683.28, xCoord=676.52]
+t25[label="t25", yCoord=356.53, xCoord=953.07]
+t26[label="t26", yCoord=350.54, xCoord=1046.85]
+t27[label="t27", yCoord=450.64, xCoord=855.63]
+t28[label="t28", yCoord=462.82, xCoord=929.6]
+t29[label="t29", yCoord=391.46, xCoord=1087.08]
+t3[label="t3", yCoord=423.17, xCoord=1501.21]
+t30[label="t30", yCoord=440.69, xCoord=1009.48]
+t31[label="t31", yCoord=499.53, xCoord=810.41]
+t32[label="t32", yCoord=559.34, xCoord=1214.66]
+t33[label="t33", yCoord=589.32, xCoord=1124.8]
+t34[label="t34", yCoord=609.7, xCoord=1046.84]
+t4[label="t4", yCoord=285.85, xCoord=1198.89]
+t5[label="t5", yCoord=233.16, xCoord=874.83]
+t6[label="t6", yCoord=252.38, xCoord=587.72]
+t7[label="t7", yCoord=361.45, xCoord=1570.15]
+t8[label="t8", yCoord=324.85, xCoord=1404.5]
+t9[label="t9", yCoord=494.09, xCoord=1261.27]
+
+.flows
+t0: {1*S} -> {1*sw, 1*JD_M0}
+t1: {1*S} -> {1*JD_M0M1, 1*sw}
+t10: {1*sw} -> {1*M1}
+t11: {1*M1} -> {1*OUT_M1}
+t12: {1*M0} -> {1*OUT_M0, 1*M1}
+t13: {1*OUT_M1} -> {1*bad1}
+t14: {1*S} -> {1*sw, 1*JD_M2}
+t15: {1*S} -> {1*JD_M2M3, 1*sw}
+t16: {1*sw} -> {1*M2}
+t17: {1*M2} -> {1*OUT_M2}
+t18: {1*M1} -> {1*OUT_M1, 1*M2}
+t19: {1*OUT_M2} -> {1*bad2}
+t2: {1*S} -> {1*JD_M0M1M2, 1*sw}
+t20: {1*S} -> {1*JD_M3, 1*sw}
+t21: {1*sw} -> {1*M3}
+t22: {1*M3} -> {1*OUT_M3}
+t23: {1*M2} -> {1*OUT_M2, 1*M3}
+t24: {1*OUT_M3} -> {1*bad3}
+t25: {1*OUT_M0, 1*JD_M0} -> {1*end}
+t26: {1*JD_M0M1, 1*OUT_M0, 1*OUT_M1} -> {1*end}
+t27: {1*OUT_M1, 1*OUT_M2, 1*JD_M0M1M2, 1*OUT_M0} -> {1*end}
+t28: {1*OUT_M3, 1*OUT_M1, 1*OUT_M2, 1*JD_M0M1M2M3, 1*OUT_M0} -> {1*end}
+t29: {1*OUT_M1, 1*JD_M1} -> {1*end}
+t3: {1*S} -> {1*sw, 1*JD_M0M1M2M3}
+t30: {1*OUT_M1, 1*JD_M1M2, 1*OUT_M2} -> {1*end}
+t31: {1*OUT_M3, 1*OUT_M1, 1*OUT_M2, 1*JD_M1M2M3} -> {1*end}
+t32: {1*OUT_M2, 1*JD_M2} -> {1*end}
+t33: {1*OUT_M2, 1*JD_M2M3, 1*OUT_M3} -> {1*end}
+t34: {1*OUT_M3, 1*JD_M3} -> {1*end}
+t4: {1*sw} -> {1*M0}
+t5: {1*M0} -> {1*OUT_M0}
+t6: {1*OUT_M0} -> {1*bad0}
+t7: {1*S} -> {1*JD_M1, 1*sw}
+t8: {1*S} -> {1*sw, 1*JD_M1M2}
+t9: {1*S} -> {1*sw, 1*JD_M1M2M3}
+
+.initial_marking {1*S}

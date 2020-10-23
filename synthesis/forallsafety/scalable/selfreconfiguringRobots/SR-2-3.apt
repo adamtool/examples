@@ -1,0 +1,112 @@
+.name "SelfOrgaRobots_2_3"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+R0B0[yCoord=644.6, bad="true", xCoord=783.85, token=2]
+R0B1[yCoord=585.91, bad="true", xCoord=900.95, token=2]
+R0D0P0[yCoord=638.01, xCoord=1242.74, token=4]
+R0D0P1[yCoord=765.41, xCoord=1021.91, token=5]
+R0D0P2[yCoord=609.02, xCoord=300.37, token=6]
+R0D1P0[yCoord=625.5, xCoord=1352.97, token=4]
+R0D1P1[yCoord=774.82, xCoord=910.82, token=5]
+R0D1P2[yCoord=603.55, xCoord=421.78, token=6]
+R0T0[yCoord=617.92, xCoord=739.54, token=2]
+R0T1[yCoord=574.82, xCoord=832.19, token=2]
+R1B0[yCoord=258.74, bad="true", xCoord=1021.67, token=3]
+R1B1[yCoord=186.12, bad="true", xCoord=1022.66, token=3]
+R1D0P0[yCoord=328.64, xCoord=1444.96, token=4]
+R1D0P1[yCoord=421.37, xCoord=1272.54, token=5]
+R1D0P2[yCoord=275.84, xCoord=569.42, token=6]
+R1D1P0[yCoord=279.84, xCoord=1388.83, token=4]
+R1D1P1[yCoord=387.33, xCoord=1170.51, token=5]
+R1D1P2[yCoord=224.32, xCoord=577.6, token=6]
+R1T0[yCoord=386.46, xCoord=956.42, token=3]
+R1T1[yCoord=324.37, xCoord=953.97, token=3]
+change0[yCoord=463.07, xCoord=739.47, token=1]
+change1[yCoord=430.57, xCoord=644.2, token=1]
+env0[yCoord=482.95, xCoord=1566.55, env="true"]
+envA1[yCoord=475.15, xCoord=1335.03, env="true"]
+envA2[yCoord=569.07, xCoord=1006.29, env="true"]
+envA3[yCoord=414.44, xCoord=323.29, env="true"]
+envB1[yCoord=579.29, xCoord=1125.82, env="true"]
+envB2[yCoord=441.47, xCoord=460.94, env="true"]
+envB3[yCoord=364.64, xCoord=287.48, env="true"]
+prog[yCoord=416.62, xCoord=786.21, token=1]
+
+.transitions
+t0[label="t0", yCoord=644.8, xCoord=977.94]
+t1[label="t1", yCoord=616.95, xCoord=1095.05]
+t10[label="t10", yCoord=562.14, xCoord=1412.47]
+t11[label="t11", yCoord=551.09, xCoord=1513.09]
+t12[label="t12", yCoord=418.27, xCoord=1540.0]
+t13[label="t13", yCoord=389.4, xCoord=1458.96]
+t14[label="t14", yCoord=473.81, xCoord=1025.36]
+t15[label="t15", yCoord=731.53, xCoord=796.95]
+t16[label="t16", yCoord=680.92, xCoord=862.79]
+t17[label="t17", yCoord=342.46, xCoord=1118.24]
+t18[label="t18", yCoord=280.38, xCoord=1112.73]
+t19[label="t19", yCoord=673.74, xCoord=1127.74]
+t2[label="t2", yCoord=490.91, xCoord=517.12]
+t20[label="t20", yCoord=681.46, xCoord=1029.78]
+t21[label="t21", yCoord=520.43, xCoord=1228.41]
+t22[label="t22", yCoord=487.82, xCoord=1141.25]
+t23[label="t23", yCoord=498.02, xCoord=741.87]
+t24[label="t24", yCoord=655.71, xCoord=532.78]
+t25[label="t25", yCoord=612.39, xCoord=643.01]
+t26[label="t26", yCoord=287.59, xCoord=819.95]
+t27[label="t27", yCoord=223.18, xCoord=821.96]
+t28[label="t28", yCoord=500.54, xCoord=243.55]
+t29[label="t29", yCoord=515.82, xCoord=334.87]
+t3[label="t3", yCoord=540.48, xCoord=610.54]
+t30[label="t30", yCoord=337.29, xCoord=376.58]
+t31[label="t31", yCoord=329.75, xCoord=458.29]
+t32[label="t32", yCoord=399.79, xCoord=531.11]
+t33[label="t33", yCoord=519.1, xCoord=864.05]
+t34[label="t34", yCoord=464.54, xCoord=910.97]
+t4[label="t4", yCoord=533.22, xCoord=684.08]
+t5[label="t5", yCoord=321.1, xCoord=1200.14]
+t6[label="t6", yCoord=244.72, xCoord=1166.05]
+t7[label="t7", yCoord=346.12, xCoord=622.56]
+t8[label="t8", yCoord=340.54, xCoord=758.42]
+t9[label="t9", yCoord=374.02, xCoord=806.38]
+
+.flows
+t0: {1*R0D0P0, 1*R0T0} -> {1*R0B0}
+t1: {1*R0T1, 1*R0D1P0} -> {1*R0B1}
+t10: {1*env0} -> {1*R0D0P0, 1*envA1}
+t11: {1*env0} -> {1*R0D1P0, 1*envA1}
+t12: {1*env0} -> {1*envA1, 1*R1D0P0}
+t13: {1*env0} -> {1*envA1, 1*R1D1P0}
+t14: {1*prog, 1*envA1} -> {1*change0, 1*envB1}
+t15: {1*R0T0, 1*R0D0P1} -> {1*R0B0}
+t16: {1*R0D1P1, 1*R0T1} -> {1*R0B1}
+t17: {1*R1T0, 1*R1D0P1} -> {1*R1B0}
+t18: {1*R1D1P1, 1*R1T1} -> {1*R1B1}
+t19: {1*envB1} -> {1*R0D0P1, 1*envA2}
+t2: {1*change0} -> {1*change1}
+t20: {1*envB1} -> {1*R0D1P1, 1*envA2}
+t21: {1*envB1} -> {1*R1D0P1, 1*envA2}
+t22: {1*envB1} -> {1*R1D1P1, 1*envA2}
+t23: {1*prog, 1*envA2} -> {1*change0, 1*envB2}
+t24: {1*R0D0P2, 1*R0T0} -> {1*R0B0}
+t25: {1*R0D1P2, 1*R0T1} -> {1*R0B1}
+t26: {1*R1T0, 1*R1D0P2} -> {1*R1B0}
+t27: {1*R1D1P2, 1*R1T1} -> {1*R1B1}
+t28: {1*envB2} -> {1*R0D0P2, 1*envA3}
+t29: {1*envB2} -> {1*envA3, 1*R0D1P2}
+t3: {1*R0T0, 1*change0} -> {1*R0T1, 1*change1}
+t30: {1*envB2} -> {1*R1D0P2, 1*envA3}
+t31: {1*envB2} -> {1*R1D1P2, 1*envA3}
+t32: {1*envA3, 1*prog} -> {1*envB3, 1*change0}
+t33: {1*R0T0, 1*R1T0} -> {1*R0B0}
+t34: {1*R1T1, 1*R0T1} -> {1*R0B1}
+t4: {1*change0, 1*R0T1} -> {1*R0T0, 1*change1}
+t5: {1*R1D0P0, 1*R1T0} -> {1*R1B0}
+t6: {1*R1T1, 1*R1D1P0} -> {1*R1B1}
+t7: {1*change1} -> {1*prog}
+t8: {1*R1T0, 1*change1} -> {1*R1T1, 1*prog}
+t9: {1*change1, 1*R1T1} -> {1*prog, 1*R1T0}
+
+.initial_marking {1*R0T0, 1*R1T1, 1*env0, 1*prog}
