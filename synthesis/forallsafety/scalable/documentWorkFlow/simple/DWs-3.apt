@@ -1,0 +1,81 @@
+.name "Clerks_3"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+N0[yCoord=574.78, xCoord=982.05, token=2]
+N1[yCoord=774.93, xCoord=1009.59, token=3]
+N2[yCoord=674.96, xCoord=764.17, token=4]
+Y0[yCoord=462.91, xCoord=1306.4, token=2]
+Y1[yCoord=662.68, xCoord=1326.79, token=3]
+Y2[yCoord=542.0, xCoord=1051.59, token=4]
+bad[yCoord=469.14, bad="true", xCoord=243.43, token=1]
+cl0[yCoord=285.9, xCoord=604.6, token=2]
+cl1[yCoord=506.58, xCoord=1566.43, token=3]
+cl2[yCoord=642.33, xCoord=394.28, token=4]
+end0[yCoord=501.27, xCoord=1185.75, token=1]
+end1[yCoord=700.66, xCoord=877.61, token=1]
+end2[yCoord=474.63, xCoord=723.39, token=1]
+env[yCoord=281.76, xCoord=923.15, env="true"]
+first0[yCoord=336.81, xCoord=558.93, env="true"]
+first1[yCoord=459.67, xCoord=1155.95, env="true"]
+first2[yCoord=616.71, xCoord=478.95, env="true"]
+good[yCoord=616.46, xCoord=1077.79, token=2]
+ready[yCoord=526.51, xCoord=697.83, token=1]
+start0[yCoord=194.05, xCoord=738.9, env="true"]
+start1[yCoord=392.54, xCoord=1326.98, env="true"]
+start2[yCoord=419.73, xCoord=493.84, env="true"]
+vote0[yCoord=369.25, xCoord=932.87, token=1]
+vote1[yCoord=617.13, xCoord=1277.03, token=1]
+vote2[yCoord=589.45, xCoord=594.16, token=1]
+
+.transitions
+glue0[label="glue0", yCoord=378.45, xCoord=732.8]
+glue1[label="glue1", yCoord=550.26, xCoord=1407.95]
+glue2[label="glue2", yCoord=685.76, xCoord=611.9]
+no[label="no", yCoord=680.86, xCoord=969.82]
+t0[label="t0", yCoord=186.23, xCoord=922.86]
+t1[label="t1", yCoord=290.81, xCoord=767.04]
+t10[label="t10", yCoord=545.56, xCoord=820.65]
+t11[label="t11", yCoord=579.26, xCoord=706.75]
+t12[label="t12", yCoord=601.17, xCoord=862.57]
+t2[label="t2", yCoord=406.08, xCoord=1146.18]
+t3[label="t3", yCoord=466.34, xCoord=1008.1]
+t4[label="t4", yCoord=310.87, xCoord=1158.67]
+t5[label="t5", yCoord=502.81, xCoord=1357.4]
+t6[label="t6", yCoord=675.73, xCoord=1117.56]
+t7[label="t7", yCoord=711.52, xCoord=1125.69]
+t8[label="t8", yCoord=334.1, xCoord=692.2]
+t9[label="t9", yCoord=534.85, xCoord=424.75]
+t_ready0[label="t_ready0", yCoord=434.18, xCoord=609.3]
+t_ready1[label="t_ready1", yCoord=497.68, xCoord=949.01]
+t_ready2[label="t_ready2", yCoord=632.83, xCoord=686.05]
+tbad[label="tbad", yCoord=489.91, xCoord=466.28]
+yes[label="yes", yCoord=567.21, xCoord=1253.05]
+
+.flows
+glue0: {1*end2, 1*cl0} -> {1*vote0}
+glue1: {1*end0, 1*cl1} -> {1*vote1}
+glue2: {1*cl2, 1*end1} -> {1*vote2}
+no: {1*N0, 1*N1, 1*N2} -> {1*good}
+t0: {1*env} -> {1*start0}
+t1: {1*start0, 1*cl0} -> {1*vote0, 1*first0}
+t10: {1*vote2} -> {1*Y2, 1*end2}
+t11: {1*vote2} -> {1*end2, 1*N2}
+t12: {1*ready, 1*good} -> {}
+t2: {1*vote0} -> {1*Y0, 1*end0}
+t3: {1*vote0} -> {1*N0, 1*end0}
+t4: {1*env} -> {1*start1}
+t5: {1*start1, 1*cl1} -> {1*first1, 1*vote1}
+t6: {1*vote1} -> {1*end1, 1*Y1}
+t7: {1*vote1} -> {1*N1, 1*end1}
+t8: {1*env} -> {1*start2}
+t9: {1*start2, 1*cl2} -> {1*first2, 1*vote2}
+t_ready0: {1*end2, 1*first0} -> {1*ready}
+t_ready1: {1*first1, 1*end0} -> {1*ready}
+t_ready2: {1*end1, 1*first2} -> {1*ready}
+tbad: {1*ready} -> {1*bad}
+yes: {1*Y0, 1*Y2, 1*Y1} -> {1*good}
+
+.initial_marking {1*cl0, 1*cl1, 1*cl2, 1*env}

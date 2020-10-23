@@ -1,0 +1,43 @@
+.name "Clerks_1"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+N0[yCoord=270.0, xCoord=1110.0, token=2]
+Y0[yCoord=150.0, xCoord=1110.0, token=2]
+bad[yCoord=630.0, bad="true", xCoord=1110.0, token=1]
+cl0[yCoord=150.0, xCoord=570.0, token=2]
+end0[yCoord=150.0, xCoord=810.0, token=1]
+env[yCoord=270.0, xCoord=210.0, env="true"]
+first0[yCoord=390.0, xCoord=570.0, env="true"]
+good[yCoord=210.0, xCoord=1350.0, token=2]
+ready[yCoord=390.0, xCoord=1110.0, token=1]
+start0[yCoord=270.0, xCoord=450.0, env="true"]
+vote0[yCoord=270.0, xCoord=690.0, token=1]
+
+.transitions
+glue0[label="glue0", yCoord=150.0, xCoord=690.0]
+no[label="no", yCoord=270.0, xCoord=1230.0]
+t0[label="t0", yCoord=270.0, xCoord=330.0]
+t1[label="t1", yCoord=270.0, xCoord=570.0]
+t2[label="t2", yCoord=150.0, xCoord=990.0]
+t3[label="t3", yCoord=270.0, xCoord=990.0]
+t4[label="t4", yCoord=390.0, xCoord=1350.0]
+t_ready0[label="t_ready0", yCoord=390.0, xCoord=810.0]
+tbad[label="tbad", yCoord=507.01, xCoord=1115.96]
+yes[label="yes", yCoord=150.0, xCoord=1230.0]
+
+.flows
+glue0: {1*cl0, 1*end0} -> {1*vote0}
+no: {1*N0} -> {1*good}
+t0: {1*env} -> {1*start0}
+t1: {1*start0, 1*cl0} -> {1*vote0, 1*first0}
+t2: {1*vote0} -> {1*Y0, 1*end0}
+t3: {1*vote0} -> {1*N0, 1*end0}
+t4: {1*good, 1*ready} -> {}
+t_ready0: {1*first0, 1*end0} -> {1*ready}
+tbad: {1*ready} -> {1*bad}
+yes: {1*Y0} -> {1*good}
+
+.initial_marking {1*cl0, 1*env}
