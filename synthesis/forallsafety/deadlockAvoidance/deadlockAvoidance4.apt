@@ -1,8 +1,6 @@
-// Can be won by the system because they let the enviroment play infinitly often t8
-// and thus they didn't created a deadlock by blocking their move t3
-// would be lost if their is no loop at env1
 .name "exampleTafel"
-.description "Example tafel 28.09.2014"
+.description "The requirement of deadlock-avoidance for the system player is illustrated.
+              The system players have ONE deadlock-avoiding winning strategies."
 .type LPN
 .options
 condition="SAFETY"

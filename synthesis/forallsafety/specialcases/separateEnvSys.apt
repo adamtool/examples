@@ -1,5 +1,6 @@
-// should have strategy because there are no bad places
 .name "Separate Env and Sys"
+.description "Illustrates the possible independence of system and environment.
+              The system player has a deadlock-avoiding winning strategies."
 .type LPN
 .options
 condition="A_SAFETY"

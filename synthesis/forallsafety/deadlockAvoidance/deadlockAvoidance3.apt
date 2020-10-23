@@ -1,5 +1,6 @@
 .name "exampleTafel"
-.description "Example tafel 28.09.2014. Should not have a strategy"
+.description "The requirement of deadlock-avoidance for the system player is illustrated.
+              The system players have NO deadlock-avoiding winning strategies."
 .type LPN
 .options
 condition="SAFETY"

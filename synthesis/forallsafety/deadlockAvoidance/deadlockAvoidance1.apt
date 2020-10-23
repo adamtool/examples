@@ -1,7 +1,6 @@
 .name "constructed example with loop"
 .description "The requirement of deadlock-avoidance for the system player is illustrated.
-              The system player has TWO winning strategies to avoid deadlocks.
-              Therefore, this example has a winning strategy."
+              The system player has TWO deadlock-avoiding winning strategies."
 .type LPN
 .options
 condition="SAFETY"

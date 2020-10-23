@@ -1,5 +1,5 @@
 .name "Scheduling"
-.description "the graph game is of interest"
+.description "The graph game is of interest. The system players have a deadlock-avoiding winning strategy."
 .type LPN
 .options
 condition="SAFETY"

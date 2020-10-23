@@ -1,9 +1,6 @@
-// t has to be forbidden in the first but not the second time it is enabled.
-// Meaning it is not enough to say t is forbidden once, then it has to 
-// be forbidden in the whole strategy.
-// Has a strategy
 .name "forbiddingTransitionOnce.net"
-.description "t is once allowed"
+.description "Two players have to make a different decision at the same place.
+              The system players have a deadlock-avoiding winning strategies."
 .type LPN
 .options
 condition="SAFETY"
