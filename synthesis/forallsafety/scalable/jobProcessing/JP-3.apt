@@ -1,4 +1,5 @@
 .name "ManufactorySystem3"
+.description "Has a deadlock-avoiding winning strategy"
 .type LPN
 .options
 condition="A_SAFETY"
