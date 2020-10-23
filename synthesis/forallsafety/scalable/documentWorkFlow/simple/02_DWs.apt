@@ -1,0 +1,62 @@
+.name "Clerks_2"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+N0[token=2]
+N1[token=3]
+Y0[token=2]
+Y1[token=3]
+bad[bad="true", token=1]
+cl0[token=2]
+cl1[token=3]
+end0[token=1]
+end1[token=1]
+env[env="true"]
+first0[env="true"]
+first1[env="true"]
+good[token=2]
+ready[token=1]
+start0[env="true"]
+start1[env="true"]
+vote0[token=1]
+vote1[token=1]
+
+.transitions
+glue0[label="glue0"]
+glue1[label="glue1"]
+no[label="no"]
+t0[label="t0"]
+t1[label="t1"]
+t2[label="t2"]
+t3[label="t3"]
+t4[label="t4"]
+t5[label="t5"]
+t6[label="t6"]
+t7[label="t7"]
+t8[label="t8"]
+t_ready0[label="t_ready0"]
+t_ready1[label="t_ready1"]
+tbad[label="tbad"]
+yes[label="yes"]
+
+.flows
+glue0: {1*cl0, 1*end1} -> {1*vote0}
+glue1: {1*end0, 1*cl1} -> {1*vote1}
+no: {1*N0, 1*N1} -> {1*good}
+t0: {1*env} -> {1*start0}
+t1: {1*start0, 1*cl0} -> {1*vote0, 1*first0}
+t2: {1*vote0} -> {1*Y0, 1*end0}
+t3: {1*vote0} -> {1*N0, 1*end0}
+t4: {1*env} -> {1*start1}
+t5: {1*start1, 1*cl1} -> {1*first1, 1*vote1}
+t6: {1*vote1} -> {1*end1, 1*Y1}
+t7: {1*vote1} -> {1*N1, 1*end1}
+t8: {1*ready, 1*good} -> {}
+t_ready0: {1*first0, 1*end1} -> {1*ready}
+t_ready1: {1*first1, 1*end0} -> {1*ready}
+tbad: {1*ready} -> {1*bad}
+yes: {1*Y0, 1*Y1} -> {1*good}
+
+.initial_marking {1*cl0, 1*cl1, 1*env}

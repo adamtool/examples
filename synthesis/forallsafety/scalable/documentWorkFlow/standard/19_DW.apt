@@ -1,0 +1,431 @@
+.name "Clerks_19"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+N0[token=2]
+N1[token=4]
+N10[token=22]
+N11[token=24]
+N12[token=26]
+N13[token=28]
+N14[token=30]
+N15[token=32]
+N16[token=34]
+N17[token=36]
+N18[token=38]
+N2[token=6]
+N3[token=8]
+N4[token=10]
+N5[token=12]
+N6[token=14]
+N7[token=16]
+N8[token=18]
+N9[token=20]
+Y0[token=2]
+Y1[token=4]
+Y10[token=22]
+Y11[token=24]
+Y12[token=26]
+Y13[token=28]
+Y14[token=30]
+Y15[token=32]
+Y16[token=34]
+Y17[token=36]
+Y18[token=38]
+Y2[token=6]
+Y3[token=8]
+Y4[token=10]
+Y5[token=12]
+Y6[token=14]
+Y7[token=16]
+Y8[token=18]
+Y9[token=20]
+bad0[bad="true", token=2]
+bad1[bad="true", token=4]
+bad10[bad="true", token=22]
+bad11[bad="true", token=24]
+bad12[bad="true", token=26]
+bad13[bad="true", token=28]
+bad14[bad="true", token=30]
+bad15[bad="true", token=32]
+bad16[bad="true", token=34]
+bad17[bad="true", token=36]
+bad18[bad="true", token=38]
+bad2[bad="true", token=6]
+bad3[bad="true", token=8]
+bad4[bad="true", token=10]
+bad5[bad="true", token=12]
+bad6[bad="true", token=14]
+bad7[bad="true", token=16]
+bad8[bad="true", token=18]
+bad9[bad="true", token=20]
+buf0[token=37]
+buf1[token=1]
+buf10[token=19]
+buf11[token=21]
+buf12[token=23]
+buf13[token=25]
+buf14[token=27]
+buf15[token=29]
+buf16[token=31]
+buf17[token=33]
+buf18[token=35]
+buf2[token=3]
+buf3[token=5]
+buf4[token=7]
+buf5[token=9]
+buf6[token=11]
+buf7[token=13]
+buf8[token=15]
+buf9[token=17]
+buff0[token=2]
+buff1[token=4]
+buff10[token=22]
+buff11[token=24]
+buff12[token=26]
+buff13[token=28]
+buff14[token=30]
+buff15[token=32]
+buff16[token=34]
+buff17[token=36]
+buff18[token=38]
+buff2[token=6]
+buff3[token=8]
+buff4[token=10]
+buff5[token=12]
+buff6[token=14]
+buff7[token=16]
+buff8[token=18]
+buff9[token=20]
+cl0[token=1]
+cl1[token=3]
+cl10[token=21]
+cl11[token=23]
+cl12[token=25]
+cl13[token=27]
+cl14[token=29]
+cl15[token=31]
+cl16[token=33]
+cl17[token=35]
+cl18[token=37]
+cl2[token=5]
+cl3[token=7]
+cl4[token=9]
+cl5[token=11]
+cl6[token=13]
+cl7[token=15]
+cl8[token=17]
+cl9[token=19]
+end0[token=1]
+end1[token=3]
+end10[token=21]
+end11[token=23]
+end12[token=25]
+end13[token=27]
+end14[token=29]
+end15[token=31]
+end16[token=33]
+end17[token=35]
+end18[token=37]
+end2[token=5]
+end3[token=7]
+end4[token=9]
+end5[token=11]
+end6[token=13]
+end7[token=15]
+end8[token=17]
+end9[token=19]
+env[env="true"]
+env0[env="true"]
+env1[env="true"]
+env10[env="true"]
+env11[env="true"]
+env12[env="true"]
+env13[env="true"]
+env14[env="true"]
+env15[env="true"]
+env16[env="true"]
+env17[env="true"]
+env18[env="true"]
+env2[env="true"]
+env3[env="true"]
+env4[env="true"]
+env5[env="true"]
+env6[env="true"]
+env7[env="true"]
+env8[env="true"]
+env9[env="true"]
+start0[env="true"]
+start1[env="true"]
+start10[env="true"]
+start11[env="true"]
+start12[env="true"]
+start13[env="true"]
+start14[env="true"]
+start15[env="true"]
+start16[env="true"]
+start17[env="true"]
+start18[env="true"]
+start2[env="true"]
+start3[env="true"]
+start4[env="true"]
+start5[env="true"]
+start6[env="true"]
+start7[env="true"]
+start8[env="true"]
+start9[env="true"]
+votel0[token=1]
+votel1[token=3]
+votel10[token=21]
+votel11[token=23]
+votel12[token=25]
+votel13[token=27]
+votel14[token=29]
+votel15[token=31]
+votel16[token=33]
+votel17[token=35]
+votel18[token=37]
+votel2[token=5]
+votel3[token=7]
+votel4[token=9]
+votel5[token=11]
+votel6[token=13]
+votel7[token=15]
+votel8[token=17]
+votel9[token=19]
+
+.transitions
+glue0[label="glue0"]
+glue1[label="glue1"]
+glue10[label="glue10"]
+glue11[label="glue11"]
+glue12[label="glue12"]
+glue13[label="glue13"]
+glue14[label="glue14"]
+glue15[label="glue15"]
+glue16[label="glue16"]
+glue17[label="glue17"]
+glue18[label="glue18"]
+glue2[label="glue2"]
+glue3[label="glue3"]
+glue4[label="glue4"]
+glue5[label="glue5"]
+glue6[label="glue6"]
+glue7[label="glue7"]
+glue8[label="glue8"]
+glue9[label="glue9"]
+t0[label="t0"]
+t1[label="t1"]
+t10[label="t10"]
+t11[label="t11"]
+t12[label="t12"]
+t13[label="t13"]
+t14[label="t14"]
+t15[label="t15"]
+t16[label="t16"]
+t17[label="t17"]
+t18[label="t18"]
+t19[label="t19"]
+t2[label="t2"]
+t20[label="t20"]
+t21[label="t21"]
+t22[label="t22"]
+t23[label="t23"]
+t24[label="t24"]
+t25[label="t25"]
+t26[label="t26"]
+t27[label="t27"]
+t28[label="t28"]
+t29[label="t29"]
+t3[label="t3"]
+t30[label="t30"]
+t31[label="t31"]
+t32[label="t32"]
+t33[label="t33"]
+t34[label="t34"]
+t35[label="t35"]
+t36[label="t36"]
+t37[label="t37"]
+t38[label="t38"]
+t39[label="t39"]
+t4[label="t4"]
+t40[label="t40"]
+t41[label="t41"]
+t42[label="t42"]
+t43[label="t43"]
+t44[label="t44"]
+t45[label="t45"]
+t46[label="t46"]
+t47[label="t47"]
+t48[label="t48"]
+t49[label="t49"]
+t5[label="t5"]
+t50[label="t50"]
+t51[label="t51"]
+t52[label="t52"]
+t53[label="t53"]
+t54[label="t54"]
+t55[label="t55"]
+t56[label="t56"]
+t57[label="t57"]
+t58[label="t58"]
+t59[label="t59"]
+t6[label="t6"]
+t60[label="t60"]
+t61[label="t61"]
+t62[label="t62"]
+t63[label="t63"]
+t64[label="t64"]
+t65[label="t65"]
+t66[label="t66"]
+t67[label="t67"]
+t68[label="t68"]
+t69[label="t69"]
+t7[label="t7"]
+t70[label="t70"]
+t71[label="t71"]
+t72[label="t72"]
+t73[label="t73"]
+t74[label="t74"]
+t75[label="t75"]
+t8[label="t8"]
+t9[label="t9"]
+tbad0[label="tbad0"]
+tbad1[label="tbad1"]
+tbad10[label="tbad10"]
+tbad11[label="tbad11"]
+tbad12[label="tbad12"]
+tbad13[label="tbad13"]
+tbad14[label="tbad14"]
+tbad15[label="tbad15"]
+tbad16[label="tbad16"]
+tbad17[label="tbad17"]
+tbad18[label="tbad18"]
+tbad2[label="tbad2"]
+tbad3[label="tbad3"]
+tbad4[label="tbad4"]
+tbad5[label="tbad5"]
+tbad6[label="tbad6"]
+tbad7[label="tbad7"]
+tbad8[label="tbad8"]
+tbad9[label="tbad9"]
+
+.flows
+glue0: {1*cl0, 1*end18} -> {1*votel0, 1*buf0}
+glue1: {1*end0, 1*cl1} -> {1*votel1, 1*buf1}
+glue10: {1*end9, 1*cl10} -> {1*buf10, 1*votel10}
+glue11: {1*cl11, 1*end10} -> {1*buf11, 1*votel11}
+glue12: {1*end11, 1*cl12} -> {1*buf12, 1*votel12}
+glue13: {1*cl13, 1*end12} -> {1*votel13, 1*buf13}
+glue14: {1*cl14, 1*end13} -> {1*votel14, 1*buf14}
+glue15: {1*cl15, 1*end14} -> {1*buf15, 1*votel15}
+glue16: {1*end15, 1*cl16} -> {1*buf16, 1*votel16}
+glue17: {1*end16, 1*cl17} -> {1*votel17, 1*buf17}
+glue18: {1*cl18, 1*end17} -> {1*votel18, 1*buf18}
+glue2: {1*cl2, 1*end1} -> {1*votel2, 1*buf2}
+glue3: {1*cl3, 1*end2} -> {1*votel3, 1*buf3}
+glue4: {1*cl4, 1*end3} -> {1*votel4, 1*buf4}
+glue5: {1*cl5, 1*end4} -> {1*votel5, 1*buf5}
+glue6: {1*end5, 1*cl6} -> {1*buf6, 1*votel6}
+glue7: {1*end6, 1*cl7} -> {1*votel7, 1*buf7}
+glue8: {1*cl8, 1*end7} -> {1*buf8, 1*votel8}
+glue9: {1*end8, 1*cl9} -> {1*buf9, 1*votel9}
+t0: {1*env} -> {1*start0}
+t1: {1*start0, 1*cl0} -> {1*env0, 1*votel0}
+t10: {1*buff2, 1*votel2} -> {1*Y2, 1*end2}
+t11: {1*buff2, 1*votel2} -> {1*end2, 1*N2}
+t12: {1*env} -> {1*start3}
+t13: {1*cl3, 1*start3} -> {1*votel3, 1*env3}
+t14: {1*votel3, 1*buff3} -> {1*Y3, 1*end3}
+t15: {1*votel3, 1*buff3} -> {1*N3, 1*end3}
+t16: {1*env} -> {1*start4}
+t17: {1*start4, 1*cl4} -> {1*env4, 1*votel4}
+t18: {1*buff4, 1*votel4} -> {1*Y4, 1*end4}
+t19: {1*votel4, 1*buff4} -> {1*N4, 1*end4}
+t2: {1*votel0, 1*buff0} -> {1*Y0, 1*end0}
+t20: {1*env} -> {1*start5}
+t21: {1*start5, 1*cl5} -> {1*votel5, 1*env5}
+t22: {1*votel5, 1*buff5} -> {1*Y5, 1*end5}
+t23: {1*buff5, 1*votel5} -> {1*end5, 1*N5}
+t24: {1*env} -> {1*start6}
+t25: {1*start6, 1*cl6} -> {1*env6, 1*votel6}
+t26: {1*votel6, 1*buff6} -> {1*end6, 1*Y6}
+t27: {1*votel6, 1*buff6} -> {1*N6, 1*end6}
+t28: {1*env} -> {1*start7}
+t29: {1*start7, 1*cl7} -> {1*votel7, 1*env7}
+t3: {1*buff0, 1*votel0} -> {1*N0, 1*end0}
+t30: {1*votel7, 1*buff7} -> {1*Y7, 1*end7}
+t31: {1*buff7, 1*votel7} -> {1*end7, 1*N7}
+t32: {1*env} -> {1*start8}
+t33: {1*cl8, 1*start8} -> {1*env8, 1*votel8}
+t34: {1*buff8, 1*votel8} -> {1*Y8, 1*end8}
+t35: {1*buff8, 1*votel8} -> {1*N8, 1*end8}
+t36: {1*env} -> {1*start9}
+t37: {1*start9, 1*cl9} -> {1*env9, 1*votel9}
+t38: {1*buff9, 1*votel9} -> {1*end9, 1*Y9}
+t39: {1*votel9, 1*buff9} -> {1*end9, 1*N9}
+t4: {1*env} -> {1*start1}
+t40: {1*env} -> {1*start10}
+t41: {1*cl10, 1*start10} -> {1*votel10, 1*env10}
+t42: {1*votel10, 1*buff10} -> {1*end10, 1*Y10}
+t43: {1*buff10, 1*votel10} -> {1*N10, 1*end10}
+t44: {1*env} -> {1*start11}
+t45: {1*start11, 1*cl11} -> {1*votel11, 1*env11}
+t46: {1*votel11, 1*buff11} -> {1*Y11, 1*end11}
+t47: {1*votel11, 1*buff11} -> {1*end11, 1*N11}
+t48: {1*env} -> {1*start12}
+t49: {1*start12, 1*cl12} -> {1*votel12, 1*env12}
+t5: {1*start1, 1*cl1} -> {1*votel1, 1*env1}
+t50: {1*buff12, 1*votel12} -> {1*Y12, 1*end12}
+t51: {1*votel12, 1*buff12} -> {1*N12, 1*end12}
+t52: {1*env} -> {1*start13}
+t53: {1*start13, 1*cl13} -> {1*env13, 1*votel13}
+t54: {1*buff13, 1*votel13} -> {1*Y13, 1*end13}
+t55: {1*votel13, 1*buff13} -> {1*end13, 1*N13}
+t56: {1*env} -> {1*start14}
+t57: {1*cl14, 1*start14} -> {1*votel14, 1*env14}
+t58: {1*buff14, 1*votel14} -> {1*Y14, 1*end14}
+t59: {1*buff14, 1*votel14} -> {1*end14, 1*N14}
+t6: {1*buff1, 1*votel1} -> {1*end1, 1*Y1}
+t60: {1*env} -> {1*start15}
+t61: {1*cl15, 1*start15} -> {1*votel15, 1*env15}
+t62: {1*buff15, 1*votel15} -> {1*end15, 1*Y15}
+t63: {1*buff15, 1*votel15} -> {1*end15, 1*N15}
+t64: {1*env} -> {1*start16}
+t65: {1*start16, 1*cl16} -> {1*env16, 1*votel16}
+t66: {1*buff16, 1*votel16} -> {1*Y16, 1*end16}
+t67: {1*buff16, 1*votel16} -> {1*end16, 1*N16}
+t68: {1*env} -> {1*start17}
+t69: {1*start17, 1*cl17} -> {1*votel17, 1*env17}
+t7: {1*votel1, 1*buff1} -> {1*N1, 1*end1}
+t70: {1*votel17, 1*buff17} -> {1*Y17, 1*end17}
+t71: {1*votel17, 1*buff17} -> {1*end17, 1*N17}
+t72: {1*env} -> {1*start18}
+t73: {1*start18, 1*cl18} -> {1*votel18, 1*env18}
+t74: {1*buff18, 1*votel18} -> {1*Y18, 1*end18}
+t75: {1*buff18, 1*votel18} -> {1*end18, 1*N18}
+t8: {1*env} -> {1*start2}
+t9: {1*start2, 1*cl2} -> {1*env2, 1*votel2}
+tbad0: {1*N0} -> {1*bad0}
+tbad1: {1*N1} -> {1*bad1}
+tbad10: {1*N10} -> {1*bad10}
+tbad11: {1*N11} -> {1*bad11}
+tbad12: {1*N12} -> {1*bad12}
+tbad13: {1*N13} -> {1*bad13}
+tbad14: {1*N14} -> {1*bad14}
+tbad15: {1*N15} -> {1*bad15}
+tbad16: {1*N16} -> {1*bad16}
+tbad17: {1*N17} -> {1*bad17}
+tbad18: {1*N18} -> {1*bad18}
+tbad2: {1*N2} -> {1*bad2}
+tbad3: {1*N3} -> {1*bad3}
+tbad4: {1*N4} -> {1*bad4}
+tbad5: {1*N5} -> {1*bad5}
+tbad6: {1*N6} -> {1*bad6}
+tbad7: {1*N7} -> {1*bad7}
+tbad8: {1*N8} -> {1*bad8}
+tbad9: {1*N9} -> {1*bad9}
+
+.initial_marking {1*buff0, 1*buff1, 1*buff10, 1*buff11, 1*buff12, 1*buff13, 1*buff14, 1*buff15, 1*buff16, 1*buff17, 1*buff18, 1*buff2, 1*buff3, 1*buff4, 1*buff5, 1*buff6, 1*buff7, 1*buff8, 1*buff9, 1*cl0, 1*cl1, 1*cl10, 1*cl11, 1*cl12, 1*cl13, 1*cl14, 1*cl15, 1*cl16, 1*cl17, 1*cl18, 1*cl2, 1*cl3, 1*cl4, 1*cl5, 1*cl6, 1*cl7, 1*cl8, 1*cl9, 1*env}

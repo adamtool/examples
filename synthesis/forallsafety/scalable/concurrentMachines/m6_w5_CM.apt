@@ -1,0 +1,301 @@
+.name "Workflow_M6WP5"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+A0[token=6]
+A1[token=8]
+A2[token=10]
+A3[token=12]
+A4[token=14]
+A5[token=16]
+B00[bad="true", token=1]
+B01[bad="true", token=2]
+B02[bad="true", token=3]
+B03[bad="true", token=4]
+B04[bad="true", token=5]
+B10[bad="true", token=1]
+B11[bad="true", token=2]
+B12[bad="true", token=3]
+B13[bad="true", token=4]
+B14[bad="true", token=5]
+B20[bad="true", token=1]
+B21[bad="true", token=2]
+B22[bad="true", token=3]
+B23[bad="true", token=4]
+B24[bad="true", token=5]
+B30[bad="true", token=1]
+B31[bad="true", token=2]
+B32[bad="true", token=3]
+B33[bad="true", token=4]
+B34[bad="true", token=5]
+B40[bad="true", token=1]
+B41[bad="true", token=2]
+B42[bad="true", token=3]
+B43[bad="true", token=4]
+B44[bad="true", token=5]
+B50[bad="true", token=1]
+B51[bad="true", token=2]
+B52[bad="true", token=3]
+B53[bad="true", token=4]
+B54[bad="true", token=5]
+Env[env="true"]
+G0[token=6]
+G1[token=8]
+G2[token=10]
+G3[token=12]
+G4[token=14]
+G5[token=16]
+M00[token=1]
+M01[token=2]
+M02[token=3]
+M03[token=4]
+M04[token=5]
+M10[token=1]
+M11[token=2]
+M12[token=3]
+M13[token=4]
+M14[token=5]
+M20[token=1]
+M21[token=2]
+M22[token=3]
+M23[token=4]
+M24[token=5]
+M30[token=1]
+M31[token=2]
+M32[token=3]
+M33[token=4]
+M34[token=5]
+M40[token=1]
+M41[token=2]
+M42[token=3]
+M43[token=4]
+M44[token=5]
+M50[token=1]
+M51[token=2]
+M52[token=3]
+M53[token=4]
+M54[token=5]
+S0[token=1]
+S1[token=2]
+S2[token=3]
+S3[token=4]
+S4[token=5]
+e[env="true"]
+testP0[token=7]
+testP1[token=9]
+testP2[token=11]
+testP3[token=13]
+testP4[token=15]
+testP5[token=17]
+
+.transitions
+t0[label="t0"]
+t1[label="t1"]
+t10[label="t10"]
+t11[label="t11"]
+t12[label="t12"]
+t13[label="t13"]
+t14[label="t14"]
+t15[label="t15"]
+t16[label="t16"]
+t17[label="t17"]
+t18[label="t18"]
+t19[label="t19"]
+t2[label="t2"]
+t20[label="t20"]
+t21[label="t21"]
+t22[label="t22"]
+t23[label="t23"]
+t24[label="t24"]
+t25[label="t25"]
+t26[label="t26"]
+t27[label="t27"]
+t28[label="t28"]
+t29[label="t29"]
+t3[label="t3"]
+t30[label="t30"]
+t31[label="t31"]
+t32[label="t32"]
+t33[label="t33"]
+t34[label="t34"]
+t35[label="t35"]
+t36[label="t36"]
+t37[label="t37"]
+t38[label="t38"]
+t39[label="t39"]
+t4[label="t4"]
+t40[label="t40"]
+t41[label="t41"]
+t42[label="t42"]
+t43[label="t43"]
+t44[label="t44"]
+t45[label="t45"]
+t46[label="t46"]
+t47[label="t47"]
+t48[label="t48"]
+t49[label="t49"]
+t5[label="t5"]
+t50[label="t50"]
+t51[label="t51"]
+t52[label="t52"]
+t53[label="t53"]
+t54[label="t54"]
+t55[label="t55"]
+t56[label="t56"]
+t57[label="t57"]
+t58[label="t58"]
+t59[label="t59"]
+t6[label="t6"]
+t60[label="t60"]
+t61[label="t61"]
+t62[label="t62"]
+t63[label="t63"]
+t64[label="t64"]
+t65[label="t65"]
+t66[label="t66"]
+t67[label="t67"]
+t68[label="t68"]
+t69[label="t69"]
+t7[label="t7"]
+t70[label="t70"]
+t71[label="t71"]
+t72[label="t72"]
+t73[label="t73"]
+t74[label="t74"]
+t75[label="t75"]
+t76[label="t76"]
+t77[label="t77"]
+t78[label="t78"]
+t79[label="t79"]
+t8[label="t8"]
+t80[label="t80"]
+t81[label="t81"]
+t82[label="t82"]
+t83[label="t83"]
+t84[label="t84"]
+t85[label="t85"]
+t86[label="t86"]
+t87[label="t87"]
+t88[label="t88"]
+t89[label="t89"]
+t9[label="t9"]
+t90[label="t90"]
+t91[label="t91"]
+t92[label="t92"]
+t93[label="t93"]
+t94[label="t94"]
+t95[label="t95"]
+test0[label="test0"]
+test1[label="test1"]
+test2[label="test2"]
+test3[label="test3"]
+test4[label="test4"]
+test5[label="test5"]
+
+.flows
+t0: {1*Env} -> {1*testP4, 1*e, 1*testP1, 1*testP2, 1*A5, 1*testP5, 1*A2, 1*testP3, 1*A3, 1*A4, 1*A1}
+t1: {1*Env} -> {1*e, 1*A0, 1*testP2, 1*A5, 1*testP3, 1*testP5, 1*A2, 1*A4, 1*testP0, 1*A3, 1*testP4}
+t10: {1*M10} -> {1*B10}
+t11: {1*A1, 1*M10} -> {1*G1}
+t12: {1*S0} -> {1*M20}
+t13: {1*M20} -> {1*B20}
+t14: {1*M20, 1*A2} -> {1*G2}
+t15: {1*S0} -> {1*M30}
+t16: {1*M30} -> {1*B30}
+t17: {1*A3, 1*M30} -> {1*G3}
+t18: {1*S0} -> {1*M40}
+t19: {1*M40} -> {1*B40}
+t2: {1*Env} -> {1*A0, 1*testP0, 1*A5, 1*testP3, 1*A4, 1*testP5, 1*e, 1*testP1, 1*A3, 1*A1, 1*testP4}
+t20: {1*A4, 1*M40} -> {1*G4}
+t21: {1*S0} -> {1*M50}
+t22: {1*M50} -> {1*B50}
+t23: {1*A5, 1*M50} -> {1*G5}
+t24: {1*S1} -> {1*M01}
+t25: {1*M01} -> {1*B01}
+t26: {1*A0, 1*M01} -> {1*G0}
+t27: {1*S1} -> {1*M11}
+t28: {1*M11} -> {1*B11}
+t29: {1*A1, 1*M11} -> {1*G1}
+t3: {1*Env} -> {1*A4, 1*A0, 1*testP0, 1*testP4, 1*e, 1*testP1, 1*testP5, 1*testP2, 1*A2, 1*A1, 1*A5}
+t30: {1*S1} -> {1*M21}
+t31: {1*M21} -> {1*B21}
+t32: {1*M21, 1*A2} -> {1*G2}
+t33: {1*S1} -> {1*M31}
+t34: {1*M31} -> {1*B31}
+t35: {1*A3, 1*M31} -> {1*G3}
+t36: {1*S1} -> {1*M41}
+t37: {1*M41} -> {1*B41}
+t38: {1*M41, 1*A4} -> {1*G4}
+t39: {1*S1} -> {1*M51}
+t4: {1*Env} -> {1*A3, 1*testP3, 1*A0, 1*A1, 1*testP1, 1*A5, 1*A2, 1*testP5, 1*testP2, 1*e, 1*testP0}
+t40: {1*M51} -> {1*B51}
+t41: {1*M51, 1*A5} -> {1*G5}
+t42: {1*S2} -> {1*M02}
+t43: {1*M02} -> {1*B02}
+t44: {1*M02, 1*A0} -> {1*G0}
+t45: {1*S2} -> {1*M12}
+t46: {1*M12} -> {1*B12}
+t47: {1*M12, 1*A1} -> {1*G1}
+t48: {1*S2} -> {1*M22}
+t49: {1*M22} -> {1*B22}
+t5: {1*Env} -> {1*testP3, 1*A0, 1*A1, 1*A3, 1*testP0, 1*testP2, 1*testP4, 1*A2, 1*A4, 1*e, 1*testP1}
+t50: {1*M22, 1*A2} -> {1*G2}
+t51: {1*S2} -> {1*M32}
+t52: {1*M32} -> {1*B32}
+t53: {1*M32, 1*A3} -> {1*G3}
+t54: {1*S2} -> {1*M42}
+t55: {1*M42} -> {1*B42}
+t56: {1*M42, 1*A4} -> {1*G4}
+t57: {1*S2} -> {1*M52}
+t58: {1*M52} -> {1*B52}
+t59: {1*M52, 1*A5} -> {1*G5}
+t6: {1*S0} -> {1*M00}
+t60: {1*S3} -> {1*M03}
+t61: {1*M03} -> {1*B03}
+t62: {1*M03, 1*A0} -> {1*G0}
+t63: {1*S3} -> {1*M13}
+t64: {1*M13} -> {1*B13}
+t65: {1*M13, 1*A1} -> {1*G1}
+t66: {1*S3} -> {1*M23}
+t67: {1*M23} -> {1*B23}
+t68: {1*A2, 1*M23} -> {1*G2}
+t69: {1*S3} -> {1*M33}
+t7: {1*M00} -> {1*B00}
+t70: {1*M33} -> {1*B33}
+t71: {1*A3, 1*M33} -> {1*G3}
+t72: {1*S3} -> {1*M43}
+t73: {1*M43} -> {1*B43}
+t74: {1*A4, 1*M43} -> {1*G4}
+t75: {1*S3} -> {1*M53}
+t76: {1*M53} -> {1*B53}
+t77: {1*M53, 1*A5} -> {1*G5}
+t78: {1*S4} -> {1*M04}
+t79: {1*M04} -> {1*B04}
+t8: {1*A0, 1*M00} -> {1*G0}
+t80: {1*A0, 1*M04} -> {1*G0}
+t81: {1*S4} -> {1*M14}
+t82: {1*M14} -> {1*B14}
+t83: {1*A1, 1*M14} -> {1*G1}
+t84: {1*S4} -> {1*M24}
+t85: {1*M24} -> {1*B24}
+t86: {1*M24, 1*A2} -> {1*G2}
+t87: {1*S4} -> {1*M34}
+t88: {1*M34} -> {1*B34}
+t89: {1*M34, 1*A3} -> {1*G3}
+t9: {1*S0} -> {1*M10}
+t90: {1*S4} -> {1*M44}
+t91: {1*M44} -> {1*B44}
+t92: {1*A4, 1*M44} -> {1*G4}
+t93: {1*S4} -> {1*M54}
+t94: {1*M54} -> {1*B54}
+t95: {1*M54, 1*A5} -> {1*G5}
+test0: {1*S3, 1*S4, 1*S1, 1*S2, 1*S0, 1*testP0} -> {1*S1, 1*S2, 1*S4, 1*S3, 1*S0}
+test1: {1*S0, 1*S1, 1*S2, 1*testP1, 1*S3, 1*S4} -> {1*S1, 1*S4, 1*S2, 1*S3, 1*S0}
+test2: {1*S4, 1*S2, 1*S1, 1*S0, 1*testP2, 1*S3} -> {1*S1, 1*S2, 1*S3, 1*S4, 1*S0}
+test3: {1*S3, 1*testP3, 1*S1, 1*S4, 1*S0, 1*S2} -> {1*S0, 1*S2, 1*S1, 1*S3, 1*S4}
+test4: {1*testP4, 1*S2, 1*S0, 1*S3, 1*S1, 1*S4} -> {1*S1, 1*S2, 1*S0, 1*S4, 1*S3}
+test5: {1*testP5, 1*S4, 1*S3, 1*S0, 1*S1, 1*S2} -> {1*S0, 1*S1, 1*S2, 1*S3, 1*S4}
+
+.initial_marking {1*Env, 1*S0, 1*S1, 1*S2, 1*S3, 1*S4}

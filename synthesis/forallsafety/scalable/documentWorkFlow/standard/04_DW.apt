@@ -1,0 +1,101 @@
+.name "Clerks_4"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+N0[token=2]
+N1[token=4]
+N2[token=6]
+N3[token=8]
+Y0[token=2]
+Y1[token=4]
+Y2[token=6]
+Y3[token=8]
+bad0[bad="true", token=2]
+bad1[bad="true", token=4]
+bad2[bad="true", token=6]
+bad3[bad="true", token=8]
+buf0[token=7]
+buf1[token=1]
+buf2[token=3]
+buf3[token=5]
+buff0[token=2]
+buff1[token=4]
+buff2[token=6]
+buff3[token=8]
+cl0[token=1]
+cl1[token=3]
+cl2[token=5]
+cl3[token=7]
+end0[token=1]
+end1[token=3]
+end2[token=5]
+end3[token=7]
+env[env="true"]
+env0[env="true"]
+env1[env="true"]
+env2[env="true"]
+env3[env="true"]
+start0[env="true"]
+start1[env="true"]
+start2[env="true"]
+start3[env="true"]
+votel0[token=1]
+votel1[token=3]
+votel2[token=5]
+votel3[token=7]
+
+.transitions
+glue0[label="glue0"]
+glue1[label="glue1"]
+glue2[label="glue2"]
+glue3[label="glue3"]
+t0[label="t0"]
+t1[label="t1"]
+t10[label="t10"]
+t11[label="t11"]
+t12[label="t12"]
+t13[label="t13"]
+t14[label="t14"]
+t15[label="t15"]
+t2[label="t2"]
+t3[label="t3"]
+t4[label="t4"]
+t5[label="t5"]
+t6[label="t6"]
+t7[label="t7"]
+t8[label="t8"]
+t9[label="t9"]
+tbad0[label="tbad0"]
+tbad1[label="tbad1"]
+tbad2[label="tbad2"]
+tbad3[label="tbad3"]
+
+.flows
+glue0: {1*cl0, 1*end3} -> {1*votel0, 1*buf0}
+glue1: {1*end0, 1*cl1} -> {1*votel1, 1*buf1}
+glue2: {1*cl2, 1*end1} -> {1*votel2, 1*buf2}
+glue3: {1*cl3, 1*end2} -> {1*votel3, 1*buf3}
+t0: {1*env} -> {1*start0}
+t1: {1*start0, 1*cl0} -> {1*env0, 1*votel0}
+t10: {1*buff2, 1*votel2} -> {1*Y2, 1*end2}
+t11: {1*buff2, 1*votel2} -> {1*end2, 1*N2}
+t12: {1*env} -> {1*start3}
+t13: {1*cl3, 1*start3} -> {1*votel3, 1*env3}
+t14: {1*votel3, 1*buff3} -> {1*Y3, 1*end3}
+t15: {1*votel3, 1*buff3} -> {1*N3, 1*end3}
+t2: {1*votel0, 1*buff0} -> {1*Y0, 1*end0}
+t3: {1*buff0, 1*votel0} -> {1*N0, 1*end0}
+t4: {1*env} -> {1*start1}
+t5: {1*start1, 1*cl1} -> {1*votel1, 1*env1}
+t6: {1*buff1, 1*votel1} -> {1*end1, 1*Y1}
+t7: {1*votel1, 1*buff1} -> {1*N1, 1*end1}
+t8: {1*env} -> {1*start2}
+t9: {1*start2, 1*cl2} -> {1*env2, 1*votel2}
+tbad0: {1*N0} -> {1*bad0}
+tbad1: {1*N1} -> {1*bad1}
+tbad2: {1*N2} -> {1*bad2}
+tbad3: {1*N3} -> {1*bad3}
+
+.initial_marking {1*buff0, 1*buff1, 1*buff2, 1*buff3, 1*cl0, 1*cl1, 1*cl2, 1*cl3, 1*env}

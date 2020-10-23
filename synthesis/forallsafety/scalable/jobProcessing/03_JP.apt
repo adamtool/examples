@@ -1,0 +1,76 @@
+.name "ManufactorySystem3"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+JD_M0[env="true"]
+JD_M0M1[env="true"]
+JD_M0M1M2[env="true"]
+JD_M1[env="true"]
+JD_M1M2[env="true"]
+JD_M2[env="true"]
+M0[token=1]
+M1[token=2]
+M2[token=3]
+OUT_M0[token=1]
+OUT_M1[token=2]
+OUT_M2[token=3]
+S[env="true"]
+bad0[bad="true", token=1]
+bad1[bad="true", token=2]
+bad2[bad="true", token=3]
+end[env="true"]
+sw[token=1]
+
+.transitions
+t0[label="t0"]
+t1[label="t1"]
+t10[label="t10"]
+t11[label="t11"]
+t12[label="t12"]
+t13[label="t13"]
+t14[label="t14"]
+t15[label="t15"]
+t16[label="t16"]
+t17[label="t17"]
+t18[label="t18"]
+t19[label="t19"]
+t2[label="t2"]
+t20[label="t20"]
+t21[label="t21"]
+t22[label="t22"]
+t3[label="t3"]
+t4[label="t4"]
+t5[label="t5"]
+t6[label="t6"]
+t7[label="t7"]
+t8[label="t8"]
+t9[label="t9"]
+
+.flows
+t0: {1*S} -> {1*sw, 1*JD_M0}
+t1: {1*S} -> {1*JD_M0M1, 1*sw}
+t10: {1*M0} -> {1*OUT_M0, 1*M1}
+t11: {1*OUT_M1} -> {1*bad1}
+t12: {1*S} -> {1*JD_M2, 1*sw}
+t13: {1*sw} -> {1*M2}
+t14: {1*M2} -> {1*OUT_M2}
+t15: {1*M1} -> {1*M2, 1*OUT_M1}
+t16: {1*OUT_M2} -> {1*bad2}
+t17: {1*JD_M0, 1*OUT_M0} -> {1*end}
+t18: {1*OUT_M1, 1*OUT_M0, 1*JD_M0M1} -> {1*end}
+t19: {1*OUT_M0, 1*JD_M0M1M2, 1*OUT_M1, 1*OUT_M2} -> {1*end}
+t2: {1*S} -> {1*JD_M0M1M2, 1*sw}
+t20: {1*JD_M1, 1*OUT_M1} -> {1*end}
+t21: {1*OUT_M1, 1*OUT_M2, 1*JD_M1M2} -> {1*end}
+t22: {1*OUT_M2, 1*JD_M2} -> {1*end}
+t3: {1*sw} -> {1*M0}
+t4: {1*M0} -> {1*OUT_M0}
+t5: {1*OUT_M0} -> {1*bad0}
+t6: {1*S} -> {1*sw, 1*JD_M1}
+t7: {1*S} -> {1*sw, 1*JD_M1M2}
+t8: {1*sw} -> {1*M1}
+t9: {1*M1} -> {1*OUT_M1}
+
+.initial_marking {1*S}

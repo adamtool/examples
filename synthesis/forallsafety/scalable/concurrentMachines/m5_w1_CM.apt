@@ -1,0 +1,90 @@
+.name "Workflow_M5WP1"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+A0[token=2]
+A1[token=4]
+A2[token=6]
+A3[token=8]
+A4[token=10]
+B00[bad="true", token=1]
+B10[bad="true", token=1]
+B20[bad="true", token=1]
+B30[bad="true", token=1]
+B40[bad="true", token=1]
+Env[env="true"]
+G0[token=2]
+G1[token=4]
+G2[token=6]
+G3[token=8]
+G4[token=10]
+M00[token=1]
+M10[token=1]
+M20[token=1]
+M30[token=1]
+M40[token=1]
+S0[token=1]
+e[env="true"]
+testP0[token=3]
+testP1[token=5]
+testP2[token=7]
+testP3[token=9]
+testP4[token=11]
+
+.transitions
+t0[label="t0"]
+t1[label="t1"]
+t10[label="t10"]
+t11[label="t11"]
+t12[label="t12"]
+t13[label="t13"]
+t14[label="t14"]
+t15[label="t15"]
+t16[label="t16"]
+t17[label="t17"]
+t18[label="t18"]
+t19[label="t19"]
+t2[label="t2"]
+t3[label="t3"]
+t4[label="t4"]
+t5[label="t5"]
+t6[label="t6"]
+t7[label="t7"]
+t8[label="t8"]
+t9[label="t9"]
+test0[label="test0"]
+test1[label="test1"]
+test2[label="test2"]
+test3[label="test3"]
+test4[label="test4"]
+
+.flows
+t0: {1*Env} -> {1*testP4, 1*e, 1*testP1, 1*testP2, 1*A2, 1*testP3, 1*A3, 1*A4, 1*A1}
+t1: {1*Env} -> {1*e, 1*A0, 1*testP2, 1*testP3, 1*A2, 1*A4, 1*testP0, 1*A3, 1*testP4}
+t10: {1*M10, 1*A1} -> {1*G1}
+t11: {1*S0} -> {1*M20}
+t12: {1*M20} -> {1*B20}
+t13: {1*M20, 1*A2} -> {1*G2}
+t14: {1*S0} -> {1*M30}
+t15: {1*M30} -> {1*B30}
+t16: {1*M30, 1*A3} -> {1*G3}
+t17: {1*S0} -> {1*M40}
+t18: {1*M40} -> {1*B40}
+t19: {1*M40, 1*A4} -> {1*G4}
+t2: {1*Env} -> {1*A0, 1*testP0, 1*testP3, 1*A4, 1*e, 1*testP1, 1*A3, 1*A1, 1*testP4}
+t3: {1*Env} -> {1*A4, 1*A0, 1*testP0, 1*testP4, 1*e, 1*testP1, 1*testP2, 1*A2, 1*A1}
+t4: {1*Env} -> {1*A3, 1*testP3, 1*A0, 1*A1, 1*testP1, 1*A2, 1*testP2, 1*e, 1*testP0}
+t5: {1*S0} -> {1*M00}
+t6: {1*M00} -> {1*B00}
+t7: {1*M00, 1*A0} -> {1*G0}
+t8: {1*S0} -> {1*M10}
+t9: {1*M10} -> {1*B10}
+test0: {1*S0, 1*testP0} -> {1*S0}
+test1: {1*S0, 1*testP1} -> {1*S0}
+test2: {1*S0, 1*testP2} -> {1*S0}
+test3: {1*testP3, 1*S0} -> {1*S0}
+test4: {1*testP4, 1*S0} -> {1*S0}
+
+.initial_marking {1*Env, 1*S0}
