@@ -4,48 +4,48 @@
 condition="A_SAFETY"
 
 .places
-A0[token=2]
-A1[token=4]
-A2[token=6]
-B00[bad="true", token=1]
-B10[bad="true", token=1]
-B20[bad="true", token=1]
-Env[env="true"]
-G0[token=2]
-G1[token=4]
-G2[token=6]
-M00[token=1]
-M10[token=1]
-M20[token=1]
-S0[token=1]
-e[env="true"]
-testP0[token=3]
-testP1[token=5]
-testP2[token=7]
+A0[yCoord=-136.44, xCoord=564.78, token=2]
+A1[yCoord=13.84, xCoord=591.95, token=4]
+A2[yCoord=122.76, xCoord=597.75, token=6]
+B00[yCoord=297.64, bad="true", xCoord=1250.37, token=1]
+B10[yCoord=390.0, bad="true", xCoord=1530.0, token=1]
+B20[yCoord=358.75, bad="true", xCoord=1780.4, token=1]
+Env[yCoord=91.58, xCoord=156.57, env="true"]
+G0[yCoord=270.0, xCoord=1110.0, token=2]
+G1[yCoord=270.0, xCoord=1410.0, token=4]
+G2[yCoord=390.0, xCoord=1650.0, token=6]
+M00[yCoord=64.38, xCoord=1267.87, token=1]
+M10[yCoord=61.75, xCoord=1552.47, token=1]
+M20[yCoord=59.45, xCoord=1779.13, token=1]
+S0[yCoord=-329.69, xCoord=1544.68, token=1]
+e[yCoord=281.73, xCoord=188.24, env="true"]
+testP0[yCoord=-330.0, xCoord=690.0, token=3]
+testP1[yCoord=-210.0, xCoord=690.0, token=5]
+testP2[yCoord=-90.0, xCoord=750.0, token=7]
 
 .transitions
-t0[label="t0"]
-t1[label="t1"]
-t10[label="t10"]
-t11[label="t11"]
-t2[label="t2"]
-t3[label="t3"]
-t4[label="t4"]
-t5[label="t5"]
-t6[label="t6"]
-t7[label="t7"]
-t8[label="t8"]
-t9[label="t9"]
-test0[label="test0"]
-test1[label="test1"]
-test2[label="test2"]
+t0[label="t0", yCoord=-128.95, xCoord=350.58]
+t1[label="t1", yCoord=9.54, xCoord=396.01]
+t10[label="t10", yCoord=221.14, xCoord=1777.36]
+t11[label="t11", yCoord=150.0, xCoord=1650.0]
+t2[label="t2", yCoord=150.0, xCoord=390.0]
+t3[label="t3", yCoord=-121.78, xCoord=1298.12]
+t4[label="t4", yCoord=195.78, xCoord=1261.0]
+t5[label="t5", yCoord=90.0, xCoord=1110.0]
+t6[label="t6", yCoord=-107.35, xCoord=1556.2]
+t7[label="t7", yCoord=210.0, xCoord=1530.0]
+t8[label="t8", yCoord=90.0, xCoord=1410.0]
+t9[label="t9", yCoord=-118.23, xCoord=1767.38]
+test0[label="test0", yCoord=-555.9, xCoord=929.51]
+test1[label="test1", yCoord=-394.48, xCoord=930.83]
+test2[label="test2", yCoord=-278.64, xCoord=907.4]
 
 .flows
 t0: {1*Env} -> {1*e, 1*testP1, 1*testP2, 1*A2, 1*A1}
 t1: {1*Env} -> {1*e, 1*A0, 1*testP2, 1*A2, 1*testP0}
 t10: {1*M20} -> {1*B20}
 t11: {1*M20, 1*A2} -> {1*G2}
-t2: {1*Env} -> {1*A0, 1*testP0, 1*e, 1*testP1, 1*A1}
+t2: {1*Env} -> {1*testP0, 1*A0, 1*e, 1*testP1, 1*A1}
 t3: {1*S0} -> {1*M00}
 t4: {1*M00} -> {1*B00}
 t5: {1*A0, 1*M00} -> {1*G0}
