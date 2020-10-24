@@ -1,0 +1,136 @@
+.name "Workflow_M3WP4"
+.description "Has NO deadlock-avoiding winning strategy"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+A0[yCoord=458.46, xCoord=811.95, token=5]
+A1[yCoord=523.92, xCoord=497.94, token=7]
+A2[yCoord=366.78, xCoord=547.55, token=9]
+B00[yCoord=726.37, bad="true", xCoord=1009.69, token=1]
+B01[yCoord=629.19, bad="true", xCoord=1142.39, token=2]
+B02[yCoord=473.96, bad="true", xCoord=1324.47, token=3]
+B03[yCoord=271.54, bad="true", xCoord=1145.25, token=4]
+B10[yCoord=726.16, bad="true", xCoord=158.22, token=1]
+B11[yCoord=537.37, bad="true", xCoord=1.47, token=2]
+B12[yCoord=774.77, bad="true", xCoord=489.58, token=3]
+B13[yCoord=761.75, bad="true", xCoord=719.82, token=4]
+B20[yCoord=311.25, bad="true", xCoord=200.84, token=1]
+B21[yCoord=380.42, bad="true", xCoord=58.81, token=2]
+B22[yCoord=206.46, bad="true", xCoord=670.98, token=3]
+B23[yCoord=186.07, bad="true", xCoord=858.79, token=4]
+Env[yCoord=400.68, xCoord=607.64, env="true"]
+G0[yCoord=486.67, xCoord=986.82, token=5]
+G1[yCoord=610.25, xCoord=412.57, token=7]
+G2[yCoord=300.25, xCoord=490.5, token=9]
+M00[yCoord=610.25, xCoord=871.82, token=1]
+M01[yCoord=568.0, xCoord=899.28, token=2]
+M02[yCoord=490.84, xCoord=1074.7, token=3]
+M03[yCoord=368.51, xCoord=974.6, token=4]
+M10[yCoord=647.02, xCoord=363.84, token=1]
+M11[yCoord=530.11, xCoord=258.69, token=2]
+M12[yCoord=645.43, xCoord=577.68, token=3]
+M13[yCoord=630.06, xCoord=664.83, token=4]
+M20[yCoord=408.64, xCoord=401.67, token=1]
+M21[yCoord=415.22, xCoord=316.31, token=2]
+M22[yCoord=345.11, xCoord=710.51, token=3]
+M23[yCoord=310.82, xCoord=764.88, token=4]
+S0[yCoord=553.18, xCoord=595.22, token=1]
+S1[yCoord=518.41, xCoord=571.44, token=2]
+S2[yCoord=509.96, xCoord=777.62, token=3]
+S3[yCoord=472.83, xCoord=756.67, token=4]
+e[yCoord=411.78, xCoord=556.68, env="true"]
+testP0[yCoord=453.81, xCoord=703.87, token=6]
+testP1[yCoord=482.5, xCoord=553.08, token=8]
+testP2[yCoord=439.95, xCoord=603.66, token=10]
+
+.transitions
+t0[label="t0", yCoord=441.95, xCoord=505.63]
+t1[label="t1", yCoord=406.27, xCoord=683.86]
+t10[label="t10", yCoord=357.56, xCoord=290.1]
+t11[label="t11", yCoord=337.93, xCoord=437.61]
+t12[label="t12", yCoord=545.2, xCoord=751.01]
+t13[label="t13", yCoord=600.79, xCoord=1028.66]
+t14[label="t14", yCoord=500.33, xCoord=894.05]
+t15[label="t15", yCoord=520.91, xCoord=409.34]
+t16[label="t16", yCoord=534.85, xCoord=123.0]
+t17[label="t17", yCoord=552.2, xCoord=362.99]
+t18[label="t18", yCoord=472.22, xCoord=425.39]
+t19[label="t19", yCoord=399.7, xCoord=177.82]
+t2[label="t2", yCoord=467.05, xCoord=635.4]
+t20[label="t20", yCoord=361.45, xCoord=411.17]
+t21[label="t21", yCoord=516.87, xCoord=942.04]
+t22[label="t22", yCoord=483.04, xCoord=1208.11]
+t23[label="t23", yCoord=459.86, xCoord=961.98]
+t24[label="t24", yCoord=583.29, xCoord=679.96]
+t25[label="t25", yCoord=713.97, xCoord=532.98]
+t26[label="t26", yCoord=591.02, xCoord=489.2]
+t27[label="t27", yCoord=424.92, xCoord=761.04]
+t28[label="t28", yCoord=271.62, xCoord=700.4]
+t29[label="t29", yCoord=321.55, xCoord=588.13]
+t3[label="t3", yCoord=599.19, xCoord=734.41]
+t30[label="t30", yCoord=415.4, xCoord=864.08]
+t31[label="t31", yCoord=319.55, xCoord=1064.03]
+t32[label="t32", yCoord=425.54, xCoord=942.16]
+t33[label="t33", yCoord=556.74, xCoord=708.1]
+t34[label="t34", yCoord=700.92, xCoord=697.94]
+t35[label="t35", yCoord=594.26, xCoord=544.49]
+t36[label="t36", yCoord=388.73, xCoord=779.0]
+t37[label="t37", yCoord=247.75, xCoord=821.58]
+t38[label="t38", yCoord=303.45, xCoord=623.21]
+t4[label="t4", yCoord=671.91, xCoord=944.24]
+t5[label="t5", yCoord=531.07, xCoord=881.08]
+t6[label="t6", yCoord=619.88, xCoord=495.83]
+t7[label="t7", yCoord=690.5, xCoord=256.0]
+t8[label="t8", yCoord=583.06, xCoord=396.51]
+t9[label="t9", yCoord=483.63, xCoord=482.41]
+test0[label="test0", yCoord=520.04, xCoord=697.96]
+test1[label="test1", yCoord=515.48, xCoord=656.94]
+test2[label="test2", yCoord=493.86, xCoord=659.41]
+
+.flows
+t0: {1*Env} -> {1*e, 1*testP1, 1*testP2, 1*A2, 1*A1}
+t1: {1*Env} -> {1*e, 1*A0, 1*testP2, 1*A2, 1*testP0}
+t10: {1*M20} -> {1*B20}
+t11: {1*A2, 1*M20} -> {1*G2}
+t12: {1*S1} -> {1*M01}
+t13: {1*M01} -> {1*B01}
+t14: {1*A0, 1*M01} -> {1*G0}
+t15: {1*S1} -> {1*M11}
+t16: {1*M11} -> {1*B11}
+t17: {1*M11, 1*A1} -> {1*G1}
+t18: {1*S1} -> {1*M21}
+t19: {1*M21} -> {1*B21}
+t2: {1*Env} -> {1*testP0, 1*A0, 1*e, 1*testP1, 1*A1}
+t20: {1*A2, 1*M21} -> {1*G2}
+t21: {1*S2} -> {1*M02}
+t22: {1*M02} -> {1*B02}
+t23: {1*M02, 1*A0} -> {1*G0}
+t24: {1*S2} -> {1*M12}
+t25: {1*M12} -> {1*B12}
+t26: {1*M12, 1*A1} -> {1*G1}
+t27: {1*S2} -> {1*M22}
+t28: {1*M22} -> {1*B22}
+t29: {1*A2, 1*M22} -> {1*G2}
+t3: {1*S0} -> {1*M00}
+t30: {1*S3} -> {1*M03}
+t31: {1*M03} -> {1*B03}
+t32: {1*A0, 1*M03} -> {1*G0}
+t33: {1*S3} -> {1*M13}
+t34: {1*M13} -> {1*B13}
+t35: {1*M13, 1*A1} -> {1*G1}
+t36: {1*S3} -> {1*M23}
+t37: {1*M23} -> {1*B23}
+t38: {1*A2, 1*M23} -> {1*G2}
+t4: {1*M00} -> {1*B00}
+t5: {1*A0, 1*M00} -> {1*G0}
+t6: {1*S0} -> {1*M10}
+t7: {1*M10} -> {1*B10}
+t8: {1*M10, 1*A1} -> {1*G1}
+t9: {1*S0} -> {1*M20}
+test0: {1*S3, 1*S1, 1*S2, 1*S0, 1*testP0} -> {1*S1, 1*S2, 1*S3, 1*S0}
+test1: {1*S0, 1*S1, 1*S2, 1*testP1, 1*S3} -> {1*S1, 1*S3, 1*S2, 1*S0}
+test2: {1*S2, 1*S1, 1*S0, 1*S3, 1*testP2} -> {1*S1, 1*S2, 1*S3, 1*S0}
+
+.initial_marking {1*Env, 1*S0, 1*S1, 1*S2, 1*S3}

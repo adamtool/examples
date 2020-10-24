@@ -1,4 +1,5 @@
 .name "Workflow_M3WP1"
+.description "Has a deadlock-avoiding winning strategy"
 .type LPN
 .options
 condition="A_SAFETY"
