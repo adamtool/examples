@@ -1,8 +1,6 @@
-// Can be won by the system because they let the enviroment play infinitly often t8
-// and thus they didn't created a deadlock by blocking their move t3
-// would be lost if their is no loop at env1
-.name "exampleTafel"
-.description "Example tafel 28.09.2014"
+.name "deadlock-avoidance"
+.description "The requirement of deadlock-avoidance for the system player is illustrated.
+              The system players have ONE deadlock-avoiding winning strategies."
 .type LPN
 .options
 condition="SAFETY"
@@ -19,7 +17,7 @@ s3[yCoord=630.0, xCoord=1110.0]
 s4[yCoord=870.0, xCoord=1050.0]
 s5[yCoord=990.0, xCoord=1050.0]
 s6[yCoord=990.0, xCoord=1290.0]
-s7[yCoord=630.0, bad="asdf", xCoord=1350.0]
+s7[yCoord=630.0, bad="true", xCoord=1350.0]
 s8[yCoord=1110.0, xCoord=930.0]
 
 .transitions

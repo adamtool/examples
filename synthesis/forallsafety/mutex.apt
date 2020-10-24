@@ -1,5 +1,6 @@
 .name "mutex"
-.description "mutex"
+.description "Illustrates infinite behavior of the system players with or without the environment player.
+              The system players have a deadlock-avoiding winning strategies."
 .type LPN
 .options
 condition="SAFETY"

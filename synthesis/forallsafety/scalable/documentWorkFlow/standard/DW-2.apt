@@ -1,0 +1,58 @@
+.name "Clerks_2"
+.description "Has a deadlock-avoiding winning strategy"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+N0[yCoord=688.16, xCoord=1300.88, token=2]
+N1[yCoord=319.25, xCoord=962.67, token=4]
+Y0[yCoord=728.97, xCoord=1134.86, token=2]
+Y1[yCoord=362.3, xCoord=623.66, token=4]
+bad0[yCoord=775.32, bad="true", xCoord=1566.17, token=2]
+bad1[yCoord=186.62, bad="true", xCoord=906.69, token=4]
+buf0[yCoord=491.69, xCoord=1049.03, token=3]
+buf1[yCoord=515.33, xCoord=1153.42, token=1]
+buff0[yCoord=715.69, xCoord=1021.16, token=2]
+buff1[yCoord=342.74, xCoord=796.1, token=4]
+cl0[yCoord=591.09, xCoord=777.8, token=1]
+cl1[yCoord=511.34, xCoord=771.46, token=3]
+end0[yCoord=592.11, xCoord=1058.06, token=1]
+end1[yCoord=459.87, xCoord=907.51, token=3]
+env[yCoord=613.22, xCoord=243.17, env="true"]
+env0[yCoord=719.52, xCoord=688.34, env="true"]
+env1[yCoord=440.5, xCoord=466.2, env="true"]
+start0[yCoord=664.33, xCoord=551.82, env="true"]
+start1[yCoord=509.57, xCoord=442.1, env="true"]
+votel0[yCoord=623.6, xCoord=931.95, token=1]
+votel1[yCoord=459.83, xCoord=811.98, token=3]
+
+.transitions
+glue0[label="glue0", yCoord=542.14, xCoord=910.13]
+glue1[label="glue1", yCoord=516.74, xCoord=964.16]
+t0[label="t0", yCoord=658.91, xCoord=372.16]
+t1[label="t1", yCoord=653.42, xCoord=743.73]
+t2[label="t2", yCoord=665.12, xCoord=1039.3]
+t3[label="t3", yCoord=654.15, xCoord=1123.26]
+t4[label="t4", yCoord=547.69, xCoord=292.34]
+t5[label="t5", yCoord=477.99, xCoord=617.72]
+t6[label="t6", yCoord=403.82, xCoord=767.96]
+t7[label="t7", yCoord=389.9, xCoord=907.81]
+tbad0[label="tbad0", yCoord=729.95, xCoord=1442.93]
+tbad1[label="tbad1", yCoord=248.62, xCoord=951.7]
+
+.flows
+glue0: {1*cl0, 1*end1} -> {1*votel0, 1*buf0}
+glue1: {1*end0, 1*cl1} -> {1*votel1, 1*buf1}
+t0: {1*env} -> {1*start0}
+t1: {1*start0, 1*cl0} -> {1*env0, 1*votel0}
+t2: {1*votel0, 1*buff0} -> {1*Y0, 1*end0}
+t3: {1*buff0, 1*votel0} -> {1*N0, 1*end0}
+t4: {1*env} -> {1*start1}
+t5: {1*start1, 1*cl1} -> {1*votel1, 1*env1}
+t6: {1*buff1, 1*votel1} -> {1*end1, 1*Y1}
+t7: {1*votel1, 1*buff1} -> {1*N1, 1*end1}
+tbad0: {1*N0} -> {1*bad0}
+tbad1: {1*N1} -> {1*bad1}
+
+.initial_marking {1*buff0, 1*buff1, 1*cl0, 1*cl1, 1*env}

@@ -1,0 +1,51 @@
+.name "ManufactorySystem2"
+.description "Has a deadlock-avoiding winning strategy"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+JD_M0[yCoord=270.0, xCoord=510.0, env="true"]
+JD_M0M1[yCoord=270.0, xCoord=690.0, env="true"]
+JD_M1[yCoord=270.0, xCoord=1050.0, env="true"]
+M0[yCoord=510.0, xCoord=810.0, token=1]
+M1[yCoord=510.0, xCoord=930.0, token=2]
+OUT_M0[yCoord=750.0, xCoord=810.0, token=1]
+OUT_M1[yCoord=754.54, xCoord=932.23, token=2]
+S[yCoord=30.0, xCoord=870.0, env="true"]
+bad0[yCoord=990.0, bad="true", xCoord=810.0, token=1]
+bad1[yCoord=990.0, bad="true", xCoord=930.0, token=2]
+end[yCoord=631.51, xCoord=247.73, env="true"]
+sw[yCoord=270.0, xCoord=870.0, token=1]
+
+.transitions
+t0[label="t0", yCoord=150.0, xCoord=690.0]
+t1[label="t1", yCoord=150.0, xCoord=870.0]
+t10[label="t10", yCoord=630.0, xCoord=510.0]
+t11[label="t11", yCoord=870.0, xCoord=570.0]
+t12[label="t12", yCoord=390.0, xCoord=1050.0]
+t2[label="t2", yCoord=390.0, xCoord=810.0]
+t3[label="t3", yCoord=630.0, xCoord=810.0]
+t4[label="t4", yCoord=870.0, xCoord=810.0]
+t5[label="t5", yCoord=150.0, xCoord=1050.0]
+t6[label="t6", yCoord=390.0, xCoord=930.0]
+t7[label="t7", yCoord=630.0, xCoord=930.0]
+t8[label="t8", yCoord=630.0, xCoord=690.0]
+t9[label="t9", yCoord=870.0, xCoord=930.0]
+
+.flows
+t0: {1*S} -> {1*sw, 1*JD_M0}
+t1: {1*S} -> {1*JD_M0M1, 1*sw}
+t10: {1*JD_M0, 1*OUT_M0} -> {1*end}
+t11: {1*OUT_M1, 1*JD_M0M1, 1*OUT_M0} -> {1*end}
+t12: {1*JD_M1, 1*OUT_M1} -> {1*end}
+t2: {1*sw} -> {1*M0}
+t3: {1*M0} -> {1*OUT_M0}
+t4: {1*OUT_M0} -> {1*bad0}
+t5: {1*S} -> {1*JD_M1, 1*sw}
+t6: {1*sw} -> {1*M1}
+t7: {1*M1} -> {1*OUT_M1}
+t8: {1*M0} -> {1*M1, 1*OUT_M0}
+t9: {1*OUT_M1} -> {1*bad1}
+
+.initial_marking {1*S}

@@ -1,5 +1,6 @@
-.name "exampleTafel"
-.description "Example tafel 28.09.2014. Should not have a strategy"
+.name "deadlock-avoidance"
+.description "The requirement of deadlock-avoidance for the system player is illustrated.
+              The system players have NO deadlock-avoiding winning strategies."
 .type LPN
 .options
 condition="SAFETY"
@@ -16,7 +17,7 @@ s3[yCoord=570.0, xCoord=1650.0]
 s4[yCoord=450.0, xCoord=1050.0]
 s5[yCoord=570.0, xCoord=1050.0]
 s6[yCoord=450.0, xCoord=1290.0]
-s7[yCoord=570.0, bad="asdf", xCoord=2010.0]
+s7[yCoord=570.0, bad="true", xCoord=2010.0]
 s8[yCoord=690.0, xCoord=1290.0]
 
 .transitions

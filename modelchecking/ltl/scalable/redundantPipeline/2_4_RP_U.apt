@@ -1,6 +1,8 @@
 .name "redundantFlow_basis_withUpdate"
+.description "Unsatisfiable"
 .type LPN
 .options
+formula="A F out",
 nb_switches="10"
 
 .places

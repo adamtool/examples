@@ -1,7 +1,9 @@
 .name "network_5"
+.description "A random switch may fail and packets bypassed from the predecessor to the successor of the failing switch.
+              Satisfiable formula:   A F pOut
+              Unsatisfiable formula: A F p1"
 .type LPN
 .options
-formula="A F pOut",
 nb_switches="6"
 
 .places

@@ -1,0 +1,146 @@
+.name "Clerks_6"
+.description "Has a deadlock-avoiding winning strategy"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+N0[yCoord=331.18, xCoord=542.13, token=2]
+N1[yCoord=563.95, xCoord=401.72, token=4]
+N2[yCoord=713.0, xCoord=722.9, token=6]
+N3[yCoord=671.77, xCoord=1206.79, token=8]
+N4[yCoord=463.37, xCoord=1407.75, token=10]
+N5[yCoord=264.07, xCoord=1009.28, token=12]
+Y0[yCoord=411.46, xCoord=649.8, token=2]
+Y1[yCoord=532.11, xCoord=450.73, token=4]
+Y2[yCoord=704.4, xCoord=850.95, token=6]
+Y3[yCoord=580.49, xCoord=1130.46, token=8]
+Y4[yCoord=413.57, xCoord=1326.71, token=10]
+Y5[yCoord=349.28, xCoord=957.02, token=12]
+bad0[yCoord=286.48, bad="true", xCoord=408.89, token=2]
+bad1[yCoord=577.11, bad="true", xCoord=243.3, token=4]
+bad2[yCoord=775.2, bad="true", xCoord=624.97, token=6]
+bad3[yCoord=740.33, bad="true", xCoord=1275.31, token=8]
+bad4[yCoord=465.34, bad="true", xCoord=1566.3, token=10]
+bad5[yCoord=186.5, bad="true", xCoord=993.81, token=12]
+buf0[yCoord=290.14, xCoord=809.62, token=11]
+buf1[yCoord=445.07, xCoord=450.88, token=1]
+buf2[yCoord=649.98, xCoord=577.51, token=3]
+buf3[yCoord=700.56, xCoord=1005.0, token=5]
+buf4[yCoord=559.25, xCoord=1334.03, token=7]
+buf5[yCoord=344.12, xCoord=1243.53, token=9]
+buff0[yCoord=370.39, xCoord=554.25, token=2]
+buff1[yCoord=583.71, xCoord=476.25, token=4]
+buff2[yCoord=709.74, xCoord=793.42, token=6]
+buff3[yCoord=627.84, xCoord=1227.4, token=8]
+buff4[yCoord=436.01, xCoord=1364.59, token=10]
+buff5[yCoord=296.93, xCoord=1069.16, token=12]
+cl0[yCoord=321.61, xCoord=762.77, token=1]
+cl1[yCoord=483.49, xCoord=554.44, token=3]
+cl2[yCoord=610.77, xCoord=694.02, token=5]
+cl3[yCoord=632.71, xCoord=986.15, token=7]
+cl4[yCoord=526.25, xCoord=1206.8, token=9]
+cl5[yCoord=395.49, xCoord=1137.2, token=11]
+end0[yCoord=407.58, xCoord=570.74, token=1]
+end1[yCoord=587.45, xCoord=560.74, token=3]
+end2[yCoord=671.97, xCoord=884.23, token=5]
+end3[yCoord=590.31, xCoord=1216.57, token=7]
+end4[yCoord=414.6, xCoord=1255.7, token=9]
+end5[yCoord=319.01, xCoord=921.91, token=11]
+env[yCoord=481.23, xCoord=903.36, env="true"]
+env0[yCoord=328.54, xCoord=714.8, env="true"]
+env1[yCoord=462.4, xCoord=619.9, env="true"]
+env2[yCoord=573.85, xCoord=707.31, env="true"]
+env3[yCoord=601.14, xCoord=944.42, env="true"]
+env4[yCoord=459.25, xCoord=1173.83, env="true"]
+env5[yCoord=354.91, xCoord=1135.31, env="true"]
+start0[yCoord=400.73, xCoord=812.38, env="true"]
+start1[yCoord=490.74, xCoord=716.34, env="true"]
+start2[yCoord=559.23, xCoord=807.33, env="true"]
+start3[yCoord=561.72, xCoord=983.31, env="true"]
+start4[yCoord=490.03, xCoord=1088.89, env="true"]
+start5[yCoord=411.18, xCoord=1013.98, env="true"]
+votel0[yCoord=352.18, xCoord=710.15, token=1]
+votel1[yCoord=508.9, xCoord=532.21, token=3]
+votel2[yCoord=642.24, xCoord=732.45, token=5]
+votel3[yCoord=635.57, xCoord=1074.57, token=7]
+votel4[yCoord=494.57, xCoord=1269.31, token=9]
+votel5[yCoord=342.09, xCoord=1093.85, token=11]
+
+.transitions
+glue0[label="glue0", yCoord=330.45, xCoord=815.12]
+glue1[label="glue1", yCoord=456.37, xCoord=527.41]
+glue2[label="glue2", yCoord=623.2, xCoord=634.6]
+glue3[label="glue3", yCoord=663.17, xCoord=984.98]
+glue4[label="glue4", yCoord=544.66, xCoord=1261.74]
+glue5[label="glue5", yCoord=372.53, xCoord=1186.94]
+t0[label="t0", yCoord=441.52, xCoord=856.87]
+t1[label="t1", yCoord=360.71, xCoord=770.16]
+t10[label="t10", yCoord=670.14, xCoord=807.91]
+t11[label="t11", yCoord=680.47, xCoord=781.37]
+t12[label="t12", yCoord=521.63, xCoord=943.18]
+t13[label="t13", yCoord=600.87, xCoord=1017.38]
+t14[label="t14", yCoord=613.78, xCoord=1151.34]
+t15[label="t15", yCoord=632.51, xCoord=1168.03]
+t16[label="t16", yCoord=485.43, xCoord=996.47]
+t17[label="t17", yCoord=493.43, xCoord=1180.37]
+t18[label="t18", yCoord=448.35, xCoord=1287.26]
+t19[label="t19", yCoord=455.23, xCoord=1319.06]
+t2[label="t2", yCoord=379.38, xCoord=633.59]
+t20[label="t20", yCoord=445.24, xCoord=956.62]
+t21[label="t21", yCoord=379.58, xCoord=1073.61]
+t22[label="t22", yCoord=327.5, xCoord=1011.2]
+t23[label="t23", yCoord=307.95, xCoord=1014.04]
+t3[label="t3", yCoord=361.69, xCoord=609.79]
+t4[label="t4", yCoord=484.8, xCoord=807.52]
+t5[label="t5", yCoord=497.43, xCoord=621.37]
+t6[label="t6", yCoord=551.11, xCoord=523.9]
+t7[label="t7", yCoord=554.4, xCoord=489.6]
+t8[label="t8", yCoord=520.62, xCoord=853.57]
+t9[label="t9", yCoord=599.42, xCoord=760.96]
+tbad0[label="tbad0", yCoord=307.19, xCoord=473.26]
+tbad1[label="tbad1", yCoord=571.88, xCoord=318.62]
+tbad2[label="tbad2", yCoord=746.39, xCoord=672.76]
+tbad3[label="tbad3", yCoord=706.13, xCoord=1242.41]
+tbad4[label="tbad4", yCoord=465.23, xCoord=1491.41]
+tbad5[label="tbad5", yCoord=224.31, xCoord=1003.62]
+
+.flows
+glue0: {1*cl0, 1*end5} -> {1*votel0, 1*buf0}
+glue1: {1*end0, 1*cl1} -> {1*votel1, 1*buf1}
+glue2: {1*cl2, 1*end1} -> {1*votel2, 1*buf2}
+glue3: {1*cl3, 1*end2} -> {1*votel3, 1*buf3}
+glue4: {1*cl4, 1*end3} -> {1*votel4, 1*buf4}
+glue5: {1*cl5, 1*end4} -> {1*buf5, 1*votel5}
+t0: {1*env} -> {1*start0}
+t1: {1*start0, 1*cl0} -> {1*env0, 1*votel0}
+t10: {1*buff2, 1*votel2} -> {1*Y2, 1*end2}
+t11: {1*buff2, 1*votel2} -> {1*end2, 1*N2}
+t12: {1*env} -> {1*start3}
+t13: {1*cl3, 1*start3} -> {1*votel3, 1*env3}
+t14: {1*votel3, 1*buff3} -> {1*Y3, 1*end3}
+t15: {1*votel3, 1*buff3} -> {1*N3, 1*end3}
+t16: {1*env} -> {1*start4}
+t17: {1*start4, 1*cl4} -> {1*env4, 1*votel4}
+t18: {1*buff4, 1*votel4} -> {1*Y4, 1*end4}
+t19: {1*votel4, 1*buff4} -> {1*N4, 1*end4}
+t2: {1*votel0, 1*buff0} -> {1*Y0, 1*end0}
+t20: {1*env} -> {1*start5}
+t21: {1*start5, 1*cl5} -> {1*votel5, 1*env5}
+t22: {1*votel5, 1*buff5} -> {1*Y5, 1*end5}
+t23: {1*buff5, 1*votel5} -> {1*end5, 1*N5}
+t3: {1*buff0, 1*votel0} -> {1*N0, 1*end0}
+t4: {1*env} -> {1*start1}
+t5: {1*start1, 1*cl1} -> {1*votel1, 1*env1}
+t6: {1*buff1, 1*votel1} -> {1*end1, 1*Y1}
+t7: {1*votel1, 1*buff1} -> {1*N1, 1*end1}
+t8: {1*env} -> {1*start2}
+t9: {1*start2, 1*cl2} -> {1*env2, 1*votel2}
+tbad0: {1*N0} -> {1*bad0}
+tbad1: {1*N1} -> {1*bad1}
+tbad2: {1*N2} -> {1*bad2}
+tbad3: {1*N3} -> {1*bad3}
+tbad4: {1*N4} -> {1*bad4}
+tbad5: {1*N5} -> {1*bad5}
+
+.initial_marking {1*buff0, 1*buff1, 1*buff2, 1*buff3, 1*buff4, 1*buff5, 1*cl0, 1*cl1, 1*cl2, 1*cl3, 1*cl4, 1*cl5, 1*env}

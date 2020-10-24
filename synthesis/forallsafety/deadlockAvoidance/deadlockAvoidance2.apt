@@ -1,7 +1,6 @@
 .name "deadlock-avoidance"
 .description "The requirement of deadlock-avoidance for the system player is illustrated.
-              The system player has ONE winning strategies to avoid deadlocks.
-              Therefore, this example has a winning strategy."
+              The system player has ONE deadlock-avoiding winning strategies."
 .type LPN
 .options
 condition="SAFETY"

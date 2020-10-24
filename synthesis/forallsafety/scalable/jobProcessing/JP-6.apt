@@ -1,0 +1,185 @@
+.name "ManufactorySystem6"
+.description "Has a deadlock-avoiding winning strategy"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+JD_M0[yCoord=571.63, xCoord=1393.17, env="true"]
+JD_M0M1[yCoord=646.2, xCoord=1401.24, env="true"]
+JD_M0M1M2[yCoord=610.92, xCoord=1371.84, env="true"]
+JD_M0M1M2M3[yCoord=514.14, xCoord=1324.22, env="true"]
+JD_M0M1M2M3M4[yCoord=428.68, xCoord=1168.97, env="true"]
+JD_M0M1M2M3M4M5[yCoord=454.41, xCoord=877.15, env="true"]
+JD_M1[yCoord=692.58, xCoord=1358.94, env="true"]
+JD_M1M2[yCoord=681.43, xCoord=1279.69, env="true"]
+JD_M1M2M3[yCoord=626.95, xCoord=1083.2, env="true"]
+JD_M1M2M3M4[yCoord=609.26, xCoord=964.96, env="true"]
+JD_M1M2M3M4M5[yCoord=425.76, xCoord=1086.04, env="true"]
+JD_M2[yCoord=691.12, xCoord=1094.86, env="true"]
+JD_M2M3[yCoord=610.34, xCoord=687.83, env="true"]
+JD_M2M3M4[yCoord=653.14, xCoord=889.21, env="true"]
+JD_M2M3M4M5[yCoord=605.78, xCoord=848.82, env="true"]
+JD_M3[yCoord=637.25, xCoord=587.75, env="true"]
+JD_M3M4[yCoord=546.88, xCoord=564.38, env="true"]
+JD_M3M4M5[yCoord=599.53, xCoord=597.41, env="true"]
+JD_M4[yCoord=705.48, xCoord=648.55, env="true"]
+JD_M4M5[yCoord=613.42, xCoord=509.77, env="true"]
+JD_M5[yCoord=679.87, xCoord=563.94, env="true"]
+M0[yCoord=522.14, xCoord=1533.06, token=1]
+M1[yCoord=538.42, xCoord=1452.15, token=2]
+M2[yCoord=386.41, xCoord=1215.28, token=3]
+M3[yCoord=369.18, xCoord=851.05, token=4]
+M4[yCoord=469.27, xCoord=604.14, token=5]
+M5[yCoord=561.47, xCoord=459.27, token=6]
+OUT_M0[yCoord=414.89, xCoord=1272.41, token=1]
+OUT_M1[yCoord=451.82, xCoord=1193.64, token=2]
+OUT_M2[yCoord=451.59, xCoord=1021.65, token=3]
+OUT_M3[yCoord=413.32, xCoord=849.3, token=4]
+OUT_M4[yCoord=432.17, xCoord=759.15, token=5]
+OUT_M5[yCoord=424.52, xCoord=676.4, token=6]
+S[yCoord=678.39, xCoord=990.28, env="true"]
+bad0[yCoord=195.94, bad="true", xCoord=1437.64, token=1]
+bad1[yCoord=285.39, bad="true", xCoord=1558.96, token=2]
+bad2[yCoord=198.14, bad="true", xCoord=1007.58, token=3]
+bad3[yCoord=186.01, bad="true", xCoord=663.8, token=4]
+bad4[yCoord=240.17, bad="true", xCoord=449.56, token=5]
+bad5[yCoord=316.43, bad="true", xCoord=235.96, token=6]
+end[yCoord=512.7, xCoord=959.78, env="true"]
+sw[yCoord=650.47, xCoord=996.02, token=1]
+
+.transitions
+t0[label="t0", yCoord=648.27, xCoord=1203.21]
+t1[label="t1", yCoord=716.53, xCoord=1207.12]
+t10[label="t10", yCoord=762.66, xCoord=1115.27]
+t11[label="t11", yCoord=732.5, xCoord=1074.09]
+t12[label="t12", yCoord=721.67, xCoord=991.17]
+t13[label="t13", yCoord=550.46, xCoord=1014.04]
+t14[label="t14", yCoord=631.39, xCoord=1279.36]
+t15[label="t15", yCoord=465.36, xCoord=1417.84]
+t16[label="t16", yCoord=449.16, xCoord=1514.81]
+t17[label="t17", yCoord=356.9, xCoord=1382.93]
+t18[label="t18", yCoord=774.71, xCoord=1018.86]
+t19[label="t19", yCoord=707.79, xCoord=830.3]
+t2[label="t2", yCoord=682.88, xCoord=1192.13]
+t20[label="t20", yCoord=763.12, xCoord=932.89]
+t21[label="t21", yCoord=716.61, xCoord=898.21]
+t22[label="t22", yCoord=516.56, xCoord=1113.71]
+t23[label="t23", yCoord=334.61, xCoord=1139.17]
+t24[label="t24", yCoord=426.17, xCoord=1395.41]
+t25[label="t25", yCoord=306.8, xCoord=998.99]
+t26[label="t26", yCoord=668.14, xCoord=802.46]
+t27[label="t27", yCoord=622.87, xCoord=771.5]
+t28[label="t28", yCoord=697.38, xCoord=756.37]
+t29[label="t29", yCoord=501.0, xCoord=902.27]
+t3[label="t3", yCoord=613.24, xCoord=1173.17]
+t30[label="t30", yCoord=296.68, xCoord=842.01]
+t31[label="t31", yCoord=340.4, xCoord=1043.46]
+t32[label="t32", yCoord=291.55, xCoord=738.74]
+t33[label="t33", yCoord=758.95, xCoord=846.48]
+t34[label="t34", yCoord=666.12, xCoord=736.93]
+t35[label="t35", yCoord=565.58, xCoord=793.74]
+t36[label="t36", yCoord=384.39, xCoord=544.89]
+t37[label="t37", yCoord=363.48, xCoord=671.39]
+t38[label="t38", yCoord=322.2, xCoord=591.41]
+t39[label="t39", yCoord=735.34, xCoord=778.99]
+t4[label="t4", yCoord=559.36, xCoord=1099.46]
+t40[label="t40", yCoord=644.38, xCoord=678.95]
+t41[label="t41", yCoord=456.94, xCoord=421.79]
+t42[label="t42", yCoord=459.05, xCoord=509.92]
+t43[label="t43", yCoord=361.25, xCoord=430.36]
+t44[label="t44", yCoord=486.98, xCoord=1239.51]
+t45[label="t45", yCoord=535.61, xCoord=1252.45]
+t46[label="t46", yCoord=511.7, xCoord=1195.37]
+t47[label="t47", yCoord=457.88, xCoord=1103.0]
+t48[label="t48", yCoord=398.43, xCoord=1022.13]
+t49[label="t49", yCoord=423.0, xCoord=970.46]
+t5[label="t5", yCoord=570.01, xCoord=913.57]
+t50[label="t50", yCoord=576.15, xCoord=1220.29]
+t51[label="t51", yCoord=554.5, xCoord=1166.17]
+t52[label="t52", yCoord=504.28, xCoord=1033.13]
+t53[label="t53", yCoord=478.98, xCoord=967.56]
+t54[label="t54", yCoord=403.1, xCoord=924.51]
+t55[label="t55", yCoord=581.77, xCoord=1044.53]
+t56[label="t56", yCoord=511.39, xCoord=803.56]
+t57[label="t57", yCoord=529.14, xCoord=866.32]
+t58[label="t58", yCoord=478.23, xCoord=817.62]
+t59[label="t59", yCoord=531.65, xCoord=731.47]
+t6[label="t6", yCoord=594.73, xCoord=1291.27]
+t60[label="t60", yCoord=462.21, xCoord=717.42]
+t61[label="t61", yCoord=497.0, xCoord=712.92]
+t62[label="t62", yCoord=572.43, xCoord=724.48]
+t63[label="t63", yCoord=515.17, xCoord=655.42]
+t64[label="t64", yCoord=552.63, xCoord=662.81]
+t7[label="t7", yCoord=409.51, xCoord=1514.83]
+t8[label="t8", yCoord=295.95, xCoord=1358.26]
+t9[label="t9", yCoord=742.57, xCoord=1172.32]
+
+.flows
+t0: {1*S} -> {1*sw, 1*JD_M0}
+t1: {1*S} -> {1*JD_M0M1, 1*sw}
+t10: {1*S} -> {1*JD_M1M2, 1*sw}
+t11: {1*S} -> {1*JD_M1M2M3, 1*sw}
+t12: {1*S} -> {1*JD_M1M2M3M4, 1*sw}
+t13: {1*S} -> {1*sw, 1*JD_M1M2M3M4M5}
+t14: {1*sw} -> {1*M1}
+t15: {1*M1} -> {1*OUT_M1}
+t16: {1*M0} -> {1*OUT_M0, 1*M1}
+t17: {1*OUT_M1} -> {1*bad1}
+t18: {1*S} -> {1*JD_M2, 1*sw}
+t19: {1*S} -> {1*JD_M2M3, 1*sw}
+t2: {1*S} -> {1*JD_M0M1M2, 1*sw}
+t20: {1*S} -> {1*JD_M2M3M4, 1*sw}
+t21: {1*S} -> {1*JD_M2M3M4M5, 1*sw}
+t22: {1*sw} -> {1*M2}
+t23: {1*M2} -> {1*OUT_M2}
+t24: {1*M1} -> {1*OUT_M1, 1*M2}
+t25: {1*OUT_M2} -> {1*bad2}
+t26: {1*S} -> {1*JD_M3, 1*sw}
+t27: {1*S} -> {1*JD_M3M4, 1*sw}
+t28: {1*S} -> {1*sw, 1*JD_M3M4M5}
+t29: {1*sw} -> {1*M3}
+t3: {1*S} -> {1*sw, 1*JD_M0M1M2M3}
+t30: {1*M3} -> {1*OUT_M3}
+t31: {1*M2} -> {1*OUT_M2, 1*M3}
+t32: {1*OUT_M3} -> {1*bad3}
+t33: {1*S} -> {1*sw, 1*JD_M4}
+t34: {1*S} -> {1*JD_M4M5, 1*sw}
+t35: {1*sw} -> {1*M4}
+t36: {1*M4} -> {1*OUT_M4}
+t37: {1*M3} -> {1*OUT_M3, 1*M4}
+t38: {1*OUT_M4} -> {1*bad4}
+t39: {1*S} -> {1*sw, 1*JD_M5}
+t4: {1*S} -> {1*JD_M0M1M2M3M4, 1*sw}
+t40: {1*sw} -> {1*M5}
+t41: {1*M5} -> {1*OUT_M5}
+t42: {1*M4} -> {1*M5, 1*OUT_M4}
+t43: {1*OUT_M5} -> {1*bad5}
+t44: {1*JD_M0, 1*OUT_M0} -> {1*end}
+t45: {1*OUT_M1, 1*OUT_M0, 1*JD_M0M1} -> {1*end}
+t46: {1*JD_M0M1M2, 1*OUT_M1, 1*OUT_M0, 1*OUT_M2} -> {1*end}
+t47: {1*OUT_M3, 1*JD_M0M1M2M3, 1*OUT_M0, 1*OUT_M2, 1*OUT_M1} -> {1*end}
+t48: {1*JD_M0M1M2M3M4, 1*OUT_M1, 1*OUT_M0, 1*OUT_M2, 1*OUT_M4, 1*OUT_M3} -> {1*end}
+t49: {1*OUT_M1, 1*OUT_M5, 1*OUT_M2, 1*OUT_M4, 1*OUT_M0, 1*JD_M0M1M2M3M4M5, 1*OUT_M3} -> {1*end}
+t5: {1*S} -> {1*JD_M0M1M2M3M4M5, 1*sw}
+t50: {1*JD_M1, 1*OUT_M1} -> {1*end}
+t51: {1*JD_M1M2, 1*OUT_M1, 1*OUT_M2} -> {1*end}
+t52: {1*OUT_M1, 1*JD_M1M2M3, 1*OUT_M2, 1*OUT_M3} -> {1*end}
+t53: {1*OUT_M3, 1*OUT_M1, 1*JD_M1M2M3M4, 1*OUT_M4, 1*OUT_M2} -> {1*end}
+t54: {1*OUT_M2, 1*OUT_M1, 1*JD_M1M2M3M4M5, 1*OUT_M3, 1*OUT_M5, 1*OUT_M4} -> {1*end}
+t55: {1*JD_M2, 1*OUT_M2} -> {1*end}
+t56: {1*OUT_M2, 1*OUT_M3, 1*JD_M2M3} -> {1*end}
+t57: {1*OUT_M4, 1*OUT_M2, 1*OUT_M3, 1*JD_M2M3M4} -> {1*end}
+t58: {1*OUT_M4, 1*OUT_M3, 1*OUT_M5, 1*OUT_M2, 1*JD_M2M3M4M5} -> {1*end}
+t59: {1*JD_M3, 1*OUT_M3} -> {1*end}
+t6: {1*sw} -> {1*M0}
+t60: {1*OUT_M4, 1*JD_M3M4, 1*OUT_M3} -> {1*end}
+t61: {1*JD_M3M4M5, 1*OUT_M4, 1*OUT_M3, 1*OUT_M5} -> {1*end}
+t62: {1*OUT_M4, 1*JD_M4} -> {1*end}
+t63: {1*OUT_M4, 1*JD_M4M5, 1*OUT_M5} -> {1*end}
+t64: {1*JD_M5, 1*OUT_M5} -> {1*end}
+t7: {1*M0} -> {1*OUT_M0}
+t8: {1*OUT_M0} -> {1*bad0}
+t9: {1*S} -> {1*sw, 1*JD_M1}
+
+.initial_marking {1*S}

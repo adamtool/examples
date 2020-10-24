@@ -1,0 +1,36 @@
+.name "Clerks_1"
+.description "Has a deadlock-avoiding winning strategy"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+N0[yCoord=510.0, xCoord=1110.0, token=1]
+Y0[yCoord=270.0, xCoord=1110.0, token=1]
+bad0[yCoord=510.0, bad="true", xCoord=1350.0, token=1]
+buf0[yCoord=150.0, xCoord=810.0, token=2]
+buff0[yCoord=390.0, xCoord=930.0, token=2]
+cl0[yCoord=270.0, xCoord=690.0, token=1]
+end0[yCoord=390.0, xCoord=1110.0, token=2]
+env[yCoord=270.0, xCoord=210.0, env="true"]
+env0[yCoord=390.0, xCoord=570.0, env="true"]
+start0[yCoord=270.0, xCoord=450.0, env="true"]
+votel0[yCoord=390.0, xCoord=810.0, token=1]
+
+.transitions
+glue0[label="glue0", yCoord=270.0, xCoord=810.0]
+t0[label="t0", yCoord=270.0, xCoord=330.0]
+t1[label="t1", yCoord=270.0, xCoord=570.0]
+t2[label="t2", yCoord=270.0, xCoord=930.0]
+t3[label="t3", yCoord=510.0, xCoord=930.0]
+tbad0[label="tbad0", yCoord=510.0, xCoord=1230.0]
+
+.flows
+glue0: {1*cl0, 1*end0} -> {1*votel0, 1*buf0}
+t0: {1*env} -> {1*start0}
+t1: {1*start0, 1*cl0} -> {1*env0, 1*votel0}
+t2: {1*votel0, 1*buff0} -> {1*Y0, 1*end0}
+t3: {1*buff0, 1*votel0} -> {1*N0, 1*end0}
+tbad0: {1*N0} -> {1*bad0}
+
+.initial_marking {1*buff0, 1*cl0, 1*env}

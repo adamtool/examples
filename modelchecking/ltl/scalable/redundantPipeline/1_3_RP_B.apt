@@ -1,6 +1,8 @@
 .name "redundantFlow_basis"
+.description "Satisfiable"
 .type LPN
 .options
+formula="A F out",
 nb_switches="6"
 
 .places

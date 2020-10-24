@@ -1,0 +1,139 @@
+.name "Clerks_6"
+.description "Has a deadlock-avoiding winning strategy"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+N0[yCoord=671.22, xCoord=999.26, token=2]
+N1[yCoord=642.31, xCoord=815.09, token=3]
+N2[yCoord=575.83, xCoord=745.88, token=4]
+N3[yCoord=476.41, xCoord=884.02, token=5]
+N4[yCoord=480.12, xCoord=1066.18, token=6]
+N5[yCoord=561.45, xCoord=1174.45, token=7]
+Y0[yCoord=654.67, xCoord=1094.57, token=2]
+Y1[yCoord=611.66, xCoord=860.32, token=3]
+Y2[yCoord=558.59, xCoord=834.55, token=4]
+Y3[yCoord=489.95, xCoord=963.82, token=5]
+Y4[yCoord=488.16, xCoord=1153.18, token=6]
+Y5[yCoord=571.92, xCoord=1273.32, token=7]
+bad[yCoord=500.26, bad="true", xCoord=1394.24, token=1]
+cl0[yCoord=711.55, xCoord=1313.0, token=2]
+cl1[yCoord=759.65, xCoord=567.8, token=3]
+cl2[yCoord=542.13, xCoord=243.39, token=4]
+cl3[yCoord=302.74, xCoord=418.33, token=5]
+cl4[yCoord=186.73, xCoord=1104.52, token=6]
+cl5[yCoord=333.29, xCoord=1566.39, token=7]
+end0[yCoord=730.36, xCoord=910.44, token=1]
+end1[yCoord=602.81, xCoord=574.53, token=1]
+end2[yCoord=449.06, xCoord=598.23, token=1]
+end3[yCoord=352.36, xCoord=997.77, token=1]
+end4[yCoord=403.98, xCoord=1348.47, token=1]
+end5[yCoord=619.88, xCoord=1390.37, token=1]
+env[yCoord=375.38, xCoord=793.19, env="true"]
+first0[yCoord=655.74, xCoord=1324.79, env="true"]
+first1[yCoord=690.89, xCoord=767.3, env="true"]
+first2[yCoord=498.46, xCoord=535.47, env="true"]
+first3[yCoord=393.71, xCoord=672.56, env="true"]
+first4[yCoord=330.73, xCoord=1099.93, env="true"]
+first5[yCoord=441.86, xCoord=1385.02, env="true"]
+good[yCoord=598.62, xCoord=951.37, token=2]
+ready[yCoord=526.03, xCoord=1007.97, token=1]
+start0[yCoord=542.56, xCoord=1098.73, env="true"]
+start1[yCoord=573.36, xCoord=613.89, env="true"]
+start2[yCoord=405.16, xCoord=399.61, env="true"]
+start3[yCoord=240.42, xCoord=578.94, env="true"]
+start4[yCoord=221.61, xCoord=957.1, env="true"]
+start5[yCoord=344.02, xCoord=1212.86, env="true"]
+vote0[yCoord=728.21, xCoord=1227.3, token=1]
+vote1[yCoord=729.33, xCoord=640.01, token=1]
+vote2[yCoord=533.06, xCoord=443.96, token=1]
+vote3[yCoord=354.61, xCoord=713.15, token=1]
+vote4[yCoord=314.84, xCoord=1209.87, token=1]
+vote5[yCoord=469.79, xCoord=1483.81, token=1]
+
+.transitions
+glue0[label="glue0", yCoord=704.36, xCoord=1410.48]
+glue1[label="glue1", yCoord=775.43, xCoord=747.43]
+glue2[label="glue2", yCoord=592.54, xCoord=376.66]
+glue3[label="glue3", yCoord=364.77, xCoord=520.96]
+glue4[label="glue4", yCoord=270.49, xCoord=1067.4]
+glue5[label="glue5", yCoord=400.41, xCoord=1531.84]
+no[label="no", yCoord=567.52, xCoord=958.25]
+t0[label="t0", yCoord=449.88, xCoord=962.36]
+t1[label="t1", yCoord=643.25, xCoord=1201.21]
+t10[label="t10", yCoord=523.13, xCoord=644.43]
+t11[label="t11", yCoord=534.87, xCoord=572.63]
+t12[label="t12", yCoord=291.95, xCoord=702.76]
+t13[label="t13", yCoord=314.33, xCoord=575.21]
+t14[label="t14", yCoord=411.35, xCoord=867.9]
+t15[label="t15", yCoord=381.24, xCoord=871.64]
+t16[label="t16", yCoord=283.97, xCoord=841.9]
+t17[label="t17", yCoord=246.02, xCoord=1132.8]
+t18[label="t18", yCoord=401.62, xCoord=1242.47]
+t19[label="t19", yCoord=397.11, xCoord=1169.2]
+t2[label="t2", yCoord=725.59, xCoord=1084.21]
+t20[label="t20", yCoord=324.81, xCoord=991.97]
+t21[label="t21", yCoord=377.58, xCoord=1419.09]
+t22[label="t22", yCoord=556.57, xCoord=1468.43]
+t23[label="t23", yCoord=546.28, xCoord=1373.91]
+t24[label="t24", yCoord=528.86, xCoord=880.41]
+t3[label="t3", yCoord=756.08, xCoord=1057.41]
+t4[label="t4", yCoord=469.89, xCoord=686.69]
+t5[label="t5", yCoord=671.12, xCoord=575.43]
+t6[label="t6", yCoord=649.07, xCoord=698.99]
+t7[label="t7", yCoord=674.38, xCoord=650.06]
+t8[label="t8", yCoord=383.02, xCoord=588.56]
+t9[label="t9", yCoord=478.91, xCoord=349.35]
+t_ready0[label="t_ready0", yCoord=596.03, xCoord=1195.87]
+t_ready1[label="t_ready1", yCoord=635.68, xCoord=929.91]
+t_ready2[label="t_ready2", yCoord=534.88, xCoord=742.52]
+t_ready3[label="t_ready3", yCoord=465.74, xCoord=794.74]
+t_ready4[label="t_ready4", yCoord=420.51, xCoord=1051.24]
+t_ready5[label="t_ready5", yCoord=464.62, xCoord=1208.54]
+tbad[label="tbad", yCoord=516.91, xCoord=1218.44]
+yes[label="yes", yCoord=569.5, xCoord=1048.97]
+
+.flows
+glue0: {1*cl0, 1*end5} -> {1*vote0}
+glue1: {1*end0, 1*cl1} -> {1*vote1}
+glue2: {1*cl2, 1*end1} -> {1*vote2}
+glue3: {1*cl3, 1*end2} -> {1*vote3}
+glue4: {1*cl4, 1*end3} -> {1*vote4}
+glue5: {1*cl5, 1*end4} -> {1*vote5}
+no: {1*N0, 1*N1, 1*N2, 1*N3, 1*N4, 1*N5} -> {1*good}
+t0: {1*env} -> {1*start0}
+t1: {1*start0, 1*cl0} -> {1*vote0, 1*first0}
+t10: {1*vote2} -> {1*Y2, 1*end2}
+t11: {1*vote2} -> {1*end2, 1*N2}
+t12: {1*env} -> {1*start3}
+t13: {1*cl3, 1*start3} -> {1*vote3, 1*first3}
+t14: {1*vote3} -> {1*Y3, 1*end3}
+t15: {1*vote3} -> {1*N3, 1*end3}
+t16: {1*env} -> {1*start4}
+t17: {1*start4, 1*cl4} -> {1*first4, 1*vote4}
+t18: {1*vote4} -> {1*Y4, 1*end4}
+t19: {1*vote4} -> {1*N4, 1*end4}
+t2: {1*vote0} -> {1*Y0, 1*end0}
+t20: {1*env} -> {1*start5}
+t21: {1*start5, 1*cl5} -> {1*vote5, 1*first5}
+t22: {1*vote5} -> {1*Y5, 1*end5}
+t23: {1*vote5} -> {1*end5, 1*N5}
+t24: {1*ready, 1*good} -> {}
+t3: {1*vote0} -> {1*N0, 1*end0}
+t4: {1*env} -> {1*start1}
+t5: {1*start1, 1*cl1} -> {1*first1, 1*vote1}
+t6: {1*vote1} -> {1*end1, 1*Y1}
+t7: {1*vote1} -> {1*N1, 1*end1}
+t8: {1*env} -> {1*start2}
+t9: {1*start2, 1*cl2} -> {1*first2, 1*vote2}
+t_ready0: {1*end5, 1*first0} -> {1*ready}
+t_ready1: {1*first1, 1*end0} -> {1*ready}
+t_ready2: {1*end1, 1*first2} -> {1*ready}
+t_ready3: {1*first3, 1*end2} -> {1*ready}
+t_ready4: {1*end3, 1*first4} -> {1*ready}
+t_ready5: {1*first5, 1*end4} -> {1*ready}
+tbad: {1*ready} -> {1*bad}
+yes: {1*Y3, 1*Y0, 1*Y5, 1*Y2, 1*Y4, 1*Y1} -> {1*good}
+
+.initial_marking {1*cl0, 1*cl1, 1*cl2, 1*cl3, 1*cl4, 1*cl5, 1*env}

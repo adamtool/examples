@@ -1,0 +1,77 @@
+.name "ManufactorySystem3"
+.description "Has a deadlock-avoiding winning strategy"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+JD_M0[yCoord=654.78, xCoord=1243.22, env="true"]
+JD_M0M1[yCoord=519.36, xCoord=1181.63, env="true"]
+JD_M0M1M2[yCoord=428.58, xCoord=721.69, env="true"]
+JD_M1[yCoord=584.39, xCoord=572.39, env="true"]
+JD_M1M2[yCoord=637.52, xCoord=642.76, env="true"]
+JD_M2[yCoord=774.36, xCoord=792.53, env="true"]
+M0[yCoord=334.7, xCoord=1228.77, token=1]
+M1[yCoord=291.17, xCoord=963.2, token=2]
+M2[yCoord=368.92, xCoord=644.9, token=3]
+OUT_M0[yCoord=449.19, xCoord=1156.56, token=1]
+OUT_M1[yCoord=382.54, xCoord=793.1, token=2]
+OUT_M2[yCoord=536.35, xCoord=649.71, token=3]
+S[yCoord=625.18, xCoord=947.79, env="true"]
+bad0[yCoord=467.23, bad="true", xCoord=1560.54, token=1]
+bad1[yCoord=185.66, bad="true", xCoord=508.6, token=2]
+bad2[yCoord=562.96, bad="true", xCoord=237.54, token=3]
+end[yCoord=563.17, xCoord=870.2, env="true"]
+sw[yCoord=556.91, xCoord=966.91, token=1]
+
+.transitions
+t0[label="t0", yCoord=672.75, xCoord=1077.18]
+t1[label="t1", yCoord=618.84, xCoord=1131.89]
+t10[label="t10", yCoord=322.94, xCoord=1124.47]
+t11[label="t11", yCoord=277.32, xCoord=639.16]
+t12[label="t12", yCoord=697.5, xCoord=941.61]
+t13[label="t13", yCoord=445.22, xCoord=819.37]
+t14[label="t14", yCoord=442.87, xCoord=509.19]
+t15[label="t15", yCoord=282.03, xCoord=765.27]
+t16[label="t16", yCoord=551.01, xCoord=431.1]
+t17[label="t17", yCoord=563.61, xCoord=1098.87]
+t18[label="t18", yCoord=466.08, xCoord=992.74]
+t19[label="t19", yCoord=472.46, xCoord=896.97]
+t2[label="t2", yCoord=530.44, xCoord=821.24]
+t20[label="t20", yCoord=481.78, xCoord=678.88]
+t21[label="t21", yCoord=516.78, xCoord=726.48]
+t22[label="t22", yCoord=661.05, xCoord=727.82]
+t3[label="t3", yCoord=428.67, xCoord=1088.98]
+t4[label="t4", yCoord=388.3, xCoord=1335.41]
+t5[label="t5", yCoord=468.4, xCoord=1377.62]
+t6[label="t6", yCoord=603.47, xCoord=778.76]
+t7[label="t7", yCoord=660.26, xCoord=839.22]
+t8[label="t8", yCoord=409.07, xCoord=973.58]
+t9[label="t9", yCoord=251.83, xCoord=847.08]
+
+.flows
+t0: {1*S} -> {1*sw, 1*JD_M0}
+t1: {1*S} -> {1*JD_M0M1, 1*sw}
+t10: {1*M0} -> {1*OUT_M0, 1*M1}
+t11: {1*OUT_M1} -> {1*bad1}
+t12: {1*S} -> {1*JD_M2, 1*sw}
+t13: {1*sw} -> {1*M2}
+t14: {1*M2} -> {1*OUT_M2}
+t15: {1*M1} -> {1*M2, 1*OUT_M1}
+t16: {1*OUT_M2} -> {1*bad2}
+t17: {1*JD_M0, 1*OUT_M0} -> {1*end}
+t18: {1*OUT_M1, 1*OUT_M0, 1*JD_M0M1} -> {1*end}
+t19: {1*OUT_M0, 1*JD_M0M1M2, 1*OUT_M1, 1*OUT_M2} -> {1*end}
+t2: {1*S} -> {1*JD_M0M1M2, 1*sw}
+t20: {1*OUT_M1, 1*JD_M1} -> {1*end}
+t21: {1*OUT_M1, 1*OUT_M2, 1*JD_M1M2} -> {1*end}
+t22: {1*OUT_M2, 1*JD_M2} -> {1*end}
+t3: {1*sw} -> {1*M0}
+t4: {1*M0} -> {1*OUT_M0}
+t5: {1*OUT_M0} -> {1*bad0}
+t6: {1*S} -> {1*sw, 1*JD_M1}
+t7: {1*S} -> {1*sw, 1*JD_M1M2}
+t8: {1*sw} -> {1*M1}
+t9: {1*M1} -> {1*OUT_M1}
+
+.initial_marking {1*S}
