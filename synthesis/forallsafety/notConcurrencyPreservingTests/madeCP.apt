@@ -1,4 +1,7 @@
 // Counter example to recycle tokens when making net concurrency-preserving
+// There are transitions with the same pre- and postcondition
+// should have a winning condition: only the second decision by the system players
+// is important and S2 is informed about what the environment did
 .name "ncp2"
 .type LPN
 .description "Testing not concurrency preserving net 2"
@@ -6,57 +9,50 @@
 condition="SAFETY"
 
 .places
-S1
-S2
-S3
-
-E1
-E2
-E3[env="true"]
-E4[env="true"]
-
-E5[env="true"]
-E6[env="true"]
-E7[env="true"]
-
-E2L
-E2R
-E3L
-E3R
-bad[bad="true"]
+E1[yCoord=-41.74, xCoord=517.05]
+E2[yCoord=-127.05, xCoord=767.84]
+E2L[yCoord=147.51, xCoord=1126.13]
+E2R[yCoord=-9.93, xCoord=1192.66]
+E3[yCoord=854.42, xCoord=1053.06, env="true"]
+E3L[yCoord=530.62, xCoord=1126.25]
+E3R[yCoord=511.51, xCoord=1264.62]
+E4[yCoord=507.88, xCoord=951.21, env="true"]
+E5[yCoord=509.24, xCoord=801.96, env="true"]
+E6[yCoord=861.51, xCoord=847.15, env="true"]
+E7[yCoord=391.64, xCoord=528.71, env="true"]
+S1[yCoord=273.15, xCoord=838.88]
+S2[yCoord=147.3, xCoord=700.14]
+S3[yCoord=-7.65, xCoord=777.56]
+bad[yCoord=331.86, bad="true", xCoord=1474.23]
 
 .transitions
-t1
-t2
-t3
-
-l1
-r1
-l2
-r2
-l3
-r3
-l4
-r4
-
-b1
-b2
+b1[label="b1", yCoord=348.73, xCoord=1246.9]
+b2[label="b2", yCoord=218.52, xCoord=1355.05]
+l1[label="l1", yCoord=32.68, xCoord=626.05]
+l2[label="l2", yCoord=4.97, xCoord=918.07]
+l3[label="l3", yCoord=637.23, xCoord=914.68]
+l4[label="l4", yCoord=624.73, xCoord=791.56]
+r1[label="r1", yCoord=-107.87, xCoord=630.76]
+r2[label="r2", yCoord=-108.8, xCoord=927.51]
+r3[label="r3", yCoord=635.84, xCoord=1038.03]
+r4[label="r4", yCoord=625.12, xCoord=675.36]
+t1[label="t1", yCoord=392.54, xCoord=695.18]
+t2[label="t2", yCoord=129.12, xCoord=881.94]
+t3[label="t3", yCoord=839.65, xCoord=536.33]
 
 .flows
-t1 : {S1,E7} -> {S2,E5}
-t2 : {S3} -> {S1}
-t3 : {E6} -> {E7}
+b1: {1*E3L, 1*E2L} -> {1*bad}
+b2: {1*E3R, 1*E2R} -> {1*bad}
+l1: {1*E1, 1*S2} -> {1*S3, 1*E2}
+l2: {1*S2, 1*E2} -> {1*S3, 1*E2L}
+l3: {1*E3, 1*E5} -> {1*E6, 1*E3L, 1*E4}
+l4: {1*E5, 1*E4} -> {1*E6}
+r1: {1*S2, 1*E1} -> {1*S3, 1*E2}
+r2: {1*E2, 1*S2} -> {1*S3, 1*E2R}
+r3: {1*E3, 1*E5} -> {1*E4, 1*E6, 1*E3R}
+r4: {1*E5, 1*E4} -> {1*E6}
+t1: {1*E7, 1*S1} -> {1*S2, 1*E5}
+t2: {1*S3} -> {1*S1}
+t3: {1*E6} -> {1*E7}
 
-l1 : {E1,S2} -> {E2,S3}
-r1 : {E1,S2} -> {E2,S3}
-l2 : {E2,S2} -> {S3,E2L}
-r2 : {E2,S2} -> {S3,E2R}
-l3 : {E3,E5} -> {E6,E3L,E4}
-r3 : {E3,E5} -> {E6,E3R,E4}
-l4 : {E4,E5} -> {E6}
-r4 : {E4,E5} -> {E6}
-
-b1 : {E2L,E3L} -> {bad}
-b2 : {E2R,E3R} -> {bad}
-
-.initial_marking {S1,E1,E3,E7}
+.initial_marking {1*E1, 1*E3, 1*E7, 1*S1}

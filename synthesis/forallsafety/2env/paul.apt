@@ -3,47 +3,47 @@
 // infinite/with loops
 // should have strategy?
 .name "burglar.net"
-.type LPN
 .description "alarm system"
+.type LPN
 .options
 condition="SAFETY"
 
 .places
-r1[env="true", token=1]
-r2[env="true", token=1]
-c1[env="true", token=2]
-c2[env="true", token=3]
-c11[env="true",token=2]
-c22[env="true",token=3]
-sd
-s1
-s2
-s0
-s00
-bad[bad="true"]
+bad[yCoord=221.71, bad="true", xCoord=1098.08]
+c1[yCoord=250.3, xCoord=370.26, env="true", token=2]
+c11[yCoord=701.67, xCoord=697.12, env="true", token=2]
+c2[yCoord=-3.44, xCoord=1079.31, env="true", token=3]
+c22[yCoord=373.25, xCoord=1388.07, env="true", token=3]
+r1[yCoord=200.53, xCoord=646.0, env="true", token=1]
+r2[yCoord=-70.44, xCoord=648.74, env="true", token=1]
+s0[yCoord=652.78, xCoord=1454.96]
+s00[yCoord=758.08, xCoord=1114.84]
+s1[yCoord=319.47, xCoord=840.19]
+s2[yCoord=422.6, xCoord=1074.25]
+sd[yCoord=683.91, xCoord=919.57]
 
 .transitions
-t1
-t2
-t3
-t4
-t5
-t6
-t7
-t8
-t9
-t10
+t1[label="t1", yCoord=528.74, xCoord=864.44]
+t10[label="t10", yCoord=132.1, xCoord=858.22]
+t2[label="t2", yCoord=591.21, xCoord=1048.88]
+t3[label="t3", yCoord=-15.47, xCoord=888.55]
+t4[label="t4", yCoord=121.56, xCoord=520.24]
+t5[label="t5", yCoord=477.59, xCoord=530.0]
+t6[label="t6", yCoord=127.97, xCoord=1292.55]
+t7[label="t7", yCoord=604.69, xCoord=1334.87]
+t8[label="t8", yCoord=778.12, xCoord=838.5]
+t9[label="t9", yCoord=266.06, xCoord=989.91]
 
 .flows
-t1: {sd} -> {s1}
-t2: {sd} -> {s2}
-t3: {r1,c2} -> {r2,c2}
-t4: {r2,c1} -> {r1,c1}
-t5: {c1} -> {c11}
-t6: {c2} -> {c22}
-t7: {s0,c22} -> {s00}
-t8: {s00,c11} -> {sd,c11}
-t9: {r1,s2} -> {bad}
-t10:{r2,s1} -> {bad}
+t1: {1*sd} -> {1*s1}
+t10: {1*s1, 1*r2} -> {1*bad}
+t2: {1*sd} -> {1*s2}
+t3: {1*r1, 1*c2} -> {1*c2, 1*r2}
+t4: {1*r2, 1*c1} -> {1*c1, 1*r1}
+t5: {1*c1} -> {1*c11}
+t6: {1*c2} -> {1*c22}
+t7: {1*s0, 1*c22} -> {1*s00}
+t8: {1*c11, 1*s00} -> {1*sd, 1*c11}
+t9: {1*r1, 1*s2} -> {1*bad}
 
-.initial_marking {r1,c1,c2,s0}
+.initial_marking {1*c1, 1*c2, 1*r1, 1*s0}

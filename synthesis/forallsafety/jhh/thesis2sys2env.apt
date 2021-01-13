@@ -1,0 +1,78 @@
+.name "Example"
+.description "Describe your net here."
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+p18[yCoord=505.55, xCoord=665.58, bad="true"]
+xBACKy[yCoord=344.82, xCoord=-1.98]
+xTOy[yCoord=30.17, xCoord=14.5]
+x_0[yCoord=-393.83, xCoord=-226.5]
+x_1[yCoord=-241.83, xCoord=-240.5, env="true"]
+x_2[yCoord=32.17, xCoord=-218.5]
+x_c[yCoord=343.17, xCoord=-249.5]
+x_f[yCoord=-98.83, xCoord=-102.5]
+x_r[yCoord=351.17, xCoord=-437.5]
+x_w[yCoord=-99.83, xCoord=-478.5]
+yBACKx[yCoord=342.57, xCoord=206.47]
+yTOx[yCoord=36.17, xCoord=213.5]
+y_0[yCoord=-400.83, xCoord=428.5]
+y_1[yCoord=-251.83, xCoord=433.5, env="true"]
+y_2[yCoord=20.17, xCoord=412.5]
+y_c[yCoord=325.17, xCoord=518.5]
+y_f[yCoord=-102.09, xCoord=583.56]
+y_r[yCoord=330.17, xCoord=420.5]
+y_w[yCoord=-96.83, xCoord=262.5]
+
+.transitions
+R_x[label="R_x", yCoord=202.47, xCoord=17.01]
+R_y[label="R_y", yCoord=220.99, xCoord=191.09]
+S_x[label="S_x", yCoord=202.49, xCoord=-107.79]
+S_y[label="S_y", yCoord=210.5, xCoord=306.12]
+c_x[label="c_x", yCoord=207.17, xCoord=-250.5]
+c_y[label="c_y", yCoord=177.17, xCoord=521.5]
+f_x[label="f_x", yCoord=-95.83, xCoord=-209.5]
+f_y[label="f_y", yCoord=-102.83, xCoord=464.5]
+r_x[label="r_x", yCoord=206.17, xCoord=-413.5]
+r_y[label="r_y", yCoord=176.17, xCoord=434.5]
+s_x[label="s_x", yCoord=-323.83, xCoord=-176.5]
+s_y[label="s_y", yCoord=-314.83, xCoord=361.5]
+tooMuchRepair1[label="tooMuchRepair1", yCoord=790.97, xCoord=-174.73]
+tooMuchRepair2[label="tooMuchRepair2", yCoord=786.22, xCoord=43.83]
+tooMuchRepair3[label="tooMuchRepair3", yCoord=784.64, xCoord=265.55]
+w_x[label="w_x", yCoord=-94.83, xCoord=-365.5]
+w_y[label="w_y", yCoord=-100.83, xCoord=351.5]
+wrongContinue1[label="wrongContinue1", yCoord=480.76, xCoord=-166.02]
+wrongContinue2[label="wrongContinue2", yCoord=506.93, xCoord=51.52]
+wrongContinue3[label="wrongContinue3", yCoord=491.78, xCoord=331.02]
+wrongRepair1[label="wrongRepair1", yCoord=632.22, xCoord=-168.77]
+wrongRepair2[label="wrongRepair2", yCoord=650.11, xCoord=52.9]
+wrongRepair3[label="wrongRepair3", yCoord=639.1, xCoord=267.68]
+
+.flows
+R_x: {1*xBACKy, 1*y_2} -> {1*y_2}
+R_y: {1*yBACKx, 1*x_2} -> {1*x_2}
+S_x: {1*xTOy, 1*x_2} -> {1*xBACKy, 1*x_2}
+S_y: {1*yTOx, 1*y_2} -> {1*y_2, 1*yBACKx}
+c_x: {1*x_2} -> {1*x_c}
+c_y: {1*y_2} -> {1*y_c}
+f_x: {1*x_1} -> {1*x_2, 1*x_f}
+f_y: {1*y_1} -> {1*y_f, 1*y_2}
+r_x: {1*x_2} -> {1*x_r}
+r_y: {1*y_2} -> {1*y_r}
+s_x: {1*x_0} -> {1*x_1}
+s_y: {1*y_0} -> {1*y_1}
+tooMuchRepair1: {1*x_r, 1*y_r, 1*y_w, 1*x_f} -> {1*p18}
+tooMuchRepair2: {1*y_f, 1*x_r, 1*y_r, 1*x_f} -> {1*p18}
+tooMuchRepair3: {1*x_w, 1*y_r, 1*y_f, 1*x_r} -> {1*p18}
+w_x: {1*x_1} -> {1*x_w, 1*x_2}
+w_y: {1*y_1} -> {1*y_2, 1*y_w}
+wrongContinue1: {1*y_c, 1*y_w, 1*x_c, 1*x_f} -> {1*p18}
+wrongContinue2: {1*x_f, 1*y_f, 1*y_c, 1*x_c} -> {1*p18}
+wrongContinue3: {1*y_f, 1*y_c, 1*x_c, 1*x_w} -> {1*p18}
+wrongRepair1: {1*y_w, 1*x_r, 1*x_w, 1*y_c} -> {1*p18}
+wrongRepair2: {1*x_r, 1*y_r, 1*y_w, 1*x_w} -> {1*p18}
+wrongRepair3: {1*y_r, 1*x_c, 1*y_w, 1*x_w} -> {1*p18}
+
+.initial_marking {1*xTOy, 1*x_0, 1*yTOx, 1*y_0}
