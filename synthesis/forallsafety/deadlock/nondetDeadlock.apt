@@ -1,7 +1,7 @@
 // should have strategy
-.name "nondet no strategy"
+.name "Don't play with the environment"
 .type LPN
-.description "Alarm system."
+.description "You can win by never allowing t3"
 .options
 condition="SAFETY"
 

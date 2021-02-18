@@ -7,7 +7,7 @@
 .description "TODO"
 .type LPN
 .options
-winningCondition="A_SAFETY"
+condition="A_SAFETY"
 
 .places
 p1[token=1]
