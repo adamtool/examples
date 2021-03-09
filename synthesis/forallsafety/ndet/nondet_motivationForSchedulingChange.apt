@@ -9,8 +9,8 @@ condition="SAFETY"
 .places
 A
 B[env="true"]
-BL[env="true"]
-BR[env="true"]
+BL
+BR
 C
 D[env="true"]
 E[env="true"]
