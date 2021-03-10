@@ -7,55 +7,55 @@
 condition="SAFETY"
 
 .places
-A
-B[env="true"]
-BL[env="true"]
-BR[env="true"]
-C
-D[env="true"]
-E[env="true"]
-E1[env="true"]
-F
-G[env="true"]
-H
-K[env="true"]
-K1[env="true"]
-bad[bad="true"]
-S1
-S2
-SL
-SR
+A[yCoord=743.01, xCoord=506.43]
+B[yCoord=-38.67, xCoord=992.96, env="true"]
+BL[yCoord=-173.4, xCoord=1250.72, env="true"]
+BR[yCoord=-56.83, xCoord=807.09, env="true"]
+C[yCoord=738.44, xCoord=751.37]
+D[yCoord=847.44, xCoord=874.11, env="true"]
+E[yCoord=764.59, xCoord=1213.52, env="true"]
+E1[yCoord=331.16, xCoord=1104.09, env="true"]
+F[yCoord=566.26, xCoord=957.51]
+G[yCoord=955.51, xCoord=531.5, env="true"]
+H[yCoord=776.34, xCoord=991.77]
+K[yCoord=157.64, xCoord=1035.85, env="true"]
+K1[yCoord=554.05, xCoord=709.05, env="true"]
+S1[yCoord=691.12, xCoord=1619.5]
+S2[yCoord=428.11, xCoord=1214.29]
+SL[yCoord=130.98, xCoord=1344.38]
+SR[yCoord=104.57, xCoord=685.91]
+bad[yCoord=-200.67, bad="true", xCoord=974.76]
 
 .transitions
-a
-b
-c
-d
-e
-f
-i
-t1
-tl
-tr
-b1
-b2
-s1
-s2
+a[label="a", yCoord=745.81, xCoord=658.34]
+b[label="b", yCoord=85.53, xCoord=899.65]
+b1[label="b1", yCoord=-94.42, xCoord=1322.98]
+b2[label="b2", yCoord=-139.66, xCoord=648.53]
+c[label="c", yCoord=918.97, xCoord=702.79]
+d[label="d", yCoord=910.06, xCoord=1101.64]
+e[label="e", yCoord=702.65, xCoord=847.26]
+f[label="f", yCoord=723.9, xCoord=1098.07]
+i[label="i", yCoord=-87.5, xCoord=1101.94]
+s1[label="s1", yCoord=555.92, xCoord=1243.08]
+s2[label="s2", yCoord=443.79, xCoord=920.79]
+t1[label="t1", yCoord=540.26, xCoord=1438.03]
+tl[label="tl", yCoord=301.05, xCoord=1361.0]
+tr[label="tr", yCoord=284.78, xCoord=957.34]
 
 .flows
-a: {A,K1} -> {C,D}
-b: {B} -> {E1,BR}
-c: {D} -> {G}
-d: {D} -> {E}
-e: {C,F} -> {C,H}
-f: {E,F} -> {E,H}
-i: {B} -> {K,BL}
-t1:{S1} -> {S2}
-tl:{S2} -> {SL}
-tr:{S2} -> {SR}
-b1:{SL,BL} -> {bad}
-b2:{SR,BR} -> {bad}
-s1:{E1,S2} -> {E}
-s2:{K,S2} -> {K1}
+a: {1*A, 1*K1} -> {1*D, 1*C}
+b: {1*B} -> {1*E1, 1*BR}
+b1: {1*BL, 1*SL} -> {1*bad}
+b2: {1*SR, 1*BR} -> {1*bad}
+c: {1*D} -> {1*G}
+d: {1*D} -> {1*E}
+e: {1*C, 1*F} -> {1*C, 1*H}
+f: {1*E, 1*F} -> {1*H, 1*E}
+i: {1*B} -> {1*K, 1*BL}
+s1: {1*S2, 1*E1} -> {1*E}
+s2: {1*S2, 1*K} -> {1*K1}
+t1: {1*S1} -> {1*S2}
+tl: {1*S2} -> {1*SL}
+tr: {1*S2} -> {1*SR}
 
-.initial_marking {A,B,F,S1}
+.initial_marking {1*A, 1*B, 1*F, 1*S1}

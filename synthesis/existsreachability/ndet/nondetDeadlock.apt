@@ -1,6 +1,6 @@
 // OK has a strategy, because deadlock is OK, idea was:
-// there should be no strategy since the only possibly strategy should invoke 
-// nodetermism. It should detect it, but not because of the nondeterminsm
+// there should be no strategy since the only possibly strategy should invoke
+// nondeterminism. It should detect it, but not because of the nondeterminism
 // but because of the scheduling that r2 can never be reached.
 .name "nondet no strategy"
 .type LPN
