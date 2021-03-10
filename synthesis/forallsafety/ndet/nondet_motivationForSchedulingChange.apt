@@ -9,8 +9,8 @@ condition="SAFETY"
 .places
 A[yCoord=743.01, xCoord=506.43]
 B[yCoord=-38.67, xCoord=992.96, env="true"]
-BL[yCoord=-173.4, xCoord=1250.72, env="true"]
-BR[yCoord=-56.83, xCoord=807.09, env="true"]
+BL[yCoord=-173.4, xCoord=1250.72]
+BR[yCoord=-56.83, xCoord=807.09]
 C[yCoord=738.44, xCoord=751.37]
 D[yCoord=847.44, xCoord=874.11, env="true"]
 E[yCoord=764.59, xCoord=1213.52, env="true"]
