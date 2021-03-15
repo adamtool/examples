@@ -1,0 +1,38 @@
+.name "BrokenEnvScheduling"
+.description "There should be NO strategy."
+.type LPN
+.options
+condition="GLOBAL_SAFETY"
+
+.places
+badA1[yCoord=-330.0, xCoord=-570.0]
+badA2[yCoord=210.0, xCoord=-90.0]
+badB1[yCoord=-330.0, xCoord=30.0]
+badB2[yCoord=210.0, xCoord=-690.0]
+badC1[yCoord=210.0, xCoord=-450.0]
+badC2[yCoord=210.0, xCoord=150.0]
+p1[yCoord=-90.0, xCoord=-570.0]
+p5[yCoord=-90.0, xCoord=30.0]
+
+.transitions
+t0[label="t0", yCoord=-210.0, xCoord=-570.0]
+t1[label="t1", yCoord=-210.0, xCoord=30.0]
+t2[label="t2", yCoord=30.0, xCoord=-90.0]
+t3[label="t3", yCoord=30.0, xCoord=150.0]
+t4[label="t4", yCoord=30.0, xCoord=-450.0]
+t5[label="t5", yCoord=30.0, xCoord=-690.0]
+
+.flows
+t0: {1*badA1} -> {1*p1}
+t1: {1*badB1} -> {1*p5}
+t2: {1*p5} -> {1*badA2}
+t3: {1*p5} -> {1*badC2}
+t4: {1*p1} -> {1*badC1}
+t5: {1*p1} -> {1*badB2}
+
+.initial_marking {1*badA1, 1*badB1}
+
+.final_markings
+{badA1,badA2}
+{badB1,badB2}
+{badC1,badC2}

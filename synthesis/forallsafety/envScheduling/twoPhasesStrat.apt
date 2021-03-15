@@ -1,0 +1,71 @@
+.name "Example"
+.description "Example for the env scheduling which should HAVE NO strategy (due to the initial token of the second player in the wrong place)."
+.type LPN
+.options
+condition="GLOBAL_SAFETY"
+
+.places
+el[yCoord=-573.16, xCoord=-1026.28]
+el2[yCoord=-78.97, xCoord=68.04]
+er[yCoord=-650.46, xCoord=621.72]
+er2[yCoord=11.64, xCoord=1177.23]
+l1[yCoord=111.95, xCoord=-364.93]
+l2[yCoord=634.87, xCoord=427.7]
+p0[yCoord=-285.05, xCoord=-265.93]
+p1[yCoord=-63.05, xCoord=-262.93]
+p10[yCoord=173.62, xCoord=633.62]
+p11[yCoord=426.21, xCoord=603.42]
+p14[yCoord=953.35, xCoord=361.81]
+p15[yCoord=1000.02, xCoord=856.01]
+p2[yCoord=-769.42, xCoord=-256.76, env="true"]
+p3[yCoord=-238.37, xCoord=650.7, env="true"]
+p4[yCoord=284.95, xCoord=-387.93]
+p5[yCoord=287.95, xCoord=-147.93]
+p8[yCoord=-26.8, xCoord=617.14, env="true"]
+p9[yCoord=-563.77, xCoord=-253.92, env="true"]
+r1[yCoord=108.95, xCoord=-156.93]
+r2[yCoord=654.09, xCoord=817.57]
+
+.transitions
+t0[label="t0", yCoord=-175.05, xCoord=-262.93]
+t1[label="t1", yCoord=-13.05, xCoord=-320.93]
+t10[label="t10", yCoord=-706.9, xCoord=-655.22]
+t11[label="t11", yCoord=-735.66, xCoord=133.09]
+t12[label="t12", yCoord=557.99, xCoord=746.18]
+t13[label="t13", yCoord=-429.52, xCoord=-268.69]
+t14[label="t14", yCoord=785.87, xCoord=424.96]
+t15[label="t15", yCoord=794.11, xCoord=864.24]
+t2[label="t2", yCoord=0.95, xCoord=-170.93]
+t3[label="t3", yCoord=211.95, xCoord=-367.93]
+t4[label="t4", yCoord=212.95, xCoord=-184.93]
+t5[label="t5", yCoord=-144.86, xCoord=290.43]
+t6[label="t6", yCoord=-128.39, xCoord=996.03]
+t7[label="t7", yCoord=280.7, xCoord=606.16]
+t8[label="t8", yCoord=66.55, xCoord=603.42]
+t9[label="t9", yCoord=544.27, xCoord=510.07]
+
+.flows
+t0: {1*p0} -> {1*p1}
+t1: {1*p1} -> {1*l1}
+t10: {1*p2} -> {1*p9, 1*el}
+t11: {1*p2} -> {1*er, 1*p9}
+t12: {1*p11} -> {1*r2}
+t13: {1*p0, 1*p9} -> {1*p0, 1*p3}
+t14: {1*l2} -> {1*p14}
+t15: {1*r2} -> {1*p15}
+t2: {1*p1} -> {1*r1}
+t3: {1*l1} -> {1*p4}
+t4: {1*r1} -> {1*p5}
+t5: {1*p3} -> {1*el2, 1*p8}
+t6: {1*p3} -> {1*p8, 1*er2}
+t7: {1*p10} -> {1*p11}
+t8: {1*p8, 1*p10} -> {1*p10}
+t9: {1*p11} -> {1*l2}
+
+.initial_marking {1*p0, 1*p10, 1*p2}
+
+.final_markings
+{el,l1}
+{er,r1}
+{l1,l2}
+{r1,r2}

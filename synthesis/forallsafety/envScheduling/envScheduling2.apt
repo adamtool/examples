@@ -1,0 +1,58 @@
+.name "Example"
+.description "Example for the env scheduling which should NOT have a strategy."
+.type LPN
+.options
+condition="GLOBAL_SAFETY"
+
+.places
+l1[yCoord=56.67, xCoord=-615.0]
+l2[yCoord=53.67, xCoord=-407.0]
+p0[yCoord=-340.33, xCoord=-516.0]
+p1[yCoord=-118.33, xCoord=-513.0]
+p10[yCoord=231.67, xCoord=99.0]
+p11[yCoord=249.67, xCoord=364.0]
+p2[yCoord=-564.4, xCoord=-121.75, env="true"]
+p3[yCoord=-569.83, xCoord=-656.25, env="true"]
+p4[yCoord=229.67, xCoord=-638.0]
+p5[yCoord=232.67, xCoord=-398.0]
+p6[yCoord=-385.33, xCoord=260.0]
+p7[yCoord=-158.33, xCoord=245.0]
+p8[yCoord=-567.12, xCoord=526.71, env="true"]
+r1[yCoord=5.67, xCoord=149.0]
+r2[yCoord=24.67, xCoord=351.0]
+
+.transitions
+t0[label="t0", yCoord=-230.33, xCoord=-513.0]
+t1[label="t1", yCoord=-68.33, xCoord=-571.0]
+t10[label="t10", yCoord=-553.55, xCoord=-420.2]
+t11[label="t11", yCoord=-558.98, xCoord=258.1]
+t2[label="t2", yCoord=-54.33, xCoord=-421.0]
+t3[label="t3", yCoord=156.67, xCoord=-618.0]
+t4[label="t4", yCoord=157.67, xCoord=-435.0]
+t5[label="t5", yCoord=129.67, xCoord=131.0]
+t6[label="t6", yCoord=136.67, xCoord=383.0]
+t7[label="t7", yCoord=-66.33, xCoord=179.0]
+t8[label="t8", yCoord=-62.33, xCoord=291.0]
+t9[label="t9", yCoord=-285.33, xCoord=254.0]
+
+.flows
+t0: {1*p0} -> {1*p1}
+t1: {1*p1} -> {1*l1}
+t10: {1*p2} -> {1*p3}
+t11: {1*p2} -> {1*p8}
+t2: {1*p1} -> {1*l2}
+t3: {1*l1} -> {1*p4}
+t4: {1*l2} -> {1*p5}
+t5: {1*r1} -> {1*p10}
+t6: {1*r2} -> {1*p11}
+t7: {1*p7} -> {1*r1}
+t8: {1*p7} -> {1*r2}
+t9: {1*p6} -> {1*p7}
+
+.initial_marking {1*p0, 1*p2, 1*p6}
+
+.final_markings
+{l1,r1}
+{l1,r2}
+{l2,r1}
+{l2,r2}

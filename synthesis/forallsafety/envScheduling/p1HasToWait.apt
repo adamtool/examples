@@ -1,0 +1,40 @@
+.name "Example"
+.description "Example for the env scheduling which should NOT have a strategy."
+.type LPN
+.options
+condition="GLOBAL_SAFETY"
+
+.places
+bad1[yCoord=-43.28, xCoord=-1068.61]
+bad2[yCoord=228.53, xCoord=-1065.86]
+badA[yCoord=155.88, xCoord=-266.09]
+badB[yCoord=152.88, xCoord=-58.09]
+p0[yCoord=-241.12, xCoord=-167.09]
+p1[yCoord=-19.12, xCoord=-164.09]
+p2[yCoord=-238.21, xCoord=-1057.63]
+p4[yCoord=328.88, xCoord=-289.09]
+p5[yCoord=331.88, xCoord=-49.09]
+
+.transitions
+t0[label="t0", yCoord=-131.12, xCoord=-164.09]
+t1[label="t1", yCoord=30.88, xCoord=-222.09]
+t2[label="t2", yCoord=44.88, xCoord=-72.09]
+t3[label="t3", yCoord=255.88, xCoord=-269.09]
+t4[label="t4", yCoord=256.88, xCoord=-86.09]
+t5[label="t5", yCoord=72.04, xCoord=-1063.12]
+t6[label="t6", yCoord=-142.11, xCoord=-1054.88]
+
+.flows
+t0: {1*p0} -> {1*p1}
+t1: {1*p1} -> {1*badA}
+t2: {1*p1} -> {1*badB}
+t3: {1*badA} -> {1*p4}
+t4: {1*badB} -> {1*p5}
+t5: {1*bad1} -> {1*bad2}
+t6: {1*p2} -> {1*bad1}
+
+.initial_marking {1*p0, 1*p2}
+
+.final_markings
+{bad1,badA}
+{bad2,badB}

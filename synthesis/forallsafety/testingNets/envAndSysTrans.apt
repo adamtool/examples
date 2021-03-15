@@ -1,0 +1,49 @@
+.name "Example"
+.description "Should have a strategy. (no strategy without transition t8)"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+el[yCoord=-573.16, xCoord=-1026.28]
+er[yCoord=-650.46, xCoord=621.72]
+l1[yCoord=111.95, xCoord=-364.93]
+p0[yCoord=-285.05, xCoord=-265.93]
+p1[yCoord=-63.05, xCoord=-262.93]
+p2[yCoord=-769.42, xCoord=-256.76, env="true"]
+p3[yCoord=-309.75, xCoord=90.61, env="true"]
+p4[yCoord=284.95, xCoord=-387.93]
+p5[yCoord=287.95, xCoord=-147.93]
+p6[yCoord=595.75, xCoord=-293.25, bad="true"]
+p9[yCoord=-563.77, xCoord=-253.92, env="true"]
+r1[yCoord=108.95, xCoord=-156.93]
+
+.transitions
+t0[label="t0", yCoord=-175.05, xCoord=-262.93]
+t1[label="t1", yCoord=-13.05, xCoord=-320.93]
+t10[label="t10", yCoord=-706.9, xCoord=-655.22]
+t11[label="t11", yCoord=-735.66, xCoord=133.09]
+t13[label="t13", yCoord=-429.52, xCoord=-268.69]
+t2[label="t2", yCoord=0.95, xCoord=-170.93]
+t3[label="t3", yCoord=211.95, xCoord=-367.93]
+t4[label="t4", yCoord=212.95, xCoord=-184.93]
+t5[label="t5", yCoord=-437.7, xCoord=-74.74]
+t6[label="t6", yCoord=-160.15, xCoord=-919.22]
+t7[label="t7", yCoord=64.26, xCoord=366.19]
+t8[label="t8", yCoord=-321.36, xCoord=-91.3]
+
+.flows
+t0: {1*p0} -> {1*p1}
+t1: {1*p1} -> {1*l1}
+t10: {1*p2} -> {1*p9, 1*el}
+t11: {1*p2} -> {1*er, 1*p9}
+t13: {1*p0, 1*p9} -> {1*p0}
+t2: {1*p1} -> {1*r1}
+t3: {1*l1} -> {1*p4}
+t4: {1*r1} -> {1*p5}
+t5: {1*p9} -> {1*p3}
+t6: {1*el, 1*p4} -> {1*p6}
+t7: {1*p5, 1*er} -> {1*p6}
+t8: {1*p3, 1*p0} -> {1*p0}
+
+.initial_marking {1*p0, 1*p2}
