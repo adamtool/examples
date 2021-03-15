@@ -1,9 +1,10 @@
 .name "SDN-handbuildExample"
 .description "The motivating example from the ATVA19 paper and the update from configuration [vfwdTou, ufwdToy, yfwdTod] to configuration [vfwdToy, yfwdTol, lfwdTod].
+			  But here all updates are done in parallel.
               Satisfiable formula:   A F d
               Unsatisfiable formula: A F u
               Loop Freedom: A G ((((v -> (v U G NEG v)) AND (u -> (u U G NEG u))) AND (y -> (y U G NEG y))) AND (l -> (l U G NEG l)))
-							is satisfiable due to the sequential update
+ 						   is not satisfiable because the update is completely concurrent.
 "
 .type LPN
 .options
@@ -18,7 +19,7 @@ p12[yCoord=736.84, xCoord=544.2]
 p13[yCoord=1230.0, xCoord=450.0]
 p14[yCoord=1230.0, xCoord=2070.0]
 p16[yCoord=330.0, xCoord=450.0]
-p17[yCoord=750.0, xCoord=2070.0]
+p17[yCoord=1361.36, xCoord=2668.48]
 p18[yCoord=329.65, xCoord=2072.3]
 p5[yCoord=1350.0, xCoord=1290.0]
 p6[yCoord=704.92, xCoord=1590.0]
@@ -47,14 +48,14 @@ t9[label="t9", weakFair="true", yCoord=450.0, xCoord=450.0]
 ingress: {1*v} -> {1*v}
 t0: {1*p11, 1*y, 1*v} -> {1*p11, 1*v, 1*y}
 t1: {1*p12, 1*v, 1*u} -> {1*u, 1*v, 1*p12}
-t10: {1*p6, 1*p14} -> {1*p17, 1*p8}
+t10: {1*p6, 1*p14} -> {1*p8}
 t11: {1*p9, 1*p17} -> {1*p18, 1*p7}
 t2: {1*p10, 1*y, 1*u} -> {1*y, 1*p10, 1*u}
 t3: {1*d, 1*l, 1*p8} -> {1*p8, 1*l, 1*d}
 t4: {1*d, 1*p9, 1*y} -> {1*p9, 1*d, 1*y}
 t5: {1*p6, 1*y, 1*l} -> {1*p6, 1*l, 1*y}
 t6: {1*p7, 1*l, 1*y} -> {1*y, 1*p7, 1*l}
-t7: {1*p5} -> {1*p13, 1*p14}
+t7: {1*p5} -> {1*p13, 1*p17, 1*p14}
 t9: {1*p13, 1*p12} -> {1*p16, 1*p11}
 
 .initial_marking {1*d, 1*l, 1*p10, 1*p12, 1*p5, 1*p6, 1*p9, 1*u, 1*v, 1*y}
