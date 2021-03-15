@@ -1,10 +1,10 @@
 .name "SDN-handbuildExample"
 .description "The motivating example from the ATVA19 paper and the update from configuration [vfwdTou, ufwdToy, yfwdTod] to configuration [vfwdToy, yfwdTol, lfwdTod].
-			  But here all updates are done in parallel.
+              But here all updates are done in parallel.
               Satisfiable formula:   A F d
               Unsatisfiable formula: A F u
               Loop Freedom: A G ((((v -> (v U G NEG v)) AND (u -> (u U G NEG u))) AND (y -> (y U G NEG y))) AND (l -> (l U G NEG l)))
- 						   is not satisfiable because the update is completely concurrent.
+                            is not satisfiable because the update is completely concurrent.
 "
 .type LPN
 .options

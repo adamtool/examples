@@ -3,7 +3,7 @@
               Satisfiable formula:   A F d
               Unsatisfiable formula: A F u
               Loop Freedom: A G ((((v -> (v U G NEG v)) AND (u -> (u U G NEG u))) AND (y -> (y U G NEG y))) AND (l -> (l U G NEG l)))
-							is satisfiable due to the sequential update
+                            is satisfiable due to the sequential update
 "
 .type LPN
 .options
