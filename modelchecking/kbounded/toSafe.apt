@@ -1,0 +1,23 @@
+.name "Example"
+.description "Describe your net here."
+.type LPN
+.options
+condition="LTL"
+
+.places
+p0[yCoord=-232.94, xCoord=-553.0]
+p1[yCoord=45.06, xCoord=-541.0]
+p2[yCoord=-114.94, xCoord=-238.0]
+p3[yCoord=-115.94, xCoord=19.0]
+
+.transitions
+t0[label="t0", yCoord=-180.94, xCoord=-407.0]
+t1[label="t1", yCoord=-23.94, xCoord=-393.0]
+t2[label="t2", yCoord=-114.94, xCoord=-90.0]
+
+.flows
+t0: {1*p0} -> {1*p2}
+t1: {1*p1} -> {1*p2}
+t2: {1*p2} -> {1*p3}
+
+.initial_marking {1*p0, 1*p1}
