@@ -1,0 +1,50 @@
+// System has winning strategy
+.name "access control"
+.description "Figure 1 from 'Synthesis in Distributed Environments' by Bernd Finkbeiner and Paul Gölz, https://arxiv.org/pdf/1710.05368.pdf"
+.type LPN
+.options
+condition="GLOBAL_SAFETY"
+
+.places
+a1[yCoord=150.0, xCoord=450.0, env="true", token=1]
+a1_auth[yCoord=450.0, xCoord=450.0, env="true", token=1]
+a2[yCoord=150.0, xCoord=1170.0, env="true", token=3]
+a2_auth[yCoord=450.0, xCoord=1170.0, env="true", token=3]
+e1[yCoord=30.0, xCoord=570.0, env="true", token=2]
+e1_attempt[yCoord=510.0, xCoord=570.0, env="true", token=2]
+e1_wait[yCoord=30.0, xCoord=330.0, env="true", token=2]
+e2[yCoord=30.0, xCoord=1050.0, env="true", token=4]
+e2_attempt[yCoord=510.0, xCoord=1050.0, env="true", token=4]
+e2_wait[yCoord=30.0, xCoord=1290.0, env="true", token=4]
+s_closed[yCoord=270.0, xCoord=810.0]
+s_open[yCoord=510.0, xCoord=810.0]
+
+.transitions
+t0[label="t0", yCoord=390.0, xCoord=810.0]
+t1[label="t1", yCoord=30.0, xCoord=450.0]
+t2[label="t2", yCoord=270.0, xCoord=450.0]
+t3[label="t3", yCoord=270.0, xCoord=570.0]
+t4[label="t4", yCoord=270.0, xCoord=690.0]
+t5[label="t5", yCoord=30.0, xCoord=1170.0]
+t6[label="t6", yCoord=270.0, xCoord=1170.0]
+t7[label="t7", yCoord=270.0, xCoord=1050.0]
+t8[label="t8", yCoord=270.0, xCoord=930.0]
+
+.flows
+t0: {1*s_closed} -> {1*s_open}
+t1: {1*a1_auth, 1*e1} -> {1*a1_auth, 1*e1_wait}
+t2: {1*a1, 1*e1} -> {1*a1_auth, 1*e1_attempt}
+t3: {1*e1} -> {1*e1_attempt}
+t4: {1*e1_attempt, 1*s_closed} -> {1*e1, 1*s_closed}
+t5: {1*e2, 1*a2_auth} -> {1*a2_auth, 1*e2_wait}
+t6: {1*a2, 1*e2} -> {1*a2_auth, 1*e2_attempt}
+t7: {1*e2} -> {1*e2_attempt}
+t8: {1*s_closed, 1*e2_attempt} -> {1*s_closed, 1*e2}
+
+// bad markings
+.final_markings
+{s_open,a1}
+{s_open,a2}
+
+.initial_marking {1*a1, 1*a2, 1*e1, 1*e2, 1*s_closed}
+

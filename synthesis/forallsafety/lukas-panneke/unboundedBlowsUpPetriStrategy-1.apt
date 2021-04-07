@@ -1,0 +1,24 @@
+// System has winning strategy
+.name "Example"
+.description "The place env is two bounded, but only one of it's tokens at a time can do anything. This leads to the petri game strategy having duplicating everything."
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+bad[yCoord=-270.0, xCoord=-90.0, bad="true", env="true"]
+env[yCoord=90.0, xCoord=-210.0, env="true"]
+inter[yCoord=-30.0, xCoord=-330.0, env="true"]
+sys[yCoord=-270.0, xCoord=-450.0]
+
+.transitions
+dumb[label="dumb", yCoord=-270.0, xCoord=-210.0]
+enter[label="enter", yCoord=-150.0, xCoord=-330.0]
+leave[label="leave", yCoord=90.0, xCoord=-450.0]
+
+.flows
+dumb: {1*env, 1*sys} -> {1*bad}
+enter: {1*sys, 1*env} -> {1*inter}
+leave: {1*inter} -> {1*sys, 1*env}
+
+.initial_marking {2*env, 1*sys}

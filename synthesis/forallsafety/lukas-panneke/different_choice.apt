@@ -1,0 +1,33 @@
+// System has no winning strategy
+.name "Different choice"
+.description "The system player has to avoid making the same move as the environment player, but cannot"
+.type LPN
+.options
+condition="GLOBAL_SAFETY"
+
+.places
+e[yCoord=330.0, xCoord=30.0, env="true",token=1]
+ed[yCoord=390.0, xCoord=270.0, env="true",token=1]
+eu[yCoord=270.0, xCoord=270.0, env="true",token=1]
+s[yCoord=330.0, xCoord=630.0]
+sd[yCoord=390.0, xCoord=390.0]
+su[yCoord=270.0, xCoord=390.0]
+
+.transitions
+ted[label="ted", yCoord=390.0, xCoord=150.0]
+teu[label="teu", yCoord=270.0, xCoord=150.0]
+tsd[label="tsd", yCoord=390.0, xCoord=510.0]
+tsu[label="tsu", yCoord=270.0, xCoord=510.0]
+
+.flows
+ted: {1*e} -> {1*ed}
+teu: {1*e} -> {1*eu}
+tsd: {1*s} -> {1*sd}
+tsu: {1*s} -> {1*su}
+
+// bad markings
+.final_markings
+{eu,su}
+{ed,sd}
+
+.initial_marking {1*e, 1*s}

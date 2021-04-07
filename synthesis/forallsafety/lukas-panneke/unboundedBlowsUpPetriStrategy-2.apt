@@ -1,0 +1,25 @@
+.name "Example"
+.description "Same as unboundedBlowsUpPetriStrategy1, but with two of those two-bounded places. Showing that the blowup grows multiplicative"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+e1[yCoord=-210.0, xCoord=-270.0, env="true", token=1]
+e2[yCoord=30.0, xCoord=-270.0, env="true", token=3]
+end[yCoord=150.0, xCoord=-390.0, env="true", token=4]
+mid[yCoord=-90.0, xCoord=-330.0, env="true", token=2]
+s1[yCoord=-330.0, xCoord=-390.0, token=0]
+s2[yCoord=-90.0, xCoord=-450.0, token=0]
+
+.transitions
+continue[label="continue", yCoord=30.0, xCoord=-390.0]
+reset[label="reset", yCoord=-90.0, xCoord=30.0]
+start[label="start", yCoord=-210.0, xCoord=-390.0]
+
+.flows
+continue: {1*s2, 1*e2, 1*mid} -> {1*end}
+reset: {1*end} -> {1*e2, 1*e1, 1*s1}
+start: {1*s1, 1*e1} -> {1*s2, 1*mid}
+
+.initial_marking {2*e1, 2*e2, 1*s1}

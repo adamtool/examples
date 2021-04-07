@@ -1,0 +1,23 @@
+// System has winning strategy
+.name "IsolatedEnvironmentsSingleUse"
+.description "Two isolated environment transitions can fire once. For this game the strategy should be the game itself."
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+A[yCoord=-30.0, xCoord=-150.0, env="true"]
+B[yCoord=-30.0, xCoord=-30.0, env="true"]
+a[yCoord=-270.0, xCoord=-150.0, env="true"]
+b[yCoord=-270.0, xCoord=-30.0, env="true"]
+sys[yCoord=-270.0, xCoord=90.0]
+
+.transitions
+ta[label="ta", yCoord=-150.0, xCoord=-150.0]
+tb[label="tb", yCoord=-150.0, xCoord=-30.0]
+
+.flows
+ta: {1*a} -> {1*A}
+tb: {1*b} -> {1*B}
+
+.initial_marking {1*a, 1*b, 1*sys}

@@ -1,0 +1,28 @@
+// System has winning strategy
+.name "Example"
+.description "This game shows that the solver can handle a disappearing and reapearing system player."
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+bad[yCoord=30.0, xCoord=270.0, bad="true"]
+choose[yCoord=-30.0, xCoord=30.0]
+env[yCoord=-90.0, xCoord=-450.0, env="true"]
+good[yCoord=-90.0, xCoord=270.0]
+ready[yCoord=-30.0, xCoord=-210.0, env="true"]
+sys[yCoord=30.0, xCoord=-450.0]
+
+.transitions
+ask[label="ask", yCoord=-30.0, xCoord=-90.0]
+clever[label="clever", yCoord=-90.0, xCoord=150.0]
+init[label="init", yCoord=-30.0, xCoord=-330.0]
+stupid[label="stupid", yCoord=30.0, xCoord=150.0]
+
+.flows
+ask: {1*ready} -> {1*choose}
+clever: {1*choose} -> {1*good}
+init: {1*sys, 1*env} -> {1*ready}
+stupid: {1*choose} -> {1*bad}
+
+.initial_marking {1*env, 1*sys}

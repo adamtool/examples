@@ -1,0 +1,27 @@
+// System has no winning strategy
+.name "ForkJoinInterrupt"
+.description "This net shows, that a graph game vertex sometimes has to have two outgoing edges with the same label."
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+env[yCoord=-390.0, xCoord=-330.0, env="true", token=1]
+l[yCoord=-150.0, xCoord=-390.0, env="true", token=1]
+r[yCoord=-150.0, xCoord=-270.0, env="true", token=2]
+done[yCoord=90.0, xCoord=-330.0, bad="true", env="true", token=1]
+sys[yCoord=210.0, xCoord=-330.0, token=0]
+
+.transitions
+fork[label="fork", yCoord=-270.0, xCoord=-330.0]
+join[label="join", yCoord=-30.0, xCoord=-330.0]
+l_interrupt[label="l_interrupt", yCoord=-30.0, xCoord=-510.0]
+r_interrupt[label="r_interrupt", yCoord=-30.0, xCoord=-150.0]
+
+.flows
+fork: {1*env} -> {1*r, 1*l}
+join: {1*r, 1*l} -> {1*done}
+l_interrupt: {1*l, 1*sys} -> {1*sys}
+r_interrupt: {1*r, 1*sys} -> {1*sys}
+
+.initial_marking {1*env, 1*sys}

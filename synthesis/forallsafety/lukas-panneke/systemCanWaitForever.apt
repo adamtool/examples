@@ -1,0 +1,21 @@
+// system has winning strategy
+.name "System can wait forever"
+.description "The system can just wait for the environment to loop forever"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+bad[yCoord=-150.0, xCoord=90.0, bad="true"]
+env[yCoord=-270.0, xCoord=-150.0, env="true"]
+sys[yCoord=-150.0, xCoord=-150.0]
+
+.transitions
+loop[label="loop", yCoord=-270.0, xCoord=-30.0]
+suicide[label="suicide", yCoord=-150.0, xCoord=-30.0]
+
+.flows
+loop: {1*env} -> {1*env}
+suicide: {1*sys} -> {1*bad}
+
+.initial_marking {1*env, 1*sys}

@@ -1,0 +1,26 @@
+// System has no winning strategy
+.name "Assassin"
+.description "This game shows that sometimes a purely environmental transition has to be fired despite a system transition being enabled, to make the system loose"
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+assassin_positioned[yCoord=-270.0, xCoord=-210.0, env="true", token=2]
+dead[yCoord=30.0, xCoord=-270.0, bad="true"]
+env[yCoord=-390.0, xCoord=-90.0, env="true", token=1]
+guilty_env[yCoord=-390.0, xCoord=-330.0, env="true", token=1]
+safe[yCoord=30.0, xCoord=-30.0]
+sys[yCoord=30.0, xCoord=-150.0]
+
+.transitions
+hire_assassin[label="hire_assassin", yCoord=-390.0, xCoord=-210.0]
+kill[label="kill", yCoord=-150.0, xCoord=-210.0]
+mercy[label="mercy", yCoord=-150.0, xCoord=-90.0]
+
+.flows
+hire_assassin: {1*env} -> {1*assassin_positioned, 1*guilty_env}
+kill: {1*sys, 1*assassin_positioned} -> {1*dead}
+mercy: {1*sys, 1*env} -> {1*safe}
+
+.initial_marking {1*env, 1*sys}

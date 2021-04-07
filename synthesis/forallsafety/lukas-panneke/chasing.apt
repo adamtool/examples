@@ -1,0 +1,47 @@
+// System has winning strategy
+.name "chasing"
+.description "Figure 7.1a from 'Synthesis for Petri games with one system player' by Paul Gölz"
+.type LPN
+.options
+condition="GLOBAL_SAFETY"
+
+.places
+c1[yCoord=210.0, xCoord=750.0, env="true", token=1]
+c2[yCoord=210.0, xCoord=990.0, env="true", token=2]
+cc1[yCoord=570.0, xCoord=750.0, env="true", token=1]
+cc2[yCoord=450.0, xCoord=990.0, env="true", token=2]
+r1[yCoord=30.0, xCoord=630.0, env="true", token=3]
+r2[yCoord=30.0, xCoord=1110.0, env="true", token=3]
+s0[yCoord=570.0, xCoord=870.0]
+s1[yCoord=810.0, xCoord=1110.0]
+s2[yCoord=810.0, xCoord=630.0]
+sD[yCoord=810.0, xCoord=870.0]
+si[yCoord=330.0, xCoord=870.0]
+
+.transitions
+t1[label="t1", yCoord=810.0, xCoord=990.0]
+t2[label="t2", yCoord=810.0, xCoord=750.0]
+tc1[label="tc1", yCoord=390.0, xCoord=750.0]
+tc2[label="tc2", yCoord=330.0, xCoord=990.0]
+tl[label="tl", yCoord=90.0, xCoord=930.0]
+tr[label="tr", yCoord=-30.0, xCoord=810.0]
+ts1[label="ts1", yCoord=450.0, xCoord=870.0]
+ts2[label="ts2", yCoord=690.0, xCoord=870.0]
+
+.flows
+t1: {1*sD} -> {1*s1}
+t2: {1*sD} -> {1*s2}
+tc1: {1*c1} -> {1*cc1}
+tc2: {1*c2} -> {1*cc2}
+tl: {1*c2, 1*r1} -> {1*c2, 1*r2}
+tr: {1*c1, 1*r2} -> {1*c1, 1*r1}
+ts1: {1*cc2, 1*si} -> {1*s0, 1*cc2}
+ts2: {1*s0, 1*cc1} -> {1*sD, 1*cc1}
+
+// bad markings
+.final_markings
+{r1,s2}
+{r2,s1}
+
+.initial_marking {1*c1, 1*c2, 1*r1, 1*si}
+

@@ -1,0 +1,25 @@
+// System has no winning strategy
+.name "Example"
+.description "The system can begg for the environment not to hurt it. If the environment gives in one, the system is safe."
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+bad[yCoord=210.0, xCoord=-390.0, bad="true", env="true", token=2]
+charge[yCoord=-30.0, xCoord=-390.0, env="true", token=2]
+env[yCoord=-270.0, xCoord=-390.0, env="true", token=1]
+safe[yCoord=-30.0, xCoord=-510.0, token=0]
+sys[yCoord=-270.0, xCoord=-510.0, token=0]
+
+.transitions
+attack[label="attack", yCoord=90.0, xCoord=-390.0]
+begg[label="begg", yCoord=-150.0, xCoord=-510.0]
+harsh[label="harsh", yCoord=-150.0, xCoord=-390.0]
+
+.flows
+attack: {2*charge} -> {1*bad}
+begg: {1*env, 1*sys} -> {1*safe}
+harsh: {1*env} -> {1*charge}
+
+.initial_marking {2*env, 1*sys}
