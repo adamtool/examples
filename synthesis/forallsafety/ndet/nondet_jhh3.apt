@@ -1,4 +1,4 @@
-// there should be no strategy, since every strategy should encounter
+// there should be NO strategy, since every strategy should encounter
 // ndet (between f2 and e)
 // made it infinite for some runs but not all as ENV can decide for c
 .name "nondet strategy"

@@ -1,0 +1,39 @@
+// Should HAVE a strategy
+.name "Example"
+.description "Describe your net here."
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+EL[yCoord=-150.0, xCoord=-630.0, env="true"]
+SL[yCoord=330.0, xCoord=-630.0, bad="true"]
+SR[yCoord=330.0, xCoord=90.0, bad="true"]
+p0[yCoord=-150.0, xCoord=-270.0]
+p1[yCoord=90.0, xCoord=-630.0]
+p2[yCoord=90.0, xCoord=90.0]
+p3[yCoord=-270.0, xCoord=-270.0, env="true"]
+
+.transitions
+t0[label="t0", yCoord=210.0, xCoord=-630.0]
+t1[label="t1", yCoord=210.0, xCoord=90.0]
+t2[label="t2", yCoord=-270.0, xCoord=-630.0]
+t3[label="t3", yCoord=-270.0, xCoord=90.0]
+t4[label="t4", yCoord=90.0, xCoord=-330.0]
+t5[label="t5", yCoord=90.0, xCoord=-150.0]
+t6[label="t6", yCoord=270.0, xCoord=-270.0]
+t7[label="t7", yCoord=-30.0, xCoord=-630.0]
+t8[label="t8", yCoord=-105.18, xCoord=-462.78]
+
+.flows
+t0: {1*p1} -> {1*SL}
+t1: {1*p2} -> {1*SR}
+t2: {1*p3} -> {1*EL, 1*p0}
+t3: {1*p3} -> {1*p2, 1*p0, 1*p1}
+t4: {1*p1, 1*p0} -> {}
+t5: {1*p2, 1*p0} -> {}
+t6: {1*p2, 1*p1, 1*p0} -> {}
+t7: {1*EL} -> {1*p1}
+t8: {1*EL} -> {1*p2}
+
+.initial_marking {1*p3}

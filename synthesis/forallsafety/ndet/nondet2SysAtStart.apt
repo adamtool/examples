@@ -1,8 +1,8 @@
 // Adaption of Paul Gölz's example
 // added place S
 // should have strategy for old definition checking the ndet within the strategy
-// should have NO strategy for the new definition where we check the ndet in the
-// original game.
+// (it is OK that S cuts off d, and so the environment has to move to G, allowing us to avoid the deadlock (and ndet))
+// should have NO strategy for the new definition where we check the ndet in the unfolding.
 .name "nondet"
 .description "Alarm system."
 .type LPN

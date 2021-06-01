@@ -1,0 +1,33 @@
+// Should have strategy for F EL -> F SL AND F ER -> F SR
+.name "Example"
+.description "Describe your net here."
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+EL[yCoord=-150.0, xCoord=-630.0, env="true"]
+ER[yCoord=-150.0, xCoord=90.0, env="true"]
+SL[yCoord=150.0, xCoord=-450.0]
+SR[yCoord=150.0, xCoord=-90.0]
+p0[yCoord=-30.0, xCoord=-270.0]
+p3[yCoord=-270.0, xCoord=-270.0, env="true"]
+p6[yCoord=-150.0, xCoord=-270.0, env="true"]
+
+.transitions
+t0[label="t0", yCoord=30.0, xCoord=-450.0]
+t1[label="t1", yCoord=30.0, xCoord=-90.0]
+t2[label="t2", yCoord=-270.0, xCoord=-630.0]
+t3[label="t3", yCoord=-270.0, xCoord=90.0]
+t4[label="t4", yCoord=-150.0, xCoord=-450.0]
+t5[label="t5", yCoord=-150.0, xCoord=-90.0]
+
+.flows
+t0: {1*p0} -> {1*SL}
+t1: {1*p0} -> {1*SR}
+t2: {1*p3} -> {1*EL}
+t3: {1*p3} -> {1*ER}
+t4: {1*EL, 1*p0} -> {1*p0, 1*p6}
+t5: {1*ER, 1*p0} -> {1*p0, 1*p6}
+
+.initial_marking {1*p0, 1*p3}

@@ -1,6 +1,6 @@
 // Adaption of Paul Gölz's first example
 // no type2 stuff
-// should have no strategy, since the only strategy violates S3, which happens
+// should have NO strategy, since the only strategy violates S3, which happens
 // because an ndet state was missed because of the scheduling
 .name "nondet strategy"
 .description "Alarm system."

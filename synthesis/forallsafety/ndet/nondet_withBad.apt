@@ -1,5 +1,6 @@
-// there should be no strategy since only exhausting nondeterminism should
+// there should be NO strategy since only exhausting nondeterminism should
 // help to avoid the bad place (or deadlock?) (Adaption of Paul Goelz example)
+// the old algorithm still detects this correctly
 .name "nondet strategy"
 .type LPN
 .description "Alarm system."
