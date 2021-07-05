@@ -1,0 +1,50 @@
+// Adaption of Paul Gölz's first example
+// no type2 stuff
+// should have NO strategy, since the only strategy violates S3, which happens
+// because an ndet state was missed because of the scheduling
+// here p0 can initially reject transition f such that when e fires
+// p0 still rejects f (thus we miss the ndet for locNdet) but then loops and
+// activates f afterwards (creating a incorrect strategy)
+.name "nondet strategy"
+.description "Alarm system."
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+A[yCoord=358.04, xCoord=179.6]
+B[yCoord=126.38, xCoord=578.64, env="true"]
+C[yCoord=610.5, xCoord=112.37]
+D[yCoord=368.19, xCoord=561.08, env="true"]
+E[yCoord=626.23, xCoord=591.04, env="true"]
+F[yCoord=645.16, xCoord=365.66]
+G[yCoord=604.79, xCoord=461.65, env="true"]
+H[yCoord=911.3, xCoord=394.18]
+K[yCoord=339.56, xCoord=433.62, env="true"]
+p0[yCoord=747.76, xCoord=668.11]
+p1[yCoord=737.62, xCoord=1047.1]
+p2[yCoord=883.38, xCoord=687.13]
+
+.transitions
+a[label="a", yCoord=479.27, xCoord=311.28]
+b[label="b", yCoord=239.03, xCoord=698.43]
+c[label="c", yCoord=502.34, xCoord=461.94]
+d[label="d", yCoord=504.63, xCoord=574.85]
+e[label="e", yCoord=757.01, xCoord=269.04]
+f[label="f", yCoord=749.45, xCoord=525.74]
+i[label="i", yCoord=231.06, xCoord=457.47]
+t0[label="t0", yCoord=816.2, xCoord=895.0]
+t1[label="t1", yCoord=641.29, xCoord=893.73]
+
+.flows
+a: {1*A, 1*K} -> {1*p0, 1*D, 1*C}
+b: {1*B} -> {1*E}
+c: {1*D} -> {1*G}
+d: {1*D} -> {1*E}
+e: {1*C, 1*F} -> {1*C, 1*H}
+f: {1*p0, 1*E, 1*F} -> {1*H, 1*E}
+i: {1*B} -> {1*K}
+t0: {1*p2, 1*p0} -> {1*p1}
+t1: {1*p1} -> {1*p0}
+
+.initial_marking {1*A, 1*B, 1*F, 1*p2}
