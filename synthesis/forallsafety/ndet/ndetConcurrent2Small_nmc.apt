@@ -1,0 +1,44 @@
+// should have strategy because the ndet is resolved
+// @author Manuel Gieseking
+.name "Example"
+.description "Describe your net here."
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+comp13[yCoord=270.0, xCoord=570.0, token=1]
+comp14[yCoord=270.0, xCoord=750.0, token=3]
+p0[yCoord=510.0, xCoord=450.0, bad="true", token=1]
+p1[yCoord=30.0, xCoord=570.0, token=1]
+p10[yCoord=-90.0, xCoord=570.0, env="true", token=0]
+p11[yCoord=30.0, xCoord=450.0, env="true", token=0]
+p12[yCoord=30.0, xCoord=690.0, env="true", token=0]
+p2[yCoord=510.0, xCoord=570.0, token=1]
+p3[yCoord=270.0, xCoord=870.0, bad="true", token=3]
+p6[yCoord=30.0, xCoord=870.0, token=3]
+p7[yCoord=30.0, xCoord=990.0, token=4]
+
+.transitions
+comt10[label="com-t10", yCoord=150.0, xCoord=750.0]
+comt9[label="com-t9", yCoord=150.0, xCoord=570.0]
+t0[label="t0", yCoord=270.0, xCoord=450.0]
+t1[label="t1", yCoord=390.0, xCoord=570.0]
+t2[label="t2", yCoord=150.0, xCoord=870.0]
+t3[label="t3", yCoord=150.0, xCoord=990.0]
+t6[label="t6", yCoord=-90.0, xCoord=450.0]
+t7[label="t7", yCoord=-90.0, xCoord=690.0]
+t8[label="t8", yCoord=270.0, xCoord=690.0]
+
+.flows
+comt10: {1*p6} -> {1*comp14}
+comt9: {1*p1} -> {1*comp13}
+t0: {1*p1} -> {1*p0}
+t1: {1*comp13, 1*comp14, 1*p11} -> {1*p2}
+t2: {1*p6} -> {1*p3}
+t3: {1*p6, 1*p7} -> {}
+t6: {1*p10} -> {1*p11}
+t7: {1*p10} -> {1*p12}
+t8: {1*p12, 1*comp13} -> {}
+
+.initial_marking {1*p1, 1*p10, 1*p6, 1*p7}

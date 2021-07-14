@@ -1,0 +1,34 @@
+// Should have strategy
+// @author Manuel Gieseking
+.name "Example"
+.description "Describe your net here."
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+p0[yCoord=-270.0, xCoord=-150.0, env="true"]
+p1[yCoord=90.0, xCoord=-150.0, env="true"]
+p10[yCoord=-270.0, xCoord=-930.0]
+p2[yCoord=-90.0, xCoord=-330.0]
+p3[yCoord=-90.0, xCoord=30.0]
+p4[yCoord=90.0, xCoord=-570.0]
+p5[yCoord=90.0, xCoord=-690.0]
+p6[yCoord=-270.0, xCoord=-690.0]
+p7[yCoord=-270.0, xCoord=-570.0]
+p8[yCoord=90.0, xCoord=-330.0, env="true"]
+p9[yCoord=-270.0, xCoord=-330.0]
+
+.transitions
+t0[label="t0", yCoord=-90.0, xCoord=-570.0]
+t1[label="t1", yCoord=-90.0, xCoord=-150.0]
+t2[label="t2", yCoord=-270.0, xCoord=-810.0]
+t3[label="t3", yCoord=-270.0, xCoord=-450.0]
+
+.flows
+t0: {1*p6, 1*p7, 1*p0} -> {1*p5, 1*p4, 1*p8}
+t1: {1*p0, 1*p2, 1*p3} -> {1*p1, 1*p2, 1*p3}
+t2: {1*p6} -> {1*p10}
+t3: {1*p7} -> {1*p9}
+
+.initial_marking {1*p0, 1*p2, 1*p3, 1*p6, 1*p7}

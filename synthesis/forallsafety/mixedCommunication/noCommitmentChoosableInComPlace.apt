@@ -1,0 +1,29 @@
+.name "skipSystem.net"
+.description "env skips the systems"
+.type LPN
+.options
+condition="SAFETY"
+
+.places
+env1[yCoord=-330.0, xCoord=-150.0, env="true", token=0]
+env2[yCoord=-210.0, xCoord=-270.0, env="true", token=0]
+env3[yCoord=-210.0, xCoord=-30.0, env="true", token=0]
+p0[yCoord=-210.0, xCoord=-150.0, token=2]
+s1[yCoord=30.0, xCoord=-150.0, token=1]
+s3[yCoord=30.0, bad="true", xCoord=-30.0, token=1]
+
+.transitions
+t0[label="t0", yCoord=-90.0, xCoord=-150.0]
+t1[label="t1", yCoord=-330.0, xCoord=-270.0]
+t2[label="t2", yCoord=-330.0, xCoord=-30.0]
+t3[label="t3", yCoord=30.0, xCoord=-270.0]
+t4[label="t4", yCoord=-90.0, xCoord=-30.0]
+
+.flows
+t0: {1*s1, 1*p0} -> {}
+t1: {1*env1} -> {1*env2}
+t2: {1*env1} -> {1*p0, 1*env3}
+t3: {1*env2, 1*s1} -> {}
+t4: {1*env3, 1*s1} -> {1*s3}
+
+.initial_marking {1*env1, 1*s1}

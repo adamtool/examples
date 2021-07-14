@@ -1,0 +1,25 @@
+.name "infStrat"
+.description "HAS STRATEGY. The strategy is infinite."
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+p0[yCoord=-331.83, xCoord=-321.0, env="true"]
+p1[yCoord=-327.83, xCoord=-676.0, env="true"]
+p2[yCoord=-331.83, xCoord=21.0, env="true"]
+p3[yCoord=-158.83, xCoord=-330.0]
+
+.transitions
+t0[label="t0", yCoord=-327.83, xCoord=-498.0]
+t1[label="t1", yCoord=-323.83, xCoord=-156.0]
+t2[label="t2", yCoord=-206.83, xCoord=-502.0]
+t3[label="t3", yCoord=-220.83, xCoord=-149.0]
+
+.flows
+t0: {1*p0} -> {1*p1}
+t1: {1*p0} -> {1*p2}
+t2: {1*p1, 1*p3} -> {1*p3, 1*p0}
+t3: {1*p2, 1*p3} -> {1*p3, 1*p0}
+
+.initial_marking {1*p0, 1*p3}

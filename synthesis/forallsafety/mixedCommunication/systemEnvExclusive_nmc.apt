@@ -1,0 +1,45 @@
+// should have strategy
+// @author Manuel Gieseking
+.name "Example"
+.description "Describe your net here."
+.type LPN
+.options
+condition="A_SAFETY"
+
+.places
+p0[yCoord=-262.33, xCoord=-110.0, env="true"]
+p1[yCoord=-256.33, xCoord=273.0, env="true"]
+p10[yCoord=301.18, xCoord=52.76]
+p11[yCoord=150.0, xCoord=90.0]
+p12[yCoord=475.74, xCoord=36.5]
+p13[yCoord=467.49, xCoord=280.62, env="true"]
+p2[yCoord=-270.0, xCoord=-570.0, env="true"]
+p3[yCoord=1.67, xCoord=-657.0, env="true"]
+p4[yCoord=50.67, xCoord=286.0, env="true"]
+p5[yCoord=265.67, xCoord=278.0, env="true"]
+p6[yCoord=44.67, xCoord=-152.0]
+p7[yCoord=36.67, xCoord=-501.0]
+p8[yCoord=288.19, xCoord=-518.66]
+p9[yCoord=289.27, xCoord=-196.15]
+
+.transitions
+t0[label="t0", yCoord=-270.0, xCoord=-330.0]
+t1[label="t1", yCoord=-270.0, xCoord=90.0]
+t2[label="t2", yCoord=-81.93, xCoord=284.35]
+t3[label="t3", yCoord=-86.26, xCoord=-576.02]
+t4[label="t4", yCoord=173.47, xCoord=-369.31]
+t5[label="t5", yCoord=150.0, xCoord=-90.0]
+t6[label="t6", yCoord=147.5, xCoord=274.61]
+t7[label="t7", yCoord=357.45, xCoord=167.47]
+
+.flows
+t0: {1*p0} -> {1*p2}
+t1: {1*p0} -> {1*p1}
+t2: {1*p1} -> {1*p4}
+t3: {1*p2} -> {1*p3, 1*p7}
+t4: {1*p7, 1*p6} -> {1*p8, 1*p9}
+t5: {1*p6, 1*p11} -> {1*p10}
+t6: {1*p4} -> {1*p11}
+t7: {1*p5, 1*p10} -> {1*p13, 1*p12}
+
+.initial_marking {1*p0, 1*p6}

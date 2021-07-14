@@ -1,0 +1,45 @@
+.name "firstExamplePaper"
+.description "The testing example of the paper"
+.type LPN
+.options
+condition="SAFETY"
+
+.places
+A[yCoord=-450.0, xCoord=-930.0, env="true"]
+AA[yCoord=210.0, xCoord=-150.0, token=1]
+B[yCoord=-450.0, xCoord=450.0, env="true"]
+BB[yCoord=210.0, xCoord=-390.0, token=1]
+EA[yCoord=210.0, xCoord=-930.0, env="true"]
+EB[yCoord=210.0, xCoord=450.0, env="true"]
+Env[yCoord=-450.0, xCoord=-270.0, env="true"]
+Sys[yCoord=-90.0, xCoord=-270.0, token=1]
+p0[yCoord=-330.0, xCoord=-270.0, token=1]
+qbad[yCoord=450.0, bad="true", xCoord=-270.0, token=1]
+
+.transitions
+comm[label="comm", yCoord=-210.0, xCoord=-270.0]
+t1[label="t1", yCoord=-450.0, xCoord=-630.0]
+t11[label="t11", yCoord=30.0, xCoord=-150.0]
+t2[label="t2", yCoord=-450.0, xCoord=90.0]
+t22[label="t22", yCoord=30.0, xCoord=-390.0]
+tbad1[label="tbad1", yCoord=210.0, xCoord=150.0]
+tbad2[label="tbad2", yCoord=201.44, xCoord=-651.12]
+tbad3[label="tbad3", yCoord=450.0, xCoord=870.0]
+tbad4[label="tbad4", yCoord=450.0, xCoord=-1230.0]
+test1[label="test1", yCoord=-330.0, xCoord=-930.0]
+test2[label="test2", yCoord=-335.6, xCoord=450.02]
+
+.flows
+comm: {1*Sys} -> {1*p0}
+t1: {1*Env} -> {1*A}
+t11: {1*Sys} -> {1*AA}
+t2: {1*Env} -> {1*B}
+t22: {1*Sys} -> {1*BB}
+tbad1: {1*EB, 1*AA} -> {1*EB, 1*qbad}
+tbad2: {1*BB, 1*EA} -> {1*EA, 1*qbad}
+tbad3: {1*AA, 1*B} -> {1*B, 1*qbad}
+tbad4: {1*A, 1*BB} -> {1*qbad, 1*A}
+test1: {1*A, 1*p0} -> {1*EA, 1*Sys}
+test2: {1*B, 1*p0} -> {1*Sys, 1*EB}
+
+.initial_marking {1*Env, 1*Sys}

@@ -4,37 +4,37 @@
 condition="SAFETY"
 
 .places
-env[env="true"]
-env1[env="true"]
-env2[env="true"]
-sys
-sys1
-sys2
-badenv[env="true",bad="true"]
-badsys[bad="true"]
+badenv[yCoord=750.0, bad="true", xCoord=810.0, env="true", token=0]
+badsys[yCoord=870.0, bad="true", xCoord=810.0, token=1]
+env[yCoord=90.0, xCoord=810.0, env="true", token=0]
+env1[yCoord=90.0, xCoord=1410.0, env="true", token=0]
+env2[yCoord=90.0, xCoord=90.0, env="true", token=0]
+sys[yCoord=390.0, xCoord=810.0, token=1]
+sys1[yCoord=570.0, xCoord=510.0, token=1]
+sys2[yCoord=570.0, xCoord=1050.0, token=1]
 
 .transitions
-te1
-te2
-tr1
-tr2
-test1
-test2
-ts1
-ts2
-tbad12
-tbad21
+tbad12[label="tbad12", yCoord=690.0, xCoord=1290.0]
+tbad21[label="tbad21", yCoord=690.0, xCoord=270.0]
+te1[label="te1", yCoord=90.0, xCoord=1110.0]
+te2[label="te2", yCoord=90.0, xCoord=450.0]
+test1[label="test1", yCoord=390.0, xCoord=1410.0]
+test2[label="test2", yCoord=390.0, xCoord=90.0]
+tr1[label="tr1", yCoord=270.0, xCoord=1170.0]
+tr2[label="tr2", yCoord=270.0, xCoord=450.0]
+ts1[label="ts1", yCoord=570.0, xCoord=690.0]
+ts2[label="ts2", yCoord=570.0, xCoord=870.0]
 
 .flows
-te1: {env} -> {env1}
-te2: {env} -> {env2}
-tr1: {env1, sys1} -> {env, sys}
-tr2: {env2, sys2} -> {env, sys}
-test1: {env1, sys} -> {env1, sys}
-test2: {env2, sys} -> {env2, sys}
-ts1: {sys} -> {sys1}
-ts2: {sys} -> {sys2}
-tbad12: {env1, sys2} -> {badenv, badsys}
-tbad21: {env2, sys1} -> {badenv, badsys}
+tbad12: {1*env1, 1*sys2} -> {1*badenv, 1*badsys}
+tbad21: {1*sys1, 1*env2} -> {1*badsys, 1*badenv}
+te1: {1*env} -> {1*env1}
+te2: {1*env} -> {1*env2}
+test1: {1*sys, 1*env1} -> {1*env1, 1*sys}
+test2: {1*env2, 1*sys} -> {1*sys, 1*env2}
+tr1: {1*sys1, 1*env1} -> {1*env, 1*sys}
+tr2: {1*env2, 1*sys2} -> {1*sys, 1*env}
+ts1: {1*sys} -> {1*sys1}
+ts2: {1*sys} -> {1*sys2}
 
-.initial_marking {env, sys}
+.initial_marking {1*env, 1*sys}
