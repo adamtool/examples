@@ -8,7 +8,7 @@ MAX=$(ls -f $INPUTFOLDER/*.apt | wc -l)
 
 CUR_DATE=$(date +"%m%d%y")
 
-NAME=RU
+NAME=packetCoherence
 FOLDER=$CUR_DATE"_"$NAME
 mkdir -p $FOLDER
 echo "-------------------- Creating the Petri net with transits ------------------------------"
@@ -18,7 +18,7 @@ for filename in $INPUTFOLDER/*.apt; do
 		FILE_NAME=$(basename "$filename" .apt)
 		FILE=$INPUTFOLDER/$FILE_NAME".apt"
 
-		$ADAM gen_topologie_zoo -i "$FILE" -c loopFreedom -o "$FOLDER"'/'"$FILE_NAME"
+		$ADAM gen_topologie_zoo -i "$FILE" -c packetCoherence -o "$FOLDER"'/'"$FILE_NAME"
 	else
 		break;
 	fi
